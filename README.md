@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/MultiTheFranky/rtf-42nd/raw/master/extras/logo_rtf_ca.png" width="480">
+    <img src="https://github.com/MultiTheFranky/rtf-42nd/raw/master/extras/logo_rtf42_ca.png" width="480">
 </p>
 
 <p align="center">

@@ -1,0 +1,12 @@
+name = "42nd RTF";
+picture = "logo_rtf42_ca.paa";
+actionName = "GitHub";
+action = "https://github.com/MultiTheFranky/rtf-42nd";
+description = "42nd RTF";
+logo = "logo_rtf42_ca.paa";
+logoOver = "logo_rtf42_ca.paa";
+tooltip = "42nd RTF";
+tooltipOwned = "42nd RTF Owned";
+overview = "42nd RTF";
+author = "42nd RTF Team";
+overviewPicture = "logo_rtf42_ca.paa";

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Monitoring">
+        <Key ID="STR_RTF42_Monitoring_enabled_DisplayName">
+            <English>Enabled</English>
+            <Polish>Enabled</Polish>
+            <Italian>Enabled</Italian>
+            <Russian>Enabled</Russian>
+            <French>Enabled</French>
+            <Spanish>Enabled</Spanish>
+            <German>
+                Enabled</German>
+            <Hungarian>Enabled</Hungarian>
+            <Czech>Enabled</Czech>
+            <Portuguese>Enabled</Portuguese>
+            <Japanese>Enabled</Japanese>
+            <Korean>
+                Enabled</Korean>
+            <Chinese>Enabled</Chinese>
+            <Chinesesimp>Enabled</Chinesesimp>
+            <Turkish>Enabled</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_enabled_Description">
+            <English>Enabled
+                Description</English>
+            <Polish>Enabled Description</Polish>
+            <Italian>Enabled Description</Italian>
+            <Russian>Enabled
+                Description</Russian>
+            <French>Enabled Description</French>
+            <Spanish>Enabled Description</Spanish>
+            <German>Enabled
+                Description</German>
+            <Hungarian>Enabled Description</Hungarian>
+            <Czech>Enabled Description</Czech>
+            <Portuguese>Enabled
+                Description</Portuguese>
+            <Japanese>Enabled Description</Japanese>
+            <Korean>Enabled Description</Korean>
+            <Chinese>Enabled
+                Description</Chinese>
+            <Chinesesimp>Enabled Description</Chinesesimp>
+            <Turkish>Enabled Description</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_endpoint_DisplayName">
+            <English>
+                Endpoint</English>
+            <Polish>Endpoint</Polish>
+            <Italian>
+                Endpoint</Italian>
+            <Russian>Endpoint</Russian>
+            <French>Endpoint</French>
+            <Spanish>Endpoint</Spanish>
+            <German>
+                Endpoint</German>
+            <Hungarian>Endpoint</Hungarian>
+            <Czech>Endpoint</Czech>
+            <Portuguese>Endpoint</Portuguese>
+            <Japanese>Endpoint</Japanese>
+            <Korean>
+                Endpoint</Korean>
+            <Chinese>Endpoint</Chinese>
+            <Chinesesimp>Endpoint</Chinesesimp>
+            <Turkish>Endpoint</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_endpoint_Description">
+            <English>Endpoint
+                Description</English>
+            <Polish>Endpoint Description</Polish>
+            <Italian>Endpoint Description</Italian>
+            <Russian>Endpoint
+                Description</Russian>
+            <French>Endpoint Description</French>
+            <Spanish>Endpoint Description</Spanish>
+            <German>Endpoint
+                Description</German>
+            <Hungarian>Endpoint Description</Hungarian>
+            <Czech>Endpoint Description</Czech>
+            <Portuguese>Endpoint
+                Description</Portuguese>
+            <Japanese>Endpoint Description</Japanese>
+            <Korean>Endpoint Description</Korean>
+            <Chinese>Endpoint
+                Description</Chinese>
+            <Chinesesimp>Endpoint Description</Chinesesimp>
+            <Turkish>Endpoint Description</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_port_DisplayName">
+            <English>
+                Port</English>
+            <Polish>Port</Polish>
+            <Italian>Port</Italian>
+            <Russian>Port</Russian>
+            <French>Port</French>
+            <Spanish>Port</Spanish>
+            <German>
+                Port</German>
+            <Hungarian>Port</Hungarian>
+            <Czech>Port</Czech>
+            <Portuguese>Port</Portuguese>
+            <Japanese>Port</Japanese>
+            <Korean>Port</Korean>
+            <Chinese>
+                Port</Chinese>
+            <Chinesesimp>Port</Chinesesimp>
+            <Turkish>Port</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_port_Description">
+            <English>Port Description</English>
+            <Polish>Port
+                Description</Polish>
+            <Italian>Port Description</Italian>
+            <Russian>Port Description</Russian>
+            <French>Port
+                Description</French>
+            <Spanish>Port Description</Spanish>
+            <German>Port Description</German>
+            <Hungarian>Port
+                Description</Hungarian>
+            <Czech>Port Description</Czech>
+            <Portuguese>Port Description</Portuguese>
+            <Japanese>Port
+                Description</Japanese>
+            <Korean>Port Description</Korean>
+            <Chinese>Port Description</Chinese>
+            <Chinesesimp>Port
+                Description</Chinesesimp>
+            <Turkish>Port Description</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_token_DisplayName">
+            <English>
+                Token</English>
+            <Polish>Token</Polish>
+            <Italian>Token</Italian>
+            <Russian>Token</Russian>
+            <French>Token</French>
+            <Spanish>Token</Spanish>
+            <German>
+                Token</German>
+            <Hungarian>Token</Hungarian>
+            <Czech>Token</Czech>
+            <Portuguese>Token</Portuguese>
+            <Japanese>Token</Japanese>
+            <Korean>
+                Token</Korean>
+            <Chinese>Token</Chinese>
+            <Chinesesimp>Token</Chinesesimp>
+            <Turkish>Token</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_token_Description">
+            <English>Token Description</English>
+            <Polish>Token
+                Description</Polish>
+            <Italian>Token Description</Italian>
+            <Russian>Token Description</Russian>
+            <French>Token
+                Description</French>
+            <Spanish>Token Description</Spanish>
+            <German>Token Description</German>
+            <Hungarian>Token
+                Description</Hungarian>
+            <Czech>Token Description</Czech>
+            <Portuguese>Token Description</Portuguese>
+            <Japanese>Token
+                Description</Japanese>
+            <Korean>Token Description</Korean>
+            <Chinese>Token Description</Chinese>
+            <Chinesesimp>Token
+                Description</Chinesesimp>
+            <Turkish>Token Description</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_organization_DisplayName">
+            <English>
+                Organization</English>
+            <Polish>Organization</Polish>
+            <Italian>Organization</Italian>
+            <Russian>Organization</Russian>
+            <French>Organization</French>
+            <Spanish>Organization</Spanish>
+            <German>
+                Organization</German>
+            <Hungarian>Organization</Hungarian>
+            <Czech>Organization</Czech>
+            <Portuguese>Organization</Portuguese>
+            <Japanese>Organization</Japanese>
+            <Korean>
+                Organization</Korean>
+            <Chinese>Organization</Chinese>
+            <Chinesesimp>Organization</Chinesesimp>
+            <Turkish>Organization</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_organization_Description">
+            <English>Organization Description</English>
+            <Polish>Organization
+                Description</Polish>
+            <Italian>Organization Description</Italian>
+            <Russian>Organization Description</Russian>
+            <French>Organization
+                Description</French>
+            <Spanish>Organization Description</Spanish>
+            <German>Organization Description</German>
+            <Hungarian>Organization
+                Description</Hungarian>
+            <Czech>Organization Description</Czech>
+            <Portuguese>Organization Description</Portuguese>
+            <Japanese>Organization
+                Description</Japanese>
+            <Korean>Organization Description</Korean>
+            <Chinese>Organization Description</Chinese>
+            <Chinesesimp>Organization
+                Description</Chinesesimp>
+            <Turkish>Organization Description</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_bucket_DisplayName">
+            <English>
+                Bucket</English>
+            <Polish>Bucket</Polish>
+            <Italian>Bucket</Italian>
+            <Russian>Bucket</Russian>
+            <French>Bucket</French>
+            <Spanish>Bucket</Spanish>
+            <German>
+                Bucket</German>
+            <Hungarian>Bucket</Hungarian>
+            <Czech>Bucket</Czech>
+            <Portuguese>Bucket</Portuguese>
+            <Japanese>Bucket</Japanese>
+            <Korean>
+                Bucket</Korean>
+            <Chinese>Bucket</Chinese>
+            <Chinesesimp>Bucket</Chinesesimp>
+            <Turkish>Bucket</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_bucket_Description">
+            <English>Bucket Description</English>
+            <Polish>Bucket
+                Description</Polish>
+            <Italian>Bucket Description</Italian>
+            <Russian>Bucket Description</Russian>
+            <French>Bucket
+                Description</French>
+            <Spanish>Bucket Description</Spanish>
+            <German>Bucket Description</German>
+            <Hungarian>Bucket
+                Description</Hungarian>
+            <Czech>Bucket Description</Czech>
+            <Portuguese>Bucket Description</Portuguese>
+            <Japanese>Bucket
+                Description</Japanese>
+            <Korean>Bucket Description</Korean>
+            <Chinese>Bucket Description</Chinese>
+            <Chinesesimp>Bucket
+                Description</Chinesesimp>
+            <Turkish>Bucket Description</Turkish>
+        </Key>
+        <Key ID="STR_RTF42_Monitoring_DisplayName">
+            <English>Monitoring</English>
+            <Polish>
+                Monitoring</Polish>
+            <Spanish>
+                Monitoring</Spanish>
+            <German>
+                Monitoring</German>
+            <Czech>Monitoring</Czech>
+            <Portuguese>Monitoring</Portuguese>
+            <French>Monitoring</French>
+            <Hungarian>
+                Monitoring</Hungarian>
+            <Russian>
+                Monitoring</Russian>
+            <Italian>Monitoring</Italian>
+            <Japanese>Monitoring</Japanese>
+            <Korean>Monitoring</Korean>
+            <Chinese>
+                Monitoring</Chinese>
+            <Chinesesimp>Monitoring</Chinesesimp>
+            <Turkish>Monitoring</Turkish>
+        </Key>
+    </Package>
+</Project>

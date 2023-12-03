@@ -1,0 +1,11 @@
+{
+    "inputDirs": ["P:/z/rtf42/addons/"],
+    "includePaths": ["P:/"],
+    "excludeList": [
+        "initsettings.sqf",
+        "initkeybinds.sqf",
+        "xeh_prep.sqf"
+    ],
+    "outputDir": "P:/",
+    "workerThreads": 1
+}

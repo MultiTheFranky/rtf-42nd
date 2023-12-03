@@ -65,7 +65,7 @@ jobs:
       uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
       with:
         steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
-        file_id: '2904026923'
+        file_id: "${{ secrets.MOD_ID }}"
         username: "${{ secrets.STEAM_USERNAME }}"
         password: "${{ secrets.STEAM_PASSWORD }}"
         otp: "${{ steps.generate.outputs.code }}"

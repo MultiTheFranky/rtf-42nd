@@ -33,8 +33,8 @@
 
 ### Extensions
 
--   Golang compiler (https://golang.org/dl/) 1.19
--   TDD gcc compiler (https://sourceforge.net/projects/tdm-gcc/)
+-   Golang compiler (https://golang.org/dl/)
+-   TDD gcc compiler (https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe)
 
 ## Setup
 

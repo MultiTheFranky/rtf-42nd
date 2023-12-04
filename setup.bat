@@ -80,7 +80,7 @@ if not exist %PROJECT_DIR% (
 )
 rem Clone the project to ExternalSource
 echo Cloning project repository...
-git clone https://github.com/MultiTheFranky/rtf42.git %PROJECT_DIR%
+git clone https://github.com/MultiTheFranky/rtf-42nd.git %PROJECT_DIR%
 echo Cloned project to %PROJECT_DIR%
 echo Creating project symlinks...
 rem Do the symlink to the Arma 3 directory

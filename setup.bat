@@ -41,6 +41,17 @@ if not exist %EXTERNAL_SOURCE_DIR% (
 )
 echo Directories checked.
 
+rem Check if Arma 3 directory x and z exists
+if not exist %ARMA3_DIR%\x (
+  echo %ARMA3_DIR%\x directory does not exist, creating...
+  mkdir %ARMA3_DIR%\x
+)
+
+if not exist %ARMA3_DIR%\z (
+  echo %ARMA3_DIR%\z directory does not exist, creating...
+  mkdir %ARMA3_DIR%\z
+)
+
 echo Cloning CBA_A3 repository...
 rem Clone CBA_A3 to ExternalSource with name cba
 git clone https://github.com/CBATeam/CBA_A3.git %EXTERNAL_SOURCE_DIR%\cba

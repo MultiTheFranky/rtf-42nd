@@ -9,7 +9,7 @@
     * <STRING> Cleared text
     *
     * Example:
-    * ["Text%·"] call rtf42_common_fnc_minifyString;
+    * "Text%·" call rtf42_common_fnc_minifyString;
     *
     * Public: No
 */

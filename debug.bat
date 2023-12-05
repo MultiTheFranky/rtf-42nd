@@ -6,6 +6,8 @@ rem Define Arma 3 directory
 set ARMA3_DIR="C:\Program Files (x86)\Steam\steamapps\common\Arma 3"
 rem =============================
 
+call mountDev.bat
+
 rem create a loop 
 :fullLoop
 
@@ -14,8 +16,15 @@ call buildExtensions.bat
 
 :loopBuildRestartOnly
 
-rem Execute Hemtt Dev
+rem Execute Hemtt Dev and get the return code
 hemtt.exe dev
+set HEMTT_DEV_RETURN_CODE=%ERRORLEVEL%
+
+rem Check if Hemtt Dev was successful
+if %HEMTT_DEV_RETURN_CODE% neq 0 (
+  echo Hemtt Dev failed, please check the logs.
+  goto armaClosed
+)
 
 rem Define Arma 3 executable
 :loopRestartOnly
@@ -29,6 +38,9 @@ if not exist %ARMA3_EXE% (
 
 rem Run Arma 3
 start "" %ARMA3_EXE% %ARMA3_PARAMS%
+
+rem sleep for 5 seconds
+timeout /t 5 >nul
 
 rem start the monitoring script
 start "Arma 3 Monitoring" monitoringLogs.bat

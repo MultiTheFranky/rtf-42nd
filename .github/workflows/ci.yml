@@ -1,6 +1,10 @@
 name: CI
 
-on: [pull_request]
+on:
+  push:
+    branches:
+    - master
+  pull_request_target:
 
 jobs:
   validate:
@@ -29,11 +33,14 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
-    - name: Release with HEMTT - MultiTheFranky
-      uses: MultiTheFranky/action-release-with-hemtt@0.0.5
-      id: build
-    - name: Upload artifact
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
+    - name: Run HEMTT build
+      run: hemtt build
+    - name: Rename build folder
+      run: mv .hemttout/build .hemttout/@rtf42
+    - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: ${{ steps.build.outputs.zip_name }}
-        path: ${{ steps.build.outputs.zip_path }}
+        name: rtf42-${{ github.sha }}
+        path: .hemttout/@*

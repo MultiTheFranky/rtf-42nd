@@ -23,12 +23,12 @@ class RscDisplayMain: RscStandardDisplay
     {
         class Logo: RscPicture
         {
-            text = QPATHTOF(data\logo_rtf42_ca.paa);
+            text = QPATHTOF(data\logo2_rtf42_ca.paa);
             delete tooltip;
             color[] = {0.9,0.9,0.9,1};
             colorActive[] = {1,1,1,1};
             shadow = 0;
-            x = "0.5 - 	2.5 * 	(pixelW * pixelGrid * 2)";
+            x = "0.5 - 	2.3 * 	(pixelW * pixelGrid * 2)";
             y = "safezoneY + (3 - 0.5 * 	5) * 	(pixelH * pixelGrid * 2)";
             w = "1 * 	5 * 	(pixelW * pixelGrid * 2)";
             h = "1 * 	5 * 	(pixelH * pixelGrid * 2)";

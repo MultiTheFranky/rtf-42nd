@@ -30,6 +30,7 @@
 ## Requirements
 
 -   Git (https://git-scm.com/downloads)
+-   HEMTT (https://github.com/BrettMayson/HEMTT)
 
 ### Extensions
 

@@ -4,8 +4,8 @@
     *
     * Arguments:
     * 0: <STRING> music file
-	* 1: <NUMBER> volume
-	* 2: <BOOL> loop
+    * 1: <NUMBER> volume
+    * 2: <BOOL> loop
     *
     * Return Value:
     * None
@@ -16,5 +16,5 @@
     * Public: No
 */
 if (typeName _this == "ARRAY") then {
-	diag_log ("playmusic" callExtension ["play", _this]);
+    diag_log ("playmusic" callExtension ["play", _this]);
 }

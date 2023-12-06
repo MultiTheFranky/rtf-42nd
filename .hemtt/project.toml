@@ -13,7 +13,8 @@ include = [
     "LICENSE",
     "logo_rtf42_ca.paa",
     "meta.cpp",
-    "rtf42_main_menu.wav"
+    "rtf42_main_menu.mp3",
+    "ffmpeg.exe"
 ]
 
 [version]

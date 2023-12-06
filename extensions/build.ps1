@@ -5,11 +5,23 @@ $BuildPath = Split-Path -Parent $BasePath
 # Param: X64 - Build x64 or x32
 function Build-Extension {
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]$ExtensionName,
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [boolean]$X64
     )
+
+    # Check if have go
+    if (-not (Get-Command go -ErrorAction SilentlyContinue)) {
+        Write-Host "Go not found, skipping build of $ExtensionName"
+        return
+    }
+
+    # Check if have gcc
+    if (-not (Get-Command gcc -ErrorAction SilentlyContinue)) {
+        Write-Host "GCC not found, skipping build of $ExtensionName"
+        return
+    }
 
     if ($X64) {
         $ENV:GOARCH = "amd64"
@@ -20,7 +32,8 @@ function Build-Extension {
 
         # Remove header file
         Remove-Item $BuildPath\$ExtensionName"_x64.h"
-    } else {
+    }
+    else {
         $ENV:GOARCH = 386
         $ENV:CGO_ENABLED = 1
         Write-Host "Building x32 extension: $ExtensionName on $BuildPath"
@@ -35,7 +48,7 @@ function Build-Extension {
 
 # Loop folders and build extensions
 Get-ChildItem -Path $BasePath -Directory | ForEach-Object {
-    if($BaseBuilds -contains $_.Name) {
+    if ($BaseBuilds -contains $_.Name) {
         return
     }
     Write-Host "Building extension: $($_.Name)"

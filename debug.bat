@@ -16,6 +16,12 @@ call buildExtensions.bat
 
 :loopBuildRestartOnly
 
+rem Check if HEMMT is installed
+if not exist hemtt.exe (
+  echo Hemtt is not installed, please check the README.
+  exit
+)
+
 rem Execute Hemtt Dev and get the return code
 hemtt.exe dev
 set HEMTT_DEV_RETURN_CODE=%ERRORLEVEL%

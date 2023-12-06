@@ -21,3 +21,5 @@ keys/*
 .hemtt/local
 .hemttout
 releases/*
+hemtt
+hemtt.exe

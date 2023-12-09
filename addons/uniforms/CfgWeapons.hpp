@@ -16,7 +16,7 @@ class CfgWeapons
     class GVAR(Desert): Uniform_Base
     { 
         scope = 2; 
-        displayName = "Uniforme Desértico"; // TODO: Localize
+        displayName = LSTRING(DesertUniformDisplayName);
         picture = "\A3\Characters_F\data\ui\icon_U_B_CombatUniform_mcam_CA.paa"; 
         model = "\A3\characters_f\BLUFOR\b_soldier_01.p3d"; 
         class ItemInfo : GVAR(UniformItemBase) {
@@ -26,7 +26,7 @@ class CfgWeapons
     
     class GVAR(Forest): GVAR(Desert)
     { 
-        displayName = "Uniforme Boscoso"; // TODO: Localize
+        displayName = LSTRING(ForestUniformDisplayName);
         class ItemInfo : GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,Forest); 
         }; 

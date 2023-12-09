@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Uniforms">
+        <Key ID="STR_RTF42_Uniforms_DesertUniformDisplayName">
+            <English>Desert Uniform</English>
+            <Spanish>Uniforme Desértico</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_ForestUniformDisplayName">
+            <English>Forest Uniform</English>
+            <Spanish>Uniforme Boscoso</Spanish>
+        </Key>
+    </Package>
+</Project>

@@ -33,7 +33,7 @@ jobs:
                   body: Update translations
                   branch: update-translations
                   branch-suffix: timestamp
-                  base: master
+                  base: main
                   labels: translations
                   reviewers: multithefranky
                   signoff: true

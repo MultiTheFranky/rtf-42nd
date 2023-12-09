@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Main">
+        <Key ID="STR_RTF42_Main_Authors">
+            <English>42nd RTF Team</English>
+            <Spanish>Equipo 42nd RTF</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_FactionDisplayName">
+            <English>42nd RTF</English>
+            <Spanish>42nd RTF</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_VehicleDisplayName">
+            <English>42nd RTF Vehicles</English>
+            <Spanish>Vehículos 42nd RTF </Spanish>
+        </Key>
+    </Package>
+</Project>

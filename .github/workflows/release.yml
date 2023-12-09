@@ -1,94 +1,93 @@
-
-name: 'RELEASE'
+name: "RELEASE"
 
 permissions:
-  contents: write
+    contents: write
 
 on:
-  release:
-    types: [published]
+    release:
+        types: [published]
 
 jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Validate SQF
-      run: python3 tools/sqf_validator.py
-    - name: Validate Config
-      run: python3 tools/config_style_checker.py
-    - name: Check for BOM
-      uses: arma-actions/bom-check@master
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Lint (sqflint)
-      uses: arma-actions/sqflint@master
-      continue-on-error: true # No failure due to many false-positives
-  hemtt:
-    name: Build with HEMTT
-    runs-on: ubuntu-latest
-    needs: [validate, lint]
-    steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
-    - name: Setup node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
-    - name: Install translator
-      run: cd extras/translator && npm install
-    - name: Fill .env file with secrets
-      run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> extras/translator/.env
-    - name: Run translator
-      run: cd extras/translator && npm start
-    - name: Setup HEMTT
-      uses: arma-actions/hemtt@v1
-    - name: Run HEMTT release
-      run: hemtt release
-    - name: Rename build folder
-      run: mv release/rtf42-latest.zip release/@rtf42.zip
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: rtf42-${{ github.sha }}
-        path: release/@rtf42.zip
-    - name: Upload asset
-      uses: shogo82148/actions-upload-release-asset@v1
-      with: 
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: release/@rtf42.zip
-        asset_content_type: application/zip
-      continue-on-error: true
+    validate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the source code
+              uses: actions/checkout@master
+            - name: Validate SQF
+              run: python3 tools/sqf_validator.py
+            - name: Validate Config
+              run: python3 tools/config_style_checker.py
+            - name: Check for BOM
+              uses: arma-actions/bom-check@master
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the source code
+              uses: actions/checkout@master
+            - name: Lint (sqflint)
+              uses: arma-actions/sqflint@master
+              continue-on-error: true # No failure due to many false-positives
+    hemtt:
+        name: Build with HEMTT
+        runs-on: ubuntu-latest
+        needs: [validate, lint]
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v2
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+            - name: Install translator
+              run: cd extras/translator && npm install
+            - name: Fill .env file with secrets
+              run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> extras/translator/.env
+            - name: Run translator
+              run: cd extras/translator && npm start
+            - name: Setup HEMTT
+              uses: arma-actions/hemtt@v1
+            - name: Run HEMTT release
+              run: hemtt release
+            - name: Rename build folder
+              run: mv release/rtf42-latest.zip release/@rtf42.zip
+            - name: Upload Artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: rtf42-${{ github.sha }}
+                  path: release/@rtf42.zip
+            - name: Upload asset
+              uses: shogo82148/actions-upload-release-asset@v1
+              with:
+                  upload_url: ${{ github.event.release.upload_url }}
+                  asset_path: release/@rtf42.zip
+                  asset_content_type: application/zip
+              continue-on-error: true
 
-    - name: Setup steamcmd
-      id: steamcmd
-      uses: CyberAndrii/setup-steamcmd@v1
+            - name: Setup steamcmd
+              id: steamcmd
+              uses: CyberAndrii/setup-steamcmd@v1
 
-    - name: Generate auth code
-      id: generate
-      uses: CyberAndrii/steam-totp@v1
-      with:
-        shared_secret: ${{ secrets.STEAM_SHARE_SECRET }}
-      continue-on-error: true
-        
-    - name: Unzip builded mod
-      run: unzip -o ${{ steps.build.outputs.zip_path }} -d ${{ steps.build.outputs.release_path }}
-      continue-on-error: true
+            - name: Generate auth code
+              id: generate
+              uses: CyberAndrii/steam-totp@v1
+              with:
+                  shared_secret: ${{ secrets.STEAM_SHARE_SECRET }}
+              continue-on-error: true
 
-    - name: Upload mod
-      uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
-      with:
-        steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
-        file_id: "${{ secrets.MOD_ID }}"
-        username: "${{ secrets.STEAM_USERNAME }}"
-        password: "${{ secrets.STEAM_PASSWORD }}"
-        otp: "${{ steps.generate.outputs.code }}"
-        path: "${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}"
-        name: "${{ steps.build.outputs.mod_name }}"
-        change_notes_title: "${{ github.event.release.name }}"
-        change_notes: "${{ github.event.release.body }}"
-      continue-on-error: true
+            - name: Unzip builded mod
+              run: unzip -o ${{ steps.build.outputs.zip_path }} -d ${{ steps.build.outputs.release_path }}
+              continue-on-error: true
+
+            - name: Upload mod
+              uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
+              with:
+                  steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
+                  file_id: "${{ secrets.MOD_ID }}"
+                  username: "${{ secrets.STEAM_USERNAME }}"
+                  password: "${{ secrets.STEAM_PASSWORD }}"
+                  otp: "${{ steps.generate.outputs.code }}"
+                  path: "${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}"
+                  name: "${{ steps.build.outputs.mod_name }}"
+                  change_notes_title: "${{ github.event.release.name }}"
+                  change_notes: "${{ github.event.release.body }}"
+              continue-on-error: true

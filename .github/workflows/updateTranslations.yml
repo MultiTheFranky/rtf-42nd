@@ -5,11 +5,6 @@ on:
     schedule:
         - cron: "0 * * * *"
     workflow_dispatch:
-        inputs:
-            force:
-                description: "Force update"
-                required: false
-                default: "false"
 
 permissions:
     contents: write
@@ -32,7 +27,7 @@ jobs:
             - name: Run translator
               run: cd extras/translator && npm start
             - name: Create PR
-              uses: peter-evans/create-pull-request@v3
+              uses: peter-evans/create-pull-request@v5
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: Update translations

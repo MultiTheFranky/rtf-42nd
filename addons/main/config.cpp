@@ -9,8 +9,8 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author = "";
-        authors[] = {LSTRING(Authors)};
+        author = LSTRING(Author);
+        authors[] = {LSTRING(Author)};
         authorUrl = "";
         VERSION_CONFIG;
     };

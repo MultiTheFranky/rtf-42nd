@@ -9,8 +9,8 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"rtf42_main", "rtf42_music", "A3_Data_F_Enoch_Loadorder"};
-        author = "";
-        authors[] = {""};
+        author = LSTRING(Author);
+        authors[] = {LSTRING(Author)};
         VERSION_CONFIG;
     };
 };

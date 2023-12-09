@@ -1,14 +1,16 @@
 #include "script_component.hpp"
 
-class CfgPatches {
-    class ADDON {
+class CfgPatches
+{
+    class ADDON
+    {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"rtf42_main"};
-        author = "";
-        authors[] = {""};
+        author = LSTRING(Author);
+        authors[] = {LSTRING(Author)};
         VERSION_CONFIG;
     };
 };

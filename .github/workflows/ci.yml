@@ -33,6 +33,16 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
+    - name: Setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    - name: Install translator
+      run: cd extras/translator && npm install
+    - name: Fill .env file with secrets
+      run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> extras/translator/.env
+    - name: Run translator
+      run: cd extras/translator && npm start
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
     - name: Run HEMTT build

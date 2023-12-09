@@ -8,7 +8,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rtf42_main", "rtf42_music", "A3_Data_F_Enoch_Loadorder"};
+        requiredAddons[] = {"rtf42_main"};
         author = LSTRING(Author);
         authors[] = {LSTRING(Author)};
         VERSION_CONFIG;
@@ -16,4 +16,4 @@ class CfgPatches
 };
 
 #include "CfgEventHandlers.hpp"
-#include "RcsDisplayMain.hpp"
+#include "CfgWeapons.hpp"

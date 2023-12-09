@@ -1,0 +1,39 @@
+# Workflow to run every hour to update the translation files
+
+on:
+    schedule:
+        - cron: "0 * * * *"
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v2
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+            - name: Install translator
+              run: cd extras/translator && npm install
+            - name: Fill .env file with secrets
+              run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> extras/translator/.env
+            - name: Run translator
+              run: cd extras/translator && npm start
+            - name: Create PR
+              uses: peter-evans/create-pull-request@v3
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  commit-message: Update translations
+                  title: Update translations
+                  body: Update translations
+                  branch: update-translations
+                  branch-suffix: timestamp
+                  base: master
+                  labels: translations
+                  reviewers: multithefranky
+                  signoff: true

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Units">
+        <Key ID="STR_RTF42_Units_DesertSoldierDisplayName">
+            <English>Desert Soldier</English>
+            <Spanish>Soldado de Desierto</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_ForestSoldierDisplayName">
+            <English>Forest Soldier</English>
+            <Spanish>Soldado Boscoso</Spanish>
+        </Key>
+    </Package>
+</Project>

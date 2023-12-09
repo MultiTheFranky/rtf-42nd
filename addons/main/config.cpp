@@ -10,7 +10,7 @@ class CfgPatches
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = "";
-        authors[] = {"42nd RTF Team"};
+        authors[] = {LSTRING(Authors)};
         authorUrl = "";
         VERSION_CONFIG;
     };

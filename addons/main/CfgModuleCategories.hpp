@@ -1,7 +1,7 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
     class RTF42: NO_CATEGORY {
-        displayName = "42nd RTF";
+        displayName = LSTRING(FactionDisplayName);
         priority = 2;
         side = 7;
     };
@@ -9,6 +9,6 @@ class CfgFactionClasses {
 
 class CfgVehicleClasses {
     class RTF42_Vehicles {
-        displayName = "42nd RTF Vehicles";
+        displayName = LSTRING(VehicleDisplayName);
     };
 };

@@ -57,14 +57,15 @@ const mapTranslations = (translations) => {
 
 const getXMLFromMap = (translations) => {
     const totalXML = new Map();
-    for (const keyNamespace in translations) {
+    for (const keyNamespaceTop in translations) {
         const xml = [];
         xml.push('<?xml version="1.0" encoding="utf-8"?>');
         xml.push('<Project name="RTF42">');
         for (const keyNamespace in translations) {
+            if (keyNamespace !== keyNamespaceTop) continue;
             xml.push(`    <Package name="${keyNamespace}">`);
             for (const keyName in translations[keyNamespace]) {
-                xml.push(`        <Key ID="${keyName}">`);
+                xml.push(`        <Key ID="STR_RTF42_${keyNamespace}_${keyName}">`);
                 for (const locale in translations[keyNamespace][keyName]) {
                     xml.push(`            <${locales.get(locale)}>${translations[keyNamespace][keyName][locale]}</${locales.get(locale)}>`);
                 }
@@ -73,7 +74,7 @@ const getXMLFromMap = (translations) => {
             xml.push('    </Package>');
         }
         xml.push('</Project>');
-        totalXML.set(keyNamespace.toLowerCase(), xml.join('\n'));
+        totalXML.set(keyNamespaceTop.toLowerCase(), xml.join('\n'));
     }
     return totalXML;
 }
@@ -85,6 +86,7 @@ const getXMLFromMap = (translations) => {
  */
 const writeStringtable = (translations) => {
     const fs = require('fs');
+    console.log(translations.entries())
     for (const [key, value] of translations.entries()) {
         fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
     }

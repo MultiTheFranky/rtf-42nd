@@ -6,7 +6,7 @@ class CfgVehicles
     class GVAR(ReconBase): B_Soldier_F {
         scope = 0;
         scopeCurator = 0;
-        author = "42nd RTF"; //TODO: Localize
+        author = LSTRING(Author);
         faction = "RTF42";
     };
         

@@ -13,13 +13,13 @@ class CfgVehicles
     class GVAR(Desert): GVAR(ReconBase) {
         scope = 2;
         scopeCurator = 2;
-        displayName = "Soldado (Desierto)"; //TODO: Localize
+        displayName = LSTRING(DesertSoldierDisplayName);
         uniformClass = QEGVAR(uniforms,Desert);
         hiddenSelectionsTextures[] = {QPATHTOF(data\desert.paa)};
     };
 
     class GVAR(Forest): GVAR(Desert) {
-        displayName = "Soldado (Bosque)"; //TODO: Localize
+        displayName = LSTRING(ForestSoldierDisplayName);
         uniformClass = QEGVAR(uniforms,Forest);
         hiddenSelectionsTextures[] = {QPATHTOF(data\forest.paa)};
     };

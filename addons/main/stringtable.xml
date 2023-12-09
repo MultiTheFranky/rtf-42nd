@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Main">
-        <Key ID="STR_RTF42_Main_Authors">
+        <Key ID="STR_RTF42_Main_Author">
             <English>42nd RTF Team</English>
             <Spanish>Equipo 42nd RTF</Spanish>
         </Key>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Uniforms">
+        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretMCDisplayName">
+            <English>Green Beret Multicam Uniform</English>
+            <Spanish>Uniforme Multicam Boina Verde</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretAOR1DisplayName">
+            <English>Green Beret AOR1 Uniform</English>
+            <Spanish>Uniforme Boina Verde AOR1 </Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_UniformRangerMCDisplayName">
+            <English>Ranger Multicam Uniform</English>
+            <Spanish>Uniforme Multicam Ranger</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_UniformRangerAOR1DisplayName">
+            <English>Ranger AOR1 Uniform</English>
+            <Spanish>Uniforme AOR1 Ranger</Spanish>
+        </Key>
+    </Package>
+</Project>

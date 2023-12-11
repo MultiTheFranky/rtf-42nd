@@ -8,7 +8,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rtf42_main", "rtf42_uniforms"};
+        requiredAddons[] = {"rtf42_main", "rtf42_uniforms", "rtf42_helmets", "rtf42_vests"};
         author = LSTRING(Author);
         authors[] = {LSTRING(Author)};
         VERSION_CONFIG;

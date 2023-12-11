@@ -1,26 +1,46 @@
 class CfgVehicles 
 {     
-    class B_Soldier_F; 
-    class B_Helipilot_F;
-
-    class GVAR(ReconBase): B_Soldier_F {
+    class B_CTRG_soldier_GL_LAT_F;
+    class GVAR(UnitBase): B_CTRG_soldier_GL_LAT_F {
+        author = "Echo";
         scope = 0;
         scopeCurator = 0;
-        author = LSTRING(Author);
-        faction = "RTF42";
+        faction = QEGVAR(main,Faction);
+        editorSubcategory = QEGVAR(main,Infantry);
     };
         
-    class GVAR(Desert): GVAR(ReconBase) {
+    class GVAR(MC): GVAR(UnitBase) {
         scope = 2;
         scopeCurator = 2;
-        displayName = LSTRING(DesertSoldierDisplayName);
-        uniformClass = QEGVAR(uniforms,Desert);
-        hiddenSelectionsTextures[] = {QPATHTOF(data\desert.paa)};
+        displayName = CSTRING(UnitMCDisplayName);
+        uniformClass = QEGVAR(uniforms,MC);
+        hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
+        linkedItems[] = {QEGVAR(helmets,MC),QEGVAR(vests,Base),BASEITEMS}; 
+        respawnLinkedItems[] = {QEGVAR(helmets,MC),QEGVAR(vests,Base),BASEITEMS}; 
+
     };
 
-    class GVAR(Forest): GVAR(Desert) {
-        displayName = LSTRING(ForestSoldierDisplayName);
-        uniformClass = QEGVAR(uniforms,Forest);
-        hiddenSelectionsTextures[] = {QPATHTOF(data\forest.paa)};
+    class GVAR(MCGreenBeret): GVAR(MC) {
+        displayName = CSTRING(UnitGreenBeretMCDisplayName);
+        uniformClass = QEGVAR(uniforms,MCGreenBeret);
+        hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_green_beret_ca.paa)};
+        linkedItems[] = {QEGVAR(helmets,MC),QEGVAR(vests,Base),BASEITEMS}; 
+        respawnLinkedItems[] = {QEGVAR(helmets,MC),QEGVAR(vests,Base),BASEITEMS}; 
+    };
+
+    class GVAR(AOR1): GVAR(MC) {
+        displayName = CSTRING(UnitAOR1DisplayName);
+        uniformClass = QEGVAR(uniforms,AOR1);
+        hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_aor1_ca.paa)};
+        linkedItems[] = {QEGVAR(helmets,AOR1),QEGVAR(vests,Base),BASEITEMS}; 
+        respawnLinkedItems[] = {QEGVAR(helmets,AOR1),QEGVAR(vests,Base),BASEITEMS}; 
+    };
+
+    class GVAR(AOR1GreenBeret): GVAR(AOR1) {
+        displayName = CSTRING(UnitGreenBeretAOR1DisplayName);
+        uniformClass = QEGVAR(uniforms,AOR1GreenBeret);
+        hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_aor1_green_beret_ca.paa)};
+        linkedItems[] = {QEGVAR(helmets,AOR1),QEGVAR(vests,Base),"ItemMap","ItemCompass","ItemWatch","ItemRadio"}; 
+        respawnLinkedItems[] = {QEGVAR(helmets,AOR1),QEGVAR(vests,Base),"ItemMap","ItemCompass","ItemWatch","ItemRadio"}; 
     };
 };

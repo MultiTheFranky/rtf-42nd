@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Helmets">
+        <Key ID="STR_RTF42_Helmets_HelmetAOR1DisplayName">
+            <English>Desert Helmet</English>
+            <Spanish>Casco Desierto</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Helmets_HelmetMCDisplayName">
+            <English>Multicam Helmet</English>
+            <Spanish>Casco Multicam</Spanish>
+        </Key>
+    </Package>
+</Project>

@@ -48,7 +48,7 @@ method = "merge" # default: first valid merge method in list "merge", "squash", 
 # Once a PR is merged, delete the branch. This option behaves like the GitHub
 # repository setting "Automatically delete head branches", which automatically
 # deletes head branches after pull requests are merged.
-delete_branch_on_merge = false # default: false
+delete_branch_on_merge = true # default: false
 
 # DEPRECATED
 #

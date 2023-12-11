@@ -1,4 +1,4 @@
-private _category = format ["RTF42 %1", localize LSTRING(DisplayName)];
+private _category = format ["RTF42 %1", LLSTRING(DisplayName)];
 
 [QGVAR(enabled), "CHECKBOX", [LSTRING(EnabledDisplayName), LSTRING(EnabledDescription)], _category, false, 1] call CBA_fnc_addSetting;
 

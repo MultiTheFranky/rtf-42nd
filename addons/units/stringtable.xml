@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Units">
-        <Key ID="STR_RTF42_Units_DesertSoldierDisplayName">
-            <English>Desert Soldier</English>
-            <Spanish>Soldado de Desierto</Spanish>
+        <Key ID="STR_RTF42_Units_UnitMCDisplayName">
+            <English>Multicam Soldier</English>
+            <Spanish>Soldado Multicam</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Units_ForestSoldierDisplayName">
-            <English>Forest Soldier</English>
-            <Spanish>Soldado Boscoso</Spanish>
+        <Key ID="STR_RTF42_Units_UnitGreenBeretMCDisplayName">
+            <English>Green Beret Multicam Soldier</English>
+            <Spanish>Soldado Boina Verde Multicam</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_UnitAOR1DisplayName">
+            <English>AOR Soldier</English>
+            <Spanish>Soldado AOR</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_UnitGreenBeretAOR1DisplayName">
+            <English>Green Beret AOR Soldier</English>
+            <Spanish>Soldado Boina Verde AOR</Spanish>
         </Key>
     </Package>
 </Project>

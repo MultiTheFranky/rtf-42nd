@@ -19,16 +19,30 @@ const locales = new Map([
  */
 const getAllTranslations = async () => {
     const locales = [];
+    const data = [];
+    const size = 20;
     for (const [key, value] of locales.entries()) {
         locales.push(key);
     }
 
-    const response = await axios.get(`${process.env.TOLGEE_URL}/v2/projects/translations?${locales.map(locale => `locales=${locale}`).join('&')}`, {
-        headers: {
-            'X-API-Key': process.env.TOLGEE_API_KEY
-        }
-    })
-    return response.data;
+    // Loop until we get all translations of all pages
+    let lastPage = 0;
+
+    while (true) {
+        const response = await axios.get(`${process.env.TOLGEE_URL}/v2/projects/translations?${locales.map(locale => `locales=${locale}`).join('&')}&size=${size}&page=${lastPage}&sort=desc`, {
+            headers: {
+                'X-API-Key': process.env.TOLGEE_API_KEY
+            }
+        })
+        const responseData = response.data;
+        if(!responseData._embedded) break;
+        lastPage++;
+        data.push(...responseData._embedded.keys);
+    }
+
+    console.log(`Retrieved ${data.length} translations`)
+
+    return data;
 };
 
 /**
@@ -38,7 +52,7 @@ const getAllTranslations = async () => {
 
 const mapTranslations = (translations) => {
     const result = {};
-    for (const key of translations._embedded.keys) {
+    for (const key of translations) {
         result[key.keyNamespace] = {
             ...result[key.keyNamespace],
             [key.keyName]: {
@@ -86,9 +100,12 @@ const getXMLFromMap = (translations) => {
  */
 const writeStringtable = (translations) => {
     const fs = require('fs');
-    console.log(translations.entries())
     for (const [key, value] of translations.entries()) {
-        fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
+        try {
+            fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
+        } catch (error) {
+            console.error(`Failed to write stringtable.xml for ${key}`, error);
+        }
     }
 }
 

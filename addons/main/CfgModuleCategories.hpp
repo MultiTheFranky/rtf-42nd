@@ -1,14 +1,14 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
-    class RTF42: NO_CATEGORY {
-        displayName = LSTRING(FactionDisplayName);
+    class GVAR(Faction): NO_CATEGORY {
+        displayName = CSTRING(FactionDisplayName);
         priority = 2;
         side = 7;
     };
 };
 
 class CfgVehicleClasses {
-    class RTF42_Vehicles {
-        displayName = LSTRING(VehicleDisplayName);
+    class GVAR(Vehicles) {
+        displayName = CSTRING(VehicleDisplayName);
     };
 };

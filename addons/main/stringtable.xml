@@ -13,5 +13,9 @@
             <English>42nd RTF Vehicles</English>
             <Spanish>Vehículos 42nd RTF </Spanish>
         </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryInfantryDisplayName">
+            <English>Infantry</English>
+            <Spanish>Infantería</Spanish>
+        </Key>
     </Package>
 </Project>

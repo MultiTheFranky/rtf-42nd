@@ -1,34 +1,44 @@
 class CfgWeapons
 {
-    class ItemCore; 
+    class U_B_CTRG_1;
     class UniformItem;
-    class Uniform_Base: ItemCore 
-    { 
-        class ItemInfo; 
-    };
-
     class GVAR(UniformItemBase): UniformItem
     {
         containerClass = "Supply50";
         mass = 50;
     };
     
-    class GVAR(Desert): Uniform_Base
+    class GVAR(MC): U_B_CTRG_1
     { 
-        scope = 2; 
-        displayName = LSTRING(DesertUniformDisplayName);
-        picture = "\A3\Characters_F\data\ui\icon_U_B_CombatUniform_mcam_CA.paa"; 
-        model = "\A3\characters_f\BLUFOR\b_soldier_01.p3d"; 
+        author = "Echo";
+        scope = 2;
+        displayName = CSTRING(UniformGreenBeretMCDisplayName);
         class ItemInfo : GVAR(UniformItemBase) {
-            uniformClass = QEGVAR(units,Desert); 
+            uniformClass = QEGVAR(units,MC); 
+        };
+    };
+
+    class GVAR(MCGreenBeret): GVAR(MC)
+    { 
+        displayName = CSTRING(UniformGreenBeretMCDisplayName);
+        class ItemInfo : GVAR(UniformItemBase) {
+            uniformClass = QEGVAR(units,MCGreenBeret); 
         }; 
     }; 
     
-    class GVAR(Forest): GVAR(Desert)
+    class GVAR(AOR1): GVAR(MC)
     { 
-        displayName = LSTRING(ForestUniformDisplayName);
+        displayName = CSTRING(UniformGreenBeretAOR1DisplayName);
         class ItemInfo : GVAR(UniformItemBase) { 
-            uniformClass = QEGVAR(units,Forest); 
-        }; 
-    }; 
+            uniformClass = QEGVAR(units,AOR1); 
+        };
+    };
+
+    class GVAR(AOR1GreenBeret): GVAR(AOR1)
+    { 
+        displayName = CSTRING(UniformGreenBeretAOR1DisplayName);
+        class ItemInfo : GVAR(UniformItemBase) { 
+            uniformClass = QEGVAR(units,AOR1GreenBeret); 
+        };
+    };
 };

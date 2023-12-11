@@ -101,7 +101,11 @@ const getXMLFromMap = (translations) => {
 const writeStringtable = (translations) => {
     const fs = require('fs');
     for (const [key, value] of translations.entries()) {
-        fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
+        try {
+            fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
+        } catch (error) {
+            console.error(`Failed to write stringtable.xml for ${key}`, error);
+        }
     }
 }
 

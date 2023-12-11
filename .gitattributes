@@ -1,2 +1,17 @@
 *.dll filter=lfs diff=lfs merge=lfs -text
 *.exe filter=lfs diff=lfs merge=lfs -text
+
+* text=auto
+*.png binary
+*.jpg binary
+*.paa binary
+
+# Change GitHub language categorization
+addons/**/*.cpp linguist-language=SQF
+addons/**/*.hpp linguist-language=SQF
+
+optionals/**/*.cpp linguist-language=SQF
+optionals/**/*.hpp linguist-language=SQF
+
+# Do not count hemtt includes in language usage stats
+include/* linguist-vendored

@@ -1,5 +1,4 @@
-class CfgVehicles 
-{     
+class CfgVehicles {     
     class B_CTRG_soldier_GL_LAT_F;
     class B_CTRG_Soldier_3_F;
     class GVAR(UnitBase): B_CTRG_soldier_GL_LAT_F {

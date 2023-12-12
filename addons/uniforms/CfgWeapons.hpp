@@ -14,7 +14,7 @@ class CfgWeapons
         author = "Echo";
         scope = 2;
         displayName = CSTRING(UniformMCDisplayName);
-        class ItemInfo : GVAR(UniformItemBase) {
+        class ItemInfo: GVAR(UniformItemBase) {
             uniformClass = QEGVAR(units,MC); 
         };
     };
@@ -22,7 +22,7 @@ class CfgWeapons
     class GVAR(MCGreenBeret): GVAR(MC)
     { 
         displayName = CSTRING(UniformGreenBeretMCDisplayName);
-        class ItemInfo : GVAR(UniformItemBase) {
+        class ItemInfo: GVAR(UniformItemBase) {
             uniformClass = QEGVAR(units,MCGreenBeret); 
         }; 
     }; 
@@ -30,7 +30,7 @@ class CfgWeapons
     class GVAR(AOR1): GVAR(MC)
     { 
         displayName = CSTRING(UniformAOR1DisplayName);
-        class ItemInfo : GVAR(UniformItemBase) { 
+        class ItemInfo: GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,AOR1); 
         };
     };
@@ -38,7 +38,7 @@ class CfgWeapons
     class GVAR(AOR1GreenBeret): GVAR(AOR1)
     { 
         displayName = CSTRING(UniformGreenBeretAOR1DisplayName);
-        class ItemInfo : GVAR(UniformItemBase) { 
+        class ItemInfo: GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,AOR1GreenBeret); 
         };
     };
@@ -50,7 +50,7 @@ class CfgWeapons
         author = "Echo";
         scope = 2;
         displayName = CSTRING(UniformMCSDisplayName);
-        class ItemInfo : GVAR(UniformItemBase) { 
+        class ItemInfo: GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,MCS); 
         };
     };
@@ -58,7 +58,7 @@ class CfgWeapons
     class GVAR(MCSGreenBeret): GVAR(MCS)
     { 
         displayName = CSTRING(UniformGreenBeretMCDisplayName);
-        class ItemInfo : GVAR(UniformItemBase) { 
+        class ItemInfo: GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,MCSGreenBeret); 
         };
     };
@@ -66,7 +66,7 @@ class CfgWeapons
     class GVAR(AOR1S): GVAR(MCS)
     { 
         displayName = CSTRING(UniformAOR1SDisplayName);
-        class ItemInfo : GVAR(UniformItemBase) { 
+        class ItemInfo: GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,AOR1S); 
         };
     };
@@ -74,7 +74,7 @@ class CfgWeapons
     class GVAR(AOR1SGreenBeret): GVAR(AOR1S)
     { 
         displayName = CSTRING(UniformGreenBeretAOR1SDisplayName);
-        class ItemInfo : GVAR(UniformItemBase) { 
+        class ItemInfo: GVAR(UniformItemBase) { 
             uniformClass = QEGVAR(units,AOR1SGreenBeret); 
         };
     };

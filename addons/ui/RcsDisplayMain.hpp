@@ -1,16 +1,13 @@
 class RscPicture;
 class RscStandardDisplay;
-class RscDisplayMain: RscStandardDisplay
-{
+class RscDisplayMain: RscStandardDisplay {
     idd = 0;
     scriptName = "RscDisplayMain";
     scriptPath = "GUI";
     onLoad = "[""onLoad"",_this,""RscDisplayMain"",'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
     onUnload = "[""onUnload"",_this,""RscDisplayMain"",'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
-    class ControlsBackground
-    {
-        class Picture: RscPicture
-        {
+    class ControlsBackground {
+        class Picture: RscPicture {
             idc = 998;
             text = QPATHTOEF(ui,data\background_main_ca.paa);
             x = "safezoneX";
@@ -19,10 +16,8 @@ class RscDisplayMain: RscStandardDisplay
             h = "safezoneH";
         };
     };
-    class controls
-    {
-        class Logo: RscPicture
-        {
+    class controls {
+        class Logo: RscPicture {
             text = QPATHTOF(data\logo2_rtf42_ca.paa);
             delete tooltip;
             color[] = {0.9,0.9,0.9,1};
@@ -45,10 +40,8 @@ class RscDisplayMain: RscStandardDisplay
     };
 };
 class RscText;
-class RscTitles
-{
-    class RscDisplayMainMenuBackground
-    {
+class RscTitles {
+    class RscDisplayMainMenuBackground {
         scriptName = "RscDisplayMainMenuBackground";
         scriptPath = "GUI";
         onLoad = "[""onLoad"",_this,""RscDisplayMainMenuBackground"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
@@ -57,10 +50,8 @@ class RscTitles
         fadein = 0;
         fadeout = 0;
         duration = 1e+10;
-        class Controls
-        {
-            class Background: RscText
-            {
+        class Controls {
+            class Background: RscText {
                 idc = 101;
                 colorBackground[] = {0.1,0.1,0.1,1};
                 x = "safezoneXAbs";
@@ -68,18 +59,15 @@ class RscTitles
                 w = "safezoneWAbs";
                 h = "2 * 	10";
             };
-            class BackgroundLeft: Background
-            {
+            class BackgroundLeft: Background {
                 x = "-	10";
                 w = "safezoneX + 	10";
             };
-            class BackgroundRight: Background
-            {
+            class BackgroundRight: Background {
                 x = "safezoneX + safezoneW";
                 w = 10;
             };
-            class Picture: RscPicture
-            {
+            class Picture: RscPicture {
                 idc = 102;
                 text = QPATHTOEF(ui,data\background_main_ca.paa);
                 x = "safezoneX";

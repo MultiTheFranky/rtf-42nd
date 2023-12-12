@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
     * Author: Franky
     * Function to play music using the extension "playmusic"

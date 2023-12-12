@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
     * Author: Franky
     * Function to clear an string from all special characters

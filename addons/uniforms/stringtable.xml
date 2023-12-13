@@ -17,5 +17,17 @@
             <English>Ranger AOR1 Uniform</English>
             <Spanish>Uniforme AOR1 Ranger</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Uniforms_UniformMCSDisplayName">
+            <English>Ranger Multicam Sleeve Uniform</English>
+            <Spanish>Uniforme Multicam Ranger Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretMCSDisplayName">
+            <English>Green Beret Multicam Sleeve Uniform</English>
+            <Spanish>Uniforme Multicam Boina Verde Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_UniformAOR1SDisplayName">
+            <English>Ranger AOR1 Sleeve Uniform</English>
+            <Spanish>Uniforme AOR1 Ranger Manga Corta</Spanish>
+        </Key>
     </Package>
 </Project>

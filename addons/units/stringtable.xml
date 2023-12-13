@@ -17,5 +17,21 @@
             <English>Green Beret AOR Soldier</English>
             <Spanish>Soldado Boina Verde AOR</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Units_UnitMCSDisplayName">
+            <English>Multicam Sleeve Soldier</English>
+            <Spanish>Soldado Multicam Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_UnitGreenBeretMCSDisplayName">
+            <English>Green Beret Multicam Sleeve Soldier</English>
+            <Spanish>Soldado Boina Verde Multicam Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_UnitAOR1SDisplayName">
+            <English>AOR Sleeve Soldier</English>
+            <Spanish>Soldado AOR Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_UnitGreenBeretAOR1SDisplayName">
+            <English>Green Beret AOR Sleeve Soldier</English>
+            <Spanish>Soldado Boina Verde AOR Manga Corta</Spanish>
+        </Key>
     </Package>
 </Project>

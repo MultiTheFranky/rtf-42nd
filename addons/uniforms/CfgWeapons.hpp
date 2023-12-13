@@ -16,10 +16,10 @@ class CfgWeapons {
         };
     };
 
-    class GVAR(MCGreenBeret): GVAR(MC) { 
+    class GVAR(GreenBeretMC): GVAR(MC) { 
         displayName = CSTRING(UniformGreenBeretMCDisplayName);
         class ItemInfo: GVAR(UniformItemBase) {
-            uniformClass = QEGVAR(units,MCGreenBeret); 
+            uniformClass = QEGVAR(units,GreenBeretMC); 
         }; 
     }; 
     
@@ -30,10 +30,10 @@ class CfgWeapons {
         };
     };
 
-    class GVAR(AOR1GreenBeret): GVAR(AOR1) { 
+    class GVAR(GreenBeretAOR1): GVAR(AOR1) { 
         displayName = CSTRING(UniformGreenBeretAOR1DisplayName);
         class ItemInfo: GVAR(UniformItemBase) { 
-            uniformClass = QEGVAR(units,AOR1GreenBeret); 
+            uniformClass = QEGVAR(units,GreenBeretAOR1); 
         };
     };
 
@@ -48,10 +48,10 @@ class CfgWeapons {
         };
     };
 
-    class GVAR(MCSGreenBeret): GVAR(MCS) { 
-        displayName = CSTRING(UniformGreenBeretMCDisplayName);
+    class GVAR(GreenBeretMCS): GVAR(MCS) { 
+        displayName = CSTRING(UniformGreenBeretMCSDisplayName);
         class ItemInfo: GVAR(UniformItemBase) { 
-            uniformClass = QEGVAR(units,MCSGreenBeret); 
+            uniformClass = QEGVAR(units,GreenBeretMCS); 
         };
     };
 
@@ -62,10 +62,10 @@ class CfgWeapons {
         };
     };
 
-    class GVAR(AOR1SGreenBeret): GVAR(AOR1S) { 
+    class GVAR(GreenBeretAOR1S): GVAR(AOR1S) { 
         displayName = CSTRING(UniformGreenBeretAOR1SDisplayName);
         class ItemInfo: GVAR(UniformItemBase) { 
-            uniformClass = QEGVAR(units,AOR1SGreenBeret); 
+            uniformClass = QEGVAR(units,GreenBeretAOR1S);
         };
     };
 };

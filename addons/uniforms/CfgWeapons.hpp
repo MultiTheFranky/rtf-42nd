@@ -1,6 +1,6 @@
 class CfgWeapons {
     class U_B_CTRG_1;
-    class U_B_CTRG_Soldier_3_F;
+    class U_B_CTRG_3;
     class UniformItem;
     class GVAR(UniformItemBase): UniformItem {
         containerClass = "Supply50";
@@ -39,7 +39,7 @@ class CfgWeapons {
 
     // Long sleeve uniforms
 
-    class GVAR(MCS): U_B_CTRG_Soldier_3_F { 
+    class GVAR(MCS): U_B_CTRG_3 { 
         author = "Echo";
         scope = 2;
         displayName = CSTRING(UniformMCSDisplayName);

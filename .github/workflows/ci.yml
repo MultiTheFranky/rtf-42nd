@@ -166,6 +166,10 @@ jobs:
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: .
+            - name: Extract Extensions
+              run: |
+                  7z x rtf42-extensions-${{ github.sha }}.zip
+                  rm rtf42-extensions-${{ github.sha }}.zip
             - name: Download FFMPEG for Windows
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z
@@ -176,8 +180,9 @@ jobs:
               run: | 
                 wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
                 tar -xf ffmpeg-release-amd64-static.tar.xz
-                mv ffmpeg-4.4-amd64-static ffmpeg
+                mv ffmpeg-release-amd64-static/ffmpeg-6.1-amd64-static/ffmpeg .
                 rm ffmpeg-release-amd64-static.tar.xz
+                rm -rf ffmpeg-release-amd64-static
             - name: Setup node
               uses: actions/setup-node@v4
               with:

@@ -26,8 +26,53 @@ jobs:
             - name: Lint (sqflint)
               uses: arma-actions/sqflint@master
               continue-on-error: true # No failure due to many false-positives
-    hemtt:
-        name: Build with HEMTT
+    windows-extensions:
+        name: Build Extensions for Windows
+        runs-on: windows-latest
+        needs: [validate, lint]
+        steps:
+            - name: Checkout repo PR
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
+            - name: Set up MinGW X86
+              uses: egor-tensin/setup-mingw@v2
+              with:
+                  platform: x86
+            - name: Setup GO
+              uses: actions/setup-go@v2
+              with:
+                  go-version: 1.21.5
+            - name: Build Extensions for Windows x86
+              run: |
+                  cd extensions
+                  for d in */ ; do
+                      cd $d
+                      echo "Building $d"
+                      CGO_ENABLED=1 GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
+                      cd ..
+                  done
+            - name: Set up MinGW X64
+              uses: egor-tensin/setup-mingw@v2
+              with:
+                  platform: x64
+            - name: Build Extensions for Windows x64
+              run: |
+                    cd extensions
+                    for d in */ ; do
+                        cd $d
+                        echo "Building $d"
+                        CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
+                        cd ..
+                    done
+            # Export the extensions to be used in the hemtt job
+            - name: Export Extensions
+              uses: actions/upload-artifact@v2
+              with:
+                  name: rtf42-extensions-${{ github.sha }}
+                  path: *.dll
+    linux-extensions:
+        name: Build Extensions for Linux
         runs-on: ubuntu-latest
         needs: [validate, lint]
         steps:
@@ -48,14 +93,13 @@ jobs:
               uses: actions/setup-go@v2
               with:
                   go-version: 1.21.5
-            - name: Build Extensions for Linux and Windows x86
+            - name: Build Extensions for Linux x86
               run: |
                   cd extensions
                   for d in */ ; do
                       cd $d
                       echo "Building $d"
                       CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o ../../$d".so" -buildmode=c-shared index.go
-                      CGO_ENABLED=1 GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
                       cd ..
                   done
             - name: Setup GCC X64
@@ -67,16 +111,36 @@ jobs:
               uses: egor-tensin/setup-mingw@v2
               with:
                   platform: x64
-            - name: Build Extensions for Linux and Windows x64
+            - name: Build Extensions for Linux x64
               run: |
                     cd extensions
                     for d in */ ; do
                         cd $d
                         echo "Building $d"
                         CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
-                        CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
                         cd ..
                     done
+            # Export the extensions to be used in the hemtt job
+            - name: Export Extensions
+              uses: actions/upload-artifact@v2
+              with:
+                  name: rtf42-extensions-${{ github.sha }}
+                  path: *.so
+
+    hemtt:
+        name: Build with HEMTT
+        runs-on: ubuntu-latest
+        needs: [validate, lint]
+        steps:
+            - name: Checkout repo PR
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
+            - name: Download Extensions
+              uses: actions/download-artifact@v2
+              with:
+                  name: rtf42-extensions-${{ github.sha }}
+                  path: .
             - name: Download FFMPEG for Windows
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

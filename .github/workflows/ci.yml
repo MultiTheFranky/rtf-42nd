@@ -119,7 +119,6 @@ jobs:
                         CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
                         cd ..
                     done
-            # Export the extensions to be used in the hemtt job
             - name: Export Extensions
               uses: actions/upload-artifact@v2
               with:
@@ -129,7 +128,7 @@ jobs:
     hemtt:
         name: Build with HEMTT
         runs-on: ubuntu-latest
-        needs: [validate, lint]
+        needs: [validate, lint, windows-extensions, linux-extensions]
         steps:
             - name: Checkout repo PR
               uses: actions/checkout@v4

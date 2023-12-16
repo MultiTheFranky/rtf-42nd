@@ -163,25 +163,15 @@ jobs:
               with:
                   ref: ${{ github.event.pull_request.head.sha }}
             - name: Download Extensions
-              uses: actions/download-artifact@v2
+              uses: actions/download-artifact@v4
               with:
                   name: rtf42-extensions-${{ github.sha }}
-            - name: Check downloaded files
-              run: ls -la
-            - name: Download FFMPEG for Windows
+            - name: Download FFMPEG
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z
                 7z x ffmpeg-6.1-essentials_build.7z
                 mv ffmpeg-6.1-essentials_build/bin/ffmpeg.exe .
                 rm -rf ffmpeg-6.1-essentials_build
-            - name: Download FFMPEG for Linux
-              run: | 
-                wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
-                tar -xf ffmpeg-release-amd64-static.tar.xz
-                ls -la
-                mv ffmpeg-6.1-amd64-static/ffmpeg .
-                rm ffmpeg-release-amd64-static.tar.xz
-                rm -rf ffmpeg-release-amd64-static
             - name: Setup node
               uses: actions/setup-node@v4
               with:
@@ -203,3 +193,21 @@ jobs:
               with:
                   name: rtf42-${{ github.sha }}
                   path: .hemttout/@*
+            - name: Delete extension artifact
+              uses : actions/github-script@v4
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  script: |
+                      const artifacts = await github.actions.listArtifactsForRepo({
+                          owner: context.repo.owner,
+                          repo: context.repo.repo
+                      });
+                      for (const artifact of artifacts.data.artifacts) {
+                          if (artifact.name.startsWith("rtf42-extensions")) {
+                              await github.actions.deleteArtifact({
+                                  owner: context.repo.owner,
+                                  repo: context.repo.repo,
+                                  artifact_id: artifact.id
+                              });
+                          }
+                      }

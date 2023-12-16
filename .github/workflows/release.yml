@@ -60,7 +60,7 @@ jobs:
           - name: Export Extensions
             uses: actions/upload-artifact@v4
             with:
-                name: rtf42-extensions-${{ github.sha }}
+                name: rtf42-extensions-${{ github.sha }}-windows-x86
                 path: ${{ github.workspace }}\*.dll
     windows-extensions-x64:
         name: Build Extensions for Windows x64
@@ -95,7 +95,7 @@ jobs:
             - name: Export Extensions
               uses: actions/upload-artifact@v4
               with:
-                  name: rtf42-extensions-${{ github.sha }}
+                  name: rtf42-extensions-${{ github.sha }}-windows-x64
                   path: ${{ github.workspace }}\*.dll
     linux-extensions:
         name: Build Extensions for Linux
@@ -151,7 +151,7 @@ jobs:
             - name: Export Extensions
               uses: actions/upload-artifact@v4
               with:
-                  name: rtf42-extensions-${{ github.sha }}
+                  name: rtf42-extensions-${{ github.sha }}-linux
                   path: /home/runner/work/rtf42/rtf42/*.so
     hemtt:
         name: Build with HEMTT
@@ -163,7 +163,15 @@ jobs:
             - name: Download Extensions
               uses: actions/download-artifact@v4
               with:
-                  name: rtf42-extensions-${{ github.sha }}
+                  name: rtf42-extensions-${{ github.sha }}-windows-x86
+            - name: Download Extensions
+              uses: actions/download-artifact@v4
+              with:
+                  name: rtf42-extensions-${{ github.sha }}-windows-x64
+            - name: Download Extensions
+              uses: actions/download-artifact@v4
+              with:
+                  name: rtf42-extensions-${{ github.sha }}-linux
             - name: Download FFMPEG
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

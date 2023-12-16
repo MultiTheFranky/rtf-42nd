@@ -238,7 +238,7 @@ jobs:
                   change_notes: "${{ github.event.release.body }}"
               continue-on-error: true
             - name: Delete extension artifact
-              uses : actions/github-script@v4
+              uses : actions/github-script@v7
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   script: |

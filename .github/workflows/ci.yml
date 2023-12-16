@@ -38,7 +38,7 @@ jobs:
             - name: Set up MinGW X86
               uses: egor-tensin/setup-mingw@v2
               with:
-                  platform: x64
+                  platform: x86
                   version: 12.2.0
             - name: Setup GO
               uses: actions/setup-go@v4
@@ -56,6 +56,29 @@ jobs:
                       go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
                       cd ..
                   }
+            - name: Export Extensions
+              uses: actions/upload-artifact@v2
+              with:
+                  name: rtf42-extensions-${{ github.sha }}
+                  path: ./*.dll
+    windows-extensions-x64:
+        name: Build Extensions for Windows x64
+        runs-on: windows-latest
+        needs: [validate, lint]
+        steps:
+            - name: Checkout repo PR
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
+            - name: Set up MinGW X64
+              uses: egor-tensin/setup-mingw@v2
+              with:
+                  platform: x64
+                  version: 12.2.0
+            - name: Setup GO
+              uses: actions/setup-go@v4
+              with:
+                  go-version: 1.21.5
             - name: Build Extensions for Windows x64
               run: |
                   cd extensions
@@ -65,7 +88,7 @@ jobs:
                       $ENV:GOARCH = amd64
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o "D:\a\rtf42\rtf42\"$_"_x64.dll" -buildmode=c-shared index.go
+                      go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
                       cd ..
                   }
             - name: Export Extensions
@@ -97,6 +120,9 @@ jobs:
               run: |
                   cd extensions
                   for d in */ ; do
+                      if [ $d = "playmusic/" ]; then
+                          continue
+                      fi
                       cd $d
                       echo "Building $d"
                       CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o ../../$d".so" -buildmode=c-shared index.go
@@ -125,7 +151,7 @@ jobs:
     hemtt:
         name: Build with HEMTT
         runs-on: ubuntu-latest
-        needs: [validate, lint, windows-extensions, linux-extensions]
+        needs: [validate, lint, windows-extensions, windows-extensions-x64, linux-extensions]
         steps:
             - name: Checkout repo PR
               uses: actions/checkout@v4

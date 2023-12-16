@@ -40,6 +40,10 @@ jobs:
               with:
                 version: latest
                 platform: x86
+            - name: Set up MinGW X86
+              uses: egor-tensin/setup-mingw@v2
+              with:
+                  platform: x86
             - name: Setup GO
               uses: actions/setup-go@v2
               with:
@@ -59,6 +63,10 @@ jobs:
               with:
                 version: latest
                 platform: x64
+            - name: Set up MinGW X64
+              uses: egor-tensin/setup-mingw@v2
+              with:
+                  platform: x64
             - name: Build Extensions for Linux and Windows x64
               run: |
                     cd extensions

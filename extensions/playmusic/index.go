@@ -13,6 +13,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"runtime"
 	"strconv"
 	"strings"
 	"syscall"
@@ -204,7 +205,14 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			return err
 		}
 
-		filePathFFMPEG := pwd + "\\z\\rtf42\\ffmpeg.exe"
+		filePathFFMPEG := ""
+
+		// Check the architecture OS and use the correct ffmpeg executable
+		if runtime.GOOS == "windows" && runtime.GOARCH == "amd64" {
+			filePathFFMPEG = pwd + "\\z\\rtf42\\ffmpeg64.exe"
+		} else {
+			filePathFFMPEG = pwd + "\\z\\rtf42\\ffmpeg64"
+		}
 
 		streamVar := ffmpeg.Input(file).Output(fileTempConverted, ffmpeg.KwArgs{
 			"c:v": "copy",

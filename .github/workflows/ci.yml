@@ -35,30 +35,40 @@ jobs:
               uses: actions/checkout@v4
               with:
                   ref: ${{ github.event.pull_request.head.sha }}
-            - name: Setup GCC
+            - name: Setup GCC X86
               uses: egor-tensin/setup-gcc@v1
               with:
                 version: latest
-                platform: x64
+                platform: x86
             - name: Setup GO
               uses: actions/setup-go@v2
               with:
                   go-version: 1.21.5
-            - name: Build Extensions
+            - name: Build Extensions for Linux and Windows x86
               run: |
                   cd extensions
                   for d in */ ; do
                       cd $d
                       echo "Building $d"
-                      ls -als
                       CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o ../../$d".so" -buildmode=c-shared index.go
                       CGO_ENABLED=1 GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
-                      # Build 64bit
-                      echo "Building $d 64bit"
-                      CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
-                      CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
                       cd ..
                   done
+            - name: Setup GCC X64
+              uses: egor-tensin/setup-gcc@v1
+              with:
+                version: latest
+                platform: x64
+            - name: Build Extensions for Linux and Windows x64
+              run: |
+                    cd extensions
+                    for d in */ ; do
+                        cd $d
+                        echo "Building $d"
+                        CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
+                        CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
+                        cd ..
+                    done
             - name: Download FFMPEG for Windows
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

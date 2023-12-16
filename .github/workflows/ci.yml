@@ -52,10 +52,10 @@ jobs:
                       $ENV:GOARCH = 386
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o ${{ github.workspace }}\$_.Name".dll" -buildmode=c-shared index.go
+                      go build -o "${{ github.workspace }}\$($_.Name).dll" -buildmode=c-shared index.go
                       cd ..
                   }
-                  dir D:\a\rtf42\rtf42\
+                  dir ${{ github.workspace }}
             - name: Export Extensions
               uses: actions/upload-artifact@v3
               with:
@@ -87,10 +87,10 @@ jobs:
                       $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o ${{ github.workspace }}\$_.Name"_x64.dll" -buildmode=c-shared index.go
+                      go build -o "${{ github.workspace }}\$($_.Name)_x64.dll" -buildmode=c-shared index.go
                       cd ..
                   }
-                  dir D:\a\rtf42\rtf42\
+                  dir ${{ github.workspace }}
             - name: Export Extensions
               uses: actions/upload-artifact@v3
               with:

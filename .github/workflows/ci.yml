@@ -48,7 +48,7 @@ jobs:
             - name: Build Extensions for Windows x86
               run: |
                   Get-ChildItem -Path ${{ github.workspace }}\extensions -Directory | ForEach-Object {
-                      cd ${{ github.workspace }}\extensions\$_.Name
+                      cd "${{ github.workspace }}\extensions\$($_.Name)"
                       $ENV:GOARCH = 386
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
@@ -83,7 +83,7 @@ jobs:
             - name: Build Extensions for Windows x64
               run: |
                   Get-ChildItem -Path ${{ github.workspace }}\extensions -Directory | ForEach-Object {
-                      cd ${{ github.workspace }}\extensions\$_.Name
+                      cd "${{ github.workspace }}\extensions\$($_.Name)"
                       $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"

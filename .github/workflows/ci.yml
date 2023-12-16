@@ -44,6 +44,9 @@ jobs:
               uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
+                  cache-dependency-path: |
+                      extensions\go.mod
+                      extensions\go.sum
             - name: Build Extensions for Windows x86
               run: |
                   cd extensions
@@ -55,6 +58,7 @@ jobs:
                       go build -o "D:\a\rtf42\rtf42\"$_.Name".dll" -buildmode=c-shared index.go
                       cd ..
                   }
+                  dir D:\a\rtf42\rtf42\
             - name: Export Extensions
               uses: actions/upload-artifact@v3
               with:
@@ -78,6 +82,9 @@ jobs:
               uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
+                  cache-dependency-path: |
+                      extensions\go.mod
+                      extensions\go.sum
             - name: Build Extensions for Windows x64
               run: |
                   cd extensions
@@ -89,6 +96,7 @@ jobs:
                       go build -o "D:\a\rtf42\rtf42\"$_.Name"_x64.dll" -buildmode=c-shared index.go
                       cd ..
                   }
+                  dir D:\a\rtf42\rtf42\
             - name: Export Extensions
               uses: actions/upload-artifact@v3
               with:
@@ -112,8 +120,9 @@ jobs:
               uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
-            - name: Install libasound2-dev
-              run: sudo apt-get install libasound2-dev
+                  cache-dependency-path: |
+                      extensions\go.mod
+                      extensions\go.sum
             - name: Build Extensions for Linux x86
               run: |
                   cd extensions
@@ -143,6 +152,7 @@ jobs:
                         CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -buildmode=c-shared index.go
                         cd ..
                     done
+                    ls -la /home/runner/work/rtf42/rtf42/
             - name: Export Extensions
               uses: actions/upload-artifact@v3
               with:

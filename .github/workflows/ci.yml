@@ -60,7 +60,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: ./*.dll
+                  path: D:\a\rtf42\rtf42\*.dll
     windows-extensions-x64:
         name: Build Extensions for Windows x64
         runs-on: windows-latest
@@ -85,7 +85,7 @@ jobs:
                   Get-ChildItem -Path . -Directory | ForEach-Object {
                       cd $_.Name
                       echo "Building " $_.Name
-                      $ENV:GOARCH = amd64
+                      $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
                       go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
@@ -95,7 +95,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: ./*.dll
+                  path: D:\a\rtf42\rtf42\*.dll
     linux-extensions:
         name: Build Extensions for Linux
         runs-on: ubuntu-latest
@@ -137,6 +137,9 @@ jobs:
               run: |
                     cd extensions
                     for d in */ ; do
+                        if [ $d = "playmusic/" ]; then
+                            continue
+                        fi
                         cd $d
                         echo "Building $d"
                         CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
@@ -146,7 +149,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: ./*.so
+                  path: /home/runner/work/rtf42/rtf42/*.so
 
     hemtt:
         name: Build with HEMTT

@@ -54,10 +54,11 @@ jobs:
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
                       go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
+                      echo "Built " $_.Name on "D:\a\rtf42\rtf42\"$_.dll
                       cd ..
                   }
             - name: Export Extensions
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: D:\a\rtf42\rtf42\*.dll
@@ -88,11 +89,12 @@ jobs:
                       $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
+                      go build -o "D:\a\rtf42\rtf42\"$_"_x64.dll" -buildmode=c-shared index.go
+                      echo "Built " $_.Name on "D:\a\rtf42\rtf42\"$_"_x64.dll"
                       cd ..
                   }
             - name: Export Extensions
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: D:\a\rtf42\rtf42\*.dll
@@ -146,7 +148,7 @@ jobs:
                         cd ..
                     done
             - name: Export Extensions
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: /home/runner/work/rtf42/rtf42/*.so

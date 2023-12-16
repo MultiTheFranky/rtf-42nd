@@ -1,3 +1,6 @@
+//go:build !linux && !darwin && !freebsd && !openbsd && !netbsd && !dragonfly && !solaris && !aix
+// +build !linux,!darwin,!freebsd,!openbsd,!netbsd,!dragonfly,!solaris,!aix
+
 package main
 
 /*
@@ -15,6 +18,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"syscall"
 	"time"
 	"unsafe"
 
@@ -211,7 +215,7 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			"q:a": 4,
 		}).SetFfmpegPath(filePathFFMPEG).OverWriteOutput()
 		cmd := streamVar.Compile()
-		//cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 		err = cmd.Run()
 
 		if err != nil {

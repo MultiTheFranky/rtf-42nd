@@ -44,18 +44,16 @@ jobs:
               uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
-            - name: Build Extensions for Windows x86 (Powershell script)
+            - name: Build Extensions for Windows x86
               run: |
                   cd extensions
-                  $BasePath = "D:\a\rtf42\rtf42\extensions"
-                  $BuildPath = Split-Path -Parent $BasePath
                   Get-ChildItem -Path . -Directory | ForEach-Object {
                       cd $_.Name
                       echo "Building " $_.Name
                       $ENV:GOARCH = 386
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o $BuildPath\$_.dll -buildmode=c-shared index.go
+                      go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
                       cd ..
                   }
             - name: Set up MinGW X64
@@ -66,15 +64,13 @@ jobs:
             - name: Build Extensions for Windows x64
               run: |
                   cd extensions
-                  $BasePath = "D:\a\rtf42\rtf42\extensions"
-                  $BuildPath = Split-Path -Parent $BasePath
                   Get-ChildItem -Path . -Directory | ForEach-Object {
                       cd $_.Name
                       echo "Building " $_.Name
                       $ENV:GOARCH = amd64
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o $BuildPath\$_.dll -buildmode=c-shared index.go
+                      go build -o "D:\a\rtf42\rtf42\"$_"_x64.dll" -buildmode=c-shared index.go
                       cd ..
                   }
             - name: Export Extensions

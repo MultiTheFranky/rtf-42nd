@@ -207,13 +207,13 @@ jobs:
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   script: |
-                      const artifacts = await github.actions.listArtifactsForRepo({
+                      const artifacts = await github.rest.actions.listArtifactsForRepo({
                           owner: context.repo.owner,
                           repo: context.repo.repo
                       });
                       for (const artifact of artifacts.data.artifacts) {
                           if (artifact.name.startsWith("rtf42-extensions")) {
-                              await github.actions.deleteArtifact({
+                              await github.rest.actions.deleteArtifact({
                                   owner: context.repo.owner,
                                   repo: context.repo.repo,
                                   artifact_id: artifact.id

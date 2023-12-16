@@ -50,14 +50,27 @@ jobs:
                   for d in */ ; do
                       cd $d
                       echo "Building $d"
-                      GOOS=linux GOARCH=386 go build -o ../../$d".so" -buildmode=c-shared index.go
-                      GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
+                      ls -als
+                      CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o ../../$d".so" -buildmode=c-shared index.go
+                      CGO_ENABLED=1 GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
                       # Build 64bit
                       echo "Building $d 64bit"
-                      GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
-                      GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
+                      CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
+                      CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
                       cd ..
                   done
+            - name: Download FFMPEG for Windows
+              run: | 
+                wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z
+                7z x ffmpeg-6.1-essentials_build.7z
+                mv ffmpeg-6.1-essentials_build/bin/ffmpeg.exe .
+                rm -rf ffmpeg-6.1-essentials_build
+            - name: Download FFMPEG for Linux
+              run: | 
+                wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+                tar -xf ffmpeg-release-amd64-static.tar.xz
+                mv ffmpeg-4.4-amd64-static ffmpeg
+                rm ffmpeg-release-amd64-static.tar.xz
             - name: Setup node
               uses: actions/setup-node@v4
               with:

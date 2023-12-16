@@ -27,7 +27,6 @@ function Build-Extension {
         $ENV:GOARCH = "amd64"
         $ENV:CGO_ENABLED = 1
         Write-Host "Building x64 extension: $ExtensionName on $BuildPath"
-        go build -o $BuildPath\$ExtensionName"_x64.so" -buildmode=c-shared $BasePath\$ExtensionName
         go build -o $BuildPath\$ExtensionName"_x64.dll" -buildmode=c-shared $BasePath\$ExtensionName
 
         # Remove header file
@@ -37,7 +36,6 @@ function Build-Extension {
         $ENV:GOARCH = 386
         $ENV:CGO_ENABLED = 1
         Write-Host "Building x32 extension: $ExtensionName on $BuildPath"
-        go build -o $BuildPath\$ExtensionName".so" -buildmode=c-shared $BasePath\$ExtensionName
         go build -o $BuildPath\$ExtensionName".dll" -buildmode=c-shared $BasePath\$ExtensionName
 
         # Remove header file

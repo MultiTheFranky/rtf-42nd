@@ -49,8 +49,7 @@ jobs:
                       extensions\go.sum
             - name: Build Extensions for Windows x86
               run: |
-                  cd extensions
-                  Get-ChildItem -Path . -Directory | ForEach-Object {
+                  Get-ChildItem -Path ${{ github.workspace }}\extensions -Directory | ForEach-Object {
                       cd $_.Name
                       $ENV:GOARCH = 386
                       $ENV:CGO_ENABLED = 1
@@ -87,8 +86,7 @@ jobs:
                       extensions\go.sum
             - name: Build Extensions for Windows x64
               run: |
-                  cd extensions
-                  Get-ChildItem -Path . -Directory | ForEach-Object {
+                  Get-ChildItem -Path ${{ github.workspace }}\extensions -Directory | ForEach-Object {
                       cd $_.Name
                       $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1

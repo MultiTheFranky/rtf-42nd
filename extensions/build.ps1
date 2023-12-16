@@ -46,9 +46,6 @@ function Build-Extension {
 
 # Loop folders and build extensions
 Get-ChildItem -Path $BasePath -Directory | ForEach-Object {
-    if ($BaseBuilds -contains $_.Name) {
-        return
-    }
     Write-Host "Building extension: $($_.Name)"
     Build-Extension -ExtensionName $_.Name -X64 1
     Build-Extension -ExtensionName $_.Name -X64 0

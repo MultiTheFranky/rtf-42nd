@@ -57,7 +57,7 @@ jobs:
                   }
                   dir ${{ github.workspace }}
             - name: Export Extensions
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: ${{ github.workspace }}\*.dll
@@ -92,7 +92,7 @@ jobs:
                   }
                   dir ${{ github.workspace }}
             - name: Export Extensions
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: ${{ github.workspace }}\*.dll
@@ -148,7 +148,7 @@ jobs:
                     done
                     ls -la /home/runner/work/rtf42/rtf42/
             - name: Export Extensions
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: rtf42-extensions-${{ github.sha }}
                   path: /home/runner/work/rtf42/rtf42/*.so
@@ -189,7 +189,7 @@ jobs:
             - name: Rename build folder
               run: mv .hemttout/build .hemttout/@rtf42
             - name: Upload Artifact
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: rtf42-${{ github.sha }}
                   path: .hemttout/@*

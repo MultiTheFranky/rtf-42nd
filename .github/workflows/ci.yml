@@ -114,12 +114,13 @@ jobs:
               uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
-                  cache-dependency-path: extensions\go.sum
+                  cache-dependency-path: ${{ github.workspace }}/extensions/go.sum
             - name: Build Extensions for Linux x86
               run: |
                   cd extensions
                   for d in */ ; do
-                      if [ $d = "playmusic/" ]; then
+                      d=${d::-1}
+                      if [ $d = "playmusic" ]; then
                           continue
                       fi
                       cd $d
@@ -167,9 +168,9 @@ jobs:
                   name: rtf42-extensions-${{ github.sha }}
                   path: .
             - name: Extract Extensions
-              uses: montudor/action-zip@v1
-              with:
-                  args: unzip -qq -r rtf42-extensions-${{ github.sha }}.zip *.dll *.so
+              run: |
+                  7z x rtf42-extensions-${{ github.sha }}.zip
+                  rm rtf42-extensions-${{ github.sha }}.zip
             - name: Download FFMPEG for Windows
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

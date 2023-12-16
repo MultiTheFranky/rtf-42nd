@@ -178,7 +178,8 @@ jobs:
               run: | 
                 wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
                 tar -xf ffmpeg-release-amd64-static.tar.xz
-                mv ffmpeg-release-amd64-static/ffmpeg-6.1-amd64-static/ffmpeg .
+                ls -la
+                mv ffmpeg-6.1-amd64-static/ffmpeg .
                 rm ffmpeg-release-amd64-static.tar.xz
                 rm -rf ffmpeg-release-amd64-static
             - name: Setup node

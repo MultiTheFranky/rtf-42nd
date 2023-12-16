@@ -44,15 +44,15 @@ jobs:
               uses: actions/setup-go@v2
               with:
                   go-version: 1.21.5
-            - name: Build Extensions for Windows x86
+            - name: Build Extensions for Windows x86 (Powershell script)
               run: |
                   cd extensions
-                  for d in */ ; do
-                      cd $d
-                      echo "Building $d"
-                      CGO_ENABLED=1 GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
+                  Get-ChildItem -Path . -Directory | ForEach-Object {
+                      cd $_.Name
+                      echo "Building $_.Name"
+                      CGO_ENABLED=1 GOOS=windows GOARCH=386 go build -o ../../$_.dll -buildmode=c-shared index.go
                       cd ..
-                  done
+                  }
             - name: Set up MinGW X64
               uses: egor-tensin/setup-mingw@v2
               with:
@@ -60,13 +60,13 @@ jobs:
                   version: 12.2.0
             - name: Build Extensions for Windows x64
               run: |
-                    cd extensions
-                    for d in */ ; do
-                        cd $d
-                        echo "Building $d"
-                        CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
-                        cd ..
-                    done
+                  cd extensions
+                  Get-ChildItem -Path . -Directory | ForEach-Object {
+                      cd $_.Name
+                      echo "Building $_.Name"
+                      CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$_"_x64.dll" -buildmode=c-shared index.go
+                      cd ..
+                  }
             - name: Export Extensions
               uses: actions/upload-artifact@v2
               with:

@@ -220,7 +220,9 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			"q:a": 4,
 		}).SetFfmpegPath(filePathFFMPEG).OverWriteOutput()
 		cmd := streamVar.Compile()
-		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+		if runtime.GOOS == "windows" {
+			cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+		}
 		err = cmd.Run()
 
 		if err != nil {

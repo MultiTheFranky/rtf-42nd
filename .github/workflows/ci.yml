@@ -65,12 +65,11 @@ jobs:
                         CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
                         cd ..
                     done
-            # Export the extensions to be used in the hemtt job
             - name: Export Extensions
               uses: actions/upload-artifact@v2
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: *.dll
+                  path: ./*.dll
     linux-extensions:
         name: Build Extensions for Linux
         runs-on: ubuntu-latest
@@ -125,7 +124,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: *.so
+                  path: ./*.so
 
     hemtt:
         name: Build with HEMTT

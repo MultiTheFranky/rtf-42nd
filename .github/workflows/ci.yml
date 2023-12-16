@@ -39,6 +39,7 @@ jobs:
               uses: egor-tensin/setup-mingw@v2
               with:
                   platform: x86
+                  version: 12.2.0
             - name: Setup GO
               uses: actions/setup-go@v2
               with:
@@ -56,6 +57,7 @@ jobs:
               uses: egor-tensin/setup-mingw@v2
               with:
                   platform: x64
+                  version: 12.2.0
             - name: Build Extensions for Windows x64
               run: |
                     cd extensions
@@ -84,14 +86,12 @@ jobs:
               with:
                 version: latest
                 platform: x86
-            - name: Set up MinGW X86
-              uses: egor-tensin/setup-mingw@v2
-              with:
-                  platform: x86
             - name: Setup GO
               uses: actions/setup-go@v2
               with:
                   go-version: 1.21.5
+            - name: Install libasound2-dev
+              run: sudo apt-get install libasound2-dev
             - name: Build Extensions for Linux x86
               run: |
                   cd extensions
@@ -106,10 +106,6 @@ jobs:
               with:
                 version: latest
                 platform: x64
-            - name: Set up MinGW X64
-              uses: egor-tensin/setup-mingw@v2
-              with:
-                  platform: x64
             - name: Build Extensions for Linux x64
               run: |
                     cd extensions

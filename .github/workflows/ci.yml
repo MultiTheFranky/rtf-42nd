@@ -49,9 +49,11 @@ jobs:
                   cd extensions
                   for d in */ ; do
                       cd $d
+                      echo "Building $d"
                       GOOS=linux GOARCH=386 go build -o ../../$d".so" -buildmode=c-shared index.go
                       GOOS=windows GOARCH=386 go build -o ../../$d".dll" -buildmode=c-shared index.go
                       # Build 64bit
+                      echo "Building $d 64bit"
                       GOOS=linux GOARCH=amd64 go build -o ../../$d"_x64.so" -buildmode=c-shared index.go
                       GOOS=windows GOARCH=amd64 go build -o ../../$d"_x64.dll" -buildmode=c-shared index.go
                       cd ..

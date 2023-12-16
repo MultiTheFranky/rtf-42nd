@@ -1,3 +1,6 @@
+//go:build windows
+// +build windows
+
 package main
 
 /*
@@ -13,7 +16,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"runtime"
 	"strconv"
 	"strings"
 	"syscall"
@@ -205,14 +207,7 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			return err
 		}
 
-		filePathFFMPEG := ""
-
-		// Check the architecture OS and use the correct ffmpeg executable
-		if runtime.GOOS == "windows" && runtime.GOARCH == "amd64" {
-			filePathFFMPEG = pwd + "\\z\\rtf42\\ffmpeg64.exe"
-		} else {
-			filePathFFMPEG = pwd + "\\z\\rtf42\\ffmpeg64"
-		}
+		filePathFFMPEG := pwd + "\\z\\rtf42\\ffmpeg.exe"
 
 		streamVar := ffmpeg.Input(file).Output(fileTempConverted, ffmpeg.KwArgs{
 			"c:v": "copy",
@@ -220,9 +215,7 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			"q:a": 4,
 		}).SetFfmpegPath(filePathFFMPEG).OverWriteOutput()
 		cmd := streamVar.Compile()
-		if runtime.GOOS == "windows" {
-			cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
-		}
+		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 		err = cmd.Run()
 
 		if err != nil {

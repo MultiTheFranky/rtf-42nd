@@ -38,7 +38,7 @@ jobs:
             - name: Set up MinGW X86
               uses: egor-tensin/setup-mingw@v2
               with:
-                  platform: x86
+                  platform: x64
                   version: 12.2.0
             - name: Setup GO
               uses: actions/setup-go@v4
@@ -56,11 +56,6 @@ jobs:
                       go build -o "D:\a\rtf42\rtf42\"$_.dll -buildmode=c-shared index.go
                       cd ..
                   }
-            - name: Set up MinGW X64
-              uses: egor-tensin/setup-mingw@v2
-              with:
-                  platform: x64
-                  version: 12.2.0
             - name: Build Extensions for Windows x64
               run: |
                   cd extensions

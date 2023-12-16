@@ -167,9 +167,9 @@ jobs:
                   name: rtf42-extensions-${{ github.sha }}
                   path: .
             - name: Extract Extensions
-              run: |
-                  7z x rtf42-extensions-${{ github.sha }}.zip
-                  rm rtf42-extensions-${{ github.sha }}.zip
+              uses: montudor/action-zip@v1
+              with:
+                  args: unzip -qq -r rtf42-extensions-${{ github.sha }}.zip *.dll *.so
             - name: Download FFMPEG for Windows
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

@@ -155,6 +155,7 @@ jobs:
 
     hemtt:
         name: Build with HEMTT
+        permissions: write-all
         runs-on: ubuntu-latest
         needs: [validate, lint, windows-extensions, windows-extensions-x64, linux-extensions]
         steps:

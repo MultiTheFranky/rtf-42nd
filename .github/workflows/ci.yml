@@ -41,13 +41,13 @@ jobs:
                   platform: x86
                   version: 12.2.0
             - name: Setup GO
-              uses: actions/setup-go@v2
+              uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
             - name: Build Extensions for Windows x86 (Powershell script)
               run: |
                   cd extensions
-                  $BasePath = D:\a\rtf42\rtf42\extensions
+                  $BasePath = "D:\a\rtf42\rtf42\extensions"
                   $BuildPath = Split-Path -Parent $BasePath
                   Get-ChildItem -Path . -Directory | ForEach-Object {
                       cd $_.Name
@@ -66,7 +66,7 @@ jobs:
             - name: Build Extensions for Windows x64
               run: |
                   cd extensions
-                  $BasePath = D:\a\rtf42\rtf42\extensions
+                  $BasePath = "D:\a\rtf42\rtf42\extensions"
                   $BuildPath = Split-Path -Parent $BasePath
                   Get-ChildItem -Path . -Directory | ForEach-Object {
                       cd $_.Name
@@ -97,7 +97,7 @@ jobs:
                 version: latest
                 platform: x86
             - name: Setup GO
-              uses: actions/setup-go@v2
+              uses: actions/setup-go@v4
               with:
                   go-version: 1.21.5
             - name: Install libasound2-dev

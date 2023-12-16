@@ -55,7 +55,7 @@ jobs:
                       $ENV:GOARCH = 386
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o "D:\a\rtf42\rtf42\"$_.Name".dll" -buildmode=c-shared index.go
+                      go build -o ${{ github.workspace }}\$_.Name".dll" -buildmode=c-shared index.go
                       cd ..
                   }
                   dir D:\a\rtf42\rtf42\
@@ -63,7 +63,7 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: D:\a\rtf42\rtf42\*.dll
+                  path: ${{ github.workspace }}\*.dll
     windows-extensions-x64:
         name: Build Extensions for Windows x64
         runs-on: windows-latest
@@ -93,7 +93,7 @@ jobs:
                       $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o "D:\a\rtf42\rtf42\"$_.Name"_x64.dll" -buildmode=c-shared index.go
+                      go build -o ${{ github.workspace }}\$_.Name"_x64.dll" -buildmode=c-shared index.go
                       cd ..
                   }
                   dir D:\a\rtf42\rtf42\
@@ -101,7 +101,7 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                   name: rtf42-extensions-${{ github.sha }}
-                  path: D:\a\rtf42\rtf42\*.dll
+                  path: ${{ github.workspace }}\*.dll
     linux-extensions:
         name: Build Extensions for Linux
         runs-on: ubuntu-latest
@@ -144,7 +144,8 @@ jobs:
               run: |
                     cd extensions
                     for d in */ ; do
-                        if [ $d = "playmusic/" ]; then
+                        d=${d::-1}
+                        if [ $d = "playmusic" ]; then
                             continue
                         fi
                         cd $d

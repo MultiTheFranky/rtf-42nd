@@ -5,7 +5,7 @@ package main
 #include <stdio.h>
 #include <string.h>
 
-#include "../extensionCallback.h"
+#include "extensionCallback.h"
 */
 import "C"
 
@@ -108,13 +108,13 @@ func goRVExtensionArgs(output *C.char, outputsize C.size_t, input *C.char, argv 
 			return
 		}
 
-		file := pwd + "\\z\\rtf42\\" + parseStringParam(params[0])
+		file := path.Join(pwd, "z", "rtf42", parseStringParam(params[0]))
 
 		// Check if file exists
 		if _, err := os.Stat(file); os.IsNotExist(err) {
-			file = pwd + "\\!Workshop\\@rtf42\\" + parseStringParam(params[0])
+			file = path.Join(pwd, "z", "rtf42", parseStringParam(params[0]))
 			if _, err := os.Stat(file); os.IsNotExist(err) {
-				returnString(output, outputsize, fmt.Sprintf("ERROR: File %s does not exist on the base path of the @rtf42 mod and is not a youtube link", params[0]))
+				returnString(output, outputsize, fmt.Sprintf("ERROR: File %s does not exist on the base path of the @rtf42 mod and is not a youtube link | Path: %s", params[0], file))
 				return
 			}
 		}
@@ -135,7 +135,7 @@ func goRVExtensionArgs(output *C.char, outputsize C.size_t, input *C.char, argv 
 			returnString(output, outputsize, fmt.Sprintf("ERROR: %s", err))
 			return
 		}
-		returnString(output, outputsize, fmt.Sprintf("INFO: Stop music"))
+		returnString(output, outputsize, "INFO: Stop music")
 	default:
 		returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid function %s", function))
 	}
@@ -174,7 +174,7 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 
 	// Check if the file already exists
 	temp := os.TempDir()
-	file := temp + "\\" + video.Title + ".m4a"
+	file := path.Join(temp, video.Title) + ".m4a"
 	if _, err := os.Stat(file); os.IsNotExist(err) {
 
 		// Create the file
@@ -192,7 +192,7 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 	}
 
 	// Check if the file is already converted
-	fileTempConverted := temp + "\\" + video.Title + ".mp3"
+	fileTempConverted := path.Join(temp, video.Title) + ".mp3"
 	if _, err := os.Stat(fileTempConverted); os.IsNotExist(err) {
 		// Convert the file
 		// Define ffmpeg executable path
@@ -215,7 +215,10 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			return fmt.Errorf("ffmpeg executable not found")
 		}
 
-		convertM4AToMP3(file, fileTempConverted, filePathFFMPEG)
+		err = convertM4AToMP3(file, fileTempConverted, filePathFFMPEG)
+		if err != nil {
+			return err
+		}
 	}
 
 	// Play the mp3 file
@@ -264,7 +267,7 @@ func playMusic(file string, volume int, loop bool) error {
 		}
 		defer streamer.Close()
 	default:
-		return fmt.Errorf("Unsupported file format")
+		return fmt.Errorf("unsupported file format")
 	}
 
 	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))

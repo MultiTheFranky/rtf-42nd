@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-	"syscall"
 	"time"
 
 	ffmpeg "github.com/u2takey/ffmpeg-go"
@@ -15,7 +14,6 @@ func convertM4AToMP3(in string, out string, ffmpegPath string) error {
 		"q:a": 4,
 	}).SetFfmpegPath(ffmpegPath).OverWriteOutput()
 	cmd := streamVar.Compile()
-	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	err := cmd.Run()
 
 	if err != nil {

@@ -13,9 +13,9 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path"
 	"strconv"
 	"strings"
-	"syscall"
 	"time"
 	"unsafe"
 
@@ -28,8 +28,6 @@ import (
 	"github.com/gopxl/beep/wav"
 
 	"github.com/kkdai/youtube/v2"
-
-	ffmpeg "github.com/u2takey/ffmpeg-go"
 )
 
 var extensionCallbackFnc C.extensionCallback
@@ -204,36 +202,20 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 			return err
 		}
 
-		filePathFFMPEG := pwd + "\\z\\rtf42\\ffmpeg.exe"
-
-		streamVar := ffmpeg.Input(file).Output(fileTempConverted, ffmpeg.KwArgs{
-			"c:v": "copy",
-			"c:a": "libmp3lame",
-			"q:a": 4,
-		}).SetFfmpegPath(filePathFFMPEG).OverWriteOutput()
-		cmd := streamVar.Compile()
-		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
-		err = cmd.Run()
-
-		if err != nil {
-			return err
+		filePathFFMPEG := ""
+		// Check os system
+		if strings.Contains(strings.ToLower(os.Getenv("OS")), "windows") {
+			filePathFFMPEG = pwd + path.Join("z", "rtf42", "ffmpeg.exe")
+		} else {
+			filePathFFMPEG = pwd + path.Join("z", "rtf42", "ffmpeg")
 		}
 
-		// Wait until the file is converted
-		fileSize := 0
-		for {
-			// Check if the file size is the same as the last loop
-			fileInfo, err := os.Stat(fileTempConverted)
-			if err != nil {
-				return err
-			}
-			if fileInfo.Size() > int64(fileSize) {
-				fileSize = int(fileInfo.Size())
-			} else {
-				break
-			}
-			time.Sleep(1 * time.Second)
+		// Check if ffmpeg exists
+		if _, err := os.Stat(filePathFFMPEG); os.IsNotExist(err) {
+			return fmt.Errorf("ffmpeg executable not found")
 		}
+
+		convertM4AToMP3(file, fileTempConverted, filePathFFMPEG)
 	}
 
 	// Play the mp3 file

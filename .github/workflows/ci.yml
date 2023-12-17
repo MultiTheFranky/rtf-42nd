@@ -120,9 +120,6 @@ jobs:
                   cd extensions
                   for d in */ ; do
                       d=${d::-1}
-                      if [ $d = "playmusic" ]; then
-                          continue
-                      fi
                       cd $d
                       echo "Building $d"
                       CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o "/home/runner/work/rtf42/rtf42/"$d".so" -buildmode=c-shared index.go
@@ -138,9 +135,6 @@ jobs:
                     cd extensions
                     for d in */ ; do
                         d=${d::-1}
-                        if [ $d = "playmusic" ]; then
-                            continue
-                        fi
                         cd $d
                         echo "Building $d"
                         CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -buildmode=c-shared index.go

@@ -117,6 +117,8 @@ jobs:
                   cache-dependency-path: ${{ github.workspace }}/extensions/go.sum
             - name: Build Extensions for Linux x86
               run: |
+                  sudo dpkg --add-architecture i386
+                  sudo apt-get update
                   sudo apt-get install libasound2-dev:i386
                   sudo apt-get install libudev-dev:i386
                   cd extensions

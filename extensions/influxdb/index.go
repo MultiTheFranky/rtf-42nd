@@ -5,7 +5,7 @@ package main
 #include <stdio.h>
 #include <string.h>
 
-#include "extensionCallback.h"
+#include "../extensionCallback.h"
 */
 import "C"
 
@@ -40,10 +40,10 @@ func goRVExtensionVersion(output *C.char, outputsize C.size_t) {
 // Save writeAPI as global variables to be used in goRVExtensionArgs data function
 var writeAPI api.WriteAPI
 
-type Data struct{
-	key string
+type Data struct {
+	key         string
 	description string
-	value float64
+	value       float64
 }
 
 //export goRVExtensionArgs
@@ -114,7 +114,7 @@ func returnString(output *C.char, outputsize C.size_t, result string) {
 	C.memmove(unsafe.Pointer(output), unsafe.Pointer(temp), size)
 }
 
-//function to parse string parameters to remove all quotes
+// function to parse string parameters to remove all quotes
 func parseStringParam(param string) string {
 	return strings.ReplaceAll(param, "\"", "")
 }

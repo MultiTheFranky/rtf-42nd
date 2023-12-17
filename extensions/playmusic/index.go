@@ -5,7 +5,7 @@ package main
 #include <stdio.h>
 #include <string.h>
 
-#include "extensionCallback.h"
+#include "../extensionCallback.h"
 */
 import "C"
 

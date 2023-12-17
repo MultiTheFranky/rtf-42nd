@@ -52,7 +52,7 @@ jobs:
                       $ENV:GOARCH = 386
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o "${{ github.workspace }}\$($_.Name).dll" -buildmode=c-shared index.go
+                      go build -o "${{ github.workspace }}\$($_.Name).dll" -buildmode=c-shared
                       cd ..
                   }
                   dir ${{ github.workspace }}
@@ -87,7 +87,7 @@ jobs:
                       $ENV:GOARCH = "amd64"
                       $ENV:CGO_ENABLED = 1
                       $ENV:GOOS = "windows"
-                      go build -o "${{ github.workspace }}\$($_.Name)_x64.dll" -buildmode=c-shared index.go
+                      go build -o "${{ github.workspace }}\$($_.Name)_x64.dll" -buildmode=c-shared
                       cd ..
                   }
                   dir ${{ github.workspace }}
@@ -124,7 +124,7 @@ jobs:
                       d=${d::-1}
                       cd $d
                       echo "Building $d"
-                      CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o "/home/runner/work/rtf42/rtf42/"$d".so" -buildmode=c-shared index.go
+                      CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o "/home/runner/work/rtf42/rtf42/"$d".so" -buildmode=c-shared
                       cd ..
                   done
             - name: Setup GCC X64
@@ -139,7 +139,7 @@ jobs:
                         d=${d::-1}
                         cd $d
                         echo "Building $d"
-                        CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -buildmode=c-shared index.go
+                        CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -buildmode=c-shared
                         cd ..
                     done
                     ls -la /home/runner/work/rtf42/rtf42/

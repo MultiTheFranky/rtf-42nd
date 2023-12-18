@@ -49,10 +49,10 @@ jobs:
                       d=${d::-1}
                       cd $d
                       echo "Building $d"
-                      docker run --rm -it -v ${PWD}:/go/work -w /go/work -e GOARCH=386 -e CGO_ENABLED=1 x1unix/go-mingw:1.20 go build -o "/home/runner/work/rtf42/rtf42/"$d".dll" -buildmode=c-shared -ldflags '-w -s' .
-                      docker run --rm -it -v ${PWD}:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 x1unix/go-mingw:1.20  go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.dll" -buildmode=c-shared -ldflags '-w -s' .
-                      docker run --rm -it -v ${PWD}:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -linkshared -ldflags '-w -s' .
-                      docker run --rm -it -v ${PWD}:/app -e GOOS=linux -e GOARCH=386 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "/home/runner/work/rtf42/rtf42/"$d".so" -linkshared -ldflags '-w -s' .
+                      docker run --rm -v ${PWD}:/go/work -w /go/work -e GOARCH=386 -e CGO_ENABLED=1 x1unix/go-mingw:1.20 go build -o "/home/runner/work/rtf42/rtf42/"$d".dll" -buildmode=c-shared -ldflags '-w -s' .
+                      docker run --rm -v ${PWD}:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 x1unix/go-mingw:1.20  go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.dll" -buildmode=c-shared -ldflags '-w -s' .
+                      docker run --rm -v ${PWD}:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -linkshared -ldflags '-w -s' .
+                      docker run --rm -v ${PWD}:/app -e GOOS=linux -e GOARCH=386 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "/home/runner/work/rtf42/rtf42/"$d".so" -linkshared -ldflags '-w -s' .
                       cd ..
                   done
             - name: Download FFMPEG

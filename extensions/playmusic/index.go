@@ -14,6 +14,7 @@ import (
 	"io"
 	"os"
 	"path"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"time"
@@ -26,130 +27,109 @@ import (
 	"github.com/gopxl/beep/speaker"
 	"github.com/gopxl/beep/vorbis"
 	"github.com/gopxl/beep/wav"
+	"github.com/indig0fox/a3go/a3interface"
+	"github.com/indig0fox/a3go/assemblyfinder"
+	"rtf42-extensions.go/internal/logger"
 
 	"github.com/kkdai/youtube/v2"
 )
 
-var extensionCallbackFnc C.extensionCallback
+var ADDON_NAME = "RTF42"
+var EXTENSION_NAME = "playmusic"
 
-func runExtensionCallback(name *C.char, function *C.char, data *C.char) C.int {
-	return C.runExtensionCallback(extensionCallbackFnc, name, function, data)
-}
+var (
+	EXTENSION_VERSION string = "1.0"
 
-//export goRVExtensionVersion
-func goRVExtensionVersion(output *C.char, outputsize C.size_t) {
-	result := C.CString("RTF42 - PlayMusic - Version 1.0")
-	defer C.free(unsafe.Pointer(result))
-	var size = C.strlen(result) + 1
-	if size > outputsize {
-		size = outputsize
-	}
-	C.memmove(unsafe.Pointer(output), unsafe.Pointer(result), size)
-}
+	modulePath    string
+	modulePathDir string
+)
 
-//export goRVExtensionArgs
-func goRVExtensionArgs(output *C.char, outputsize C.size_t, input *C.char, argv **C.char, argc C.int) {
-	defer func() {
-		if err := recover(); err != nil {
-			returnString(output, outputsize, fmt.Sprintf("ERROR: %s", err))
-			return
-		}
+func init() {
+	a3interface.SetVersion(EXTENSION_VERSION)
+
+	a3interface.NewRegistration("play").SetRunInBackground(true).SetArgsFunction(onPlay).Register()
+	a3interface.NewRegistration("stop").SetRunInBackground(true).SetArgsFunction(onStop).Register()
+
+	go func() {
+		modulePath = assemblyfinder.GetModulePath()
+		modulePathDir = filepath.Dir(modulePath)
+
+		logger.InitLoggers(&logger.LoggerOptionsType{
+			Path: filepath.Join(
+				modulePathDir,
+				fmt.Sprintf(
+					"%s_v%s.log",
+					EXTENSION_NAME,
+					EXTENSION_VERSION,
+				)),
+			AddonName:        ADDON_NAME,
+			ExtensionName:    EXTENSION_NAME,
+			ExtensionVersion: EXTENSION_VERSION,
+			Debug:            true,
+			Trace:            true,
+		})
+		logger.RotateLogs()
+		logger.Log.Info().Msgf(`%s v%s started`, EXTENSION_NAME, EXTENSION_VERSION)
+		logger.ArmaOnly.Info().Msgf(`Log path: %s`, logger.ActiveOptions.Path)
 	}()
-	function := C.GoString(input)
-	params := make([]string, argc)
-	for i := 0; i < int(argc); i++ {
-		params[i] = C.GoString(*argv)
-		argv = (**C.char)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + unsafe.Sizeof(uintptr(0))))
-	}
-	switch function {
-	case "play": // start <file> <volume> (optional) <loop> (optional)
-		var volume int
-		var loop bool
-		switch len(params) {
-		case 1: // start <file>
-			volume = 0
-			loop = false
-		case 2: // start <file> <volume>
-			var err error
-			volume, err = strconv.Atoi(params[1])
-			if err != nil {
-				returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid volume %s", params[1]))
-				return
-			}
-			loop = false
-		case 3: // start <file> <volume> <loop>
-			var err error
-			volume, err = strconv.Atoi(params[1])
-			if err != nil {
-				returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid volume %s", params[1]))
-				return
-			}
-			loop, err = strconv.ParseBool(params[2])
-			if err != nil {
-				returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid loop %s", params[2]))
-				return
-			}
-		default:
-			returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid number of parameters %d", len(params)))
-			return
-		}
+}
 
-		// If the file is a youtube link, download it
-		if strings.Contains(params[0], "youtube.com") || strings.Contains(params[0], "youtu.be") {
-			go downloadMusicAndPlay(parseStringParam(params[0]), volume, loop)
-			returnString(output, outputsize, fmt.Sprintf("INFO: Downloading and playing music file %s", params[0]))
-			return
-		}
-
-		pwd, err := os.Getwd()
-
+func onPlay(ctx a3interface.ArmaExtensionContext,
+	command string,
+	args []string) (string, error) {
+	var volume int
+	var loop bool
+	switch len(args) {
+	case 1: // start <file>
+		volume = 0
+		loop = false
+	case 2: // start <file> <volume>
+		var err error
+		volume, err = strconv.Atoi(args[1])
 		if err != nil {
-			returnString(output, outputsize, fmt.Sprintf("ERROR: %s", err))
-			return
+			return fmt.Sprintf("ERROR: Invalid volume %s", args[1]), nil
 		}
-
-		file := path.Join(pwd, "z", "rtf42", parseStringParam(params[0]))
-
-		// Check if file exists
-		if _, err := os.Stat(file); os.IsNotExist(err) {
-			file = path.Join(pwd, "z", "rtf42", parseStringParam(params[0]))
-			if _, err := os.Stat(file); os.IsNotExist(err) {
-				returnString(output, outputsize, fmt.Sprintf("ERROR: File %s does not exist on the base path of the @rtf42 mod and is not a youtube link | Path: %s", params[0], file))
-				return
-			}
-		}
-
-		go playMusic(file, volume, loop)
+		loop = false
+	case 3: // start <file> <volume> <loop>
+		var err error
+		volume, err = strconv.Atoi(args[1])
 		if err != nil {
-			returnString(output, outputsize, fmt.Sprintf("ERROR: %s", err))
-			return
+			return fmt.Sprintf("ERROR: Invalid volume %s", args[1]), nil
 		}
-		returnString(output, outputsize, fmt.Sprintf("INFO: Play music file %s", params[0]))
-	case "stop": // stop
-		if len(params) != 0 {
-			returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid number of parameters %d", len(params)))
-			return
-		}
-		err := stopMusic(0)
+		loop, err = strconv.ParseBool(args[2])
 		if err != nil {
-			returnString(output, outputsize, fmt.Sprintf("ERROR: %s", err))
-			return
+			return fmt.Sprintf("ERROR: Invalid loop %s", args[2]), nil
 		}
-		returnString(output, outputsize, "INFO: Stop music")
 	default:
-		returnString(output, outputsize, fmt.Sprintf("ERROR: Invalid function %s", function))
+		return fmt.Sprintf("ERROR: Invalid number of parameters %d", len(args)), nil
 	}
+
+	// If the file is a youtube link, download it
+	if strings.Contains(args[0], "youtube.com") || strings.Contains(args[0], "youtu.be") {
+		go downloadMusicAndPlay(parseStringParam(args[0]), volume, loop)
+		return fmt.Sprintf("INFO: Downloading and playing music file %s", args[0]), nil
+	}
+
+	file := path.Join(modulePathDir, parseStringParam(args[0]))
+	if _, err := os.Stat(file); os.IsNotExist(err) {
+		return fmt.Sprintf("ERROR: File %s does not exist on the base path of the @rtf42 mod and is not a youtube link | Path: %s", args[0], file), nil
+	}
+
+	go playMusic(file, volume, loop)
+	return fmt.Sprintf("INFO: Play music file %s", args[0]), nil
 }
 
-//export goRVExtension
-func goRVExtension(output *C.char, outputsize C.size_t, input *C.char) {
-	// Not used
-	returnString(output, outputsize, "WARNING: This method is unavailable. Please use CallExtensionArgs. More info: https://community.bistudio.com/wiki/callExtension")
-}
-
-//export goRVExtensionRegisterCallback
-func goRVExtensionRegisterCallback(fnc C.extensionCallback) {
-	extensionCallbackFnc = fnc
+func onStop(ctx a3interface.ArmaExtensionContext,
+	command string,
+	args []string) (string, error) {
+	if len(args) != 0 {
+		return fmt.Sprintf("ERROR: Invalid number of parameters %d", len(args)), nil
+	}
+	err := stopMusic(0)
+	if err != nil {
+		return fmt.Sprintf("ERROR: %s", err), nil
+	}
+	return "INFO: Stop music", nil
 }
 
 func downloadMusicAndPlay(url string, volume int, loop bool) error {

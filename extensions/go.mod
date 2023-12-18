@@ -20,7 +20,11 @@ require (
 	github.com/influxdata/line-protocol v0.0.0-20200327222509-2487e7298839 // indirect
 	github.com/jfreymuth/oggvorbis v1.0.5 // indirect
 	github.com/jfreymuth/vorbis v1.0.2 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mewkiz/flac v1.0.8 // indirect
 	github.com/mewkiz/pkg v0.0.0-20230226050401-4010bf0fec14 // indirect
 	github.com/oapi-codegen/runtime v1.0.0 // indirect
@@ -33,7 +37,11 @@ require (
 
 require (
 	github.com/gopxl/beep v1.3.0
+	github.com/indig0fox/a3go v0.3.2
 	github.com/influxdata/influxdb-client-go/v2 v2.13.0
 	github.com/kkdai/youtube/v2 v2.9.0
+	github.com/rs/zerolog v1.31.0
 	github.com/u2takey/ffmpeg-go v0.5.0
+	gopkg.in/natefinch/lumberjack.v2 v2.2.1
+	gorm.io/gorm v1.25.5
 )

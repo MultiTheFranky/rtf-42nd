@@ -31,5 +31,6 @@ jobs:
                   git config --global user.name "tolgee-bot"
                   git config --global user.email "noreply@multithefranky.com"
                   git add .
+                  if [[ -z $(git status -s) ]]; then exit 0; fi
                   git commit -m "Translations updated"
                   git push

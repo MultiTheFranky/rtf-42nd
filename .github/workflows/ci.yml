@@ -57,11 +57,8 @@ jobs:
                       docker run --rm -v ${{ github.workspace }}/extensions:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 rtf42/build-a3go:windows-so  go build -o "./${d}_x64.dll" -buildmode=c-shared -ldflags '-w -s' "./$d"
                       docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "./${d}_x64.so" -linkshared -ldflags '-w -s' "./$d"
                       docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=386 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so-x86 go build -o "./$d.so" -linkshared -ldflags '-w -s' "./$d"
-
                       mv $d.dll ${d}_x64.dll ${d}_x64.so $d.so ..
                   done
-                  cd ..
-                  ls -la
             - name: Download FFMPEG
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

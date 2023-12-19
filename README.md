@@ -35,7 +35,7 @@
 ### Extensions
 
 -   Golang compiler (https://golang.org/dl/)
--   TDD gcc compiler (https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe)
+-   Docker (https://docker.com) - You can install it using the script dockerInstall.ps1
 
 ## Setup
 

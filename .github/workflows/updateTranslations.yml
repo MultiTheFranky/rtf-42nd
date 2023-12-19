@@ -26,15 +26,10 @@ jobs:
               run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> extras/translator/.env
             - name: Run translator
               run: cd extras/translator && npm start
-            - name: Create PR
-              uses: peter-evans/create-pull-request@v5
-              with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  commit-message: Update translations
-                  title: Update translations
-                  body: Update translations
-                  branch: update-translations
-                  branch-suffix: timestamp
-                  labels: translations
-                  reviewers: multithefranky
-                  signoff: true
+            - name: Merge changes
+              run: |
+                  git config --global user.name "tolgee-bot"
+                  git config --global user.email "noreply@multithefranky.com"
+                  git add .
+                  git commit -m "Translations updated"
+                  git push

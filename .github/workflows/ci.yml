@@ -41,7 +41,7 @@ jobs:
               with:
                 install: true
                 driver: docker
-            - name: Build Extensions for Linux
+            - name: Build Extensions
               run: |
                   cd extensions
                   docker build -t rtf42/build-a3go:windows-so -f ${{ github.workspace }}/extensions/Dockerfile_windows.build .
@@ -49,15 +49,16 @@ jobs:
                   docker build -t rtf42/build-a3go:linux-so-x86 -f ${{ github.workspace }}/extensions/Dockerfile_linux_x86.build .
                   for d in */ ; do
                       d=${d::-1}
+                      if [ "$d" == "internal" ]; then
+                          continue
+                      fi
                       echo "Building $d"
                       docker run --rm -v ${{ github.workspace }}/extensions:/go/work -w /go/work -e GOARCH=386 -e CGO_ENABLED=1 rtf42/build-a3go:windows-so go build -o "./$d.dll" -buildmode=c-shared -ldflags '-w -s' "./$d"
                       docker run --rm -v ${{ github.workspace }}/extensions:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 rtf42/build-a3go:windows-so  go build -o "./${d}_x64.dll" -buildmode=c-shared -ldflags '-w -s' "./$d"
                       docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "./${d}_x64.so" -linkshared -ldflags '-w -s' "./$d"
                       docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=386 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so-x86 go build -o "./$d.so" -linkshared -ldflags '-w -s' "./$d"
 
-                      ls -la
                       mv $d.dll ${d}_x64.dll ${d}_x64.so $d.so ..
-                      rm -rf $d.dll ${d}_x64.dll ${d}_x64.so $d.so
                       cd ..
                   done
                   ls -la

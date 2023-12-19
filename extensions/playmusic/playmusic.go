@@ -5,7 +5,6 @@ package main
 #include <stdio.h>
 #include <string.h>
 
-#include "extensionCallback.h"
 */
 import "C"
 
@@ -20,6 +19,7 @@ import (
 	"time"
 	"unsafe"
 
+	"github.com/MultiTheFranky/rtf-42nd/extensions/internal/logger"
 	"github.com/gopxl/beep"
 	"github.com/gopxl/beep/effects"
 	"github.com/gopxl/beep/flac"
@@ -29,7 +29,6 @@ import (
 	"github.com/gopxl/beep/wav"
 	"github.com/indig0fox/a3go/a3interface"
 	"github.com/indig0fox/a3go/assemblyfinder"
-	"rtf42-extensions.go/internal/logger"
 
 	"github.com/kkdai/youtube/v2"
 )

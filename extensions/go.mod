@@ -1,8 +1,17 @@
-module rtf42-extensions.go
+module github.com/MultiTheFranky/rtf-42nd/extensions
 
 go 1.21
 
-toolchain go1.21.4
+require (
+	github.com/gopxl/beep v1.3.0
+	github.com/indig0fox/a3go v0.3.2
+	github.com/influxdata/influxdb-client-go/v2 v2.13.0
+	github.com/kkdai/youtube/v2 v2.9.0
+	github.com/rs/zerolog v1.31.0
+	github.com/u2takey/ffmpeg-go v0.5.0
+	gopkg.in/natefinch/lumberjack.v2 v2.2.1
+	gorm.io/gorm v1.25.5
+)
 
 require (
 	github.com/apapsch/go-jsonmerge/v2 v2.0.0 // indirect
@@ -33,15 +42,4 @@ require (
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/sys v0.13.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
-)
-
-require (
-	github.com/gopxl/beep v1.3.0
-	github.com/indig0fox/a3go v0.3.2
-	github.com/influxdata/influxdb-client-go/v2 v2.13.0
-	github.com/kkdai/youtube/v2 v2.9.0
-	github.com/rs/zerolog v1.31.0
-	github.com/u2takey/ffmpeg-go v0.5.0
-	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	gorm.io/gorm v1.25.5
 )

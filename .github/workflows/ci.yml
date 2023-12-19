@@ -42,19 +42,25 @@ jobs:
                 install: true
             - name: Build Extensions for Linux
               run: |
-                  docker pull x1unix/go-mingw:1.20
-                  docker build -t rtf42/build-a3go:linux-so -f ${{ github.workspace }}/extensions/Dockerfile.build .
+                  docker build -t rtf42/build-a3go:windows-so -f ${{ github.workspace }}/extensions/Dockerfile_windows.build .
+                  docker build -t rtf42/build-a3go:linux-so -f ${{ github.workspace }}/extensions/Dockerfile_linux_x64.build .
+                  docker build -t rtf42/build-a3go:linux-so-x86 -f ${{ github.workspace }}/extensions/Dockerfile_linux_x86.build .
                   cd extensions
                   for d in */ ; do
                       d=${d::-1}
                       cd $d
                       echo "Building $d"
-                      docker run --rm -v ${PWD}:/go/work -w /go/work -e GOARCH=386 -e CGO_ENABLED=1 x1unix/go-mingw:1.20 go build -o "/home/runner/work/rtf42/rtf42/"$d".dll" -buildmode=c-shared -ldflags '-w -s'
-                      docker run --rm -v ${PWD}:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 x1unix/go-mingw:1.20  go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.dll" -buildmode=c-shared -ldflags '-w -s'
-                      docker run --rm -v ${PWD}:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "/home/runner/work/rtf42/rtf42/"$d"_x64.so" -linkshared -ldflags '-w -s'
-                      docker run --rm -v ${PWD}:/app -e GOOS=linux -e GOARCH=386 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "/home/runner/work/rtf42/rtf42/"$d".so" -linkshared -ldflags '-w -s'
+                      docker run --rm -v ${{ github.workspace }}/extensions:/go/work -w /go/work -e GOARCH=386 -e CGO_ENABLED=1 rtf42/build-a3go:windows-so go build -o "./$d.dll" -buildmode=c-shared -ldflags '-w -s' "./$d"
+                      docker run --rm -v ${{ github.workspace }}/extensions:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 rtf42/build-a3go:windows-so  go build -o "./$d_x64.dll" -buildmode=c-shared -ldflags '-w -s' "./$d"
+                      docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "./$d_x64.so" -linkshared -ldflags '-w -s' "./$d"
+                      docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=386 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so-x86 go build -o "./$d.so" -linkshared -ldflags '-w -s' "./$d"
+
+                      mv $d.dll $d_x64.dll $d_x64.so $d.so ..
+
+                      rm -rf $d.dll $d_x64.dll $d_x64.so $d.so
                       cd ..
                   done
+                  ls -la
             - name: Download FFMPEG
               run: | 
                 wget https://github.com/GyanD/codexffmpeg/releases/download/6.1/ffmpeg-6.1-essentials_build.7z

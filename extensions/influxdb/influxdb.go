@@ -14,11 +14,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/MultiTheFranky/rtf-42nd/extensions/internal/logger"
 	"github.com/indig0fox/a3go/a3interface"
 	"github.com/indig0fox/a3go/assemblyfinder"
 	influxdb2 "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/api"
-	"rtf42-extensions.go/internal/logger"
 )
 
 var ADDON_NAME = "RTF42"

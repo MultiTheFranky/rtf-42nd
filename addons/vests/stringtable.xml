@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Vests">
-        <Key ID="STR_RTF42_Vests_VestGreenBeretDisplayName">
+        <Key ID="STR_RTF42_Vests_BaseVestDisplayName">
             <English>Green Beret Platecarrier</English>
             <Spanish>Portaplacas Boina Verde</Spanish>
         </Key>

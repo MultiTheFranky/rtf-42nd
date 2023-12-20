@@ -49,7 +49,6 @@ jobs:
                   automated pr
                 assignees: multithefranky
                 reviewers: multithefranky
-                milestone: 1
                 draft: false
             - name: Enable Pull Request Automerge
               if: steps.cpr.outputs.pull-request-number != ''

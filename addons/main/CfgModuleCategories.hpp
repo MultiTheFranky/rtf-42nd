@@ -5,6 +5,9 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(Modules): NO_CATEGORY {
+        displayName = CSTRING(ModulesDisplayName);
+    };
 };
 
 class CfgVehicleClasses {

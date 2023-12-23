@@ -1,3 +1,17 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
-diag_log text format["This is here as an example!!!"];
+/*
+    * Author: X
+    * Function to have an emtpy function to call
+    *
+    * Arguments:
+    * None
+    *
+    * Return Value:
+    * None
+    *
+    * Example:
+    * call rtf42_blank_fnc_empty;
+    *
+    * Public: No
+*/

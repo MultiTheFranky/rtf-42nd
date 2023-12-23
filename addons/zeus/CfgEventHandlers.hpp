@@ -10,10 +10,8 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
-class Extended_InitPost_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            init = QUOTE(_this call EFUNC(interrogation,init));
-        };
+class Extended_PostInit_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };

@@ -6,15 +6,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"rtf42_main", "zen_main"};
         author = ECSTRING(common,RTF42Team);
         authors[] = {ECSTRING(common,RTF42Team)};
-        authorUrl = "";
         VERSION_CONFIG;
     };
 };
 
-#include "CfgSettings.hpp"
 #include "CfgEventHandlers.hpp"
-#include "CfgModuleCategories.hpp"
-#include "CfgEditorSubcategories.hpp"

@@ -75,13 +75,18 @@ if (_unit getVariable [QGVAR(informant), false]) then {
 		}, _answers, 0, true, true, "", format ["alive _target && alive _this && !(_target getVariable ['%1', false])", _cooldownVariable], 3, false, "", ""],
         true
     ];
+
     _unit setVariable [
         QGVAR(mreaction), 
         _unit addAction [LLSTRING(MREAction), { 
             params ["_target", "_caller", "_id", "_args"];
             _target setVariable [QGVAR(mre), true, true];
             _caller call FUNC(removeMRE);
-            [_target, LLSTRING(MREAnswer)] remoteExec [QFUNC(talk), _caller];
+            if (!(_caller getVariable [QGVAR(translator), false])) then {
+                [_target, floor(random(32)) call EFUNC(common,generateRandomString)] remoteExec [QFUNC(talk), _caller];
+            } else {
+                [_target, LLSTRING(MREAnswer)] remoteExec [QFUNC(talk), _caller];
+            };
         }, [], 0, false, true, "", format ["alive _target && alive _this && !(_target getVariable ['%1', false]) && (_this call %2) != ''", _mreVariable, _getMREFnc], 3, false, "", ""]
     ];
     _unit setVariable [QGVAR(informant), true, true];

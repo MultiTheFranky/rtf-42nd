@@ -44,15 +44,12 @@ if (_unit getVariable [QGVAR(informant), false]) then {
 
 			// If the unit is not a translator, answer some strange text
 			if (!(_caller getVariable [QGVAR(translator), false])) exitWith {
-				[name _target, floor(random(32)) call EFUNC(common,generateRandomString)] remoteExec ["BIS_fnc_showSubtitle", _caller];
-				[_target,true] remoteExec ["setRandomLip", _caller];
+                [_target, floor(random(32)) call EFUNC(common,generateRandomString)] remoteExec [QFUNC(talk), _caller];
                 _target setVariable [QGVAR(cooldown), true, true];
                 _target spawn {
                     sleep random [GVAR(cooldownMin),  (GVAR(cooldownMin) + GVAR(cooldownMax)) / 2, GVAR(cooldownMax)];
                     _this setVariable [QGVAR(cooldown), false, true];
                 };
-				sleep 3;
-				[_target,false] remoteExec ["setRandomLip", _caller];
 			};
 
             private _answer = "";
@@ -69,15 +66,12 @@ if (_unit getVariable [QGVAR(informant), false]) then {
             };
 
 			// If the unit is a translator, answer a random answer from the array
-			[name _target, _answer] remoteExec ["BIS_fnc_showSubtitle", _caller];
-			[_target,true] remoteExec ["setRandomLip", _caller];
+			[_target, _answer] remoteExec [QFUNC(talk), _caller];
             _target setVariable [QGVAR(cooldown), true, true];
             _target spawn {
                 sleep random [GVAR(cooldownMin),  (GVAR(cooldownMin) + GVAR(cooldownMax)) / 2, GVAR(cooldownMax)];
                 _this setVariable [QGVAR(cooldown), false, true];
             };
-			sleep 3;
-			[_target,false] remoteExec ["setRandomLip", _caller];
 		}, _answers, 0, true, true, "", format ["alive _target && alive _this && !(_target getVariable ['%1', false])", _cooldownVariable], 3, false, "", ""],
         true
     ];
@@ -87,10 +81,7 @@ if (_unit getVariable [QGVAR(informant), false]) then {
             params ["_target", "_caller", "_id", "_args"];
             _target setVariable [QGVAR(mre), true, true];
             _caller call FUNC(removeMRE);
-            [name _target, LLSTRING(MREAnswer)] remoteExec ["BIS_fnc_showSubtitle", _caller];
-			[_target,true] remoteExec ["setRandomLip", _caller];
-            sleep 3;
-			[_target,false] remoteExec ["setRandomLip", _caller];
+            [_target, LLSTRING(MREAnswer)] remoteExec [QFUNC(talk), _caller];
         }, [], 0, false, true, "", format ["alive _target && alive _this && !(_target getVariable ['%1', false]) && (_this call %2) != ''", _mreVariable, _getMREFnc], 3, false, "", ""]
     ];
     _unit setVariable [QGVAR(informant), true, true];

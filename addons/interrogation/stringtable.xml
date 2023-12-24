@@ -53,5 +53,9 @@
             <English>What is this? It's for me? Thanks!</English>
             <Spanish>¿Qué es esto? ¿Es para mí? ¡Gracias!</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Interrogation_CivilDisplayName">
+            <English>Civil</English>
+            <Spanish>Civil</Spanish>
+        </Key>
     </Package>
 </Project>

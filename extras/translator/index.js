@@ -47,7 +47,7 @@ const getAllTranslations = async () => {
 
 /**
  * Map Tolgee translations to a simple object
- * @param {*} translations 
+ * @param {*} translations
  */
 
 const mapTranslations = (translations) => {
@@ -66,7 +66,7 @@ const mapTranslations = (translations) => {
 
 /**
  * Get XML from a map of translations with this format:
- * @param {*} translations 
+ * @param {*} translations
  */
 
 const getXMLFromMap = (translations) => {
@@ -103,9 +103,7 @@ const writeStringtable = (translations) => {
     for (const [key, value] of translations.entries()) {
         try {
             fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
-        } catch (error) {
-            console.error(`Failed to write stringtable.xml for ${key}`, error);
-        }
+        } catch (error) {}
     }
 }
 

@@ -9,24 +9,24 @@ class RscDisplayMain: RscStandardDisplay {
     onUnload = "[""onUnload"",_this,""RscDisplayMain"",'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
     class ControlsBackground {
         class MouseArea: RscText {
-			idc = 999;
-			style = 16;
-			x = "safezoneXAbs";
-			y = "safezoneY";
-			w = "safezoneWAbs";
-			h = "safezoneH";
-		};
+            idc = 999;
+            style = 16;
+            x = "safezoneXAbs";
+            y = "safezoneY";
+            w = "safezoneWAbs";
+            h = "safezoneH";
+        };
         class BackgroundLeft: RscText {
-			colorBackground[] = {0.1,0.1,0.1,1};
-			x = "-	10";
-			y = "-	10";
-			w = "safezoneX + 	10";
-			h = "2 * 	10";
-		};
-		class BackgroundRight: BackgroundLeft {
-			x = "safezoneX + safezoneW";
-			w = 10;
-		};
+            colorBackground[] = {0.1,0.1,0.1,1};
+            x = "-	10";
+            y = "-	10";
+            w = "safezoneX + 	10";
+            h = "2 * 	10";
+        };
+        class BackgroundRight: BackgroundLeft {
+            x = "safezoneX + safezoneW";
+            w = 10;
+        };
         class Picture: RscPicture {
             idc = 998;
             text = QPATHTOF(data\background_main_ca.paa);

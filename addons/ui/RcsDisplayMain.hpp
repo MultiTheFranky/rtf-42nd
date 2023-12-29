@@ -1,4 +1,5 @@
 class RscPicture;
+class RscText;
 class RscStandardDisplay;
 class RscDisplayMain: RscStandardDisplay {
     idd = 0;
@@ -7,16 +8,35 @@ class RscDisplayMain: RscStandardDisplay {
     onLoad = "[""onLoad"",_this,""RscDisplayMain"",'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
     onUnload = "[""onUnload"",_this,""RscDisplayMain"",'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
     class ControlsBackground {
+        class MouseArea: RscText {
+			idc = 999;
+			style = 16;
+			x = "safezoneXAbs";
+			y = "safezoneY";
+			w = "safezoneWAbs";
+			h = "safezoneH";
+		};
+        class BackgroundLeft: RscText {
+			colorBackground[] = {0.1,0.1,0.1,1};
+			x = "-	10";
+			y = "-	10";
+			w = "safezoneX + 	10";
+			h = "2 * 	10";
+		};
+		class BackgroundRight: BackgroundLeft {
+			x = "safezoneX + safezoneW";
+			w = 10;
+		};
         class Picture: RscPicture {
             idc = 998;
             text = QPATHTOF(data\background_main_ca.paa);
-            x = "safezoneX";
+            x = "safezoneX - 0.05";
             y = "safezoneY";
-            w = "safezoneW";
+            w = "safezoneW + 0.1";
             h = "safezoneH";
         };
     };
-    class controls {
+    class Controls {
         class Logo: RscPicture {
             text = QPATHTOF(data\logo2_rtf42_ca.paa);
             delete tooltip;
@@ -27,10 +47,10 @@ class RscDisplayMain: RscStandardDisplay {
             y = "safezoneY + (3 - 0.5 * 	5) * 	(pixelH * pixelGrid * 2)";
             w = "1 * 	5 * 	(pixelW * pixelGrid * 2)";
             h = "1 * 	5 * 	(pixelH * pixelGrid * 2)";
-            onKillFocus = "(_this select 0) ctrlsettextcolor [0.9,0.9,0.9,1];";
         };
-        delete SpotlightPrev;
+        class LogoApex: Logo {};
         delete SpotlightNext;
+        delete SpotlightPrev;
         delete Spotlight1;
         delete Spotlight2;
         delete Spotlight3;
@@ -70,9 +90,9 @@ class RscTitles {
             class Picture: RscPicture {
                 idc = 102;
                 text = QPATHTOF(data\background_main_ca.paa);
-                x = "safezoneX";
+                x = "safezoneX - 0.05";
                 y = "safezoneY";
-                w = "safezoneW";
+                w = "safezoneW + 0.1";
                 h = "safezoneH";
             };
         };

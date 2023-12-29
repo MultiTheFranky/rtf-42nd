@@ -54,7 +54,7 @@ if not exist %ARMA3_DIR%\z (
 
 echo Cloning CBA_A3 repository...
 rem Clone CBA_A3 to ExternalSource with name cba
-git clone https://github.com/CBATeam/CBA_A3.git %EXTERNAL_SOURCE_DIR%\cba
+git clone --branch release https://github.com/CBATeam/CBA_A3.git %EXTERNAL_SOURCE_DIR%\cba
 echo Cloned CBA_A3 to %EXTERNAL_SOURCE_DIR%\cba
 rem Do the symlink to the Arma 3 directory
 echo Creating symlinks...

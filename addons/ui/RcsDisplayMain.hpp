@@ -9,7 +9,7 @@ class RscDisplayMain: RscStandardDisplay {
     class ControlsBackground {
         class Picture: RscPicture {
             idc = 998;
-            text = QPATHTOEF(ui,data\background_main_ca.paa);
+            text = QPATHTOF(data\background_main_ca.paa);
             x = "safezoneX";
             y = "safezoneY";
             w = "safezoneW";
@@ -69,7 +69,7 @@ class RscTitles {
             };
             class Picture: RscPicture {
                 idc = 102;
-                text = QPATHTOEF(ui,data\background_main_ca.paa);
+                text = QPATHTOF(data\background_main_ca.paa);
                 x = "safezoneX";
                 y = "safezoneY";
                 w = "safezoneW";

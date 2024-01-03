@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Cards">
+        <Key ID="STR_RTF42_Cards_Hearts10">
+            <English>10 of Hearts</English>
+            <Spanish>10 de Corazones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_HeartsAS">
+            <English>As of Hearts</English>
+            <Spanish>As de Corazones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_HeartsJ">
+            <English>J of Hearts</English>
+            <Spanish>J de Corazones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_HeartsK">
+            <English>K of Hearts</English>
+            <Spanish>K de Corazones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_HeartsQ">
+            <English>Q of Hearts</English>
+            <Spanish>Q de Corazones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_Spades10">
+            <English>10 of Spades</English>
+            <Spanish>10 de Espadas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_SpadesAS">
+            <English>AS of Spades</English>
+            <Spanish>AS de Espadas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_SpadesJ">
+            <English>J of Spades</English>
+            <Spanish>J de Espadas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_SpadesK">
+            <English>K of Spades</English>
+            <Spanish>K de Espadas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Cards_SpadesQ">
+            <English>Q of Spades</English>
+            <Spanish>Q de Espadas</Spanish>
+        </Key>
+    </Package>
+</Project>

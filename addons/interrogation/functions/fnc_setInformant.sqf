@@ -7,6 +7,7 @@
     * Arguments:
     * 0: Unit <OBJECT>
     * 1: Answers <HASHMAP>
+    * 2: Force <BOOL>
     *
     * Return Value:
     * None
@@ -17,13 +18,11 @@
     * Public: No
 */
 
-params ["_unit", "_answers"];
+params ["_unit", "_answers", "_force"];
 
-if (!isNil "_answers" && {typeName _answers != "HASHMAP"}) exitWith {
-    diag_log str _answers;
-};
+if (!isNil "_answers" && {typeName _answers != "HASHMAP"}) exitWith {};
 
-if (_unit getVariable [QGVAR(informant), false]) then {
+if (_unit getVariable [QGVAR(informant), false] && !_force) then {
     _unit removeAction (_unit getVariable [QGVAR(action), -1]);
     _unit setVariable [QGVAR(action), -1, true];
     _unit setVariable [QGVAR(informant), false, true];
@@ -34,11 +33,19 @@ if (_unit getVariable [QGVAR(informant), false]) then {
         [_unit, _answers] call FUNC(setInformant);
     };
 } else {
+    if (_force) then {
+        _unit removeAction (_unit getVariable [QGVAR(action), -1]);
+        _unit setVariable [QGVAR(action), -1, true];
+        _unit setVariable [QGVAR(informant), false, true];
+        _unit removeAction (_unit getVariable [QGVAR(mreaction), -1]);
+        _unit setVariable [QGVAR(mreaction), -1, true];
+        _unit setVariable [QGVAR(mre), false, true];
+    };
     private _cooldownVariable = QGVAR(cooldown);
     private _mreVariable = QGVAR(mre);
     private _getMREFnc = FUNC(getMRE);
     _unit setVariable [
-        QGVAR(action), 
+        QGVAR(action),
         _unit addAction [LLSTRING(InterrogateAction), {
 			params ["_target", "_caller", "_id", "_args"];
 
@@ -77,8 +84,8 @@ if (_unit getVariable [QGVAR(informant), false]) then {
     ];
 
     _unit setVariable [
-        QGVAR(mreaction), 
-        _unit addAction [LLSTRING(MREAction), { 
+        QGVAR(mreaction),
+        _unit addAction [LLSTRING(MREAction), {
             params ["_target", "_caller", "_id", "_args"];
             _target setVariable [QGVAR(mre), true, true];
             _caller call FUNC(removeMRE);

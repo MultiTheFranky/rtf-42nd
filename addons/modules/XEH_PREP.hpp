@@ -1,2 +1,2 @@
-PREP(moduleSetInterrogation);
+PREP(moduleSetInformant);
 PREP(moduleSetTranslator);

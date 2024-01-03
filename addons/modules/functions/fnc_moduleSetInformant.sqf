@@ -14,5 +14,5 @@ for "_i" from 1 to 5 do {
 };
 
 {
-   [_x, _answers] call EFUNC(interrogation,setInformant);
+   [_x, _answers, true] call EFUNC(interrogation,setInformant);
 } forEach _units;

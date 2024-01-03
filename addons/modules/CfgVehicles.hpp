@@ -9,7 +9,7 @@ class CfgVehicles {
         displayName = CSTRING(InterrogationDisplayName);
         icon = QPATHTOF(ui\Icon_Module_Interrogation_ca.paa);
         category = QEGVAR(main,Modules);
-        function = QFUNC(moduleSetInterrogation);
+        function = QFUNC(moduleSetInformant);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;

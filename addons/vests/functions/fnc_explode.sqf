@@ -5,18 +5,17 @@
     *
     * Arguments:
     * 0: Player <OBJECT>
-    * 1: Target <OBJECT>
     *
     * Return Value:
     *
     *
     * Example:
-    * [_player, _target] call rtf42_vests_fnc_canExplode;
+    * [_player] call rtf42_vests_fnc_explode;
     *
     * Public: No
 */
 
-params ["_player", "_target"];
+params ["_player"];
 
 ("DemoCharge_Remote_Ammo_Scripted" createVehicle (position _player)) setDamage 1;
 

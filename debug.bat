@@ -8,7 +8,7 @@ rem =============================
 
 call mountDev.bat
 
-rem create a loop 
+rem create a loop
 :fullLoop
 
 rem Execute buildExtensions.bat
@@ -59,7 +59,7 @@ rem Check every 5 seconds if Arma 3 is still running
 :loop
 tasklist /fi "imagename eq arma3_x64.exe" | find /i /n "arma3_x64.exe" >nul
 if errorlevel 1 goto armaClosed
-timeout /t 5 >nul
+timeout /t 1 >nul
 goto loop
 :armaClosed
 

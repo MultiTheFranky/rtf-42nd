@@ -3,10 +3,10 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {QGVAR(Cards)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rtf42_main", "rtf42_ui"};
+        requiredAddons[] = {"rtf42_main", "rtf42_items", "rtf42_cards"};
         author = ECSTRING(main,Author);
         authors[] = {ECSTRING(main,Author)};
         VERSION_CONFIG;
@@ -14,5 +14,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Objects">
+        <Key ID="STR_RTF42_Objects_CardsDisplayName">
+            <English>Cards</English>
+            <Spanish>Cartas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_SeeCards">
+            <English>See cards</English>
+            <Spanish>Ver cartas</Spanish>
+        </Key>
+    </Package>
+</Project>

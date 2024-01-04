@@ -92,8 +92,8 @@ class CfgVehicles {
     // CUP Compatibility for suicide vest
     class Land;
     class Man: Land {
-		class EventHandlers;
-	};
+        class EventHandlers;
+    };
     class Civilian_F;
     class CUP_Creatures_Civil_Takistan_Base: Civilian_F {
         class EventHandlers: EventHandlers {

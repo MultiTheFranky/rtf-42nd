@@ -47,17 +47,17 @@ if (_unit getVariable [QGVAR(informant), false] && !_force) then {
     _unit setVariable [
         QGVAR(action),
         _unit addAction [LLSTRING(InterrogateAction), {
-			params ["_target", "_caller", "_id", "_args"];
+            params ["_target", "_caller", "_id", "_args"];
 
-			// If the unit is not a translator, answer some strange text
-			if (!(_caller getVariable [QGVAR(translator), false])) exitWith {
+            // If the unit is not a translator, answer some strange text
+            if (!(_caller getVariable [QGVAR(translator), false])) exitWith {
                 [_target, floor(random(32)) call EFUNC(common,generateRandomString)] remoteExec [QFUNC(talk), _caller];
                 _target setVariable [QGVAR(cooldown), true, true];
                 _target spawn {
                     sleep random [GVAR(cooldownMin),  (GVAR(cooldownMin) + GVAR(cooldownMax)) / 2, GVAR(cooldownMax)];
                     _this setVariable [QGVAR(cooldown), false, true];
                 };
-			};
+            };
 
             private _answer = "";
             private _randomNumber = random 1;
@@ -72,14 +72,14 @@ if (_unit getVariable [QGVAR(informant), false] && !_force) then {
                 _answer = [call FUNC(getAnswersHashMap), _randomNumber] call FUNC(getBestAnswer);
             };
 
-			// If the unit is a translator, answer a random answer from the array
-			[_target, _answer] remoteExec [QFUNC(talk), _caller];
+            // If the unit is a translator, answer a random answer from the array
+            [_target, _answer] remoteExec [QFUNC(talk), _caller];
             _target setVariable [QGVAR(cooldown), true, true];
             _target spawn {
                 sleep random [GVAR(cooldownMin),  (GVAR(cooldownMin) + GVAR(cooldownMax)) / 2, GVAR(cooldownMax)];
                 _this setVariable [QGVAR(cooldown), false, true];
             };
-		}, _answers, 0, true, true, "", format ["alive _target && alive _this && !(_target getVariable ['%1', false])", _cooldownVariable], 3, false, "", ""],
+        }, _answers, 0, true, true, "", format ["alive _target && alive _this && !(_target getVariable ['%1', false])", _cooldownVariable], 3, false, "", ""],
         true
     ];
 

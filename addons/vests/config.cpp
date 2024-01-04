@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rtf42_main"};
+        requiredAddons[] = {"rtf42_main", "rtf42_ui"};
         author = LSTRING(Author);
         authors[] = {LSTRING(Author)};
         VERSION_CONFIG;
@@ -15,3 +15,4 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

@@ -8,8 +8,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {QPATHTOF(data\rtf42_base_vest_ca.paa)};
     };
     class InventoryItem_Base_F;
-    class VestItem: InventoryItem_Base_F
-    {
+    class VestItem: InventoryItem_Base_F {
         type = 701;
     };
     class GVAR(SuicideVest): V_PlateCarrier2_blk {
@@ -17,7 +16,7 @@ class CfgWeapons {
         _generalMacro = QGVAR(SuicideVest);
         displayName = CSTRING(SuicideVestDisplayName);
         model = QPATHTOF(data\suicide_vest.p3d);
-        class ItemInfo : VestItem {
+        class ItemInfo: VestItem {
             uniformModel = QPATHTOF(data\suicide_vest.p3d);
             containerClass = "Supply140";
             mass = 140;

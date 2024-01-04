@@ -1,7 +1,7 @@
 @echo off
 rem =========ZONE TO EDIT========
 rem Define Disk
-set ARMA3_PARAMS=-mod="!Workshop\@CBA_A3;!Workshop\@ace;!Workshop\@RHSUSAF;!Workshop\@Zeus Enhanced;!Workshop\@Zeus Enhanced - ACE3 Compatibility;z\rtf42" -world=empty -noPause -showScriptErrors -filePatching -skipIntro -noSplash -noPause -noPauseAudio
+set ARMA3_PARAMS=-mod="!Workshop\@CBA_A3;!Workshop\@ace;!Workshop\@RHSUSAF;!Workshop\@Zeus Enhanced;!Workshop\@Zeus Enhanced - ACE3 Compatibility;z\rtf42"
 rem Define Arma 3 directory
 set ARMA3_DIR="C:\Program Files (x86)\Steam\steamapps\common\Arma 3"
 rem =============================

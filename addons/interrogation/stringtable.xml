@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Interrogation">
+        <Key ID="STR_RTF42_Interrogation_DisplayName">
+            <English>Interrogation</English>
+            <Spanish>Interrogación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_EnabledDisplayName">
+            <English>Enabled</English>
+            <Spanish>Activado</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_EnabledDescription">
+            <English>Do you want to activate this module?</English>
+            <Spanish>¿Quieres activar este módulo?</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_AnswerDisplayName">
+            <English>Answer</English>
+            <Spanish>Respuesta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_AnswerDescription">
+            <English>Answer that the civilians will answers when an interrogator success.</English>
+            <Spanish>Respuesta que dará un civil cuando la interrogación sea fructífera.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_SuccessChanceDisplayName">
+            <English>Success Chance</English>
+            <Spanish>Porcentaje de acierto</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_ImproveChanceDisplayName">
+            <English>Improve Chance</English>
+            <Spanish>Mejorar la probabilidad</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_AmountOfImproveDisplayName">
+            <English>Amount of improvement</English>
+            <Spanish>Cantidad de mejora</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMinDisplayName">
+            <English>Min. Cooldown</English>
+            <Spanish>Enfriamiento mínimo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMaxDisplayName">
+            <English>Max. Cooldown</English>
+            <Spanish>Enfriamiento máximo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_InterrogateAction">
+            <English>Interrogate</English>
+            <Spanish>Interrogar</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_MREAction">
+            <English>Give MRE</English>
+            <Spanish>Dar comida</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_MREAnswer">
+            <English>What is this? It's for me? Thanks!</English>
+            <Spanish>¿Qué es esto? ¿Es para mí? ¡Gracias!</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CivilDisplayName">
+            <English>Civil</English>
+            <Spanish>Civil</Spanish>
+        </Key>
+    </Package>
+</Project>

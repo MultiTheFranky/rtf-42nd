@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Zeus">
+        <Key ID="STR_RTF42_Zeus_DisplayName">
+            <English>Zeus</English>
+            <Spanish>Zeus</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_SetInformantDisplayName">
+            <English>Set informant</English>
+            <Spanish>Establecer informante</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_SetTranslatorDisplayName">
+            <English>Set translator</English>
+            <Spanish>Establecer traductor</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_SetInformantWithAnswersDisplayName">
+            <English>Set Informant with answers</English>
+            <Spanish>Establecer informante con preguntas</Spanish>
+        </Key>
+    </Package>
+</Project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Modules">
+        <Key ID="STR_RTF42_Modules_InterrogationDisplayName">
+            <English>Set Interrogators</English>
+            <Spanish>Añadir Interrogadores</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Modules_TranslatorDisplayName">
+            <English>Set Translators</English>
+            <Spanish>Añadir traductores</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Modules_Interrogation">
+            <English>Interrogation Description</English>
+            <Spanish>Descripción Interrogación</Spanish>
+        </Key>
+    </Package>
+</Project>

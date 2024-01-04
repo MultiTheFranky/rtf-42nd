@@ -55,10 +55,7 @@ jobs:
 
                   [1]: https://github.com/peter-evans/create-pull-request
                 labels: |
-                  report
-                  automated pr
-                assignees: multithefranky
-                reviewers: multithefranky
+                  translations
                 draft: false
             - name: Commit the changes
               if: steps.check_pr.outputs.pr_number != ''

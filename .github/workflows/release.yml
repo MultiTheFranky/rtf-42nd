@@ -103,7 +103,7 @@ jobs:
               continue-on-error: true
 
             - name: Unzip builded mod
-              run: unzip -o ${{ github.workspace }}/releases/@rtf42.zip -d ${{ steps.build.outputs.release_path }}
+              run: unzip -o ${{ github.workspace }}/releases/@rtf42.zip -d ${{ github.workspace }}/releases
               continue-on-error: true
 
             - name: Upload mod
@@ -114,8 +114,8 @@ jobs:
                   username: "${{ secrets.STEAM_USERNAME }}"
                   password: "${{ secrets.STEAM_PASSWORD }}"
                   otp: "${{ steps.generate.outputs.code }}"
-                  path: "${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}"
-                  name: "${{ steps.build.outputs.mod_name }}"
+                  path: "${{ github.workspace }}/releases/@rtf42"
+                  name: "rtf42"
                   change_notes_title: "${{ github.event.release.name }}"
                   change_notes: "${{ github.event.release.body }}"
               continue-on-error: true

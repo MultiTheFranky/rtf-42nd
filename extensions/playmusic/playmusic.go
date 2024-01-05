@@ -184,9 +184,9 @@ func downloadMusicAndPlay(url string, volume int, loop bool) error {
 		filePathFFMPEG := ""
 		// Check os system
 		if strings.Contains(strings.ToLower(os.Getenv("OS")), "windows") {
-			filePathFFMPEG = pwd + path.Join("z", "rtf42", "ffmpeg.exe")
+			filePathFFMPEG = pwd + path.Join(modulePathDir, "ffmpeg.exe")
 		} else {
-			filePathFFMPEG = pwd + path.Join("z", "rtf42", "ffmpeg")
+			filePathFFMPEG = pwd + path.Join(modulePathDir, "ffmpeg")
 		}
 
 		// Check if ffmpeg exists

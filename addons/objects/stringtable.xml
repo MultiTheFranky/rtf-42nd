@@ -9,5 +9,9 @@
             <English>See cards</English>
             <Spanish>Ver cartas</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_Explode">
+            <English>Explode</English>
+            <Spanish>Explotar</Spanish>
+        </Key>
     </Package>
 </Project>

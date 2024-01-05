@@ -108,6 +108,7 @@ jobs:
 
             - name: Upload mod
               uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
+              if: ${{ github.event.release.prerelease == false }}
               with:
                   steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
                   file_id: "${{ secrets.MOD_ID }}"
@@ -119,21 +120,18 @@ jobs:
                   change_notes_title: "${{ github.event.release.name }}"
                   change_notes: "${{ github.event.release.body }}"
               continue-on-error: true
-            - name: Delete extension artifact
-              uses : actions/github-script@v7
+
+            - name: Upload beta mod
+              uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
+              if: ${{ github.event.release.prerelease == true }}
               with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  script: |
-                      const artifacts = await github.rest.actions.listArtifactsForRepo({
-                          owner: context.repo.owner,
-                          repo: context.repo.repo
-                      });
-                      for (const artifact of artifacts.data.artifacts) {
-                          if (artifact.name.startsWith("rtf42-extensions")) {
-                              await github.rest.actions.deleteArtifact({
-                                  owner: context.repo.owner,
-                                  repo: context.repo.repo,
-                                  artifact_id: artifact.id
-                              });
-                          }
-                      }
+                  steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
+                  file_id: "${{ secrets.BETA_MOD_ID }}"
+                  username: "${{ secrets.STEAM_USERNAME }}"
+                  password: "${{ secrets.STEAM_PASSWORD }}"
+                  otp: "${{ steps.generate.outputs.code }}"
+                  path: "${{ github.workspace }}/releases/@rtf42"
+                  name: "rtf42"
+                  change_notes_title: "${{ github.event.release.name }}"
+                  change_notes: "${{ github.event.release.body }}"
+              continue-on-error: true

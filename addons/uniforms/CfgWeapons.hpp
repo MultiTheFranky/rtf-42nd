@@ -37,8 +37,6 @@ class CfgWeapons {
         };
     };
 
-    // Long sleeve uniforms
-
     class GVAR(MCS): U_B_CTRG_3 {
         author = "Echo";
         scope = 2;

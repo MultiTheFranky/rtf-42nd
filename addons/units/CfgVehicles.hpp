@@ -1,6 +1,7 @@
 class CfgVehicles {
-    class B_Soldier_F;
-    class GVAR(UnitBase): B_Soldier_F {
+    class B_CTRG_soldier_GL_LAT_F;
+    class B_CTRG_soldier_AR_A_F;
+    class GVAR(UnitBase): B_CTRG_soldier_GL_LAT_F {
         author = "Echo";
         scope = 0;
         scopeCurator = 0;
@@ -17,7 +18,6 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
         linkedItems[] = {QEGVAR(helmets,MC),QEGVAR(vests,Base),BASEITEMS};
         respawnLinkedItems[] = {QEGVAR(helmets,MC),QEGVAR(vests,Base),BASEITEMS};
-
     };
 
     class GVAR(GreenBeretMC): GVAR(MC) {
@@ -44,9 +44,7 @@ class CfgVehicles {
         respawnLinkedItems[] = {QEGVAR(helmets,AOR1),QEGVAR(vests,Base),BASEITEMS};
     };
 
-    // Long sleeve uniforms
-
-    class GVAR(UnitBaseS): B_Soldier_F {
+    class GVAR(UnitBaseS): B_CTRG_soldier_AR_A_F {
         author = "Echo";
         scope = 0;
         scopeCurator = 0;

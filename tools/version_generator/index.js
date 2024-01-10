@@ -37,7 +37,7 @@ function writeProjectTomlVersion(year, month, minor, beta) {
     fs.writeFileSync(projectTomlPath, newProjectToml);
 }
 
-function generateNewVersion(beta = false) {
+function generateNewVersion(beta = false, commit = false) {
     const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
     const projectToml = fs.readFileSync(projectTomlPath, 'utf8');
 
@@ -50,7 +50,7 @@ function generateNewVersion(beta = false) {
     if (beta) {
         if (!versionParts[3]) {
             return {
-                version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}-rc.0`,
+                version: `v${versionYear}.${versionMonth}.${commit ? parseInt(versionMinor) + 1 : parseInt(versionMinor)}-rc.0`,
                 versionYear,
                 versionMonth,
                 versionMinor,
@@ -59,16 +59,16 @@ function generateNewVersion(beta = false) {
         }
         const versionBetaMinor = versionParts[3];
         return {
-            version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor)}-rc.${parseInt(versionBetaMinor) + 1}`,
+            version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor)}-rc.${commit ? parseInt(versionBetaMinor) + 1 : parseInt(versionBetaMinor)}`,
             versionYear,
             versionMonth,
             versionMinor,
-            versionBetaMinor: parseInt(versionBetaMinor) + 1,
+            versionBetaMinor: commit ? parseInt(versionBetaMinor) + 1 : parseInt(versionBetaMinor),
         };
     }
 
     return {
-        version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}`,
+        version: `v${versionYear}.${versionMonth}.${commit ? parseInt(versionMinor) + 1 : parseInt(versionMinor)}`,
         versionYear,
         versionMonth,
         versionMinor,
@@ -77,13 +77,28 @@ function generateNewVersion(beta = false) {
 
 // Get arguments
 const beta = process.argv.includes('--beta');
+const commit = process.argv.includes('--commit');
 
 // Generate new version
-const newVersion = generateNewVersion(beta);
+const newVersion = generateNewVersion(beta,commit);
 
 // Write new version
 writeAddonsReleaseVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? newVersion.versionBetaMinor : null);
 writeProjectTomlVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? `rc.${newVersion.versionBetaMinor}` : null);
+
+// Commit and tag
+if (!commit) {
+    console.log(newVersion.version);
+    return;
+}
+const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
+const scriptVersionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
+execSync(`git config user.email "rtf42-versions@rtf42.com"`);
+execSync(`git config user.name "rtf42-versions"`);
+execSync(`git checkout -b release/${newVersion.version}`);
+execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
+execSync(`git commit -m "Version ${newVersion.version}"`);
+execSync(`git push origin release/${newVersion.version}`);
 
 // Return version to be use on github actions
 console.log(newVersion.version);

@@ -4,9 +4,8 @@ permissions:
     contents: write
 
 on:
-    push:
-        tags:
-        - 'v*.*.*'
+    release:
+        types: [published]
 
 
 jobs:
@@ -77,16 +76,16 @@ jobs:
             - name: Execute version generator
               if: ${{ github.event.release.prerelease == false }}
               run: |
-                cd ../tools/version_generator
+                cd ${{github.workspace}}/tools/version_generator
                 npm install
-                VERSION=$(node index.js)
+                VERSION=$(node index.js --commit)
                 echo "VERSION=$VERSION" >> $GITHUB_ENV
             - name: Execute version generator
               if: ${{ github.event.release.prerelease == true }}
               run: |
-                  cd ../tools/version_generator
+                  cd ${{github.workspace}}/tools/version_generator
                   npm install
-                  VERSION=$(node index.js --beta)
+                  VERSION=$(node index.js --beta --commit)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1

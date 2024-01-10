@@ -7,7 +7,7 @@ on:
     pull_request_target:
 
 concurrency:
-    group: "ci"
+    group: "${{ github.actor }} - ${{github.ref}} - ci"
     cancel-in-progress: true
 
 jobs:

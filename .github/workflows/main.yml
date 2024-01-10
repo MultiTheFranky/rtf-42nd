@@ -9,7 +9,7 @@ on:
             - "main"
 
 concurrency:
-    group: "main"
+    group: "${{ github.actor }} - ${{github.ref}} - main"
     cancel-in-progress: true
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
         name: BETA Release
         permissions: write-all
         runs-on: ubuntu-latest
-        if: github.actor != 'github-actions[bot]'
+        if: github.actor != 'kodiakhq'
         needs: [validate, lint]
         steps:
               - name: Checkout repo

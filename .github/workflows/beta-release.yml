@@ -6,8 +6,7 @@ permissions:
 on:
     push:
         branches:
-            # Only run on beta release branch e.g. "release/v2024.1.0-rc.0"
-            - "release/v*.*.*-rc.*"
+            - "release/**"
 
 jobs:
     validate:

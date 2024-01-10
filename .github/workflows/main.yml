@@ -41,8 +41,26 @@ jobs:
               with:
                 node-version: "18"
             - name: Execute version generator
+              # if the author is a bot no version is generated
+              if: github.actor != 'github-actions[bot]'
               run: |
                 cd ${{ github.workspace }}/tools/version_generator
                 npm install
                 VERSION=$(node index.js --beta --commit)
                 echo "VERSION=$VERSION" >> $GITHUB_ENV
+            - name: PR to merge version to main branch
+            # if the author is a bot no version is generated
+              if: github.actor != 'github-actions[bot]'
+              uses: peter-evans/create-pull-request@v5
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                commit-message: "Update version to ${{ env.VERSION }}"
+                title: "Update version to ${{ env.VERSION }}"
+                body: "Update version to ${{ env.VERSION }}"
+                branch: "version-${{ env.VERSION }}"
+                base: "main"
+                branch-suffix: random
+                delete-branch: true
+                labels: |
+                    automerge
+                    automated pr

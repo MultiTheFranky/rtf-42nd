@@ -4,7 +4,10 @@ permissions:
     contents: write
 
 on:
-    release:
+    push:
+        tags:
+        - 'v*.*.*'
+
 
 jobs:
     validate:

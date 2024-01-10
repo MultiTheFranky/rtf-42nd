@@ -36,7 +36,7 @@ jobs:
         name: BETA Release
         permissions: write-all
         runs-on: ubuntu-latest
-        if: github.actor != 'kodiakhq'
+        if: github.actor != 'kodiakhq[bot]'
         needs: [validate, lint]
         steps:
               - name: Checkout repo

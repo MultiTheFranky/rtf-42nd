@@ -1,4 +1,4 @@
-name: "BETA RELEASE"
+name: "Main Workflow"
 
 permissions:
     contents: write
@@ -28,8 +28,8 @@ jobs:
             - name: Lint (sqflint)
               uses: arma-actions/sqflint@master
               continue-on-error: true # No failure due to many false-positives
-    release:
-        name: BETA Release
+    version:
+        name: Generate version
         permissions: write-all
         runs-on: ubuntu-latest
         needs: [validate, lint]
@@ -42,7 +42,7 @@ jobs:
                 node-version: "18"
             - name: Execute version generator
               run: |
-                cd ${{ github.workspace }}/tools/version-generator
+                cd ${{ github.workspace }}/tools/version_generator
                 npm install
                 VERSION=$(node index.js --beta --commit)
                 echo "VERSION=$VERSION" >> $GITHUB_ENV

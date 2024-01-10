@@ -76,7 +76,7 @@ jobs:
               run: cd tools/translator && npm start
             - name: Execute version generator
               run: |
-                  cd ${{github.workspace}}/tools/version-generator
+                  cd ${{github.workspace}}/tools/version_generator
                   npm install
                   VERSION=$(node index.js --beta)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV

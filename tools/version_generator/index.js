@@ -49,7 +49,7 @@ function generateNewVersion(beta = false) {
     if (beta) {
         if (!versionParts[3]) {
             return {
-                version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}-rc.0`,
+                version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor)}-rc.0`,
                 versionYear,
                 versionMonth,
                 versionMinor,

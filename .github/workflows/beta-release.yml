@@ -36,9 +36,19 @@ jobs:
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
+            - name: Setup Node.js
+              uses: actions/setup-node@v2
+              with:
+                node-version: "18"
+            - name: Execute version generator
+              run: |
+                cd tools/version_generator
+                npm install
+                VERSION=$(node index.js --beta)
+                echo "VERSION=$VERSION" >> $GITHUB_ENV
             - uses: "marvinpinto/action-automatic-releases@latest"
               with:
                 repo_token: "${{ secrets.GITHUB_TOKEN }}"
-                automatic_release_tag: "beta"
+                automatic_release_tag: "${{ env.VERSION }}"
                 prerelease: true
-                title: "Beta release"
+                title: "Release ${{ env.VERSION }}"

@@ -1,0 +1,14 @@
+{
+  "name": "version_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "updateVersion": "node index.js",
+    "updateBetaVersion": "node index.js --beta"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

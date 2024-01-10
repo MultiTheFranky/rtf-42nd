@@ -5,7 +5,6 @@ permissions:
 
 on:
     release:
-        types: [created]
 
 jobs:
     validate:
@@ -67,11 +66,25 @@ jobs:
               with:
                   node-version: 18
             - name: Install translator
-              run: cd extras/translator && npm install
+              run: cd tools/translator && npm install
             - name: Fill .env file with secrets
-              run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> extras/translator/.env
+              run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> tools/translator/.env
             - name: Run translator
-              run: cd extras/translator && npm start
+              run: cd tools/translator && npm start
+            - name: Execute version generator
+              if: ${{ github.event.release.prerelease == false }}
+              run: |
+                cd ../tools/version_generator
+                npm install
+                VERSION=$(node index.js)
+                echo "VERSION=$VERSION" >> $GITHUB_ENV
+            - name: Execute version generator
+              if: ${{ github.event.release.prerelease == true }}
+              run: |
+                  cd ../tools/version_generator
+                  npm install
+                  VERSION=$(node index.js --beta)
+                  echo "VERSION=$VERSION" >> $GITHUB_ENV
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT release
@@ -81,7 +94,7 @@ jobs:
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
               with:
-                  name: rtf42-${{ github.sha }}
+                  name: rtf42-${{ env.VERSION }}
                   path: ${{ github.workspace }}/releases/@rtf42.zip
             - name: Upload asset
               uses: shogo82148/actions-upload-release-asset@v1

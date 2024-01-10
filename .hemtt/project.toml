@@ -21,7 +21,7 @@ include = [
 git_hash = 0
 
 [properties]
-version = "1.0.0"
+version = "v2024.1.0"
 
 [asc]
 enabled = true

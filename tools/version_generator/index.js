@@ -85,15 +85,5 @@ const newVersion = generateNewVersion(beta);
 writeAddonsReleaseVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? newVersion.versionBetaMinor : null);
 writeProjectTomlVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? `rc.${newVersion.versionBetaMinor}` : null);
 
-// Commit and tag
-const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
-const scriptVersionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
-execSync(`git config user.email "github-actions[bot]@users.noreply.github.com"`);
-execSync(`git config user.name "github-actions[bot]"`);
-execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
-execSync(`git commit -m "Version ${newVersion.version}"`);
-execSync(`git tag ${newVersion.version}`);
-execSync(`git push origin ${newVersion.version}`);
-
 // Return version to be use on github actions
 console.log(newVersion.version);

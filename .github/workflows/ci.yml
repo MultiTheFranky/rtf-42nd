@@ -6,6 +6,10 @@ on:
             - main
     pull_request_target:
 
+concurrency:
+    group: "ci"
+    cancel-in-progress: true
+
 jobs:
     validate:
         runs-on: ubuntu-latest

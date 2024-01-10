@@ -98,7 +98,11 @@ execSync(`git config user.name "rtf42-versions"`);
 execSync(`git checkout -b release/${newVersion.version}`);
 execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
 execSync(`git commit -m "Version ${newVersion.version}"`);
-execSync(`git push origin release/${newVersion.version}`);
+try {
+    execSync(`git push origin release/${newVersion.version}`);
+} catch (e) {
+    console.log('Branch already exists');
+}
 
 // Return version to be use on github actions
 console.log(newVersion.version);

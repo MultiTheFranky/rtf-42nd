@@ -12,7 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execSync, exec } = require('child_process');
 
 function writeAddonsReleaseVersion(year, month, minor, beta) {
     const releasePath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
@@ -88,8 +88,12 @@ writeProjectTomlVersion(newVersion.versionYear, newVersion.versionMonth, newVers
 // Commit and tag
 const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
 const scriptVersionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
+execSync(`git config user.email "github-actions[bot]@users.noreply.github.com"`);
+execSync(`git config user.name "github-actions[bot]"`);
 execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
 execSync(`git commit -m "Version ${newVersion.version}"`);
+execSync(`git tag ${newVersion.version}`);
+execSync(`git push origin ${newVersion.version}`);
 
 // Return version to be use on github actions
 console.log(newVersion.version);

@@ -12,7 +12,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync, exec } = require('child_process');
 
 function writeAddonsReleaseVersion(year, month, minor, beta) {
     const releasePath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
@@ -37,7 +36,7 @@ function writeProjectTomlVersion(year, month, minor, beta) {
     fs.writeFileSync(projectTomlPath, newProjectToml);
 }
 
-function generateNewVersion(beta = false, commit = false) {
+function generateNewVersion(beta = false) {
     const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
     const projectToml = fs.readFileSync(projectTomlPath, 'utf8');
 
@@ -50,7 +49,7 @@ function generateNewVersion(beta = false, commit = false) {
     if (beta) {
         if (!versionParts[3]) {
             return {
-                version: `v${versionYear}.${versionMonth}.${commit ? parseInt(versionMinor) + 1 : parseInt(versionMinor)}-rc.0`,
+                version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}-rc.0`,
                 versionYear,
                 versionMonth,
                 versionMinor,
@@ -59,16 +58,16 @@ function generateNewVersion(beta = false, commit = false) {
         }
         const versionBetaMinor = versionParts[3];
         return {
-            version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor)}-rc.${commit ? parseInt(versionBetaMinor) + 1 : parseInt(versionBetaMinor)}`,
+            version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor)}-rc.${parseInt(versionBetaMinor) + 1}`,
             versionYear,
             versionMonth,
             versionMinor,
-            versionBetaMinor: commit ? parseInt(versionBetaMinor) + 1 : parseInt(versionBetaMinor),
+            versionBetaMinor: parseInt(versionBetaMinor) + 1,
         };
     }
 
     return {
-        version: `v${versionYear}.${versionMonth}.${commit ? parseInt(versionMinor) + 1 : parseInt(versionMinor)}`,
+        version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}`,
         versionYear,
         versionMonth,
         versionMinor,
@@ -79,7 +78,7 @@ function generateNewVersion(beta = false, commit = false) {
 const beta = process.argv.includes('--beta');
 
 // Generate new version
-const newVersion = generateNewVersion(beta,commit);
+const newVersion = generateNewVersion(beta);
 
 // Write new version
 writeAddonsReleaseVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? newVersion.versionBetaMinor : null);

@@ -41,26 +41,6 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: "18"
-            - name: Execute version generator
-              run: |
-                cd ${{ github.workspace }}/tools/version_generator
-                npm install
-                VERSION=$(node index.js --beta )
-                echo "VERSION=$VERSION" >> $GITHUB_ENV
-            - name: PR to merge version to main branch
-              uses: peter-evans/create-pull-request@v5
-              with:
-                token: ${{ secrets.GITHUB_TOKEN }}
-                commit-message: "Update version to ${{ env.VERSION }}"
-                title: "Update version to ${{ env.VERSION }}"
-                body: "Update version to ${{ env.VERSION }}"
-                branch: "version-${{ env.VERSION }}"
-                base: "main"
-                branch-suffix: random
-                delete-branch: true
-                labels: |
-                    automerge
-                    automated pr
     release:
         name: BETA Release
         permissions: write-all
@@ -111,14 +91,22 @@ jobs:
                 run: |
                   cd ${{ github.workspace }}/tools/version_generator
                   npm install
-                  VERSION=$(node index.js --beta)
+                  VERSION=$(node index.js --beta )
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
-              - name: Execute version generator
-                run: |
-                    cd ${{github.workspace}}/tools/version_generator
-                    npm install
-                    VERSION=$(node index.js --beta)
-                    echo "VERSION=$VERSION" >> $GITHUB_ENV
+              - name: PR to merge version to main branch
+                uses: peter-evans/create-pull-request@v5
+                with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  commit-message: "Update version to ${{ env.VERSION }}"
+                  title: "Update version to ${{ env.VERSION }}"
+                  body: "Update version to ${{ env.VERSION }}"
+                  branch: "version-${{ env.VERSION }}"
+                  base: "main"
+                  branch-suffix: random
+                  delete-branch: true
+                  labels: |
+                      automerge
+                      automated pr
               - name: Setup HEMTT
                 uses: arma-actions/hemtt@v1
               - name: Run HEMTT release

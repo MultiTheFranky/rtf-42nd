@@ -77,7 +77,6 @@ function generateNewVersion(beta = false, commit = false) {
 
 // Get arguments
 const beta = process.argv.includes('--beta');
-const commit = process.argv.includes('--commit');
 
 // Generate new version
 const newVersion = generateNewVersion(beta,commit);
@@ -85,24 +84,6 @@ const newVersion = generateNewVersion(beta,commit);
 // Write new version
 writeAddonsReleaseVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? newVersion.versionBetaMinor : null);
 writeProjectTomlVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? `rc.${newVersion.versionBetaMinor}` : null);
-
-// Commit and tag
-if (!commit) {
-    console.log(newVersion.version);
-    return;
-}
-const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
-const scriptVersionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
-try {
-    execSync(`git config user.email "rtf42-versions@rtf42.com"`);
-    execSync(`git config user.name "rtf42-versions"`);
-    execSync(`git checkout -b release/${newVersion.version}`);
-    execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
-    execSync(`git commit -m "Version ${newVersion.version}"`);
-    execSync(`git push origin release/${newVersion.version}`);
-} catch (e) {
-    console.log('Branch already exists');
-}
 
 // Return version to be use on github actions
 console.log(newVersion.version);

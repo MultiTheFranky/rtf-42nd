@@ -68,8 +68,3 @@ jobs:
                   git add .
                   git commit -m "Update translations files"
                   git push
-            - name: Add label automerge to the PR
-              if: steps.check_pr.outputs.pr_number != ''
-              run: gh pr edit ${{ steps.check_pr.outputs.pr_number }} --add-label automerge
-              env:
-                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

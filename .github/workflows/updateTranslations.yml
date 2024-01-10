@@ -55,7 +55,9 @@ jobs:
 
                   [1]: https://github.com/peter-evans/create-pull-request
                 labels: |
-                  translations
+                    translations
+                    automerge
+                    automated pr
                 draft: false
             - name: Commit the changes
               if: steps.check_pr.outputs.pr_number != ''

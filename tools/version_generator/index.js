@@ -93,12 +93,12 @@ if (!commit) {
 }
 const projectTomlPath = path.join(__dirname, '..', '..', '.hemtt', 'project.toml');
 const scriptVersionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
-execSync(`git config user.email "rtf42-versions@rtf42.com"`);
-execSync(`git config user.name "rtf42-versions"`);
-execSync(`git checkout -b release/${newVersion.version}`);
-execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
-execSync(`git commit -m "Version ${newVersion.version}"`);
 try {
+    execSync(`git config user.email "rtf42-versions@rtf42.com"`);
+    execSync(`git config user.name "rtf42-versions"`);
+    execSync(`git checkout -b release/${newVersion.version}`);
+    execSync(`git add ${projectTomlPath} ${scriptVersionPath}`);
+    execSync(`git commit -m "Version ${newVersion.version}"`);
     execSync(`git push origin release/${newVersion.version}`);
 } catch (e) {
     console.log('Branch already exists');

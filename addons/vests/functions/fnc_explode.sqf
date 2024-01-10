@@ -17,6 +17,19 @@
 
 params ["_player"];
 
-("DemoCharge_Remote_Ammo_Scripted" createVehicle (position _player)) setDamage 1;
+switch (vest _player) do {
+    case "rtf42_vests_SuicideVest": {
+        ("DemoCharge_Remote_Ammo_Scripted" createVehicle (position _player)) setDamage 1;
+    };
+    case "rtf42_vests_MiniSuicideVest": {
+        ("ClaymoreDirectionalMine_Remote_Ammo_Scripted" createVehicle (position _player)) setDamage 1;
+    };
+    default { };
+};
+
+// Remove the vest
+removeVest _player;
+
+
 
 

@@ -82,7 +82,7 @@ jobs:
                 run: |
                   cd ${{ github.workspace }}/tools/version_generator
                   npm install
-                  VERSION=$(node index.js --beta )
+                  VERSION=$(node index.js --beta)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
               - name: PR to merge version to main branch
                 uses: peter-evans/create-pull-request@v5
@@ -103,12 +103,12 @@ jobs:
               - name: Run HEMTT release
                 run: hemtt release
               - name: Rename build folder
-                run: mv ${{ github.workspace }}/releases/rtf42-latest.zip ${{ github.workspace }}/releases/@rtf42.zip
+                run: mv ${{ github.workspace }}/releases/rtf42-latest.zip ${{ github.workspace }}/releases/@rtf42-${{env.VERSION}}.zip
               - name: Upload Artifact
                 uses: actions/upload-artifact@v4
                 with:
                     name: rtf42-${{ env.VERSION }}
-                    path: ${{ github.workspace }}/releases/@rtf42.zip
+                    path: ${{ github.workspace }}/releases/@rtf42-${{env.VERSION}}.zip
               - uses: "marvinpinto/action-automatic-releases@latest"
                 id: "automatic_releases"
                 with:
@@ -120,6 +120,6 @@ jobs:
                 uses: shogo82148/actions-upload-release-asset@v1
                 with:
                     upload_url: ${{ steps.automatic_releases.outputs.upload_url }}
-                    asset_path: ${{ github.workspace }}/releases/@rtf42.zip
+                    asset_path: ${{ github.workspace }}/releases/@rtf42-${{env.VERSION}}.zip
                     asset_content_type: application/zip
                 continue-on-error: true

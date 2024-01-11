@@ -17,12 +17,6 @@ include = [
     "ffmpeg.exe"
 ]
 
-[version]
-git_hash = 0
-
-[properties]
-version = "v2024.1.0-rc.3"
-
 [asc]
 enabled = true
 exclude = [

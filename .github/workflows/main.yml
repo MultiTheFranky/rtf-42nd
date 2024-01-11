@@ -98,7 +98,7 @@ jobs:
               - uses: "marvinpinto/action-automatic-releases@latest"
                 id: "automatic_releases"
                 with:
-                    repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                    repo_token: "${{ secrets.PAT }}"
                     automatic_release_tag: "${{ env.VERSION }}"
                     prerelease: true
                     title: "Release ${{ env.VERSION }}"

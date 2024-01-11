@@ -103,14 +103,6 @@ jobs:
               with:
                   name: rtf42-${{ env.VERSION }}
                   path: ${{ github.workspace }}/releases/@rtf42.zip
-            - name: Upload asset
-              uses: shogo82148/actions-upload-release-asset@v1
-              with:
-                  upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ${{ github.workspace }}/releases/@rtf42.zip
-                  asset_content_type: application/zip
-              continue-on-error: true
-
             - name: Setup steamcmd
               id: steamcmd
               uses: CyberAndrii/setup-steamcmd@v1

@@ -84,20 +84,6 @@ jobs:
                   npm install
                   VERSION=$(node index.js --beta)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
-              - name: PR to merge version to main branch
-                uses: peter-evans/create-pull-request@v5
-                with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  commit-message: "Update version to ${{ env.VERSION }}"
-                  title: "Update version to ${{ env.VERSION }}"
-                  body: "Update version to ${{ env.VERSION }}"
-                  branch: "version-${{ env.VERSION }}"
-                  base: "main"
-                  branch-suffix: random
-                  delete-branch: true
-                  labels: |
-                      automerge
-                      automated pr
               - name: Setup HEMTT
                 uses: arma-actions/hemtt@v1
               - name: Run HEMTT release
@@ -123,3 +109,17 @@ jobs:
                     asset_path: ${{ github.workspace }}/releases/@rtf42-${{env.VERSION}}.zip
                     asset_content_type: application/zip
                 continue-on-error: true
+              - name: PR to merge version to main branch
+                uses: peter-evans/create-pull-request@v5
+                with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  commit-message: "Update version to ${{ env.VERSION }}"
+                  title: "Update version to ${{ env.VERSION }}"
+                  body: "Update version to ${{ env.VERSION }}"
+                  branch: "version-${{ env.VERSION }}"
+                  base: "main"
+                  branch-suffix: random
+                  delete-branch: true
+                  labels: |
+                      automerge
+                      automated pr

@@ -4,8 +4,10 @@ permissions:
     contents: write
 
 on:
-    release:
-        types: [published]
+    push:
+        tags:
+            - "v*"
+
 
 concurrency:
     group: "release"
@@ -77,14 +79,15 @@ jobs:
             - name: Run translator
               run: cd tools/translator && npm start
             - name: Execute version generator
-              if: ${{ github.event.release.prerelease == false }}
+              # if have rc in tag name, then it is prerelease
+              if: ${{ contains(github.ref_name,'rc') == false }}
               run: |
                 cd ${{github.workspace}}/tools/version_generator
                 npm install
                 VERSION=$(node index.js )
                 echo "VERSION=$VERSION" >> $GITHUB_ENV
             - name: Execute version generator
-              if: ${{ github.event.release.prerelease == true }}
+              if: ${{ contains(github.ref_name,'rc') == true }}
               run: |
                   cd ${{github.workspace}}/tools/version_generator
                   npm install
@@ -126,7 +129,7 @@ jobs:
 
             - name: Upload mod
               uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
-              if: ${{ github.event.release.prerelease == false }}
+              if: ${{ contains(github.ref_name,'rc') == false }}
               with:
                   steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
                   file_id: "${{ secrets.MOD_ID }}"
@@ -141,7 +144,7 @@ jobs:
 
             - name: Upload beta mod
               uses: MultiTheFranky/action-release-to-steam-ws@0.0.2
-              if: ${{ github.event.release.prerelease == true }}
+              if: ${{ contains(github.ref_name,'rc') == true }}
               with:
                   steamcmd_path: ${{ steps.steamcmd.outputs.directory }}
                   file_id: "${{ secrets.BETA_MOD_ID }}"

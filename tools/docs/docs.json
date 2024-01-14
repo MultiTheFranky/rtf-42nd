@@ -1,0 +1,387 @@
+{
+    "cards": {
+        "addCardActions": {
+            "description": "Returns children actions for the actions cards.",
+            "params": [
+                {
+                    "name": "Target",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_target] call rft42_cards_fnc_addCardActions",
+            "author": "Franky",
+            "public": false
+        },
+        "canSeeCards": {
+            "description": "Check if the player has the cards on their inventory",
+            "params": [
+                {
+                    "name": "Player",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_player] call rft42_cards_fnc_canSeeCards;",
+            "author": "Franky",
+            "public": false
+        },
+        "seeCard": {
+            "description": "Shows a hint with an image of the card",
+            "params": [
+                {
+                    "name": "Target",
+                    "type": "OBJECT"
+                },
+                {
+                    "name": "Player",
+                    "type": "OBJECT"
+                },
+                {
+                    "name": "Args",
+                    "type": "ARRAY"
+                },
+                {
+                    "name": "Image Name",
+                    "type": "STRING"
+                },
+                {
+                    "name": "Image File Name",
+                    "type": "STRING"
+                }
+            ],
+            "returns": {},
+            "example": "[player, [\"imageName\", \"image.paa\"]] call rft42_cards_fnc_seeCard;",
+            "author": "Franky",
+            "public": false
+        }
+    },
+    "common": {
+        "generateRandomString": {
+            "description": "Function to generate a random string",
+            "params": [
+                {
+                    "name": "Length",
+                    "type": "NUMBER"
+                }
+            ],
+            "returns": {},
+            "example": "12 call rtf42_common_fnc_generateRandomString;",
+            "author": "Franky",
+            "public": false
+        },
+        "keyHandlerPrepRecompile": {
+            "description": "Function to create a key handler to recompile the functions using [] call ACE_PREP_RECOMPILE;",
+            "params": [],
+            "returns": {},
+            "example": "call rtf42_common_fnc_keyHandlerPrepRecompile;",
+            "author": "Franky",
+            "public": false
+        },
+        "minifyString": {
+            "description": "Function to clear an string from all special characters",
+            "params": [
+                {
+                    "name": "Text to clear",
+                    "type": "STRING"
+                }
+            ],
+            "returns": {},
+            "example": "\"Text%·\" call rtf42_common_fnc_minifyString;",
+            "author": "Franky",
+            "public": false
+        }
+    },
+    "helmets": {},
+    "interrogation": {
+        "getAnswersHashMap": {
+            "description": "Function to create a hashmap from all answers and the percentage of success",
+            "params": [],
+            "returns": {
+                "name": "Answers",
+                "type": "HASHMAP"
+            },
+            "example": "call rtf42_interrogation_fnc_getAnswersHashMap;",
+            "author": "Franky",
+            "public": false
+        },
+        "getBestAnswer": {
+            "description": "Function to get the best answer based on a random number",
+            "params": [
+                {
+                    "name": "Answers",
+                    "type": "HASHMAP"
+                },
+                {
+                    "name": "Random Number",
+                    "type": "NUMBER"
+                }
+            ],
+            "returns": {
+                "name": "Answer",
+                "type": "STRING"
+            },
+            "example": "[answers] call rtf42_interrogation_fnc_getBestAnswer;",
+            "author": "Franky",
+            "public": false
+        },
+        "getMRE": {
+            "description": "Function to get if the unit has an MRE item in his inventory",
+            "params": [
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {
+                "name": "Classname of the item",
+                "type": "STRING"
+            },
+            "example": "call rtf42_interrogation_fnc_getMRE;",
+            "author": "Franky",
+            "public": false
+        },
+        "init": {
+            "description": "Function to set a unit to informant or not",
+            "params": [
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[franky] call rtf42_interrogation_fnc_init;",
+            "author": "Franky",
+            "public": false
+        },
+        "removeMRE": {
+            "description": "Function to remove MRE item from the unit inventory",
+            "params": [],
+            "returns": {
+                "name": "Unit",
+                "type": "OBJECT"
+            },
+            "example": "call rtf42_interrogation_fnc_removeMRE;",
+            "author": "Franky",
+            "public": false
+        },
+        "setInformant": {
+            "description": "Function to set a unit to informant or not",
+            "params": [
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                },
+                {
+                    "name": "Answers",
+                    "type": "HASHMAP"
+                },
+                {
+                    "name": "Force",
+                    "type": "BOOL"
+                }
+            ],
+            "returns": {},
+            "example": "[franky] call rtf42_interrogation_fnc_setInformant;",
+            "author": "Franky",
+            "public": false
+        },
+        "setTranslator": {
+            "description": "Function to set the translator for the interrogation system",
+            "params": [
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[franky] call rtf42_interrogation_fnc_setTranslator;",
+            "author": "Franky",
+            "public": false
+        },
+        "talk": {
+            "description": "Function to show to the player the text of the unit in the chat",
+            "params": [
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                },
+                {
+                    "name": "Text",
+                    "type": "STRING"
+                }
+            ],
+            "returns": {},
+            "example": "[franky] call rtf42_interrogation_fnc_talk;",
+            "author": "Franky",
+            "public": false
+        }
+    },
+    "items": {},
+    "main": {},
+    "modules": {},
+    "monitoring": {
+        "influxDBLoop": {
+            "description": "Start influxDB info loop",
+            "params": [],
+            "returns": {},
+            "example": "[] call rtf42_monitoring_fnc_influxDBLoop",
+            "author": "Franky",
+            "public": false
+        },
+        "initInfluxDB": {
+            "description": "Start InfluxDB client",
+            "params": [],
+            "returns": {},
+            "example": "[] call rtf42_monitoring_fnc_initInfluxDB",
+            "author": "Franky",
+            "public": false
+        },
+        "logKill": {
+            "description": "Add a kill to the InfluxDB Data",
+            "params": [
+                {
+                    "name": "Name of killer",
+                    "type": "STRING"
+                },
+                {
+                    "name": "Number of kills",
+                    "type": "NUMBER"
+                }
+            ],
+            "returns": {},
+            "example": "[] call rtf42_monitoring_fnc_logKill",
+            "author": "Franky",
+            "public": false
+        }
+    },
+    "music": {
+        "playMusic": {
+            "description": "Function to play music using the extension \"playmusic\"",
+            "params": [
+                {
+                    "name": "Music file",
+                    "type": "STRING"
+                },
+                {
+                    "name": "Volume",
+                    "type": "NUMBER"
+                },
+                {
+                    "name": "Loop",
+                    "type": "BOOL"
+                }
+            ],
+            "returns": {},
+            "example": "[\"music.ogg\", 1, true] call rtf42_music_fnc_playMusic;",
+            "author": "Franky",
+            "public": false
+        },
+        "stopMusic": {
+            "description": "Function to stop music",
+            "params": [],
+            "returns": {},
+            "example": "[] call rtf42_music_fnc_stopMusic;",
+            "author": "Franky",
+            "public": false
+        }
+    },
+    "objects": {},
+    "ui": {},
+    "uniforms": {},
+    "units": {},
+    "vests": {
+        "addExplodeAction": {
+            "description": "Function to add an action to the player to explode the vest",
+            "params": [
+                {
+                    "name": "Player",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_player] call rtf42_vests_fnc_addExplodeAction;",
+            "author": "Franky",
+            "public": false
+        },
+        "canExplode": {
+            "description": "Function to check if the player can explode",
+            "params": [
+                {
+                    "name": "Player",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_player] call rtf42_vests_fnc_canExplode;",
+            "author": "Franky",
+            "public": false
+        },
+        "explode": {
+            "description": "Function to explode (easy as that :D)",
+            "params": [
+                {
+                    "name": "Player",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_player] call rtf42_vests_fnc_explode;",
+            "author": "Franky",
+            "public": false
+        }
+    },
+    "zeus": {
+        "setInformant": {
+            "description": "Function to be called when the module is placed on the map to set a unit to be an informant",
+            "params": [
+                {
+                    "name": "Logic",
+                    "type": "LOGIC"
+                },
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_logic, _unit] call rtf42_zeus_fnc_setInformant;",
+            "author": "Franky",
+            "public": false
+        },
+        "setInformantWithAnswers": {
+            "description": "Function to be called when the module is placed on the map to set a unit to be an informant and set the answers to the questions.",
+            "params": [
+                {
+                    "name": "Logic",
+                    "type": "LOGIC"
+                },
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_logic, _unit] call rtf42_zeus_fnc_setInformantWithAnswers;",
+            "author": "Franky",
+            "public": false
+        },
+        "setTranslator": {
+            "description": "Function to be called when the module is placed on the map to set a unit to be an translator",
+            "params": [
+                {
+                    "name": "Logic",
+                    "type": "LOGIC"
+                },
+                {
+                    "name": "Unit",
+                    "type": "OBJECT"
+                }
+            ],
+            "returns": {},
+            "example": "[_logic, _unit] call rtf42_zeus_fnc_setTranslator;",
+            "author": "Franky",
+            "public": false
+        }
+    }
+}

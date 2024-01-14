@@ -19,6 +19,4 @@
 
 if (isNull _player) exitWith {false};
 
-diag_log format ["%1",items _player];
-
 (items _player) findIf {(_x isKindOf [QEGVAR(items,Cards), configFile >> "CfgWeapons"])} != -1

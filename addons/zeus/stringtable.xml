@@ -17,5 +17,57 @@
             <English>Set Informant with answers</English>
             <Spanish>Establecer informante con preguntas</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_aceshigh">
+            <English>ACES HIGH</English>
+            <Spanish>ACES HIGH</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_airqrf">
+            <English>AIR QRF</English>
+            <Spanish>AIR QRF</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_airsupply">
+            <English>AIR SUPPLY</English>
+            <Spanish>AIR SUPPLY</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_angelofdeath">
+            <English>ANGEL OF DEATH</English>
+            <Spanish>ANGEL OF DEATH</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_bigbrother">
+            <English>BIG BROTHER</English>
+            <Spanish>BIG BROTHER</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_deathfromabove">
+            <English>DEATH FROM ABOVE</English>
+            <Spanish>DEATH FROM ABOVE</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_fallguys">
+            <English>FALL GUYS</English>
+            <Spanish>FALL GUYS</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_fob">
+            <English>FOB</English>
+            <Spanish>FOB</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_herecomestheboom">
+            <English>HERE COMES THE BOOM</English>
+            <Spanish>HERE COMES THE BOOM</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_medevac">
+            <English>MEDEVAC</English>
+            <Spanish>MEDEVAC</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_heavypuncher">
+            <English>HEAVY PUNCHER</English>
+            <Spanish>HEAVY PUNCHER</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_theshield">
+            <English>THE SHIELD</English>
+            <Spanish>THE SHIELD</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_vikings">
+            <English>VIKINGS</English>
+            <Spanish>VIKINGS</Spanish>
+        </Key>
     </Package>
 </Project>

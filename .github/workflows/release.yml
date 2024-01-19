@@ -78,7 +78,6 @@ jobs:
             - name: Run translator
               run: cd tools/translator && npm start
             - name: Execute version generator
-              # if have rc in tag name, then it is prerelease
               if: ${{ contains(github.ref_name,'rc') == false }}
               run: |
                 cd ${{github.workspace}}/tools/version_generator
@@ -162,4 +161,5 @@ jobs:
                 labels: |
                     automerge
                     automated pr
+                path: addons
 

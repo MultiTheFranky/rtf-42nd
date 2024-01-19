@@ -15,4 +15,5 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "RcsDisplayMain.hpp"
+#include "RscDisplayPassword.hpp"
 #include "CfgWorlds.hpp"

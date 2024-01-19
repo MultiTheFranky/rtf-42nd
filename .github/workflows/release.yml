@@ -149,6 +149,7 @@ jobs:
 
             - name: PR to merge version to main branch
               uses: peter-evans/create-pull-request@v5
+              if: ${{ contains(github.ref_name,'rc') == false }}
               with:
                 token: ${{ secrets.GITHUB_TOKEN }}
                 commit-message: "Update version to ${{ env.VERSION }}"
@@ -161,5 +162,4 @@ jobs:
                 labels: |
                     automerge
                     automated pr
-                path: addons
 

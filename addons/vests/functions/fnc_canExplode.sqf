@@ -17,7 +17,7 @@
 
 params ["_player"];
 
-// Check if the vest is "rtf42_vests_SuicideVest"
+// Check if the vest is "rtf42_vests_SuicideVest" or "rtf42_vests_MiniSuicideVest"
 
-(vest _player) isEqualTo "rtf42_vests_SuicideVest"
+(vest _player) isEqualTo "rtf42_vests_SuicideVest" || (vest _player) isEqualTo "rtf42_vests_MiniSuicideVest"
 

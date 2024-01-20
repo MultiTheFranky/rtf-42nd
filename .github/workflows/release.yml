@@ -78,7 +78,6 @@ jobs:
             - name: Run translator
               run: cd tools/translator && npm start
             - name: Execute version generator
-              # if have rc in tag name, then it is prerelease
               if: ${{ contains(github.ref_name,'rc') == false }}
               run: |
                 cd ${{github.workspace}}/tools/version_generator
@@ -147,3 +146,20 @@ jobs:
                   change_notes_title: "${{ github.event.release.name }}"
                   change_notes: "${{ github.event.release.body }}"
               continue-on-error: true
+
+            - name: PR to merge version to main branch
+              uses: peter-evans/create-pull-request@v5
+              if: ${{ contains(github.ref_name,'rc') == false }}
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                commit-message: "Update version to ${{ env.VERSION }}"
+                title: "Update version to ${{ env.VERSION }}"
+                body: "Update version to ${{ env.VERSION }}"
+                branch: "version-${{ env.VERSION }}"
+                base: "main"
+                branch-suffix: random
+                delete-branch: true
+                labels: |
+                    automerge
+                    automated pr
+

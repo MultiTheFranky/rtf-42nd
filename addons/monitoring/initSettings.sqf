@@ -2,7 +2,7 @@ private _category = format ["RTF42 %1", LLSTRING(DisplayName)];
 
 [QGVAR(enabled), "CHECKBOX", [LSTRING(EnabledDisplayName), LSTRING(EnabledDescription)], _category, false, 1] call CBA_fnc_addSetting;
 
-[QGVAR(endpoint), "EDITBOX", [LSTRING(EndpointDisplayName), LSTRING(EndpointDescription)], _category, "http//:localhost:8086", 1] call CBA_fnc_addSetting;
+[QGVAR(endpoint), "EDITBOX", [LSTRING(EndpointDisplayName), LSTRING(EndpointDescription)], _category, "localhost:8086", 1] call CBA_fnc_addSetting;
 
 [QGVAR(token), "EDITBOX", [LSTRING(TokenDisplayName), LSTRING(TokenDescription)], _category, "<token>", 1] call CBA_fnc_addSetting;
 

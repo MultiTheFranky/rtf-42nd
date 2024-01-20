@@ -53,7 +53,7 @@ function generateNewVersion(beta = false) {
         version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}`,
         versionYear,
         versionMonth,
-        versionMinor,
+        versionMinor: parseInt(versionMinor) + 1,
     };
 }
 

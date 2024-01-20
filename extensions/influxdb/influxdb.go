@@ -76,7 +76,7 @@ func onStart(ctx a3interface.ArmaExtensionContext,
 	if len(args) != 4 {
 		return fmt.Sprintf("ERROR: Invalid number of parameters for start. Expected 4 <endpoint> <token> <org> <bucket>, got %d", len(args)), nil
 	}
-	client := influxdb2.NewClient(a3interface.RemoveEscapeQuotes(args[0]), a3interface.RemoveEscapeQuotes(args[1]))
+	client := influxdb2.NewClient("https://"+a3interface.RemoveEscapeQuotes(args[0]), a3interface.RemoveEscapeQuotes(args[1]))
 	writeAPI = client.WriteAPI(a3interface.RemoveEscapeQuotes(args[2]), a3interface.RemoveEscapeQuotes(args[3]))
 	return fmt.Sprintf("INFO: Created connection to InfluxDB on %s", args[0]), nil
 }

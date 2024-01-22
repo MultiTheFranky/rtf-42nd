@@ -21,6 +21,6 @@ _player addAction ["<t color='#ff0000'>Explode Vest</t>", {
     params ["_target"];
 
     [_target] call rtf42_vests_fnc_explode;
-}, nil, 0, false, true, "", "_target == _this && alive _target && [_target] call rtf42_vests_fnc_canExplode",0];
+}, nil, 0, false, true, "", "_this in _target && alive _this && [_this] call rtf42_vests_fnc_canExplode",0];
 
 

@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {QGVAR(Cards)};
+        units[] = {QGVAR(Cards),QGVAR(CeilingLamp)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"rtf42_main", "rtf42_items", "rtf42_cards"};

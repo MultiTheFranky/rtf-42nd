@@ -42,8 +42,7 @@ class CfgVehicles {
         editorSubcategory = "EdSubcat_Lamps";
         model = QPATHTOF(data\ceiling_lamp.p3d);
         _generalMacro = QGVAR(CeilingLamp);
-        class SimpleObject
-        {
+        class SimpleObject {
             eden = 0;
             animate[] = {{"light_1_pitch_rot",0},{"light_1_jaw_rot",0.13}};
             hide[] = {"light_1_hide"};

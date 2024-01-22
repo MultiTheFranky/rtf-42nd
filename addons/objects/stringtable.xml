@@ -13,5 +13,9 @@
             <English>Explode</English>
             <Spanish>Explotar</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_CeilingLampDisplayName">
+            <English>Ceiling Lamp</English>
+            <Spanish>Lámpara de Techo</Spanish>
+        </Key>
     </Package>
 </Project>

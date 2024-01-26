@@ -73,12 +73,12 @@ jobs:
               run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getMusic/.env
             - name: Run getMusic
               run: cd ${{ github.workspace }}/tools/getMusic && npm start
-            - name: Install getVideo
-              run: cd ${{ github.workspace }}/tools/getVideo && npm install
+            - name: Install getVideos
+              run: cd ${{ github.workspace }}/tools/getVideos && npm install
             - name: Fill .env file with secrets
-              run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideo/.env
-            - name: Run getVideo
-              run: cd ${{ github.workspace }}/tools/getVideo && npm start
+              run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideos/.env
+            - name: Run getVideos
+              run: cd ${{ github.workspace }}/tools/getVideos && npm start
             - name: Install translator
               run: cd ${{ github.workspace }}/tools/translator && npm install
             - name: Fill .env file with secrets

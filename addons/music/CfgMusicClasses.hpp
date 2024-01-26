@@ -1,7 +1,5 @@
-class CfgMusicClasses
-{
-	class GVAR(musicClass)
-    {
+class CfgMusicClasses {
+    class GVAR(musicClass) {
         displayName = "42nd R.T.F Music";
     };
 };

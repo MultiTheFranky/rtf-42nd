@@ -101,7 +101,7 @@ const writeConfig = async (music) => {
         .map(
             (file) => `class GVAR(${file.name}) {
         name = QUOTE(${file.prettyName});
-        sound[] = {QPATHTOF(data/${file.name}.ogg), 1, 1};
+        sound[] = {QPATHTOF(data\\${file.name}.ogg), 1, 1};
         duration = ${file.length};
         musicClass = QGVAR(musicClass);
     };`

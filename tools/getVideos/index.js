@@ -98,7 +98,7 @@ const writeConfig = async (video) => {
         .map(
             (file) => `class GVAR(${file.name}) {
         name = QUOTE(${file.prettyName});
-        file = QPATHTOF(data/${file.name}.ogv);
+        file = QPATHTOF(data\\${file.name}.ogv);
         duration = ${file.length};
     };`
         )

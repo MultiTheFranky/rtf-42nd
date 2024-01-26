@@ -14,5 +14,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgMusicClasses.hpp"
-#include "CfgMusic.hpp"
+#include "CfgVideos.hpp"

@@ -67,12 +67,24 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: 18
-            - name: Install translator
-              run: cd tools/translator && npm install
+            - name: Install getMusic
+              run: cd ${{ github.workspace }}/tools/getMusic && npm install
             - name: Fill .env file with secrets
-              run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> tools/translator/.env
+              run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getMusic/.env
+            - name: Run getMusic
+              run: cd ${{ github.workspace }}/tools/getMusic && npm start
+            - name: Install getVideo
+              run: cd ${{ github.workspace }}/tools/getVideo && npm install
+            - name: Fill .env file with secrets
+              run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideo/.env
+            - name: Run getVideo
+              run: cd ${{ github.workspace }}/tools/getVideo && npm start
+            - name: Install translator
+              run: cd ${{ github.workspace }}/tools/translator && npm install
+            - name: Fill .env file with secrets
+              run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> ${{ github.workspace }}/tools/translator/.env
             - name: Run translator
-              run: cd tools/translator && npm start
+              run: cd ${{ github.workspace }}/tools/translator && npm start
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT build

@@ -23,4 +23,7 @@ private _videoFile = getText (configFile >> "CfgVideos" >> _video >> "file");
 
 if (_videoFile == "") exitWith { diag_log format ["Video %1 not found", _video]; };
 
-[_videoFile] spawn BIS_fnc_playVideo;
+showChat false;
+[_videoFile] call BIS_fnc_playVideo;
+showChat true;
+

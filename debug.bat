@@ -19,6 +19,10 @@ call buildExtensions.bat
 
 call buildTranslations.bat
 
+call buildMusic.bat
+
+call buildVideos.bat
+
 call buildImages.bat
 
 rem Check if HEMMT is installed

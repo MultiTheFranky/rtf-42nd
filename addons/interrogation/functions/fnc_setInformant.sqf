@@ -22,6 +22,10 @@ params ["_unit", "_answers", "_force"];
 
 if (!isNil "_answers" && {typeName _answers != "HASHMAP"}) exitWith {};
 
+if (isNil "_force") then {
+    _force = false;
+};
+
 if (_unit getVariable [QGVAR(informant), false] && !_force) then {
     _unit removeAction (_unit getVariable [QGVAR(action), -1]);
     _unit setVariable [QGVAR(action), -1, true];
@@ -44,6 +48,7 @@ if (_unit getVariable [QGVAR(informant), false] && !_force) then {
     private _cooldownVariable = QGVAR(cooldown);
     private _mreVariable = QGVAR(mre);
     private _getMREFnc = FUNC(getMRE);
+
     _unit setVariable [
         QGVAR(action),
         _unit addAction [LLSTRING(InterrogateAction), {

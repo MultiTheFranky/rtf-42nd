@@ -1,3 +1,4 @@
+class CBA_Extended_EventHandlers;
 class CfgVehicles {
     class B_CTRG_soldier_GL_LAT_F;
     class B_CTRG_soldier_AR_A_F;
@@ -94,8 +95,12 @@ class CfgVehicles {
     };
     class Civilian_F;
     class CUP_Creatures_Civil_Takistan_Base: Civilian_F {
+        class EventHandlers;
+    };
+    class GVAR(Takistan_Base): CUP_Creatures_Civil_Takistan_Base {
         class EventHandlers: EventHandlers {
-            delete init;
+            init = "";
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
     };
 };

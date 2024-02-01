@@ -122,7 +122,7 @@ jobs:
                     asset_content_type: application/zip
                 continue-on-error: true
               - name: PR to merge version to main branch
-                uses: peter-evans/create-pull-request@v5
+                uses: peter-evans/create-pull-request@v6
                 with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: "Update version to ${{ env.VERSION }}"

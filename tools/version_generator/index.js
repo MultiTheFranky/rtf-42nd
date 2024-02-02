@@ -9,62 +9,94 @@
  *
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 function writeAddonsReleaseVersion(year, month, minor, beta) {
-    const versionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
-    const version = fs.readFileSync(versionPath, 'utf8');
+    const versionPath = path.join(
+        __dirname,
+        "..",
+        "..",
+        "addons",
+        "main",
+        "script_version.hpp"
+    );
+    const version = fs.readFileSync(versionPath, "utf8");
 
     const newVersion = version
         .replace(/#define MAJOR (.*)/, `#define MAJOR ${year}`)
         .replace(/#define MINOR (.*)/, `#define MINOR ${month}`)
         .replace(/#define PATCHLVL (.*)/, `#define PATCHLVL ${minor}`)
-        .replace(/#define BUILD (.*)/, `#define BUILD ${beta ? beta : '0'}`);
+        .replace(/#define BUILD (.*)/, `#define BUILD ${beta ? beta : "0"}`);
 
     fs.writeFileSync(versionPath, newVersion);
 }
 
 function generateNewVersion(beta = false) {
     // Use the script_version.hpp file to get the current version
-    const versionPath = path.join(__dirname, '..', '..', 'addons', 'main', 'script_version.hpp');
-    const version = fs.readFileSync(versionPath, 'utf8');
+    const versionPath = path.join(
+        __dirname,
+        "..",
+        "..",
+        "addons",
+        "main",
+        "script_version.hpp"
+    );
+    const version = fs.readFileSync(versionPath, "utf8");
 
     const versionYear = new Date().getFullYear();
     const versionMonth = new Date().getMonth() + 1;
 
-    const versionParts = version.match(/#define MAJOR (.*)\n#define MINOR (.*)\n#define PATCHLVL (.*)\n#define BUILD (.*)/);
-    const versionMinor = versionParts[3];
+    const versionParts = version.match(
+        /#define MAJOR (.*)\n#define MINOR (.*)\n#define PATCHLVL (.*)\n#define BUILD (.*)/
+    );
+    const versionMinor = versionParts[2];
+    const versionPatch = versionParts[3];
+    const versionBetaMinor = versionParts[4];
+
+    if (versionMonth !== parseInt(versionMinor)) {
+        versionPatch = 0;
+        versionBetaMinor = 0;
+    }
 
     // If is beta, increase the build version
     if (beta) {
-        const versionBetaMinor = versionParts[4];
         return {
-            version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor)}-rc.${parseInt(versionBetaMinor) + 1}`,
+            version: `v${versionYear}.${versionMonth}.${parseInt(
+                versionPatch
+            )}-rc.${parseInt(versionBetaMinor) + 1}`,
             versionYear,
             versionMonth,
-            versionMinor,
+            versionPatch,
             versionBetaMinor: parseInt(versionBetaMinor) + 1,
         };
     }
 
     // If is not beta, increase the patch level
     return {
-        version: `v${versionYear}.${versionMonth}.${parseInt(versionMinor) + 1}`,
+        version: `v${versionYear}.${versionMonth}.${
+            parseInt(versionPatch) + 1
+        }`,
         versionYear,
         versionMonth,
-        versionMinor: parseInt(versionMinor) + 1,
+        versionPatch: parseInt(versionMinor) + 1,
     };
 }
 
 // Get arguments
-const beta = process.argv.includes('--beta');
+const beta = process.argv.includes("--beta");
 
 // Generate new version
 const newVersion = generateNewVersion(beta);
 
 // Write new version
-writeAddonsReleaseVersion(newVersion.versionYear, newVersion.versionMonth, newVersion.versionMinor, beta ? newVersion.versionBetaMinor : null);
+writeAddonsReleaseVersion(
+    newVersion.versionYear,
+    newVersion.versionMonth,
+    newVersion.versionMinor,
+    beta ? newVersion.versionBetaMinor : null
+);
 
 // Return version to be use on github actions
 console.log(newVersion.version);
+

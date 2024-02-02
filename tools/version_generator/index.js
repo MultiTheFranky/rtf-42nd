@@ -93,7 +93,7 @@ const newVersion = generateNewVersion(beta);
 writeAddonsReleaseVersion(
     newVersion.versionYear,
     newVersion.versionMonth,
-    newVersion.versionMinor,
+    newVersion.versionPatch,
     beta ? newVersion.versionBetaMinor : null
 );
 

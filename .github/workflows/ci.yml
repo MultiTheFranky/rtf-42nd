@@ -9,11 +9,11 @@ concurrency:
 
 jobs:
     validate:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/validate.yml@main
+        uses: ./validate.yml
     lint:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/lint.yml@main
+        uses: ./lint.yml
     check:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/check.yml@main
+        uses: ./check.yml
 
     hemtt:
         name: Build with HEMTT
@@ -21,7 +21,7 @@ jobs:
         runs-on: windows-latest
         needs: [validate, lint, check]
         steps:
-            - uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/base.yml@main
+            - uses: ./base.yml
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT build

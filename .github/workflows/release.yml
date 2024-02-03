@@ -56,7 +56,7 @@ jobs:
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT release
-              run: hemtt release
+              run: hemtt release --no-bin
             - name: Rename build folder
               run: mv ${{ github.workspace }}\\releases\\rtf42-latest.zip ${{ github.workspace }}\\releases\\@rtf42.zip
             - name: Upload Artifact

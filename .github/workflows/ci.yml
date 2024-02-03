@@ -31,6 +31,9 @@ jobs:
                 CDN_URL: ${{ secrets.CDN_URL }}
                 TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
                 TOLGEE_URL: ${{ secrets.TOLGEE_URL }}
+            - uses: arma-actions/arma3-tools@master
+              with:
+                toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT build

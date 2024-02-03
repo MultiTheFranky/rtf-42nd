@@ -48,8 +48,11 @@ jobs:
               run: |
                   cd ${{github.workspace}}\\tools\\version_generator
                   npm install
-                  VERSION=$(node index.js --beta)
+                  $VERSION=$(node index.js --beta)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
+            - uses: arma-actions/arma3-tools@master
+              with:
+                  toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT release

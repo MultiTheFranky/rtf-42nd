@@ -3,7 +3,7 @@ name: Check Workflow
 on:
   workflow_call:
 jobs:
-  build:
+  check:
     runs-on: windows-latest
     steps:
         - name: Checkout the source code

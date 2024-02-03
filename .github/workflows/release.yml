@@ -30,7 +30,7 @@ jobs:
         needs: [validate, lint, check, extensions]
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
             - uses: ./.github/workflows/base
               with:
                 CDN_URL: ${{ secrets.CDN_URL }}

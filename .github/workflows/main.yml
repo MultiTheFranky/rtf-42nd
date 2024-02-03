@@ -55,8 +55,6 @@ jobs:
                   toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip
               - name: Setup HEMTT
                 uses: arma-actions/hemtt@v1
-                with:
-                  version: "1.10.2"
               - name: Run HEMTT release
                 run: hemtt release
               - name: Rename build folder

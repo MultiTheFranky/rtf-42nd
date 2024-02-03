@@ -79,7 +79,7 @@ function generateNewVersion(beta = false) {
         }`,
         versionYear,
         versionMonth,
-        versionPatch: parseInt(versionMinor) + 1,
+        versionPatch: parseInt(versionPatch) + 1,
     };
 }
 

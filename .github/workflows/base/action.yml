@@ -46,7 +46,7 @@ runs:
       shell: pwsh
     - name: Fill .env file with secrets
       run: |
-        echo "TOLGEE_API_KEY=${{inputs.TOLGEE_API_KEY}}" >>
+        echo "TOLGEE_API_KEY=${{inputs.TOLGEE_API_KEY}}" >> ${{ github.workspace }}\\tools\\translator\\.env
         echo "TOLGEE_URL=${{inputs.TOLGEE_URL}}" >> ${{ github.workspace }}\\tools\\translator\\.env
       shell: pwsh
     - name: Run translator

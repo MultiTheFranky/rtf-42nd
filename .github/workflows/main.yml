@@ -41,7 +41,7 @@ jobs:
                     TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
                     TOLGEE_URL: ${{ secrets.TOLGEE_URL }}
               - name: Retrieve base artifact
-                uses: actions/download-artifact@v2
+                uses: actions/download-artifact@v4
                 with:
                   name: extensions
               - name: Execute version generator

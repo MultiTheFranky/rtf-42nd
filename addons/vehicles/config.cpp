@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rtf42_main", "rhsusf_vehicles"};
+        requiredAddons[] = {"rtf42_main", "rhsusf_vehicles","CUP_WheeledVehicles_NewM998"};
         author = ECSTRING(main,Author);
         authors[] = {ECSTRING(main,Author)};
         VERSION_CONFIG;

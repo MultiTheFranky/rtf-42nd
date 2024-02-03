@@ -14,11 +14,11 @@ concurrency:
 
 jobs:
     validate:
-        uses: ./validate.yml
+        uses: ./.github/workflows/validate.yml
     lint:
-        uses: ./lint.yml
+        uses: ./.github/workflows/lint.yml
     check:
-        uses: ./check.yml
+        uses: ./.github/workflows/check.yml
     release:
         name: BETA Release
         permissions: write-all
@@ -26,7 +26,7 @@ jobs:
         if: github.actor != 'kodiakhq[bot]'
         needs: [validate, lint, check]
         steps:
-              - uses: /./base.yml
+              - uses: ./.github/workflows/base.yml
               - name: Execute version generator
                 run: |
                     cd ${{ github.workspace }}/tools/version_generator

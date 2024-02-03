@@ -1,4 +1,4 @@
-# .github/workflows/jobs/lint.yaml
+# .github/workflows/lint.yaml
 name: Lint Workflow
 on:
   workflow_call:

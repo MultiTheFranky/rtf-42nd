@@ -9,11 +9,11 @@ concurrency:
 
 jobs:
     validate:
-        uses: ./validate.yml
+        uses: ./.github/workflows/validate.yml
     lint:
-        uses: ./lint.yml
+        uses: ./.github/workflows/lint.yml
     check:
-        uses: ./check.yml
+        uses: ./.github/workflows/check.yml
 
     hemtt:
         name: Build with HEMTT
@@ -21,7 +21,7 @@ jobs:
         runs-on: windows-latest
         needs: [validate, lint, check]
         steps:
-            - uses: ./base.yml
+            - uses: ./.github/workflows/base.yml
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT build

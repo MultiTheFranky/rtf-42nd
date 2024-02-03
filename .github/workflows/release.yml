@@ -14,18 +14,18 @@ concurrency:
 
 jobs:
     validate:
-        uses: ./validate.yml
+        uses: ./.github/workflows/validate.yml
     lint:
-        uses: ./lint.yml
+        uses: ./.github/workflows/lint.yml
     check:
-        uses: ./check.yml
+        uses: ./.github/workflows/check.yml
     hemtt:
         name: Build with HEMTT
         permissions: write-all
         runs-on: windows-latest
         needs: [validate, lint, check]
         steps:
-            - uses: ./base.yml
+            - uses: ./.github/workflows/base.yml
             - name: Execute version generator
               if: ${{ contains(github.ref_name,'rc') == false }}
               run: |

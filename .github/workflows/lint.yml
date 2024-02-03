@@ -1,4 +1,3 @@
-# .github/workflows/lint.yaml
 name: Lint Workflow
 on:
   workflow_call:

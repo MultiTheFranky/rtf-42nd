@@ -1,4 +1,3 @@
-# .github/workflows/validate.yaml
 name: Validate Workflow
 on:
   workflow_call:

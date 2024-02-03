@@ -22,7 +22,7 @@ runs:
         install: true
         driver: docker
     - name: Build Extensions
-      run: .\extensions\build.ps1
+      run: .\buildExtensions.bat
       shell: pwsh
     - name: Download FFMPEG
       run: .\tools\downloadFFMPEG.ps1

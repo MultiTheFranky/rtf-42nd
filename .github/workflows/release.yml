@@ -41,15 +41,15 @@ jobs:
               run: |
                 cd ${{github.workspace}}\\tools\\version_generator
                 npm install
-                VERSION=$(node index.js )
-                echo "VERSION=$VERSION" >> $GITHUB_ENV
+                $VERSION=$(node index.js )
+                echo "VERSION=$VERSION" >> $env:GITHUB_ENV
             - name: Execute version generator
               if: ${{ contains(github.ref_name,'rc') == true }}
               run: |
-                  cd ${{github.workspace}}\\tools\\version_generator
-                  npm install
-                  $VERSION=$(node index.js --beta)
-                  echo "VERSION=$VERSION" >> $GITHUB_ENV
+                cd ${{github.workspace}}\\tools\\version_generator
+                npm install
+                $VERSION=$(node index.js --beta)
+                echo "VERSION=$VERSION" >> $env:GITHUB_ENV
             - uses: arma-actions/arma3-tools@master
               with:
                   toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip

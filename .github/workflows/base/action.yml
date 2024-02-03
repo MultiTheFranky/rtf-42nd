@@ -1,5 +1,16 @@
 name: "Base Workflow"
 description: "This workflow is used to execute base scripts for the project"
+inputs:
+  CDN_URL:
+    description: "URL of the CDN where the files will be uploaded"
+    required: true
+    default: "https://cdn.example.com"
+  TOLGEE_API_KEY:
+    description: "API key for TOLGEE"
+    required: true
+  TOLGEE_URL:
+    description: "URL of the TOLGEE server"
+    required: true
 runs:
   using: "composite"
   steps:
@@ -12,28 +23,39 @@ runs:
         driver: docker
     - name: Build Extensions
       run: .\extensions\build.ps1
+      shell: pwsh
     - name: Download FFMPEG
       run: .\tools\downloadFFMPEG.ps1
+      shell: pwsh
     - name: Setup node
       uses: actions/setup-node@v4
       with:
         node-version: 18
     - name: Install getMusic
       run: cd ${{ github.workspace }}/tools/getMusic && npm install
+      shell: pwsh
     - name: Fill .env file with secrets
-      run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getMusic/.env
+      run: echo -e "CDN_URL=${{inputs.CDN_URL}}" >> ${{ github.workspace }}/tools/getMusic/.env
+      shell: pwsh
     - name: Run getMusic
       run: cd ${{ github.workspace }}/tools/getMusic && npm start
+      shell: pwsh
     - name: Install getVideos
       run: cd ${{ github.workspace }}/tools/getVideos && npm install
+      shell: pwsh
     - name: Fill .env file with secrets
-      run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideos/.env
+      run: echo -e "CDN_URL=${{inputs.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideos/.env
+      shell: pwsh
     - name: Run getVideos
       run: cd ${{ github.workspace }}/tools/getVideos && npm start
+      shell: pwsh
     - name: Install translator
       run: cd ${{ github.workspace }}/tools/translator && npm install
+      shell: pwsh
     - name: Fill .env file with secrets
-      run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> ${{ github.workspace }}/tools/translator/.env
+      run: echo -e "TOLGEE_API_KEY=${{ inputs.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ inputs.TOLGEE_URL }}" >> ${{ github.workspace }}/tools/translator/.env
+      shell: pwsh
     - name: Run translator
       run: cd ${{ github.workspace }}/tools/translator && npm start
+      shell: pwsh
 

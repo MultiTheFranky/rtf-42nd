@@ -1,10 +1,9 @@
 # .github/workflows/validate.yaml
-name: Base Workflow
-on:
-  workflow_call:
-jobs:
-  build:
-    runs-on: ubuntu-latest
+name: "Base Workflow"
+description: "This workflow is used to execute base scripts for the project"
+runs:
+  using: "composite"
+  steps:
     steps:
         - name: Checkout repo
           uses: actions/checkout@v4
@@ -39,3 +38,15 @@ jobs:
           run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> ${{ github.workspace }}/tools/translator/.env
         - name: Run translator
           run: cd ${{ github.workspace }}/tools/translator && npm start
+        - name: Temporaly save all to an artifact
+          uses: actions/upload-artifact@v2
+          with:
+            name: temp
+            path: |
+              addons/music/data
+              addons/videos/data
+              *stringtable.xml*
+              *.dll
+              *.so
+              ffmpeg.exe
+

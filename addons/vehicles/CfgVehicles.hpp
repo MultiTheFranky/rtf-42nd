@@ -29,7 +29,6 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_hmmwv\textures\m998_exterior_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\m998_interior_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\A2_parts_D_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\wheel_wranglermt_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\m998_mainbody_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\gratting_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\m998_interior_wood_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\m998_2drcargo_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\textures\tile_exmetal_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\unitdecals\101stab_502reg_2ndbn_a12_d_co.paa", "rhsusf\addons\rhsusf_hmmwv\unitdecals\a12^_co.paa"};
         #include "./inventoryPresets/Base.hpp"
     };
-
     class rhsusf_m1152_rsv_usarmy_d;
     class GVAR(m1152_rsv_usarmy_d): rhsusf_m1152_rsv_usarmy_d {
         #include "./inventoryPresets/SupplyTruck.hpp"

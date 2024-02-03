@@ -26,7 +26,7 @@ jobs:
         if: github.actor != 'kodiakhq[bot]'
         needs: [validate, lint, check]
         steps:
-              - uses: ./.github/workflows/base.yml
+              - uses: MultiTheFranky/rtf-42nd/.github/workflows/base.yml@main
               - name: Execute version generator
                 run: |
                     cd ${{ github.workspace }}/tools/version_generator

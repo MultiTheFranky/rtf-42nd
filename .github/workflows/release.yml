@@ -25,7 +25,7 @@ jobs:
         runs-on: windows-latest
         needs: [validate, lint, check]
         steps:
-            - uses: ./.github/workflows/base.yml
+            - uses: MultiTheFranky/rtf-42nd/.github/workflows/base.yml@main
             - name: Execute version generator
               if: ${{ contains(github.ref_name,'rc') == false }}
               run: |

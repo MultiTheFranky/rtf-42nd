@@ -3,7 +3,7 @@
 ADDON = false;
 PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 PREP_RECOMPILE_END;
 
 ADDON = true;

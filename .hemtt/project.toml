@@ -1,6 +1,7 @@
 name = "rtf42"
 prefix = "rtf42"
 author = "42nd RTF Team"
+mainprefix = "z"
 
 [files]
 include = [
@@ -17,10 +18,18 @@ include = [
     "ffmpeg.exe"
 ]
 
-[asc]
-enabled = true
-exclude = [
-    "/initsettings.sqf",
-    "/initkeybinds.sqf",
-    "/xeh_prep.sqf",
+[hemtt.launch.default]
+workshop = []
+presets = [
+    "main", # .html presets from .hemtt/presets/
+]
+dlc = []
+optionals = []
+parameters = [
+    "-skipIntro",           # These parameters are passed to the Arma 3 executable
+    "-noSplash",            # They do not need to be added to your list
+    "-showScriptErrors",    # You can add additional parameters here
+    "-debug",
+    "-filePatching",
+    "D:\\Arma3Projects\\rtf42\\missions\\rtf42_base_test_mission.VR\\mission.sqm", # Launch into existing Editor Mission - \\ needed - Change what ever you path is
 ]

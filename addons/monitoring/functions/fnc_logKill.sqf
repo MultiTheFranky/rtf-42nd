@@ -21,7 +21,7 @@ if (!params [
     ["_killer", "", [""]],
     ["_kills", 0, [0]]
     ]) exitWith {
-        ERROR_2("rtf42_monitoring_fnc_logKill | Missing parameter [%1, %2]", _killer, _kills);
+        ERROR_2("rtf42_monitoring_fnc_logKill | Missing parameter [%1, %2]",_killer,_kills);
     };
 
     // Add the data

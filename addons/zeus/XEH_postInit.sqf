@@ -1,2 +1,2 @@
 #include "script_component.hpp"
-#include "initZen.sqf"
+#include "initZen.inc.sqf"

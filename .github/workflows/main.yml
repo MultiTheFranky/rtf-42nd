@@ -25,8 +25,8 @@ jobs:
         runs-on: windows-latest
         if: github.actor != 'kodiakhq[bot]'
         needs: [validate, lint, check]
+        uses: MultiTheFranky/rtf-42nd/.github/workflows/base.yml@main
         steps:
-              - uses: MultiTheFranky/rtf-42nd/.github/workflows/base.yml@main
               - name: Execute version generator
                 run: |
                     cd ${{ github.workspace }}/tools/version_generator

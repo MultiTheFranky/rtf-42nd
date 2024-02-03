@@ -20,8 +20,8 @@ jobs:
         permissions: write-all
         runs-on: windows-latest
         needs: [validate, lint, check]
+        uses: MultiTheFranky/rtf-42nd/.github/workflows/base.yml@main
         steps:
-            - uses: MultiTheFranky/rtf-42nd/.github/workflows/base.yml@main
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT build

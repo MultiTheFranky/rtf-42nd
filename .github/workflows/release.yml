@@ -14,18 +14,18 @@ concurrency:
 
 jobs:
     validate:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/validate.yml@main
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/validate.yml@main
     lint:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/lint.yml@main
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/lint.yml@main
     check:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/check.yml@main
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/check.yml@main
     hemtt:
         name: Build with HEMTT
         permissions: write-all
         runs-on: windows-latest
         needs: [validate, lint, check]
         steps:
-            - uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/base.yml@main
+            - uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/base.yml@main
             - name: Execute version generator
               if: ${{ contains(github.ref_name,'rc') == false }}
               run: |

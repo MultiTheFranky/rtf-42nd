@@ -14,11 +14,11 @@ concurrency:
 
 jobs:
     validate:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/validate.yml@main
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/validate.yml@main
     lint:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/lint.yml@main
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/lint.yml@main
     check:
-        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/check.yml@main
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/check.yml@main
     release:
         name: BETA Release
         permissions: write-all
@@ -26,7 +26,7 @@ jobs:
         if: github.actor != 'kodiakhq[bot]'
         needs: [validate, lint, check]
         steps:
-              - uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/base.yml@main
+              - uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/base.yml@main
               - name: Execute version generator
                 run: |
                     cd ${{ github.workspace }}/tools/version_generator

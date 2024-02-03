@@ -14,16 +14,23 @@ jobs:
         uses: ./.github/workflows/lint.yml
     check:
         uses: ./.github/workflows/check.yml
+    extensions:
+        name: Extensions
+        uses: ./.github/workflows/buildExtensions.yml
 
     hemtt:
         name: Build with HEMTT
         permissions: write-all
         runs-on: windows-latest
-        needs: [validate, lint, check]
+        needs: [validate, lint, check, extensions]
         steps:
             - name: Checkout
               uses: actions/checkout@v2
             - uses: ./.github/workflows/base
+              with:
+                CDN_URL: ${{ secrets.CDN_URL }}
+                TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
+                TOLGEE_URL: ${{ secrets.TOLGEE_URL }}
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT build

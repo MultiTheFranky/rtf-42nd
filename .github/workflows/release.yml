@@ -19,26 +19,34 @@ jobs:
         uses: ./.github/workflows/lint.yml
     check:
         uses: ./.github/workflows/check.yml
+    extensions:
+        name: Extensions
+        uses: ./.github/workflows/buildExtensions.yml
+
     hemtt:
         name: Build with HEMTT
         permissions: write-all
         runs-on: windows-latest
-        needs: [validate, lint, check]
+        needs: [validate, lint, check, extensions]
         steps:
             - name: Checkout
               uses: actions/checkout@v2
             - uses: ./.github/workflows/base
+              with:
+                CDN_URL: ${{ secrets.CDN_URL }}
+                TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
+                TOLGEE_URL: ${{ secrets.TOLGEE_URL }}
             - name: Execute version generator
               if: ${{ contains(github.ref_name,'rc') == false }}
               run: |
-                cd ${{github.workspace}}/tools/version_generator
+                cd ${{github.workspace}}\\tools\\version_generator
                 npm install
                 VERSION=$(node index.js )
                 echo "VERSION=$VERSION" >> $GITHUB_ENV
             - name: Execute version generator
               if: ${{ contains(github.ref_name,'rc') == true }}
               run: |
-                  cd ${{github.workspace}}/tools/version_generator
+                  cd ${{github.workspace}}\\tools\\version_generator
                   npm install
                   VERSION=$(node index.js --beta)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
@@ -47,12 +55,12 @@ jobs:
             - name: Run HEMTT release
               run: hemtt release
             - name: Rename build folder
-              run: mv ${{ github.workspace }}/releases/rtf42-latest.zip ${{ github.workspace }}/releases/@rtf42.zip
+              run: mv ${{ github.workspace }}\\releases\\rtf42-latest.zip ${{ github.workspace }}\\releases\\@rtf42.zip
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
               with:
                   name: rtf42-${{ env.VERSION }}
-                  path: ${{ github.workspace }}/releases/@rtf42.zip
+                  path: ${{ github.workspace }}\\releases\\@rtf42.zip
             - name: Setup steamcmd
               id: steamcmd
               uses: CyberAndrii/setup-steamcmd@v1
@@ -65,7 +73,7 @@ jobs:
               continue-on-error: true
 
             - name: Unzip builded mod
-              run: unzip -o ${{ github.workspace }}/releases/@rtf42.zip -d ${{ github.workspace }}/releases
+              run: unzip -o ${{ github.workspace }}\\releases\\@rtf42.zip -d ${{ github.workspace }}\\releases
               continue-on-error: true
 
             - name: Upload mod
@@ -77,7 +85,7 @@ jobs:
                   username: "${{ secrets.STEAM_USERNAME }}"
                   password: "${{ secrets.STEAM_PASSWORD }}"
                   otp: "${{ steps.generate.outputs.code }}"
-                  path: "${{ github.workspace }}/releases/@rtf42"
+                  path: "${{ github.workspace }}\\releases\\@rtf42"
                   name: "rtf42"
                   change_notes_title: "${{ github.event.release.name }}"
                   change_notes: "${{ github.event.release.body }}"
@@ -92,7 +100,7 @@ jobs:
                   username: "${{ secrets.STEAM_USERNAME }}"
                   password: "${{ secrets.STEAM_PASSWORD }}"
                   otp: "${{ steps.generate.outputs.code }}"
-                  path: "${{ github.workspace }}/releases/@rtf42"
+                  path: "${{ github.workspace }}\\releases\\@rtf42"
                   name: "rtf42"
                   change_notes_title: "${{ github.event.release.name }}"
                   change_notes: "${{ github.event.release.body }}"

@@ -22,13 +22,16 @@ jobs:
     check:
         name: Check
         uses: ./.github/workflows/check.yml
+    extensions:
+        name: Extensions
+        uses: ./.github/workflows/buildExtensions.yml
 
     release:
         name: BETA Release
         permissions: write-all
         if: github.actor != 'kodiakhq[bot]'
         runs-on: windows-latest
-        needs: [validate, lint, check]
+        needs: [validate, lint, check, extensions]
         steps:
               - name: Checkout
                 uses: actions/checkout@v2
@@ -40,8 +43,7 @@ jobs:
               - name: Retrieve base artifact
                 uses: actions/download-artifact@v2
                 with:
-                  name: temp
-                  path: ${{ github.workspace }}
+                  name: extensions
               - name: Execute version generator
                 run: |
                     cd ${{ github.workspace }}/tools/version_generator

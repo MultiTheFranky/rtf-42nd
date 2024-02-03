@@ -1,0 +1,41 @@
+# .github/workflows/jobs/validate.yaml
+name: Validate Workflow
+on:
+  workflow_call:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repo
+            uses: actions/checkout@v4
+        - name: Setup Docker
+            uses: docker/setup-buildx-action@v3
+            with:
+                install: true
+                driver: docker
+        - name: Build Extensions
+            run: .\extensions\build.ps1
+        - name: Download FFMPEG
+            run: .\tools\downloadFFMPEG.ps1
+        - name: Setup node
+            uses: actions/setup-node@v4
+            with:
+                node-version: 18
+        - name: Install getMusic
+            run: cd ${{ github.workspace }}/tools/getMusic && npm install
+        - name: Fill .env file with secrets
+            run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getMusic/.env
+        - name: Run getMusic
+            run: cd ${{ github.workspace }}/tools/getMusic && npm start
+        - name: Install getVideos
+            run: cd ${{ github.workspace }}/tools/getVideos && npm install
+        - name: Fill .env file with secrets
+            run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideos/.env
+        - name: Run getVideos
+            run: cd ${{ github.workspace }}/tools/getVideos && npm start
+        - name: Install translator
+            run: cd ${{ github.workspace }}/tools/translator && npm install
+        - name: Fill .env file with secrets
+            run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> ${{ github.workspace }}/tools/translator/.env
+        - name: Run translator
+            run: cd ${{ github.workspace }}/tools/translator && npm start

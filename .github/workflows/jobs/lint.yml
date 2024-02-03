@@ -1,0 +1,12 @@
+# .github/workflows/jobs/lint.yaml
+name: Lint Workflow
+on:
+  workflow_call:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout the source code
+          uses: actions/checkout@master
+        - name: Lint (sqflint)
+          uses: arma-actions/sqflint@master

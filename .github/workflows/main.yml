@@ -14,31 +14,11 @@ concurrency:
 
 jobs:
     validate:
-        runs-on: windows-latest
-        steps:
-            - name: Checkout the source code
-              uses: actions/checkout@master
-            - name: Validate SQF
-              run: python3 tools/sqf_validator.py
-            - name: Validate Config
-              run: python3 tools/config_style_checker.py
-            - name: Check for BOM
-              uses: arma-actions/bom-check@master
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/validate.yml@main
     lint:
-        runs-on: windows-latest
-        steps:
-            - name: Checkout the source code
-              uses: actions/checkout@master
-            - name: Lint (sqflint)
-              uses: arma-actions/sqflint@master
-              continue-on-error: true # No failure due to many false-positives
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/lint.yml@main
     check:
-        runs-on: windows-latest
-        steps:
-            - name: Setup HEMTT
-              uses: arma-actions/hemtt@v1
-            - name: Run HEMTT check
-              run: hemtt check
+        uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/check.yml@main
     release:
         name: BETA Release
         permissions: write-all
@@ -46,45 +26,13 @@ jobs:
         if: github.actor != 'kodiakhq[bot]'
         needs: [validate, lint, check]
         steps:
-              - name: Checkout repo
-                uses: actions/checkout@v4
-              - name: Setup Docker
-                uses: docker/setup-buildx-action@v3
-                with:
-                    install: true
-                    driver: docker
-              - name: Build Extensions
-                run: .\extensions\build.ps1
-              - name: Download FFMPEG
-                run: .\tools\downloadFFMPEG.ps1
-              - name: Setup node
-                uses: actions/setup-node@v4
-                with:
-                    node-version: 18
-              - name: Install getMusic
-                run: cd ${{ github.workspace }}/tools/getMusic && npm install
-              - name: Fill .env file with secrets
-                run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getMusic/.env
-              - name: Run getMusic
-                run: cd ${{ github.workspace }}/tools/getMusic && npm start
-              - name: Install getVideos
-                run: cd ${{ github.workspace }}/tools/getVideos && npm install
-              - name: Fill .env file with secrets
-                run: echo -e "CDN_URL=${{secrets.CDN_URL}}" >> ${{ github.workspace }}/tools/getVideos/.env
-              - name: Run getVideos
-                run: cd ${{ github.workspace }}/tools/getVideos && npm start
-              - name: Install translator
-                run: cd ${{ github.workspace }}/tools/translator && npm install
-              - name: Fill .env file with secrets
-                run: echo -e "TOLGEE_API_KEY=${{ secrets.TOLGEE_API_KEY }}\nTOLGEE_URL=${{ secrets.TOLGEE_URL }}" >> ${{ github.workspace }}/tools/translator/.env
-              - name: Run translator
-                run: cd ${{ github.workspace }}/tools/translator && npm start
+              - uses: /MultiTheFranky/rtf-42nd/tree/main/.github/workflows/jobs/base.yml@main
               - name: Execute version generator
                 run: |
-                  cd ${{ github.workspace }}/tools/version_generator
-                  npm install
-                  VERSION=$(node index.js --beta)
-                  echo "VERSION=$VERSION" >> $GITHUB_ENV
+                    cd ${{ github.workspace }}/tools/version_generator
+                    npm install
+                    VERSION=$(node index.js --beta)
+                    echo "VERSION=$VERSION" >> $GITHUB_ENV
               - name: Setup HEMTT
                 uses: arma-actions/hemtt@v1
               - name: Run HEMTT release

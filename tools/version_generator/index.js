@@ -48,7 +48,7 @@ function generateNewVersion(beta = false) {
     const versionMonth = new Date().getMonth() + 1;
 
     const versionParts = version.match(
-        /#define MAJOR (.*)\n#define MINOR (.*)\n#define PATCHLVL (.*)\n#define BUILD (.*)/
+        /#define MAJOR (.*)\r\n#define MINOR (.*)\r\n#define PATCHLVL (.*)\r\n#define BUILD (.*)/
     );
     const versionMinor = versionParts[2];
     const versionPatch = versionParts[3];

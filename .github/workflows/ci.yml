@@ -36,9 +36,9 @@ jobs:
             - name: Run HEMTT build
               run: hemtt build
             - name: Rename build folder
-              run: mv .hemttout/build .hemttout/@rtf42
+              run: mv .hemttout\\build .hemttout\\@rtf42
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
               with:
                   name: rtf42-${{ github.sha }}
-                  path: .hemttout/@*
+                  path: .hemttout\\@*

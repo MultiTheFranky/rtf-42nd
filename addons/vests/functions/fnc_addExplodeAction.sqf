@@ -1,23 +1,23 @@
 #include "..\script_component.hpp"
 /*
     * Author: Franky
-    * Function to add an action to the player to explode the vest
+    * Function to add an action to the unit to explode the vest
     *
     * Arguments:
-    * 0: Player <OBJECT>
+    * 0: Unit <OBJECT>
     *
     * Return Value:
     *
     *
     * Example:
-    * [_player] call rtf42_vests_fnc_addExplodeAction;
+    * [_unit] call rtf42_vests_fnc_addExplodeAction;
     *
     * Public: No
 */
 
-params ["_player"];
+params ["_unit"];
 
-_player addAction ["<t color='#ff0000'>Explode Vest</t>", {
+_unit addAction ["<t color='#ff0000'>Explode Vest</t>", {
     params ["_target"];
 
     [_target] call rtf42_vests_fnc_explode;

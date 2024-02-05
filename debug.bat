@@ -1,6 +1,6 @@
 @echo off
 
-call mountDev.bat
+rem call mountDev.bat
 
 rem create a loop
 :fullLoop

@@ -51,43 +51,13 @@
  cd rtf42
 ```
 
-3. Edit the setup (setup.bat) script
-
-4. Edit the DISK, the ARMA3_DIR, P_DRIVE_DIR and the PROJECT_NAME variables as you want and save
-
-```bash
- DISK="C:"
- ARMA3_DIR="C:\Program Files (x86)\Steam\steamapps\common\Arma 3"
- P_DRIVE_DIR="C:\Users\Public\Documents\Arma 3 - Other Profiles"
- PROJECT_NAME="rtf42"
-```
-
-5. Execute the setup script
-
-```bash
- .\setup.bat
-```
-
-6. Delete the cloned repository
-
-```bash
- cd ..
- rmdir /s /q rtf42
-```
-
-7. Go to `P:\z\rtf42` or `Arma3Projects\rtf42` and execute the debug script
-
-```bash
- .\debug.bat
-```
-
 ## Development
 
 ```bash
  .\debug.bat
 ```
 
-Execute
+Execute every time you whan to recompile functions
 
 ```sqf
 [] call ACE_PREP_RECOMPILE;

@@ -12,6 +12,12 @@ jobs:
           with:
             driver: docker
             install: true
+        - name: Setup Cross
+          uses: actions-rs/cargo@v1
+          with:
+            command: install
+            args: cross --git https://github.com/cross-rs/cross
+
         - name: Build Extensions
           run: |
                 cd extensions
@@ -27,6 +33,24 @@ jobs:
                     docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "./${d}_x64.so" -linkshared -ldflags '-w -s' "./$d"
                     mv ${d}_x64.dll ${d}_x64.so ..
                 done
+        - name: Build Rust Extensions
+          run: |
+                    cd extensions
+                    for d in */ ; do
+                        d=${d::-1}
+                        if [ "$d" != "playmusicrs" ]; then
+                            continue
+                        fi
+                        echo "Building $d"
+                        cross build --target x86_64-pc-windows-gnu --release
+                        cross build --target i686-pc-windows-gnu --release
+                        cross build --target x86_64-unknown-linux-gnu --release
+                        cross build --target i686-unknown-linux-gnu --release
+                        mv target/x86_64-pc-windows-gnu/release/*.dll ${{ github.workspace }}/${d}_x64.dll
+                        mv target/x86_64-unknown-linux-gnu/release/*.so ${{ github.workspace }}/${d}_x64.so
+                        mv target/i686-pc-windows-gnu/release/*.dll ${{ github.workspace }}/${d}.dll
+                        mv target/i686-unknown-linux-gnu/release/*.so ${{ github.workspace }}/${d}.so
+                    done
         - name: upload artifacts
           uses: actions/upload-artifact@v4
           with:

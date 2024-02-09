@@ -22,9 +22,6 @@ jobs:
                     cd extensions
                     for d in */ ; do
                         d=${d::-1}
-                        if [ "$d" != "playmusicrs" ]; then
-                            continue
-                        fi
                         echo "Building $d"
                         cd $d
                         cross build --target x86_64-pc-windows-gnu --release

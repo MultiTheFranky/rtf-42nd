@@ -10,7 +10,7 @@
  * None
  *s
  * Example:
- * [_card] call rft42_cards_fnc_seeCardSimple;
+ * [_card] call rtf42_cards_fnc_seeCardSimple;
  *
  * Public: No
  */

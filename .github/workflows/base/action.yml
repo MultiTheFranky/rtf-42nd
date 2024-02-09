@@ -16,8 +16,6 @@ runs:
   steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-    - name: Download FFMPEG
-      run: .\\tools\\downloadFFMPEG.ps1
       shell: pwsh
     - name: Setup node
       uses: actions/setup-node@v4

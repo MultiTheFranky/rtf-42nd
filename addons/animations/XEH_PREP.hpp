@@ -1,0 +1,2 @@
+PREP(canPerformAnimation);
+PREP(performAnimation);

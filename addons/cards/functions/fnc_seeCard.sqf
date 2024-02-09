@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [_target, player, ["imageName", "image.paa"]] call rft42_cards_fnc_seeCard;
+ * [_target, player, ["imageName", "image.paa"]] call rtf42_cards_fnc_seeCard;
  *
  * Public: No
  */

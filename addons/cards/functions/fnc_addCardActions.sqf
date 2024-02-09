@@ -10,7 +10,7 @@
  * Actions <ARRAY>
  *
  * Example:
- * [_target] call rft42_cards_fnc_addCardActions
+ * [_target] call rtf42_cards_fnc_addCardActions
  *
  * Public: No
  */

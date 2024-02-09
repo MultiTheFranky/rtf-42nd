@@ -17,7 +17,7 @@
 */
 
 
-["RFT42 Cards", LLSTRING(HintCard), {
+["RTF42 Cards", LLSTRING(HintCard), {
     private _cards = createHashMapFromArray [
         ["aceshigh",QPATHTOEF(cards,ui\aceshigh.jpg)],
         ["airqrf",QPATHTOEF(cards,ui\airqrf.jpg)],

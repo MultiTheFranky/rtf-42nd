@@ -17,25 +17,6 @@ jobs:
           with:
             command: install
             args: cross --git https://github.com/cross-rs/cross
-
-        - name: Build Extensions
-          run: |
-                cd extensions
-                docker build -t rtf42/build-a3go:windows-so -f ${{ github.workspace }}/extensions/Dockerfile_windows.build .
-                docker build -t rtf42/build-a3go:linux-so -f ${{ github.workspace }}/extensions/Dockerfile_linux_x64.build .
-                for d in */ ; do
-                    d=${d::-1}
-                    if [ "$d" == "internal" ]; then
-                        continue
-                    fi
-                    if [ "$d" == "playmusicrs" ]; then
-                        continue
-                    fi
-                    echo "Building $d"
-                    docker run --rm -v ${{ github.workspace }}/extensions:/go/work -w /go/work -e GOARCH=amd64 -e CGO_ENABLED=1 rtf42/build-a3go:windows-so  go build -o "./${d}_x64.dll" -buildmode=c-shared -ldflags '-w -s' "./$d"
-                    docker run --rm -v ${{ github.workspace }}/extensions:/app -e GOOS=linux -e GOARCH=amd64 -e CGO_ENABLED=1 -e CC=gcc rtf42/build-a3go:linux-so go build -o "./${d}_x64.so" -linkshared -ldflags '-w -s' "./$d"
-                    mv ${d}_x64.dll ${d}_x64.so ..
-                done
         - name: Build Rust Extensions
           run: |
                     cd extensions

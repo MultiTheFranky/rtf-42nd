@@ -10,13 +10,13 @@
  * None
  *
  * Example:
- * ["card"] call rft42_cards_fnc_seeCardGlobal;
+ * ["card"] call rtf42_cards_fnc_seeCardGlobal;
  *
  * Public: No
  */
 
 params ["_card"];
 
-diag_log format ["rft42_cards_fnc_seeCardGlobal: %1", _card];
+diag_log format ["rtf42_cards_fnc_seeCardGlobal: %1", _card];
 
 [_card] remoteExec [QFUNC(seeCardSimple), 0];

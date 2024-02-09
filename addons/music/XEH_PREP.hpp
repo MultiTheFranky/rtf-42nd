@@ -1,2 +1,1 @@
 PREP(playMusic);
-PREP(stopMusic);

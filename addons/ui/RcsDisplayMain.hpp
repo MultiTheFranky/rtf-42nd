@@ -65,7 +65,7 @@ class RscTitles {
         scriptName = "RscDisplayMainMenuBackground";
         scriptPath = "GUI";
         onLoad = "[""onLoad"",_this,""RscDisplayMainMenuBackground"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
-        onUnload = "[""onUnload"",_this,""RscDisplayMainMenuBackground"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay');'' call (uinamespace getvariable 'rtf42_music_fnc_stopMusic')";
+        onUnload = "[""onUnload"",_this,""RscDisplayMainMenuBackground"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
         idd = -1;
         fadein = 0;
         fadeout = 0;

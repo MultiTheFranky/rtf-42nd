@@ -1,0 +1,12 @@
+[package]
+name = "influxdb"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+arma-rs = "1.10.4"
+influxc = "0.4.2"
+
+[lib]
+name = "influxdb"
+crate-type = ["cdylib"]

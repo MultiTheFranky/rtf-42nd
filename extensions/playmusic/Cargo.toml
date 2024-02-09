@@ -1,0 +1,13 @@
+[package]
+name = "playmusic"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+arma-rs = "1.10.4"
+soloud = "1"
+process_path = "0.1.4"
+
+[lib]
+name = "playmusic"
+crate-type = ["cdylib"]

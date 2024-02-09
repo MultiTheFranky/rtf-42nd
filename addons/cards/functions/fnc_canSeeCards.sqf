@@ -10,7 +10,7 @@
  * Has cards <BOOL>
  *
  * Example:
- * [_player] call rft42_cards_fnc_canSeeCards;
+ * [_player] call rtf42_cards_fnc_canSeeCards;
  *
  * Public: No
  */

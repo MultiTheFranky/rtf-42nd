@@ -60,6 +60,12 @@ class GVAR(mississippi_twilight_trigger) {
         duration = 100;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(pod_afraid_to_die) {
+        name = QUOTE(Pod Afraid To Die);
+        sound[] = {QPATHTOF(data\pod_afraid_to_die.ogg), 1, 1};
+        duration = 88;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(seven_nation_army) {
         name = QUOTE(Seven Nation Army);
         sound[] = {QPATHTOF(data\seven_nation_army.ogg), 1, 1};

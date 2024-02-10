@@ -33,8 +33,8 @@
 -   HEMTT (https://github.com/BrettMayson/HEMTT)
 
 ### Extensions
-
--   Golang compiler (https://golang.org/dl/)
+-   Rust (https://rustup.rs)
+-   Cross (https://github.com/cross-rs/cross) - You can install using `cargo install cross --git https://github.com/cross-rs/cross`
 -   Docker (https://docker.com) - You can install it using the script dockerInstall.ps1
 
 ## Setup
@@ -74,8 +74,8 @@ Arma Public License Share Alike (APL-SA) - See LICENSE for more information.
 
 # Credits
 
-- A3GO - https://github.com/indig0fox/a3go Thanks for the library to make Arma 3 extensions easily using Golang.
+- arma-rs - https://github.com/BrettMayson/arma-rs Thanks for develop the rust extension adapter.
 - ACE3 - https://github.com/acemod/ACE3 Thanks for the develop of ACE3 and the development wiki.
 - CBA_A3 - https://github.com/CBATeam/CBA_A3 Thanks for the macros and the develop structure of Arma 3 Mods.
-- HEMTT - https://github.com/BrettMayson/HEMTT Thanks for the Arma 3 mod builder
-- Arma 3 - https://arma3.com/ Thanks for the base game and the DLCs
+- HEMTT - https://github.com/BrettMayson/HEMTT Thanks for the Arma 3 mod builder.
+- Arma 3 - https://arma3.com/ Thanks for the base game and the DLCs.

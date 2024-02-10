@@ -25,15 +25,15 @@ jobs:
                         echo "Building $d"
                         cd $d
                         cross build --target x86_64-pc-windows-gnu --release
-                        cross build --target i686-pc-windows-gnu --release
                         cross build --target x86_64-unknown-linux-gnu --release
-                        cross build --target i686-unknown-linux-gnu --release
                         mv target/x86_64-pc-windows-gnu/release/*.dll ${{ github.workspace }}/${d}_x64.dll
                         mv target/x86_64-unknown-linux-gnu/release/*.so ${{ github.workspace }}/${d}_x64.so
-                        mv target/i686-pc-windows-gnu/release/*.dll ${{ github.workspace }}/${d}.dll
-                        mv target/i686-unknown-linux-gnu/release/*.so ${{ github.workspace }}/${d}.so
                         cd ..
                     done
+        - name: Cache Docker images
+          uses: ScribeMD/docker-cache@0.3.7
+          with:
+            key: docker-${{ runner.os }}-${{ hashFiles(paths) }}
         - name: upload artifacts
           uses: actions/upload-artifact@v4
           with:

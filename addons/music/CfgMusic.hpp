@@ -54,6 +54,12 @@ class GVAR(metallica_for_whom_the_bell_tolls) {
         duration = 253;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(mississippi_twilight_trigger) {
+        name = QUOTE(Mississippi Twilight Trigger);
+        sound[] = {QPATHTOF(data\mississippi_twilight_trigger.ogg), 1, 1};
+        duration = 100;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(seven_nation_army) {
         name = QUOTE(Seven Nation Army);
         sound[] = {QPATHTOF(data\seven_nation_army.ogg), 1, 1};

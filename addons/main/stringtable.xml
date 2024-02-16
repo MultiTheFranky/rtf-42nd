@@ -21,5 +21,29 @@
             <English>RTF42 Modules</English>
             <Spanish>Módulos RTF42</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Main_CategoryItemsDisplayName">
+            <English>42nd R.T.F</English>
+            <Spanish>42nd R.T.F</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryVehiclesDisplayName">
+            <English>Vehicles</English>
+            <Spanish>Vehículos</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryAircraftDisplayName">
+            <English>Planes</English>
+            <Spanish>Aviones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryStaticDisplayName">
+            <English>Static</English>
+            <Spanish>Estáticas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryPropsDisplayName">
+            <English>Props</English>
+            <Spanish>Props</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryLightsDisplayName">
+            <English>Lights</English>
+            <Spanish>Luces</Spanish>
+        </Key>
     </Package>
 </Project>

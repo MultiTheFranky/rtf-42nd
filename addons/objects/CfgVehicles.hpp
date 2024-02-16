@@ -6,6 +6,8 @@ class CfgVehicles {
         displayName = CSTRING(CardsDisplayName);
         author = ECSTRING(main,Author);
         vehicleClass = "Items";
+        editorCategory = QEGVAR(main,Items);
+        editorSubcategory = QEGVAR(main,Props);
         editorPreview = QPATHTOEF(items,ui\icon_cards_ca.paa);
         class TransportItems {
             MACRO_ADDITEM(EGVAR(items,Cards),1);
@@ -38,8 +40,8 @@ class CfgVehicles {
         displayName = CSTRING(CeilingLampDisplayName);
         author = ECSTRING(main,Author);
         vehicleClass = "Cargo";
-        editorCategory = "EdCat_Things";
-        editorSubcategory = "EdSubcat_Lamps";
+        editorCategory = QEGVAR(main,Items);
+        editorSubcategory = QEGVAR(main,Lights);
         model = QPATHTOF(data\ceiling_lamp.p3d);
         _generalMacro = QGVAR(CeilingLamp);
         aggregateReflectors[] = {{"Light_1"}};

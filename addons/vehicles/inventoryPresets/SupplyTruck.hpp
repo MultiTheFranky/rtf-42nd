@@ -46,5 +46,9 @@ class ACE_Cargo {
             type = "ACE_Wheel";
             amount = 3;
         };
+        class GVAR(b_m252_us) {
+            type = QGVAR(b_m252_us);
+            amount = 1;
+        };
     };
 };

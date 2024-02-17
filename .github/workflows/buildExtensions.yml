@@ -10,7 +10,7 @@ jobs:
         - name: Setup Docker
           uses: docker/setup-buildx-action@v3
         - name: Setup Cross
-          uses: actions-rs/cargo@v1
+          uses: clechasseur/rs-cargo@v2
           with:
             command: install
             args: cross --git https://github.com/cross-rs/cross

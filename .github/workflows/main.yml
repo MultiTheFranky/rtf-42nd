@@ -64,13 +64,14 @@ jobs:
                 with:
                     name: rtf42-${{ env.VERSION }}
                     path: ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
-              - uses: "marvinpinto/action-automatic-releases@latest"
+              - uses: "ncipollo/release-action@v1"
                 id: "automatic_releases"
                 with:
-                    repo_token: "${{ secrets.PAT }}"
-                    automatic_release_tag: "${{ env.VERSION }}"
+                    token: "${{ secrets.PAT }}"
+                    tag: "${{ env.VERSION }}"
                     prerelease: true
-                    title: "Release ${{ env.VERSION }}"
+                    name: "Release ${{ env.VERSION }}"
+                    generateReleaseNotes: true
               - name: Upload asset
                 uses: shogo82148/actions-upload-release-asset@v1
                 with:

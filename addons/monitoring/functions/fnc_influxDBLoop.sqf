@@ -17,24 +17,20 @@
 
 if (!isServer) exitwith {};
 
-private _serverName = serverName call EFUNC(common,minifyString);
+private _missionName = missionName call EFUNC(common,minifyString);
 
-if(_serverName == "") then {
-    _serverName = "singlePlayer";
-};
-
-private _datatoWrite = [
-    [format ["rtf42_%1_players", _serverName], count allplayers] joinstring ":",
-    [format ["rtf42_%1_server_fps", _serverName], floor diag_fps] joinstring ":",
-    [format ["rtf42_%1_ai", _serverName], {
+private _dataToWrite = createHashMapFromArray [
+    [format ["rtf42_%1_players", _missionName], count (allPlayers - entities "HeadlessClient_F")],
+    [format ["rtf42_%1_server_fps", _missionName], floor diag_fps],
+    [format ["rtf42_%1_ai", _missionName], {
         !isplayer _x
-    } count allunits] joinstring ":",
-    [format ["rtf42_%1_objects", _serverName], count allMissionObjects "All"] joinstring ":",
-    [format ["rtf42_%1_blufor", _serverName], blufor countside allunits] joinstring ":",
-    [format ["rtf42_%1_opfor", _serverName], opfor countside allunits] joinstring ":",
-    [format ["rtf42_%1_ind", _serverName], independent countside allunits] joinstring ":"
+    } count allunits],
+    [format ["rtf42_%1_objects", _missionName], count allMissionObjects "All"],
+    [format ["rtf42_%1_blufor", _missionName], blufor countside allunits],
+    [format ["rtf42_%1_opfor", _missionName], opfor countside allunits],
+    [format ["rtf42_%1_ind", _missionName], independent countside allunits],
 ];
 
-diag_log str("influxdb" callExtension ["data", [GVAR(endpoint), GVAR(token), GVAR(organization), GVAR(bucket), _datatoWrite]]);
+diag_log str("influxdb" callExtension ["data", [GVAR(endpoint), GVAR(token), GVAR(organization), GVAR(bucket), _dataToWrite]]);
 
 [FUNC(influxDBLoop), [], 5] call CBA_fnc_waitandexecute;

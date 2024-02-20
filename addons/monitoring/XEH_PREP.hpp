@@ -1,1 +1,2 @@
 PREP(influxDBLoop);
+PREP(logKill);

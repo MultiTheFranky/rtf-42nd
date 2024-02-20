@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 arma-rs = "1.10.4"
 influxc = "0.4.2"
-openssl = { version = "0.10", features = ["vendored"] }
+rustls = "0.22.2"
 
 [lib]
 name = "influxdb"

@@ -34,6 +34,7 @@ class TransportItems {
     MACRO_ADDITEM(ACE_Flashlight_MX991,4);
     MACRO_ADDITEM(ToolKit,4);
     MACRO_ADDITEM(Binocular,1);
+    MACRO_ADDITEM(ACE_RangeTable_82mm,1);
 };
 class TransportWeapons {
     MACRO_ADDWEAPON(CUP_hgun_FlareGun,1);

@@ -14,4 +14,9 @@ class GVAR(mission_3) {
         file = QPATHTOF(data\mission_3.ogv);
         duration = 69;
     };
+class GVAR(mission_4) {
+        name = QUOTE(Mission 4);
+        file = QPATHTOF(data\mission_4.ogv);
+        duration = 228;
+    };
 };

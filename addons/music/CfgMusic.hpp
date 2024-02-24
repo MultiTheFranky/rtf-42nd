@@ -60,6 +60,12 @@ class GVAR(mississippi_twilight_trigger) {
         duration = 100;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(papa_roach_born_for_greatness) {
+        name = QUOTE(Papa Roach Born For Greatness);
+        sound[] = {QPATHTOF(data\papa_roach_born_for_greatness.ogg), 1, 1};
+        duration = 51;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(pod_afraid_to_die) {
         name = QUOTE(Pod Afraid To Die);
         sound[] = {QPATHTOF(data\pod_afraid_to_die.ogg), 1, 1};
@@ -76,6 +82,12 @@ class GVAR(warrior_song) {
         name = QUOTE(Warrior Song);
         sound[] = {QPATHTOF(data\warrior_song.ogg), 1, 1};
         duration = 83;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(zackdempsey_dont_get_in_my_way) {
+        name = QUOTE(Zackdempsey Dont Get In My Way);
+        sound[] = {QPATHTOF(data\zackdempsey_dont_get_in_my_way.ogg), 1, 1};
+        duration = 43;
         musicClass = QGVAR(musicClass);
     };
 };

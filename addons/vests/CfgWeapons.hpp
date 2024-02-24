@@ -1,42 +1,23 @@
 class CfgWeapons {
+    class milgp_v_mmac_light_rgr;
+    class milgp_v_mmac_medic_rgr;
+    class milgp_v_mmac_teamleader_rgr;
+    class milgp_v_marciras_teamleader_RGR;
+    class milgp_v_marciras_teamleader_belt_RGR;
+    class milgp_v_mmac_hgunner_rgr;
     class V_PlateCarrier2_blk;
-    class GVAR(Base): V_PlateCarrier2_blk {
-        author = "Echo";
-        _generalMacro = QGVAR(Base);
-        displayName = CSTRING(BaseVestDisplayName);
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {QPATHTOF(data\rtf42_base_vest_ca.paa)};
-    };
     class InventoryItem_Base_F;
     class VestItem: InventoryItem_Base_F {
         type = 701;
     };
-    class GVAR(SuicideVest): V_PlateCarrier2_blk {
-        author = ECSTRING(main,Author);
-        _generalMacro = QGVAR(SuicideVest);
-        displayName = CSTRING(SuicideVestDisplayName);
-        model = QPATHTOF(data\suicide_vest.p3d);
-        class ItemInfo: VestItem {
-            uniformModel = QPATHTOF(data\suicide_vest.p3d);
-            containerClass = "Supply140";
-            mass = 140;
-            armor = 5*0;
-            passThrough = 1;
-            hitpointName = "HitBody";
-        };
-    };
-    class GVAR(MiniSuicideVest): V_PlateCarrier2_blk {
-        author = ECSTRING(main,Author);
-        _generalMacro = QGVAR(MiniSuicideVest);
-        displayName = CSTRING(MiniSuicideVestDisplayName);
-        model = QPATHTOF(data\mini_suicide_vest.p3d);
-        class ItemInfo: VestItem {
-            uniformModel = QPATHTOF(data\mini_suicide_vest.p3d);
-            containerClass = "Supply140";
-            mass = 140;
-            armor = 5*0;
-            passThrough = 1;
-            hitpointName = "HitBody";
-        };
-    };
+    #include "includes\suicidevests.hpp"
+    #include "includes\rifleman.hpp"
+    #include "includes\paramedic.hpp"
+    #include "includes\at.hpp"
+    #include "includes\lmg.hpp"
+    #include "includes\officer.hpp"
+    #include "includes\rto.hpp"
+    #include "includes\sapper.hpp"
+    #include "includes\sl.hpp"
+    #include "includes\tl.hpp"
 };

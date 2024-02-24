@@ -1,7 +1,8 @@
-class CBA_Extended_EventHandlers;
 class CfgVehicles {
-    class B_CTRG_soldier_GL_LAT_F;
-    class B_CTRG_soldier_AR_A_F;
+    class B_AssaultPack_rgr;
+    class milgp_b_patrol_01_rgr;
+    class B_Kitbag_rgr;
+    class B_FieldPack_khk;
     #include "includes\rifleman.hpp"
     #include "includes\paramedic.hpp"
     #include "includes\at.hpp"
@@ -11,7 +12,4 @@ class CfgVehicles {
     #include "includes\sapper.hpp"
     #include "includes\sl.hpp"
     #include "includes\tl.hpp"
-
-    #include "includes\cup_compatibility.hpp"
-
 };

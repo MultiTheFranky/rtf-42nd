@@ -1,7 +1,10 @@
-class CBA_Extended_EventHandlers;
-class CfgVehicles {
-    class B_CTRG_soldier_GL_LAT_F;
-    class B_CTRG_soldier_AR_A_F;
+class CfgWeapons {
+    class rhs_weap_m4a1_carryhandle;
+    class rhsusf_weap_glock17g4;
+    class rhs_weap_m249_pip_ris;
+    class rhs_weap_M136_hedp;
+    class Binocular;
+    class ACE_Vector;
     #include "includes\rifleman.hpp"
     #include "includes\paramedic.hpp"
     #include "includes\at.hpp"
@@ -11,7 +14,4 @@ class CfgVehicles {
     #include "includes\sapper.hpp"
     #include "includes\sl.hpp"
     #include "includes\tl.hpp"
-
-    #include "includes\cup_compatibility.hpp"
-
 };

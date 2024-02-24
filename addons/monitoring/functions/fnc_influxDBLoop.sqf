@@ -28,7 +28,7 @@ private _dataToWrite = createHashMapFromArray [
     [format ["rtf42_%1_objects", _missionName], count allMissionObjects "All"],
     [format ["rtf42_%1_blufor", _missionName], blufor countside allunits],
     [format ["rtf42_%1_opfor", _missionName], opfor countside allunits],
-    [format ["rtf42_%1_ind", _missionName], independent countside allunits],
+    [format ["rtf42_%1_ind", _missionName], independent countside allunits]
 ];
 
 diag_log str("influxdb" callExtension ["data", [GVAR(endpoint), GVAR(token), GVAR(organization), GVAR(bucket), _dataToWrite]]);

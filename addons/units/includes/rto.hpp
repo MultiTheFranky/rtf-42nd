@@ -5,7 +5,7 @@ class GVAR(rto): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(rto_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_green_beret_ca.paa)};
+    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
     hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,rto_primaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,rto_primaryWeapon),"Throw","Put"};

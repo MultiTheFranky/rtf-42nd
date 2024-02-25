@@ -166,7 +166,7 @@ const getUnitText = (
     output += `    faction = QEGVAR(main,Faction);\n`;
     output += `    editorSubcategory = QEGVAR(main,Infantry);\n`;
     output += `    displayName = CSTRING(${type}_DisplayName);\n`;
-    output += `    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\\rtf42_uniform_mc_green_beret_ca.paa)};\n`;
+    output += `    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\\rtf42_uniform_mc_ca.paa)};\n`;
     output += `    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\\clothing1.rvmat)};\n`;
     output += `    weapons[] = {`;
     if (primaryWeapon) {

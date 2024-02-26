@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Uniforms">
-        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretMCDisplayName">
-            <English>Green Beret Multicam Uniform</English>
-            <Spanish>Uniforme Multicam Boina Verde</Spanish>
+        <Key ID="STR_RTF42_Uniforms_mc_displayName">
+            <English>MultiCam</English>
+            <Spanish>MultiCam</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretAOR1DisplayName">
-            <English>Green Beret AOR1 Uniform</English>
-            <Spanish>Uniforme Boina Verde AOR1 </Spanish>
+        <Key ID="STR_RTF42_Uniforms_mc_sleeve_displayName">
+            <English>MultiCam Sleeve</English>
+            <Spanish>MultiCam Manga Corta</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformMCDisplayName">
-            <English>Ranger Multicam Uniform</English>
-            <Spanish>Uniforme Multicam Ranger</Spanish>
+        <Key ID="STR_RTF42_Uniforms_mc_beret_displayName">
+            <English>MultiCam Green Beret</English>
+            <Spanish>MultiCam Boina Verde</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformAOR1DisplayName">
-            <English>Ranger AOR1 Uniform</English>
-            <Spanish>Uniforme AOR1 Ranger</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformMCSDisplayName">
-            <English>Ranger Multicam Sleeve Uniform</English>
-            <Spanish>Uniforme Multicam Ranger Manga Corta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretMCSDisplayName">
-            <English>Green Beret Multicam Sleeve Uniform</English>
-            <Spanish>Uniforme Multicam Boina Verde Manga Corta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformAOR1SDisplayName">
-            <English>Ranger AOR1 Sleeve Uniform</English>
-            <Spanish>Uniforme AOR1 Ranger Manga Corta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_UniformGreenBeretAOR1SDisplayName">
-            <English>Green Beret AOR1 Sleeve Uniform</English>
-            <Spanish>Uniforme Boina Verde AOR1 Manga Corta</Spanish>
+        <Key ID="STR_RTF42_Uniforms_mc_beret_sleeve_displayName">
+            <English>MultiCam Green Beret Sleeve</English>
+            <Spanish>MultiCam Boina Verde Manga Corta</Spanish>
         </Key>
     </Package>
 </Project>

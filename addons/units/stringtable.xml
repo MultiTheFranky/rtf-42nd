@@ -37,5 +37,13 @@
             <English>Team Leader</English>
             <Spanish>Líder de Equipo</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Units_leader_DisplayName">
+            <English>Leader</English>
+            <Spanish>Líder</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_operator_DisplayName">
+            <English>Operator</English>
+            <Spanish>Operador</Spanish>
+        </Key>
     </Package>
 </Project>

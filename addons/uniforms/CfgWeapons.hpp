@@ -6,14 +6,44 @@ class CfgWeapons {
         containerClass = "Supply50";
         mass = 50;
     };
-
-    #include "includes\rifleman.hpp"
-    #include "includes\paramedic.hpp"
-    #include "includes\at.hpp"
-    #include "includes\lmg.hpp"
-    #include "includes\officer.hpp"
-    #include "includes\rto.hpp"
-    #include "includes\sapper.hpp"
-    #include "includes\sl.hpp"
-    #include "includes\tl.hpp"
+    class GVAR(mc): U_B_CTRG_1 {
+        scope = 2;
+        displayName = CSTRING(mc_displayName);
+        class ItemInfo: UniformItem {
+            uniformModel = "-";
+            uniformClass = QEGVAR(units,rifleman);
+            containerClass = "Supply50";
+            mass = 50;
+        };
+    };
+    class GVAR(mc_sleeve): U_B_CTRG_3 {
+        scope = 2;
+        displayName = CSTRING(mc_sleeve_displayName);
+        class ItemInfo: UniformItem {
+            uniformModel = "-";
+            uniformClass = QEGVAR(units,rto);
+            containerClass = "Supply50";
+            mass = 50;
+        };
+    };
+    class GVAR(mc_beret): U_B_CTRG_1 {
+        scope = 2;
+        displayName = CSTRING(mc_beret_displayName);
+        class ItemInfo: UniformItem {
+            uniformModel = "-";
+            uniformClass = QEGVAR(units,leader);
+            containerClass = "Supply50";
+            mass = 50;
+        };
+    };
+    class GVAR(mc_beret_sleeve): U_B_CTRG_3 {
+        scope = 2;
+        displayName = CSTRING(mc_beret_sleeve_displayName);
+        class ItemInfo: UniformItem {
+            uniformModel = "-";
+            uniformClass = QEGVAR(units,operator);
+            containerClass = "Supply50";
+            mass = 50;
+        };
+    };
 };

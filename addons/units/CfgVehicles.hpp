@@ -11,6 +11,8 @@ class CfgVehicles {
     #include "includes\sapper.hpp"
     #include "includes\sl.hpp"
     #include "includes\tl.hpp"
+    #include "includes\leader.hpp"
+    #include "includes\operator.hpp"
 
     #include "includes\cup_compatibility.hpp"
 

@@ -2,6 +2,9 @@ class CfgEditorSubcategories {
     class GVAR(Infantry) {
         displayName=CSTRING(SubcategoryInfantryDisplayName);
     };
+    class GVAR(GreenBeret) {
+        displayName=CSTRING(SubcategoryGreenBeretDisplayName);
+    };
     class GVAR(Vehicles) {
         displayName=CSTRING(SubcategoryVehiclesDisplayName);
     };

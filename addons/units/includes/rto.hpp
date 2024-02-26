@@ -1,4 +1,4 @@
-class GVAR(rto): B_CTRG_soldier_GL_LAT_F {
+class GVAR(rto): B_CTRG_soldier_AR_A_F {
     author = ECSTRING(main,Author);
     scope = 2;
     scopeCurator = 2;
@@ -9,7 +9,7 @@ class GVAR(rto): B_CTRG_soldier_GL_LAT_F {
     hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,rto_primaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,rto_primaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,rto);
+    uniformClass = QEGVAR(uniforms,mc_sleeve);
     backpack = QEGVAR(backpacks,rto);
     linkedItems[] = {QEGVAR(vests,rto),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
     respawnLinkedItems[] = {QEGVAR(vests,rto),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};

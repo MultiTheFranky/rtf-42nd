@@ -18,4 +18,4 @@
 
 params ["_unit"];
 
-_unit setVariable [QGVAR(translator), !(_unit getVariable [QGVAR(translator), true])];
+_unit setVariable [QGVAR(translator), !(_unit getVariable [QGVAR(translator), false])];

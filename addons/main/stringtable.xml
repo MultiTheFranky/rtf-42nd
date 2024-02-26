@@ -45,5 +45,9 @@
             <English>Lights</English>
             <Spanish>Luces</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Main_GreenBeret">
+            <English>Green Beret</English>
+            <Spanish>Boinas Verdes</Spanish>
+        </Key>
     </Package>
 </Project>

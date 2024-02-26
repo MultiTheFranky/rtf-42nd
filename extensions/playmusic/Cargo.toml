@@ -7,6 +7,7 @@ edition = "2021"
 arma-rs = "1.10.4"
 soloud = "1"
 process_path = "0.1.4"
+fltk = "^1.4"
 
 [lib]
 name = "playmusic"

@@ -9,7 +9,7 @@ class GVAR(paramedic): B_CTRG_soldier_GL_LAT_F {
     hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,paramedic_primaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,paramedic_primaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,paramedic);
+    uniformClass = QEGVAR(uniforms,mc);
     backpack = QEGVAR(backpacks,paramedic);
     linkedItems[] = {QEGVAR(vests,paramedic),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
     respawnLinkedItems[] = {QEGVAR(vests,paramedic),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};

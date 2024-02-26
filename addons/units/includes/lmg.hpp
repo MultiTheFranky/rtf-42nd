@@ -9,7 +9,7 @@ class GVAR(lmg): B_CTRG_soldier_GL_LAT_F {
     hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,lmg_primaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,lmg_primaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,lmg);
+    uniformClass = QEGVAR(uniforms,mc);
     backpack = QEGVAR(backpacks,lmg);
     linkedItems[] = {QEGVAR(vests,lmg),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
     respawnLinkedItems[] = {QEGVAR(vests,lmg),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};

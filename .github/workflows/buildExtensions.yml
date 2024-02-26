@@ -21,8 +21,8 @@ jobs:
                         d=${d::-1}
                         echo "Building $d"
                         cd $d
-                        cross build --target x86_64-pc-windows-gnu --release --features=fltk-bundled
-                        cross build --target x86_64-unknown-linux-gnu --release --features=fltk-bundled
+                        cross build --target x86_64-pc-windows-gnu --release
+                        cross build --target x86_64-unknown-linux-gnu --release
                         mv target/x86_64-pc-windows-gnu/release/*.dll ${{ github.workspace }}/${d}_x64.dll
                         mv target/x86_64-unknown-linux-gnu/release/*.so ${{ github.workspace }}/${d}_x64.so
                         cd ..

@@ -12,3 +12,6 @@ fltk = { version = "^1.4", features = ["fltk-bundled"] }
 [lib]
 name = "playmusic"
 crate-type = ["cdylib"]
+
+[target.x86_64-unknown-linux-gnu]
+dockerfile = "./linux-dockerfile"

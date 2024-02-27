@@ -84,28 +84,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "248e3bacc7dc6baa3b21e405ee045c3047101a49145e7e9eca583ab4c2ca5345"
 
 [[package]]
-name = "fltk"
-version = "1.4.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "59fa214b5ad440215f11c6099697c7118c63c08c140636b405d6a14712640491"
-dependencies = [
- "bitflags",
- "crossbeam-channel",
- "fltk-sys",
- "paste",
- "ttf-parser",
-]
-
-[[package]]
-name = "fltk-sys"
-version = "1.4.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e0af8e28f3915d1362de406f05f5b917d5ce678e818ee403b32edc18fc25708b"
-dependencies = [
- "cmake",
-]
-
-[[package]]
 name = "generator"
 version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -217,7 +195,6 @@ name = "playmusic"
 version = "1.0.0"
 dependencies = [
  "arma-rs",
- "fltk",
  "process_path",
  "soloud",
 ]
@@ -474,12 +451,6 @@ dependencies = [
  "tracing-core",
  "tracing-log",
 ]
-
-[[package]]
-name = "ttf-parser"
-version = "0.20.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "17f77d76d837a7830fe1d4f12b7b4ba4192c1888001c7164257e4bc6d21d96b4"
 
 [[package]]
 name = "unicode-ident"

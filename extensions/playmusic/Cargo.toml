@@ -7,19 +7,7 @@ edition = "2021"
 arma-rs = "1.10.4"
 soloud = "1"
 process_path = "0.1.4"
-fltk = { version = "^1.4", features = ["fltk-bundled"] }
 
 [lib]
 name = "playmusic"
 crate-type = ["cdylib"]
-
-[package.metadata.cross.target.x86_64-unknown-linux-gnu]
-pre-build = [""" \
-    dpkg --add-architecture amd64 && \
-    apt-get update && \
-    apt-get install --assume-yes --no-install-recommends \
-    libx11-dev:amd64 libxext-dev:amd64 libxft-dev:amd64 \
-    libxinerama-dev:amd64 libxcursor-dev:amd64 \
-    libxrender-dev:amd64  libxfixes-dev:amd64  libgl1-mesa-dev:amd64 \
-    libglu1-mesa-dev:amd64 libasound2-dev:amd64 libpango1.0-dev:amd64 \
-    """]

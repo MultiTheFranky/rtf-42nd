@@ -51,12 +51,31 @@ function generateNewVersion(beta = false) {
         /#define MAJOR (.*)\r\n#define MINOR (.*)\r\n#define PATCHLVL (.*)\r\n#define BUILD (.*)/
     );
     const versionMinor = versionParts[2];
-    const versionPatch = versionParts[3];
-    const versionBetaMinor = versionParts[4];
+    let versionPatch = versionParts[3];
+    let versionBetaMinor = versionParts[4];
 
     if (versionMonth !== parseInt(versionMinor)) {
         versionPatch = 0;
         versionBetaMinor = 0;
+        if (beta) {
+            return {
+                version: `v${versionYear}.${versionMonth}.${parseInt(
+                    versionPatch
+                )}-rc.${parseInt(versionBetaMinor)}`,
+                versionYear,
+                versionMonth,
+                versionPatch,
+                versionBetaMinor: parseInt(versionBetaMinor),
+            };
+        }
+        return {
+            version: `v${versionYear}.${versionMonth}.${
+                parseInt(versionPatch)
+            }`,
+            versionYear,
+            versionMonth,
+            versionPatch: parseInt(versionPatch),
+        };
     }
 
     // If is beta, increase the build version

@@ -24,6 +24,12 @@ class GVAR(5fdp_wrong_side_of_heaven) {
         duration = 51;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(adieaux_warriors) {
+        name = QUOTE(Adieaux Warriors);
+        sound[] = {QPATHTOF(data\adieaux_warriors.ogg), 1, 1};
+        duration = 40;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(any_given_day_unbreakable) {
         name = QUOTE(Any Given Day Unbreakable);
         sound[] = {QPATHTOF(data\any_given_day_unbreakable.ogg), 1, 1};

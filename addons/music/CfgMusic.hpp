@@ -36,6 +36,12 @@ class GVAR(any_given_day_unbreakable) {
         duration = 39;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(childishgambino_this_is_america) {
+        name = QUOTE(Childishgambino This Is America);
+        sound[] = {QPATHTOF(data\childishgambino_this_is_america.ogg), 1, 1};
+        duration = 47;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(hans_zimmer_the_rock_bso) {
         name = QUOTE(Hans Zimmer The Rock Bso);
         sound[] = {QPATHTOF(data\hans_zimmer_the_rock_bso.ogg), 1, 1};

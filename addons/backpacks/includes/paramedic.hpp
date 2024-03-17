@@ -11,6 +11,7 @@ class GVAR(paramedic): milgp_b_patrol_01_rgr {
                 MACRO_ADDITEM(ACE_epinephrine,10);
                 MACRO_ADDITEM(ACE_EntrenchingTool,1);
                 MACRO_ADDITEM(ACE_CableTie,10);
+                MACRO_ADDITEM(ACRE_PRC152,1);
     };
     class TransportMagazines {
     };

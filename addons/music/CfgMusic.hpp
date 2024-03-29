@@ -36,10 +36,40 @@ class GVAR(any_given_day_unbreakable) {
         duration = 39;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(blacksabbath_warpigs) {
+        name = QUOTE(Blacksabbath Warpigs);
+        sound[] = {QPATHTOF(data\blacksabbath_warpigs.ogg), 1, 1};
+        duration = 48;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(childishgambino_this_is_america) {
         name = QUOTE(Childishgambino This Is America);
         sound[] = {QPATHTOF(data\childishgambino_this_is_america.ogg), 1, 1};
         duration = 47;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_road_to_kotal_e__anjuman) {
+        name = QUOTE(Covenant Road To Kotal E  Anjuman);
+        sound[] = {QPATHTOF(data\covenant_road_to_kotal_e__anjuman.ogg), 1, 1};
+        duration = 87;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_three_minute_fuse) {
+        name = QUOTE(Covenant Three Minute Fuse);
+        sound[] = {QPATHTOF(data\covenant_three_minute_fuse.ogg), 1, 1};
+        duration = 159;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_thunder_continues) {
+        name = QUOTE(Covenant Thunder Continues);
+        sound[] = {QPATHTOF(data\covenant_thunder_continues.ogg), 1, 1};
+        duration = 240;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(dlhu_black_thunder) {
+        name = QUOTE(Dlhu Black Thunder);
+        sound[] = {QPATHTOF(data\dlhu_black_thunder.ogg), 1, 1};
+        duration = 75;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(hans_zimmer_the_rock_bso) {
@@ -58,6 +88,12 @@ class GVAR(linkinpark_bleeding_out) {
         name = QUOTE(Linkinpark Bleeding Out);
         sound[] = {QPATHTOF(data\linkinpark_bleeding_out.ogg), 1, 1};
         duration = 106;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(marilynmanson_sweet_dreams) {
+        name = QUOTE(Marilynmanson Sweet Dreams);
+        sound[] = {QPATHTOF(data\marilynmanson_sweet_dreams.ogg), 1, 1};
+        duration = 89;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(metallica_for_whom_the_bell_tolls) {
@@ -82,6 +118,12 @@ class GVAR(pod_afraid_to_die) {
         name = QUOTE(Pod Afraid To Die);
         sound[] = {QPATHTOF(data\pod_afraid_to_die.ogg), 1, 1};
         duration = 88;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(saintchaos_give_it_100) {
+        name = QUOTE(Saintchaos Give It 100);
+        sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1};
+        duration = 79;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(seven_nation_army) {

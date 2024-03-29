@@ -14,7 +14,7 @@ include = [
     "LICENSE",
     "logo_rtf42_ca.paa",
     "meta.cpp",
-    "rtf42_main_menu.mp3"
+    "rtf42_main_menu.mp3",
 ]
 
 [hemtt.launch.default]
@@ -25,10 +25,10 @@ presets = [
 dlc = []
 optionals = []
 parameters = [
-    "-skipIntro",           # These parameters are passed to the Arma 3 executable
-    "-noSplash",            # They do not need to be added to your list
-    "-showScriptErrors",    # You can add additional parameters here
+    "-skipIntro",                                                      # These parameters are passed to the Arma 3 executable
+    "-noSplash",                                                       # They do not need to be added to your list
+    "-showScriptErrors",                                               # You can add additional parameters here
     "-debug",
     "-filePatching",
-    "D:\\Arma3Projects\\rtf42\\missions\\rtf42_base_test_mission.VR\\mission.sqm", # Launch into existing Editor Mission - \\ needed - Change what ever you path is
+    "F:\\rtf-42nd\\missions\\rtf42_base_test_mission.VR\\mission.sqm", # Launch into existing Editor Mission - \\ needed - Change what ever you path is
 ]

@@ -1,20 +1,20 @@
 #include "..\script_component.hpp"
 
 /*
-	    * Author: Franky
-	    * Function to get the best answer based on a random number
-	    *
-	    * Arguments:
-	    * 0: Answers <HASHMAP>
-	    * 1: random Number <NUMBER>
-	    *
-	    * Return Value:
-	    * 0: Answer <STRING>
-	    *
-	    * Example:
-	    * [answers] call rtf42_interrogation_fnc_getBestAnswer;
-	    *
-	    * Public: No
+	        * Author: Franky
+	        * Function to get the best answer based on a random number
+	        *
+	        * Arguments:
+	        * 0: Answers <HASHMAP>
+	        * 1: random Number <NUMBER>
+	        *
+	        * Return Value:
+	        * 0: Answer <STRING>
+	        *
+	        * Example:
+	        * [answers] call rtf42_interrogation_fnc_getBestAnswer;
+	        *
+	        * Public: No
 */
 
 params ["_answers", "_randomNumber"];

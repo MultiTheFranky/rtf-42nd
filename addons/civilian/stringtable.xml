@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Civilian">
+        <Key ID="STR_RTF42_Civilian_DisplayName">
+            <English>Civilian</English>
+            <Spanish>Civiles</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_EnabledDisplayName">
+            <English>Enabled</English>
+            <Spanish>Activado</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_EnabledDescription">
+            <English>Do you want to activate this module?</English>
+            <Spanish>¿Quieres activar este módulo?</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_ActivationDistanceDisplayName">
+            <English>Activation Distance</English>
+            <Spanish>Distancia de Activación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_ActivationDistanceDescription">
+            <English>Distance from player where a location will be activated in meters</English>
+            <Spanish>Distancia desde el jugador donde se activará una ubicación en metros</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_LoopTimeDisplayName">
+            <English>Loop time</English>
+            <Spanish>Tiempo de bucle</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_LoopTimeDescription">
+            <English>Time between loops that checks locations around players</English>
+            <Spanish>Tiempo entre bucles que comprueba las ubicaciones alrededor de los jugadores</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_MaxNumberOfActiveLocationsDisplayName">
+            <English>Max number of active locations</English>
+            <Spanish>Número máximo de ubicaciones activas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_MaxNumberOfActiveLocationsDescription">
+            <English>Max number of locations active on a mission</English>
+            <Spanish>Número máximo de ubicaciones activas en una misión</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_MaxCiviliansPerLocationDisplayName">
+            <English>Max number of civilians on a location</English>
+            <Spanish>Número máximo de civiles en una ubicación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_MaxCiviliansPerLocationDescription">
+            <English>Max civilians per location (In houses + In street + In Vehicles)</English>
+            <Spanish>Máximo de civiles por ubicación (en casas + en la calle + en vehículos)</Spanish>
+        </Key>
+    </Package>
+</Project>

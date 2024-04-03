@@ -22,7 +22,7 @@ private _civilians = GVAR(activeLocations) getOrDefault [_location, []];
 
 // Remove civilians to all curators
 {
-	_x removeCuratorEditableObjects [_civilians, true];
+    _x removeCuratorEditableObjects [_civilians, true];
 } forEach allCurators;
 
 {

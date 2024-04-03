@@ -45,5 +45,37 @@
             <English>Max civilians per location (In houses + In street + In Vehicles)</English>
             <Spanish>Máximo de civiles por ubicación (en casas + en la calle + en vehículos)</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Civilian_MinCiviliansPerLocationDisplayName">
+            <English>Min number of civilians per locaction</English>
+            <Spanish>Número mínimo de civiles por ubicación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_MinCiviliansPerLocationDescription">
+            <English>Min civilians per location (In houses + In street + In Vehicles)</English>
+            <Spanish>Mínimo de civiles por ubicación (en casas + en la calle + en vehículos)</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_CiviliansClassnamesDisplayName">
+            <English>Classnames of civilians</English>
+            <Spanish>Nombres de clase de los civiles</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_CiviliansClassnamesDescription">
+            <English>An array of the classnames of the civilians to spawn. It will be selected randomly</English>
+            <Spanish>Una serie de nombres de clase de los civiles que se generarán. Se seleccionará al azar</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_CiviliansVehiclesClassnamesDisplayName">
+            <English>Vehicle classname of civilians</English>
+            <Spanish>Nombre de clase de vehículos de civiles</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_CiviliansVehiclesClassnamesDescription">
+            <English>An array of the classnames of the vehicles of the civilians to spawn. It will be selected randomly</English>
+            <Spanish>Una serie de nombres de clase de los vehículos de los civiles que se generarán. Se seleccionará al azar</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_LocationTypesDisplayName">
+            <English>Type of locations</English>
+            <Spanish>Tipo de ubicaciones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_LocationTypesDescription">
+            <English>An array of type of locations. The posible options are on https://community.bistudio.com/wiki/Location</English>
+            <Spanish>Una variedad de tipos de ubicaciones. Las posibles opciones están en https://community.bistudio.com/wiki/Location</Spanish>
+        </Key>
     </Package>
 </Project>

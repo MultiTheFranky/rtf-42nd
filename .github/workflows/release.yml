@@ -86,7 +86,7 @@ jobs:
             - name: Build Changelog
               id: github_release
               uses: mikepenz/release-changelog-builder-action@v4
-              env:
+              with:
                   commitMode: true
                   configurationJson: |
                       {
@@ -112,6 +112,7 @@ jobs:
                           }
                         ],
                       }
+              env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Upload mod
@@ -140,7 +141,7 @@ jobs:
                   otp: "${{ steps.generate.outputs.code }}"
                   path: "${{ github.workspace }}\\releases\\@rtf42"
                   name: "rtf42"
-                  change_notes_title: "rtf42-${{ env.VERSION }}"
+                  change_notes_title: "${{ env.VERSION }}"
                   change_notes: "${{steps.github_release.outputs.changelog}}"
               continue-on-error: true
 

@@ -1,55 +1,55 @@
 {
     "categories": [
         {
-            "title": "🪛 Continuous integration",
+            "title": "## 🪛 Continuous integration",
             "labels": ["kind/ci", "ci"]
         },
         {
-            "title": "🚀 Features",
+            "title": "## 🚀 Features",
             "labels": ["kind/feature", "feature", "feat"]
         },
         {
-            "title": "🐛 Bugfixes",
+            "title": "## 🐛 Bugfixes",
             "labels": ["kind/bug", "fix", "bug"]
         },
         {
-            "title": "🔧 Changes",
+            "title": "## 🔧 Changes",
             "labels": ["kind/chore", "change", "chore"]
         },
         {
-            "title": "✨ Optimizations",
+            "title": "## ✨ Optimizations",
             "labels": ["kind/perf", "optimization", "perf", "optimize"]
         },
         {
-            "title": "🚨 Security ",
+            "title": "## 🚨 Security ",
             "labels": ["kind/security", "security"]
         },
         {
-            "title": "🧹 Housekeeping",
+            "title": "## 🧹 Housekeeping",
             "labels": ["kind/refactor", "refactor", "style"]
         },
         {
-            "title": "🐒 Miscellaneous",
+            "title": "## 🐒 Miscellaneous",
             "labels": ["kind/misc", "misc"]
         },
         {
-            "title": "⛔ Deprecated",
+            "title": "## ⛔ Deprecated",
             "labels": ["kind/deprecate", "deprecate"]
         },
         {
-            "title": "⛔ Removed",
+            "title": "## ⛔ Removed",
             "labels": ["kind/remove", "remove"]
         },
         {
-            "title": "📦 Build & Dependencies",
+            "title": "## 📦 Build & Dependencies",
             "labels": ["kind/build", "build", "dependency", "dep", "package"]
         },
         {
-            "title": "✏️ Docs",
+            "title": "## ✏️ Docs",
             "labels": ["kind/docs", "doc", "docs", "wiki"]
         },
         {
-            "title": "🧪 Tests & Demo Vault",
+            "title": "## 🧪 Tests & Demo Vault",
             "labels": ["kind/test", "test", "tests", "vault"]
         }
     ],

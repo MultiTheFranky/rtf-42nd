@@ -77,5 +77,37 @@
             <English>An array of type of locations. The posible options are on https://community.bistudio.com/wiki/Location</English>
             <Spanish>Una variedad de tipos de ubicaciones. Las posibles opciones están en https://community.bistudio.com/wiki/Location</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Civilian_UseHouseAgentsDisplayName">
+            <English>Use agents on Houses</English>
+            <Spanish>Utilizar agentes en casas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_UseHouseAgentsDescription">
+            <English>Use agents on houses. Remember that an agent can't be controlled by ZEUS but it gives you some performance improvements</English>
+            <Spanish>Utilizar agentes en casas. Recuerda que ZEUS no puede controlar un agente pero te brinda algunas mejoras de rendimiento</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_UseStreetAgentsDisplayName">
+            <English>Use agents on streets</English>
+            <Spanish>Utilizar agentes en calles</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_UseStreetAgentsDescription">
+            <English>Use agents on streets. Remember that an agent can't be controlled by ZEUS but it gives you some performance improvements</English>
+            <Spanish>Utilizar agentes en calles. Recuerda que ZEUS no puede controlar un agente pero te brinda algunas mejoras de rendimiento</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_UseVehicleAgentsDescription">
+            <English>Use agents on vehicles. Remember that an agent can't be controlled by ZEUS but it gives you some performance improvements</English>
+            <Spanish>Utilizar agentes en vehículos. Recuerda que ZEUS no puede controlar un agente pero te brinda algunas mejoras de rendimiento</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_LocationBlacklistedDisplayName">
+            <English>Blacklisted locations</English>
+            <Spanish>Ubicaciones en la lista negra</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_LocationBlacklistedDescription">
+            <English>Name or classnames of the locations that you don't want to be active</English>
+            <Spanish>Nombre o nombres de clase de las ubicaciones que no desea que estén activas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Civilian_ActionDragOut">
+            <English>Drag out driver</English>
+            <Spanish>Arrastrar fuera al conductor</Spanish>
+        </Key>
     </Package>
 </Project>

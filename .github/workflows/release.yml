@@ -85,9 +85,9 @@ jobs:
 
             - name: Build Changelog
               id: github_release
-              uses: mikepenz/release-changelog-builder-action@develop
+              uses: mikepenz/release-changelog-builder-action@main
               with:
-                  mode: "HYBRID"
+                  commitMode: true
                   configurationJson: |
                       {
                         "template": "#{{CHANGELOG}}",

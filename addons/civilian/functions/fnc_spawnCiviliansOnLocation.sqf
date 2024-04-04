@@ -39,7 +39,12 @@ for "_i" from 1 to _numberOfCivialiansOnHouses do {
     // Check if the position is not empty
     if (count (_position nearObjects ["Man", 1]) > 0) then { _i = _i - 1; continue };
     // Create the civilian
-    private _civilian = createAgent [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    private _civilian = objNull;
+    if (GVAR(useHouseAgents)) then {
+        _civilian = createAgent [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    } else {
+        _civilian = (createGroup civilian) createUnit [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    };
     _civilian setDir (random 360);
     _createdCivilians pushBack _civilian;
     sleep 0.1;
@@ -60,19 +65,30 @@ for "_i" from 1 to _numberOfCiviliansOnVehicles do {
     _vehicle setDir ([_road, (roadsConnectedTo _road) select 0] call BIS_fnc_DirTo);
     _createdCivilians pushBack _vehicle;
     // Create the civilian
-    private _civilian = createAgent [selectRandom GVAR(civiliansClassnames), _position, [], 0, "NONE"];
+    private _civilian = objNull;
+    if (GVAR(useVehicleAgents)) then {
+        _civilian = createAgent [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    } else {
+        _civilian = (createGroup civilian) createUnit [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    };
     // Move the civilian on the vehicle
     _civilian moveInDriver _vehicle;
     _createdCivilians pushBack _civilian;
     [_civilian, _location] spawn FUNC(moveAgentVehicleRandomly);
     [_vehicle, _civilian] spawn FUNC(agentDriveSkill);
+    [_vehicle] remoteExec [QFUNC(addActionToVehicle), 0, true];
     sleep 0.1;
 };
 
 // spawn civilians on the street
 for "_i" from 1 to (_numberOfCivilians - _numberOfCivialiansOnHouses - _numberOfCiviliansOnVehicles) do {
     private _position = (getPos _location) getPos [((selectMax (size _location)) / 4) * sqrt random 1, random 360];
-    private _civilian = createAgent [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    private _civilian = objNull;
+    if (GVAR(useStreetAgents)) then {
+        _civilian = createAgent [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    } else {
+        _civilian = (createGroup civilian) createUnit [selectRandom GVAR(civiliansClassnames), _position, [], 0, "CAN_COLLIDE"];
+    };
     _civilian forceWalk true;
     [_civilian, _location] spawn FUNC(moveAgentRandomly);
     _createdCivilians pushBack _civilian;

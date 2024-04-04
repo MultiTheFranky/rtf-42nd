@@ -21,7 +21,9 @@ private _activeLocations = [];
 {
     private _locations = nearestLocations [_x, GVAR(locationTypes), GVAR(activationDistance), _x];
     {
-        _activeLocations pushBackUnique _x;
+        if (!((text _x) in GVAR(locationBlacklisted)) && !((className _x) in GVAR(locationBlacklisted))) then {
+            _activeLocations pushBackUnique _x;
+        };
     } forEach _locations;
 } forEach allPlayers;
 

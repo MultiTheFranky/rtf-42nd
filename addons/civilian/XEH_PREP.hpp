@@ -7,3 +7,4 @@ PREP(getRoadOnLocation);
 PREP(moveAgentRandomly);
 PREP(moveAgentVehicleRandomly);
 PREP(agentDriveSkill);
+PREP(addActionToVehicle);

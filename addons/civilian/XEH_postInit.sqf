@@ -9,5 +9,6 @@ if (!isServer) exitWith {};
     GVAR(civiliansClassnames) = parseSimpleArray GVAR(civiliansClassnames);
     GVAR(civiliansVehiclesClassnames) = parseSimpleArray GVAR(civiliansVehiclesClassnames);
     GVAR(locationTypes) = parseSimpleArray GVAR(locationTypes);
+    GVAR(locationBlacklisted) = parseSimpleArray GVAR(locationBlacklisted);
     [FUNC(loop), [], 5] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;

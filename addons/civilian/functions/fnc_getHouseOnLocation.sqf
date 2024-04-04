@@ -17,4 +17,6 @@
 */
 
 params ["_location"];
-selectRandom (nearestTerrainObjects [getPos _location, ["HOUSE", "HOSPITAL", "CHURCH", "CHAPEL", "BUILDING", "BUNKER", "FUELSTATION", "LIGHTHOUSE", "RUIN"], selectMax (size _location)]);
+selectRandom (
+    nearestTerrainObjects [getPos _location, ["HOUSE", "HOSPITAL", "CHURCH", "CHAPEL", "BUILDING", "BUNKER", "FUELSTATION", "LIGHTHOUSE", "RUIN"], selectMax (size _location)] + nearestObjects [getPos _location, ["HOUSE", "HOSPITAL", "CHURCH", "CHAPEL", "BUILDING", "BUNKER", "FUELSTATION", "LIGHTHOUSE", "RUIN"], selectMax (size _location)]
+);

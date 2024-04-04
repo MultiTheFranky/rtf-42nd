@@ -12,7 +12,7 @@
     * None
     *
     * Example:
-    * spawn rtf42_civilian_fnc_moveAgentVehicleRandomly;
+    * [_agent, _location] spawn rtf42_civilian_fnc_moveAgentVehicleRandomly;
     *
     * Public: No
 */
@@ -28,15 +28,19 @@ private _position = getPos([_locationSelected] call FUNC(getRoadOnLocation));
 if (isNil "_position") exitWith {};
 
 // Move the agent to the new location
-_agent setDestination [_position, "LEADER PLANNED", true];
+if (isAgent teamMember _agent) then {
+    _agent setDestination [_position, "LEADER PLANNED", true];
+} else {
+    _agent doMove _position;
+};
 _agent setBehaviour "CARELESS";
 _agent setSpeedMode "LIMITED";
 _agent setCombatMode "BLUE";
 _agent forceWalk true;
 
 // Wait for the agent to reach the new location or the agent is not live
-waitUntil { (_agent distance _position) < 30  || !alive _agent || isNull _agent};
-if (!alive _agent || isNull _agent) exitWith {};
+waitUntil {(_agent distance _position) < 30  || !alive _agent || isNull _agent || vehicle _agent == _agent};
+if (!alive _agent || isNull _agent || vehicle _agent == _agent) exitWith {};
 sleep random 10;
 
 // Call the function again

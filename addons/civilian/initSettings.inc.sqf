@@ -12,6 +12,12 @@ private _category = format ["RTF42 %1", LLSTRING(DisplayName)];
 
 [QGVAR(minCiviliansPerLocation), "SLIDER", [LSTRING(MinCiviliansPerLocationDisplayName), LSTRING(MinCiviliansPerLocationDescription)], _category, [0,100,20,0,false], 1] call CBA_fnc_addSetting;
 
+[QGVAR(useHouseAgents), "CHECKBOX", [LSTRING(UseHouseAgentsDisplayName), LSTRING(UseHouseAgentsDescription)], _category, true, 1] call CBA_fnc_addSetting;
+
+[QGVAR(useStreetAgents), "CHECKBOX", [LSTRING(UseStreetAgentsDisplayName), LSTRING(UseStreetAgentsDescription)], _category, true, 1] call CBA_fnc_addSetting;
+
+[QGVAR(useVehicleAgents), "CHECKBOX", [LSTRING(UseVehicleAgentsDisplayName), LSTRING(UseVehicleAgentsDescription)], _category, true, 1] call CBA_fnc_addSetting;
+
 [QGVAR(civiliansClassnames), "EDITBOX", [LSTRING(CiviliansClassnamesDisplayName), LSTRING(CiviliansClassnamesDescription)], _category, 
     '["CUP_C_TK_Man_05_Waist","CUP_C_TK_Man_06_Waist","CUP_C_TK_Man_01_Coat","CUP_C_TK_Man_08_Waist","CUP_C_TK_Man_03_Coat","CUP_C_TK_Man_01_Jack","CUP_C_TK_Man_06_Jack","CUP_C_TK_Man_03_Jack"]'
 , 1] call CBA_fnc_addSetting;
@@ -22,4 +28,8 @@ private _category = format ["RTF42 %1", LLSTRING(DisplayName)];
 
 [QGVAR(locationTypes), "EDITBOX", [LSTRING(LocationTypesDisplayName), LSTRING(LocationTypesDescription)], _category, 
     '["Name","NameCity","NameCityCapital","NameLocal","NameVillage"]'
+, 1] call CBA_fnc_addSetting;
+
+[QGVAR(locationBlacklisted), "EDITBOX", [LSTRING(LocationBlacklistedDisplayName), LSTRING(LocationBlacklistedDescription)], _category, 
+    '[]'
 , 1] call CBA_fnc_addSetting;

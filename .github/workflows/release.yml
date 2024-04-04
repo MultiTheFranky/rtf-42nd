@@ -85,13 +85,10 @@ jobs:
 
             - name: Build Changelog
               id: github_release
-              uses: mikepenz/release-changelog-builder-action@develop
+              uses: mikepenz/release-changelog-builder-action@v4
               with:
                   commitMode: true
                   configuration: ".github/changelog_config.json"
-                  ignorePreReleases: false
-                  fetchReleaseInformation: true
-                  fetchViaCommits: true
                   token: "${{ secrets.PAT }}"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

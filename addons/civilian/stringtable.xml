@@ -93,6 +93,10 @@
             <English>Use agents on streets. Remember that an agent can't be controlled by ZEUS but it gives you some performance improvements</English>
             <Spanish>Utilizar agentes en calles. Recuerda que ZEUS no puede controlar un agente pero te brinda algunas mejoras de rendimiento</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Civilian_UseVehicleAgentsDisplayName">
+            <English>Use agents on vehicles</English>
+            <Spanish>Utilizar agentes en vehículos</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Civilian_UseVehicleAgentsDescription">
             <English>Use agents on vehicles. Remember that an agent can't be controlled by ZEUS but it gives you some performance improvements</English>
             <Spanish>Utilizar agentes en vehículos. Recuerda que ZEUS no puede controlar un agente pero te brinda algunas mejoras de rendimiento</Spanish>

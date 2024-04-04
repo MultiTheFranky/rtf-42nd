@@ -85,33 +85,14 @@ jobs:
 
             - name: Build Changelog
               id: github_release
-              uses: mikepenz/release-changelog-builder-action@main
+              uses: mikepenz/release-changelog-builder-action@develop
               with:
                   commitMode: true
-                  configurationJson: |
-                      {
-                        "template": "#{{CHANGELOG}}",
-                        "categories": [
-                          {
-                              "title": "## Feature",
-                              "labels": ["feat", "feature"]
-                          },
-                          {
-                              "title": "## Fix",
-                              "labels": ["fix", "bug"]
-                          },
-                          {
-                              "title": "## Other",
-                              "labels": []
-                          }
-                        ],
-                        "label_extractor": [
-                          {
-                            "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w ])+([\\s\\S]*)",
-                            "target": "$1"
-                          }
-                        ],
-                      }
+                  configuration: ".github/changelog_config.json"
+                  ignorePreReleases: false
+                  fetchReleaseInformation: true
+                  fetchViaCommits: true
+                  token: "${{ secrets.PAT }}"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

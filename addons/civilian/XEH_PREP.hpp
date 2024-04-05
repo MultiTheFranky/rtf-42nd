@@ -8,3 +8,6 @@ PREP(moveAgentRandomly);
 PREP(moveAgentVehicleRandomly);
 PREP(agentDriveSkill);
 PREP(addActionToVehicle);
+PREP(spawnInHouses);
+PREP(spawnInStreet);
+PREP(spawnInVehicles);

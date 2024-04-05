@@ -21,7 +21,7 @@ params ["_agent", "_location"];
 if (isNil "_agent" || isNil "_location") exitWith {};
 if (!alive _agent) exitWith {};
 if (!isNil (_agent getVariable ["lambs_main_currentTask", nil])) exitWith {};
-private _pos = ((getPos _location) getPos [((selectMax (size _location)) / 2) * sqrt random 1, random 360]);
+private _pos = ((getPos _location) getPos [((selectMax (size _location))) * sqrt random 1, random 360]);
 if (isAgent teamMember _agent) then {
     _agent setDestination [_pos, "LEADER PLANNED", true];
 } else {

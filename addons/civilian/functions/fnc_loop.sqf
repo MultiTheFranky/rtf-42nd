@@ -19,9 +19,13 @@
 // Get players distance to nearest location
 private _activeLocations = [];
 {
-    private _locations = nearestLocations [_x, GVAR(locationTypes), GVAR(activationDistance), _x];
+    private _customLocations = [];
     {
-        if (!((text _x) in GVAR(locationBlacklisted)) && !((className _x) in GVAR(locationBlacklisted))) then {
+        _customLocations pushBack (_x select 0);
+    } forEach (values GVAR(customLocations));
+    private _locations = nearestLocations [_x, GVAR(locationTypes), GVAR(activationDistance), _x] + _customLocations;
+    {
+        if (!((text _x) in GVAR(locationBlacklisted)) && !(([_x] call FUNC(getLocationClassName)) in GVAR(locationBlacklisted))) then {
             _activeLocations pushBackUnique _x;
         };
     } forEach _locations;
@@ -34,9 +38,9 @@ if (count _activeLocations > GVAR(maxNumberOfActiveLocations)) then {
 
 // Activate location if not already
 {
-    if (!((className _x) in GVAR(activeLocations))) then {
-        [[className _x] call FUNC(getLocationFromName)] spawn FUNC(spawnCiviliansOnLocation);
-        GVAR(activeLocations) set [className _x, []];
+    if (!(([_x] call FUNC(getLocationClassName)) in GVAR(activeLocations))) then {
+        [[[_x] call FUNC(getLocationClassName)] call FUNC(getLocationFromName)] spawn FUNC(spawnCiviliansOnLocation);
+        GVAR(activeLocations) set [[_x] call FUNC(getLocationClassName), []];
     };
 } forEach _activeLocations;
 

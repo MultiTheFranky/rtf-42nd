@@ -21,7 +21,7 @@ params ["_agent", "_location"];
 // Get the nearest location to the start location that is on GVAR(activeLocations)
 private _locations = nearestLocations [getPos _location, GVAR(locationTypes), GVAR(activationDistance)];
 // Filter locations that doesn't have roads and is active
-_locations = _locations select {[_x] call FUNC(getRoadOnLocation) != objNull && (className _x) in GVAR(activeLocations)};
+_locations = _locations select {[_x] call FUNC(getRoadOnLocation) != objNull && ([_x] call FUNC(getLocationClassName)) in GVAR(activeLocations)};
 // Get the first location that is not the start location and is on GVAR(activeLocations)
 private _locationSelected = selectRandom _locations;
 if (isNil "_locationSelected") exitWith {sleep random 10; [_agent, _location] spawn FUNC(moveAgentVehicleRandomly);};

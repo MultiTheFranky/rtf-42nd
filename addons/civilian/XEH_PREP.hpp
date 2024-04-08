@@ -11,3 +11,4 @@ PREP(addActionToVehicle);
 PREP(spawnInHouses);
 PREP(spawnInStreet);
 PREP(spawnInVehicles);
+PREP(getLocationClassName);

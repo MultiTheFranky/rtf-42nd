@@ -6,15 +6,15 @@ rem create a loop
 :fullLoop
 
 rem Execute buildExtensions.bat
-call buildExtensions.bat
+rem call buildExtensions.bat
 
-call buildTranslations.bat
+rem call buildTranslations.bat
 
-call buildMusic.bat
+rem call buildMusic.bat
 
-call buildVideos.bat
+rem call buildVideos.bat
 
-call buildImages.bat
+rem call buildImages.bat
 
 :loopRestartOnly
 

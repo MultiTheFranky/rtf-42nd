@@ -19,7 +19,10 @@
 params ["_location"];
 
 // Generate a random number of civilians
-private _numberOfCivilians = round (random [GVAR(minCiviliansPerLocation), (GVAR(maxCiviliansPerLocation) + GVAR(minCiviliansPerLocation)) / 2, GVAR(maxCiviliansPerLocation)]);
+private _isCustomLocation = text _location in GVAR(customLocations);
+private _maxNumberOfCivilians = if (_isCustomLocation) then {(GVAR(customLocations) get (text _location)) select 1} else {GVAR(maxCiviliansPerLocation)};
+private _minNumberOfCivilians = if (_isCustomLocation) then {(GVAR(customLocations) get (text _location)) select 2} else {GVAR(minCiviliansPerLocation)};
+private _numberOfCivilians = round (random [_minNumberOfCivilians, (_maxNumberOfCivilians + _minNumberOfCivilians) / 2, _maxNumberOfCivilians]);
 
 private _numberOfCivialiansOnHouses = round (_numberOfCivilians * (random 1));
 

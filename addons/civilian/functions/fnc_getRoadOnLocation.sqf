@@ -17,4 +17,5 @@
 */
 
 params ["_location"];
-selectRandom ((getPos _location) nearRoads (selectMax (size _location)));
+selectRandom (((getPos _location) nearRoads (selectMax (size _location))));
+

@@ -19,7 +19,7 @@
 params ["_vehicle"];
 
 private _actions = createHashMapFromArray [ // HashMap of Actions <STRING, ARRAY [condition, radius, memoryPoint, script]>
-    [LSTRING(ActionDragOut), [
+    [localize LSTRING(ActionDragOut), [
         "!(isNull driver _target)",
         2,
         "pos driver",
@@ -32,7 +32,7 @@ private _actions = createHashMapFromArray [ // HashMap of Actions <STRING, ARRAY
             waitUntil {!(isNull driver _target)};
             if (!(isPlayer driver _target)) then {
                 private _locations = nearestLocations [getPos _target, GVAR(locationTypes), GVAR(activationDistance)];
-                private _locationSelected = selectRandom (_locations select {((className _x) in GVAR(activeLocations))});
+                private _locationSelected = selectRandom (_locations select {(([_x] call FUNC(getLocationClassName)) in GVAR(activeLocations))});
                 [driver _target, _locationSelected] spawn FUNC(moveAgentVehicleRandomly);
             };
         }

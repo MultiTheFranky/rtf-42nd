@@ -41,4 +41,4 @@ for "_i" from 1 to _numberOfCivialiansOnStreet do {
 } forEach allCurators;
 
 
- GVAR(activeLocations) set [className _location, (GVAR(activeLocations) getOrDefault [className _location, []]) + _createdCivilians];
+ GVAR(activeLocations) set [[_location] call FUNC(getLocationClassName), (GVAR(activeLocations) getOrDefault [[_location] call FUNC(getLocationClassName), []]) + _createdCivilians];

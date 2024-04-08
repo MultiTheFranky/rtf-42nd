@@ -17,5 +17,10 @@
 */
 
 params ["_locationClassName"];
-private _pos = getArray (configFile >> "CfgWorlds" >> worldName >> "Names" >> _locationClassName >> "position");
-nearestLocation [_pos, GVAR(locationTypes)];
+if ((_locationClassName) in GVAR(customLocations)) then {
+    (GVAR(customLocations) get (_locationClassName)) select 0;
+} else {
+    configFile >> "CfgWorlds" >> worldName >> "Names" >> _locationClassName >> "position";
+    private _pos = getArray (configFile >> "CfgWorlds" >> worldName >> "Names" >> _locationClassName >> "position");
+    nearestLocation [_pos, GVAR(locationTypes)];
+};

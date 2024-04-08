@@ -30,5 +30,8 @@ parameters = [
     "-showScriptErrors",                                               # You can add additional parameters here
     "-debug",
     "-filePatching",
+    "-world=empty",
+    "-noPause",
+    "-noPauseAudio",
     "F:\\rtf-42nd\\missions\\rtf42_base_test_mission.VR\\mission.sqm", # Launch into existing Editor Mission - \\ needed - Change what ever you path is
 ]

@@ -65,19 +65,17 @@ jobs:
                   name: rtf42-${{ env.VERSION }}
                   path: ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
 
-            - name: Get previous tag
-              id: previousTag
-              run: |
-                  $name=$(git describe --abbrev=0 --tags --exclude="$(git describe --abbrev=0 --tags)")
-                  echo "previousTag: $name"
-                  echo "previousTag=$name" >> $env:GITHUB_ENV
+            - name: "Get Previous tag"
+              id: previoustag
+              uses: "WyriHaximus/github-action-get-previous-tag@v1"
+
             - name: Update CHANGELOG
               id: changelog
               uses: requarks/changelog-action@v1
               with:
                   token: ${{ github.token }}
                   fromTag: ${{ github.ref_name }}
-                  toTag: ${{ env.previousTag }}
+                  toTag: ${{ steps.previoustag.outputs.tag }}
                   writeToFile: false
             - uses: "ncipollo/release-action@v1"
               id: "automatic_releases"

@@ -33,59 +33,74 @@ jobs:
         runs-on: windows-latest
         needs: [validate, lint, check, extensions]
         steps:
-              - name: Checkout
-                uses: actions/checkout@v4
-              - uses: ./.github/workflows/base
-                with:
-                    CDN_URL: ${{ secrets.CDN_URL }}
-                    TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
-                    TOLGEE_URL: ${{ secrets.TOLGEE_URL }}
-              - name: Retrieve base artifact
-                uses: actions/download-artifact@v4
-                with:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - uses: ./.github/workflows/base
+              with:
+                  CDN_URL: ${{ secrets.CDN_URL }}
+                  TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
+                  TOLGEE_URL: ${{ secrets.TOLGEE_URL }}
+            - name: Retrieve base artifact
+              uses: actions/download-artifact@v4
+              with:
                   name: extensions
-              - name: Execute version generator
-                run: |
-                    cd ${{ github.workspace }}\\tools\\version_generator
-                    npm install
-                    $VERSION=$(node index.js --beta)
-                    echo "VERSION=$VERSION" >> $env:GITHUB_ENV
-              - uses: arma-actions/arma3-tools@master
-                with:
+            - name: Execute version generator
+              run: |
+                  cd ${{ github.workspace }}\\tools\\version_generator
+                  npm install
+                  $VERSION=$(node index.js --beta)
+                  echo "VERSION=$VERSION" >> $env:GITHUB_ENV
+            - uses: arma-actions/arma3-tools@master
+              with:
                   toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip
-              - name: Setup HEMTT
-                uses: arma-actions/hemtt@v1
-              - name: Run HEMTT release
-                run: hemtt release
-              - name: Rename build folder
-                run: mv ${{ github.workspace }}\\releases\\rtf42-latest.zip ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
-              - name: Upload Artifact
-                uses: actions/upload-artifact@v4
-                with:
-                    name: rtf42-${{ env.VERSION }}
-                    path: ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
-              - uses: "ncipollo/release-action@v1"
-                id: "automatic_releases"
-                with:
-                    token: "${{ secrets.PAT }}"
-                    tag: "${{ env.VERSION }}"
-                    prerelease: true
-                    name: "Release ${{ env.VERSION }}"
-                    generateReleaseNotes: true
-              - name: Upload asset
-                uses: shogo82148/actions-upload-release-asset@v1
-                with:
-                    upload_url: ${{ steps.automatic_releases.outputs.upload_url }}
-                    asset_path: ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
-                    asset_content_type: application/zip
-                continue-on-error: true
-              - name: PR to merge version to main branch
-                uses: peter-evans/create-pull-request@v6
-                with:
+            - name: Setup HEMTT
+              uses: arma-actions/hemtt@v1
+            - name: Run HEMTT release
+              run: hemtt release
+            - name: Rename build folder
+              run: mv ${{ github.workspace }}\\releases\\rtf42-latest.zip ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
+            - name: Upload Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: rtf42-${{ env.VERSION }}
+                  path: ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
+
+            - name: Get previous tag
+              id: previousTag
+              run: |
+                  name=$(git --no-pager tag --sort=creatordate --merged ${{ github.ref_name }} | tail -2 | head -1)
+                  echo "previousTag: $name"
+                  echo "previousTag=$name" >> $GITHUB_ENV
+            - name: Update CHANGELOG
+              id: changelog
+              uses: requarks/changelog-action@v1
+              with:
+                  token: ${{ github.token }}
+                  fromTag: ${{ github.ref_name }}
+                  toTag: ${{ env.previousTag }}
+                  writeToFile: false
+            - uses: "ncipollo/release-action@v1"
+              id: "automatic_releases"
+              with:
+                  token: "${{ secrets.PAT }}"
+                  tag: "${{ env.VERSION }}"
+                  prerelease: true
+                  name: "Release ${{ env.VERSION }}"
+                  body: ${{ steps.changelog.outputs.changes }}
+            - name: Upload asset
+              uses: shogo82148/actions-upload-release-asset@v1
+              with:
+                  upload_url: ${{ steps.automatic_releases.outputs.upload_url }}
+                  asset_path: ${{ github.workspace }}\\releases\\@rtf42-${{env.VERSION}}.zip
+                  asset_content_type: application/zip
+              continue-on-error: true
+            - name: PR to merge version to main branch
+              uses: peter-evans/create-pull-request@v6
+              with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: "Update version to ${{ env.VERSION }}"
                   title: "Update version to ${{ env.VERSION }}"
-                  body: "Update version to ${{ env.VERSION }}"
+                  body: "Update version to ${{ env.VERSION }}/n${{ steps.changelog.outputs.changes }}"
                   branch: "version-${{ env.VERSION }}"
                   base: "main"
                   branch-suffix: random

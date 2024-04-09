@@ -83,15 +83,21 @@ jobs:
               run: unzip -o ${{ github.workspace }}\\releases\\@rtf42.zip -d ${{ github.workspace }}\\releases
               continue-on-error: true
 
-            - name: Build Changelog
-              id: github_release
-              uses: mikepenz/release-changelog-builder-action@v4
+            - name: Get previous tag
+              id: previousTag
+              run: |
+                  name=$(git --no-pager tag --sort=creatordate --merged ${{ github.ref_name }} | tail -2 | head -1)
+                  echo "previousTag: $name"
+                  echo "previousTag=$name" >> $GITHUB_ENV
+
+            - name: Update CHANGELOG
+              id: changelog
+              uses: requarks/changelog-action@v1
               with:
-                  commitMode: true
-                  configuration: ".github/changelog_config.json"
-                  token: "${{ secrets.PAT }}"
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ github.token }}
+                  fromTag: ${{ github.ref_name }}
+                  toTag: ${{ env.previousTag }}
+                  writeToFile: false
 
             - name: Upload mod
               uses: MultiTheFranky/action-release-to-steam-ws@0.0.3
@@ -105,7 +111,7 @@ jobs:
                   path: "${{ github.workspace }}\\releases\\@rtf42"
                   name: "rtf42"
                   change_notes_title: "rtf42-${{ env.VERSION }}"
-                  change_notes: "${{steps.github_release.outputs.changelog}}"
+                  change_notes: "${{ steps.changelog.outputs.changes }}"
               continue-on-error: true
 
             - name: Upload beta mod
@@ -120,7 +126,7 @@ jobs:
                   path: "${{ github.workspace }}\\releases\\@rtf42"
                   name: "rtf42"
                   change_notes_title: "${{ env.VERSION }}"
-                  change_notes: "${{steps.github_release.outputs.changelog}}"
+                  change_notes: "${{ steps.changelog.outputs.changes }}"
               continue-on-error: true
 
             - name: PR to merge version to main branch
@@ -130,7 +136,7 @@ jobs:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: "Update version to ${{ env.VERSION }}"
                   title: "Update version to ${{ env.VERSION }}"
-                  body: "Update version to ${{ env.VERSION }}\nChanges: ${{steps.github_release.outputs.changelog}}"
+                  body: "Update version to ${{ env.VERSION }}\nChanges: ${{ steps.changelog.outputs.changes }}"
                   branch: "version-${{ env.VERSION }}"
                   base: "main"
                   branch-suffix: random

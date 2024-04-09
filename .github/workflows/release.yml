@@ -83,17 +83,12 @@ jobs:
               run: unzip -o ${{ github.workspace }}\\releases\\@rtf42.zip -d ${{ github.workspace }}\\releases
               continue-on-error: true
 
-            - name: "Get Previous tag"
-              id: previoustag
-              uses: "WyriHaximus/github-action-get-previous-tag@v1"
-
             - name: Update CHANGELOG
               id: changelog
               uses: requarks/changelog-action@v1
               with:
                   token: ${{ github.token }}
-                  fromTag: ${{ github.ref_name }}
-                  toTag: ${{ steps.previoustag.outputs.tag }}
+                  tag: ${{ github.ref_name }}
                   writeToFile: false
 
             - name: Upload mod

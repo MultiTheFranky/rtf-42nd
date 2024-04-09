@@ -4,9 +4,9 @@ class CfgNonAIVehicles {
         scope = 0;
         icon = "\A3\ui_f\data\map\mapcontrol\tourism_ca.paa";
         class AttributeValues {
-			size2[] = {50,50};
-			size3[] = {50,50,-1};
-		};
+            size2[] = {50,50};
+            size3[] = {50,50,-1};
+        };
         class Attributes {
             class Name {
                 control = "Edit";
@@ -44,17 +44,17 @@ class CfgNonAIVehicles {
         scope = 2;
         displayName = "Town";
         class AttributeValues {
-			MaxNumberOfUnits = 50;
-			MinNumberOfUnits = 20;
-		};
+            MaxNumberOfUnits = 50;
+            MinNumberOfUnits = 20;
+        };
     };
 
     class GVAR(Village): GVAR(Location) {
         scope = 2;
         displayName = "Village";
         class AttributeValues {
-			MaxNumberOfUnits = 30;
-			MinNumberOfUnits = 10;
-		};
+            MaxNumberOfUnits = 30;
+            MinNumberOfUnits = 10;
+        };
     };
 };

@@ -1,8 +1,10 @@
 PREP(setTranslator);
-PREP(setInformant);
+PREP(interrogate);
 PREP(getAnswersHashMap);
 PREP(getBestAnswer);
-PREP(init);
 PREP(getMRE);
 PREP(removeMRE);
 PREP(talk);
+PREP(giveMRE);
+PREP(canInterrogate);
+PREP(canGiveMRE);

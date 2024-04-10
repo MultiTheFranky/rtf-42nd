@@ -13,7 +13,7 @@ class Extended_PreInit_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class CAManBase {
         class ADDON {
-            init = QUOTE(_this call EFUNC(interrogation,init);_this call FUNC(flashlight));
+            init = QUOTE(_this call FUNC(flashlight));
         };
     };
 };

@@ -86,6 +86,7 @@ jobs:
             - name: Generate previous version
               id: previous_version
               run: |
+                  git fetch --tags
                   $previousVersion=$(git tag --sort=-v:refname | Where-Object {$_ -like 'v*.*.*' -and $_ -notlike '*-rc.*'} | Select-Object -First 2 | Select-Object -Last 1)
                   echo "PREVIOUS_VERSION=$previousVersion" >> $env:GITHUB_ENV
 
@@ -143,3 +144,4 @@ jobs:
                   labels: |
                       automerge
                       automated pr
+

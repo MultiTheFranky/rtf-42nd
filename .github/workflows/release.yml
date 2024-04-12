@@ -83,12 +83,19 @@ jobs:
               run: unzip -o ${{ github.workspace }}\\releases\\@rtf42.zip -d ${{ github.workspace }}\\releases
               continue-on-error: true
 
+            - name: Generate previous version
+              id: previous_version
+              run: |
+                  $previousVersion=$(git tag --sort=-v:refname | Where-Object {$_ -like 'v*.*.*' -and $_ -notlike '*-rc.*'} | Select-Object -First 2 | Select-Object -Last 1)
+                  echo "PREVIOUS_VERSION=$previousVersion" >> $env:GITHUB_ENV
+
             - name: Update CHANGELOG
               id: changelog
               uses: MultiTheFranky/changelog-action@v0.0.4
               with:
+                  fromTag: ${{ env.PREVIOUS_VERSION }}
+                  toTag: ${{ github.ref_name }}
                   token: ${{ github.token }}
-                  tag: ${{ github.ref_name }}
                   writeToFile: false
 
             - name: Upload mod

@@ -94,8 +94,8 @@ jobs:
               id: changelog
               uses: MultiTheFranky/changelog-action@v0.0.4
               with:
-                  fromTag: ${{ env.PREVIOUS_VERSION }}
-                  toTag: ${{ github.ref_name }}
+                  fromTag: ${{ github.ref_name }}
+                  toTag: ${{ env.PREVIOUS_VERSION }}
                   token: ${{ github.token }}
                   writeToFile: false
 
@@ -144,4 +144,3 @@ jobs:
                   labels: |
                       automerge
                       automated pr
-

@@ -18,4 +18,4 @@
 */
 
 params ["_target","_player"];
-alive _target && alive _player && (side _target) == civilian && !(_target getVariable [QGVAR(mre), false]) && (_player call FUNC(getMRE)) != ''
+GVAR(enabled) && {alive _target && alive _player && (side _target) == civilian && !(_target getVariable [QGVAR(mre), false]) && (_player call FUNC(getMRE)) != ''}

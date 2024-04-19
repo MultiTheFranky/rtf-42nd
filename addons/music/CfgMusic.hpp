@@ -108,6 +108,12 @@ class GVAR(mississippi_twilight_trigger) {
         duration = 100;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(originals_42ndcountry_coldbeer) {
+        name = QUOTE(Originals 42ndcountry Coldbeer);
+        sound[] = {QPATHTOF(data\originals_42ndcountry_coldbeer.ogg), 1, 1};
+        duration = 191;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(papa_roach_born_for_greatness) {
         name = QUOTE(Papa Roach Born For Greatness);
         sound[] = {QPATHTOF(data\papa_roach_born_for_greatness.ogg), 1, 1};

@@ -17,5 +17,17 @@
             <English>Ceiling Lamp</English>
             <Spanish>Lámpara de Techo</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_DoorDisplayName">
+            <English>Door</English>
+            <Spanish>Puerta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_OpenDoorDisplayName">
+            <English>Open door</English>
+            <Spanish>Abrir puerta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_CloseDoorDisplayName">
+            <English>Close door</English>
+            <Spanish>Cerrar puerta</Spanish>
+        </Key>
     </Package>
 </Project>

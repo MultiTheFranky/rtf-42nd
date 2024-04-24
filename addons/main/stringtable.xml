@@ -53,5 +53,9 @@
             <English>Green Beret</English>
             <Spanish>Boinas Verdes</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryStructureDisplayName">
+            <English>Structures</English>
+            <Spanish>Estructuras</Spanish>
+        </Key>
     </Package>
 </Project>

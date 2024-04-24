@@ -36,6 +36,7 @@
 -   Rust (https://rustup.rs)
 -   Cross (https://github.com/cross-rs/cross) - You can install using `cargo install cross --git https://github.com/cross-rs/cross`
 -   Docker (https://docker.com) - You can install it using the script dockerInstall.ps1
+-   Cmake (https://cmake.org) - To compile the rust playmusic extension
 
 ## Setup
 

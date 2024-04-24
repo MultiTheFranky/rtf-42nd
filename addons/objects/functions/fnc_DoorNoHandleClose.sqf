@@ -1,0 +1,1 @@
+(_this select 0) animate [(_this select 1), 0];

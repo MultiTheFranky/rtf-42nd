@@ -71,7 +71,7 @@
         </Key>
         <Key ID="STR_RTF42_Zeus_HintCard">
             <English>Hint cards</English>
-            <Spanish>Tarjetas de pistas</Spanish>
+            <Spanish>Mostrar cartas</Spanish>
         </Key>
     </Package>
 </Project>

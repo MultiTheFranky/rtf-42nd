@@ -69,5 +69,9 @@
             <English>VIKINGS</English>
             <Spanish>VIKINGS</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_HintCard">
+            <English>Hint cards</English>
+            <Spanish>Mostrar cartas</Spanish>
+        </Key>
     </Package>
 </Project>

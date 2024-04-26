@@ -96,7 +96,7 @@ class CfgVehicles {
                 position = QUOTE(Door_trigger);
                 priority = 0.4;
                 radius = 1.5;
-                onlyForPlayer = QUOTE(false);
+                onlyForPlayer = 0;
                 condition = QUOTE((this animationPhase 'Door_rot') < 0.5);
                 statement = QUOTE((ARR_4([this,'Door_rot','Door_Handle_rot_1','Door_Handle_rot_2']) call FUNC(DoorOpen)));
             };

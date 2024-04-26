@@ -1,0 +1,7 @@
+class CfgFunctions {
+    class rtf42 {
+        class main {
+            class assignZeus {};
+        };
+    };
+};

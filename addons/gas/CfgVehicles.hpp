@@ -14,8 +14,8 @@ class CfgVehicles {
 
     class Sound;
     class GVAR(Sound_Cough_Min): Sound {
-		sound = QGVAR(Cough_Min);
-	};
+        sound = QGVAR(Cough_Min);
+    };
     class GVAR(Sound_Cough_Mid): Sound {
         sound = QGVAR(Cough_Mid);
     };

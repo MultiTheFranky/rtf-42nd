@@ -73,5 +73,9 @@
             <English>Hint cards</English>
             <Spanish>Mostrar cartas</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_GasZeusDisplayName">
+            <English>Gas</English>
+            <Spanish>Gas</Spanish>
+        </Key>
     </Package>
 </Project>

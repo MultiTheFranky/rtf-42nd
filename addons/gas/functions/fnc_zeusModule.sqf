@@ -17,7 +17,7 @@
 */
 
 params ["_pos"];
-private _misile = "M_Mo_82mm_AT_LG" createVehicle [(_pos select 0), (_pos select 1), 1000];
+private _misile = QGVAR(Missile) createVehicle [(_pos select 0), (_pos select 1), 1000];
 _misile setVectorDirAndUp [[0,0,-1],[0,1,0]];
 waitUntil {((getPos _misile)  select 2) < 1};
 private _smoke = QGVAR(GasAmmo) createVehicle [(_pos select 0), (_pos select 1), 0];

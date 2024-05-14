@@ -5,5 +5,33 @@
             <English>StandBy</English>
             <Spanish>Apoyar</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Animations_DisplayName_Actions">
+            <English>Actions</English>
+            <Spanish>Animaciones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Animations_DisplayName_Pose">
+            <English>Pose Animations</English>
+            <Spanish>Animaciones de posturas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Animations_DisplayName_FullPose">
+            <English>Full Pose Animations</English>
+            <Spanish>Animaciones de pose completa</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Animations_DisplayName_Animation">
+            <English>Animations</English>
+            <Spanish>Animaciones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Animations_DisplayName_Cancel">
+            <English>Cancel</English>
+            <Spanish>Cancelar</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Animations_fullpose_holdvest">
+            <English>Holding Vest</English>
+            <Spanish>Agarrando el Chaleco</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Animations_fullpose_cradle">
+            <English>Cradle Weapon</English>
+            <Spanish>Acunando el Arma</Spanish>
+        </Key>
     </Package>
 </Project>

@@ -48,6 +48,7 @@ parameters = [
     "-port=2302",
     "-loadMissionToMemory",
     "-autoInit",
+    "-filePatching",
     "-cfg=F:\\rtf-42nd\\server\\basic.cfg",
     "-config=F:\\rtf-42nd\\server\\server.cfg",
 ]

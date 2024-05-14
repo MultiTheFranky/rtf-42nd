@@ -18,4 +18,4 @@
 
 params ["_player", "_animation"];
 
-[_player, format ["rtf42_animations_%1", _animation]] remoteExec ['switchMove', 0];
+[_player, _animation] remoteExec ['switchMove', 0];

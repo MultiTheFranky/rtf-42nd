@@ -6,7 +6,7 @@ class CfgFaces {
         class Pettka;
         class GVAR(Rubi): Pettka {
             displayname="Rubi";
-            texture=QPATHTOF(data\rubi_co.paa);
+            texture=QPATHTOF(data\rubi.paa);
             head=QGVAR(Rubi);
             identityTypes[]= {"Head_Euro","Head_NATO"};
             author=ECSTRING(main,Author);

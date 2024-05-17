@@ -69,9 +69,7 @@ Or you can setup a keybind on custom action 20 on Arma 3.
 
 # License
 
-![License](https://community.bistudio.com/wikidata/images/2/2e/Licence_APL-SA.png)
-
-Arma Public License Share Alike (APL-SA) - See LICENSE for more information.
+License under CUP License - https://www.cup-arma3.org/cup-license
 
 # Credits
 

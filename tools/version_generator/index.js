@@ -69,36 +69,54 @@ function generateNewVersion(beta = false) {
             };
         }
         return {
-            version: `v${versionYear}.${versionMonth}.${
-                parseInt(versionPatch)
-            }`,
+            version: `v${versionYear}.${versionMonth}.${versionPatch}`,
             versionYear,
             versionMonth,
-            versionPatch: parseInt(versionPatch),
+            versionPatch,
         };
     }
 
     // If is beta, increase the build version
     if (beta) {
+        // If the beta is after a release, reset the beta minor
+        if (parseInt(versionBetaMinor) === 0) {
+            return {
+                version: `v${versionYear}.${versionMonth}.${
+                    parseInt(versionPatch) + 1
+                }-rc.1`,
+                versionYear,
+                versionMonth,
+                versionPatch: parseInt(versionPatch) + 1,
+                versionBetaMinor: 1,
+            };
+        }
         return {
             version: `v${versionYear}.${versionMonth}.${parseInt(
                 versionPatch
             )}-rc.${parseInt(versionBetaMinor) + 1}`,
             versionYear,
             versionMonth,
-            versionPatch,
+            versionPatch: parseInt(versionPatch),
             versionBetaMinor: parseInt(versionBetaMinor) + 1,
         };
     }
 
-    // If is not beta, increase the patch level
+    // If is not beta, return the actual version without beta minor
+    if (parseInt(versionBetaMinor) === 0) {
+        return {
+            version: `v${versionYear}.${versionMonth}.${
+                parseInt(versionPatch) + 1
+            }`,
+            versionYear,
+            versionMonth,
+            versionPatch: parseInt(versionPatch) + 1,
+        };
+    }
     return {
-        version: `v${versionYear}.${versionMonth}.${
-            parseInt(versionPatch) + 1
-        }`,
+        version: `v${versionYear}.${versionMonth}.${parseInt(versionPatch)}`,
         versionYear,
         versionMonth,
-        versionPatch: parseInt(versionPatch) + 1,
+        versionPatch: parseInt(versionPatch),
     };
 }
 
@@ -118,4 +136,3 @@ writeAddonsReleaseVersion(
 
 // Return version to be use on github actions
 console.log(newVersion.version);
-

@@ -40,7 +40,7 @@ class TransportItems {
     MACRO_ADDITEM(ACE_Flashlight_MX991,1);
     MACRO_ADDITEM(ACE_surgicalKit,1);
     MACRO_ADDITEM(Binocular,1);
-    MACRO_ADDITEM(JCA_G_AirPurifyingRespirator_03_black_clear_F,2);
+    MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),2);
 };
 class TransportWeapons {
     MACRO_ADDWEAPON(CUP_hgun_FlareGun,1);

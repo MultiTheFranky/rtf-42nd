@@ -9,7 +9,7 @@ class GVAR(rto): B_FieldPack_khk {
                 MACRO_ADDITEM(SmokeShellGreen,2);
                 MACRO_ADDITEM(SmokeShellRed,2);
                 MACRO_ADDITEM(ACRE_PRC152,1);
-                MACRO_ADDITEM(JCA_G_AirPurifyingRespirator_03_black_clear_F,1);
+                MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),1);
     };
     class TransportMagazines {
                 MACRO_ADDMAGAZINE(rhs_mag_m67,1);

@@ -12,7 +12,7 @@ class GVAR(sl): B_AssaultPack_rgr {
                 MACRO_ADDITEM(SmokeShellGreen,2);
                 MACRO_ADDITEM(SmokeShellRed,2);
                 MACRO_ADDITEM(Laserbatteries,2);
-                MACRO_ADDITEM(JCA_G_AirPurifyingRespirator_03_black_clear_F,1);
+                MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),1);
     };
     class TransportMagazines {
                 MACRO_ADDMAGAZINE(rhs_mag_m67,1);

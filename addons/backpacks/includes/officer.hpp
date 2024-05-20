@@ -17,7 +17,7 @@ class GVAR(officer): B_AssaultPack_rgr {
                 MACRO_ADDITEM(ACE_HandFlare_White,1);
                 MACRO_ADDITEM(ACE_HandFlare_Yellow,1);
                 MACRO_ADDITEM(SmokeShellBlue,2);
-                MACRO_ADDITEM(JCA_G_AirPurifyingRespirator_03_black_clear_F,1);
+                MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),1);
     };
     class TransportMagazines {
                 MACRO_ADDMAGAZINE(rhs_mag_m67,1);

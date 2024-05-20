@@ -30,7 +30,7 @@ class TransportItems {
     MACRO_ADDITEM(ACE_SpareBarrel,1);
     MACRO_ADDITEM(ACE_rope6,1);
     MACRO_ADDITEM(ACE_IR_Strobe_Item,3);
-    MACRO_ADDITEM(JCA_G_AirPurifyingRespirator_03_black_clear_F,2);
+    MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),2);
 };
 class TransportWeapons {
     MACRO_ADDWEAPON(rhs_weap_M136_hedp,1);

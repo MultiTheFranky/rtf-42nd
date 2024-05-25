@@ -31,7 +31,8 @@
         ["medevac",QPATHTOEF(cards,ui\medevac.jpg)],
         ["heavypuncher",QPATHTOEF(cards,ui\heavypuncher.jpg)],
         ["theshield",QPATHTOEF(cards,ui\theshield.jpg)],
-        ["vikings",QPATHTOEF(cards,ui\vikings.jpg)]
+        ["vikings",QPATHTOEF(cards,ui\vikings.jpg)],
+        ["starlink",QPATHTOEF(cards,ui\starlink.jpg)]
     ];
     private _values = [];
     private _names = [];

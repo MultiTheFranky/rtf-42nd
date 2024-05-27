@@ -17,22 +17,15 @@ if (!_alreadyExists) then {
 	if (count _newAddons > 0) then {
 		_curator addCuratorAddons _newAddons
 	};
-
-	_curator setcuratorcoef["place", 0];
-	_curator setcuratorcoef["delete", 0];
-	[_curator] spawn {
-		params ["_curator"];
-		while { !isNull _curator } do {
-			_curator addCuratorEditableObjects[(allMissionObjects "All"), true];
-			sleep 60;
-		};
-	};
+	_curator setcuratorcoef ["place", 0];
+	_curator setcuratorcoef ["delete", 0];
+	_curator addCuratorEditableObjects [(allMissionObjects "All"), true];
 	rtf42_zeusArray set [_uid, _curator];
 	_curator remoteExec ["unassignCurator", 0];
 	unassignCurator _curator;
 	sleep 0.4;
 	_this assignCurator _curator;
-	"[RTF42] Created Zeus..." remoteExec ["systemChat", _this];
+	"[RTF42] Created Zeus!" remoteExec ["systemChat", _this];
 	true;
 } else {
 	// Existing zeus module
@@ -40,6 +33,6 @@ if (!_alreadyExists) then {
 	_curator = rtf42_zeusArray get _uid;
 	deleteVehicle _curator;
 	rtf42_zeusArray deleteAt _uid;
-	"[RTF42] Zeus Deleted..." remoteExec ["systemChat", _this];
+	"[RTF42] Zeus Deleted!" remoteExec ["systemChat", _this];
 	_this call rtf42_fnc_assignZeus;
 };

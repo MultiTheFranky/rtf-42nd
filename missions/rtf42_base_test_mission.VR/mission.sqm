@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={4173.6304,9.1088753,789.2583};
-		dir[]={0.010771646,-0.3322272,-0.94313788};
-		up[]={0.0037941434,0.94319934,-0.3322055};
-		aside[]={-0.99993473,2.3283064e-10,-0.011420326};
+		pos[]={4173.3848,7.3529887,785.22186};
+		dir[]={0.0052376119,-0.43291798,-0.90141809};
+		up[]={0.0025153903,0.90143335,-0.43291071};
+		aside[]={-0.99998313,0,-0.0058103157};
 	};
 };
 binarizationWanted=0;
@@ -37,7 +37,7 @@ addons[]=
 	"ace_vector",
 	"A3_Weapons_F",
 	"ace_parachute",
-	"cTab",
+	"rtf42_tablet",
 	"CUP_Creatures_Military_USArmy",
 	"rhsusf_c_troops",
 	"rtf42_uniforms",
@@ -132,8 +132,9 @@ class AddonsMetaData
 		};
 		class Item7
 		{
-			className="cTab";
-			name="cTab";
+			className="rtf42_tablet";
+			name="rtf42 - Tablet";
+			author="42nd RTF Team";
 		};
 		class Item8
 		{
@@ -379,6 +380,37 @@ class ScenarioData
 };
 class CustomAttributes
 {
+	class Category0
+	{
+		name="HNEG_emed_ped_session";
+		class Attribute0
+		{
+			property="HNEG_emed_ped_sessionRUN";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="HNEG_emed_ped_sessionATTNOTOOL";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		nAttributes=2;
+	};
 	class Category1
 	{
 		name="Multiplayer";
@@ -717,7 +749,7 @@ class Mission
 											map="ItemMap";
 											compass="ItemCompass";
 											watch="ACE_Altimeter";
-											gps="ItemcTab";
+											gps="rtf42_tablet_Tablet";
 											goggles="CUP_G_ESS_BLK_Scarf_Red";
 											headgear="rhsusf_mich_bare_norotos_alt_tan";
 										};
@@ -1121,7 +1153,7 @@ class Mission
 											map="ItemMap";
 											compass="ItemCompass";
 											watch="ACE_Altimeter";
-											gps="ItemcTab";
+											gps="rtf42_tablet_Tablet";
 											goggles="rhsusf_oakley_goggles_clr";
 											headgear="rhsusf_mich_bare_norotos_alt_tan";
 										};
@@ -21456,9 +21488,11 @@ class Mission
 						};
 					};
 					id=0;
+					atlOffset=-3.75;
 				};
 			};
 			id=93;
+			atlOffset=-3.75;
 		};
 	};
 };

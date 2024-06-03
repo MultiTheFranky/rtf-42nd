@@ -62,7 +62,7 @@ if (!isNull _display) then {
 		private _ctrlChatBG = (allControls _display) select (allControls _display findIf {ctrlClassName _x == "CA_Background"});
 		_ctrlChatBG ctrlShow false;
 
-		private _displayOverlay = findDisplay 46 createDisplay "RscDisplayEmpty";
+		private _displayOverlay = findDisplay 313 createDisplay "RscDisplayEmpty";
 		uiNamespace setVariable [QUOTE(VAR_CHAT_OVERLAY_DISPLAY),_displayOverlay];
 
 		// set up per frame unscheduled task handler

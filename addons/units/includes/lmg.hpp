@@ -17,4 +17,5 @@ class GVAR(lmg): B_CTRG_soldier_GL_LAT_F {
     respawnItems[] = {"ACE_tourniquet","ACE_morphine","ACE_epinephrine","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","Chemlight_green","Chemlight_green"};
     magazines[] = {"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote","rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote"};
     respawnMagazines[] = {"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote","rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote"};
+    #include "disableRandomize.hpp"
 };

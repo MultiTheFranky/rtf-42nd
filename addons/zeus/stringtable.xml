@@ -78,8 +78,8 @@
             <Spanish>Gas</Spanish>
         </Key>
         <Key ID="STR_RTF42_Zeus_starlink">
-            <English>StarLink</English>
-            <Spanish>StarLink</Spanish>
+            <English>STARLINK</English>
+            <Spanish>STARLINK</Spanish>
         </Key>
     </Package>
 </Project>

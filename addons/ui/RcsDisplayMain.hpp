@@ -59,7 +59,6 @@ class RscDisplayMain: RscStandardDisplay {
         delete BackgroundSpotlight;
     };
 };
-class RscText;
 class RscTitles {
     class RscDisplayMainMenuBackground {
         scriptName = "RscDisplayMainMenuBackground";

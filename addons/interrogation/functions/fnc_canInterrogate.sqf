@@ -19,4 +19,17 @@
 
 params ["_target","_player"];
 diag_log format["%1 - %2 - %3",_target,_player, !(_target getVariable [QGVAR(cooldown), false])];
-GVAR(enabled) && {alive _target && alive _player && (side _target) == civilian && !(_target getVariable [QGVAR(cooldown), false])}
+GVAR(enabled) && {
+    alive _target && 
+    alive _player && 
+    (side _target) == civilian && 
+    !(_target getVariable [QGVAR(cooldown), false]) &&
+    [_target] call EFUNC(common,getConfigSide) == civilian
+} ||
+GVAR(enabledPrisoner) && {
+    alive _target && 
+    alive _player && 
+    (side _target) == civilian && 
+    !(_target getVariable [QGVAR(cooldown), false]) &&
+    [_target] call EFUNC(common,getConfigSide) == east
+}

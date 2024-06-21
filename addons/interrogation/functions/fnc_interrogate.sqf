@@ -36,13 +36,21 @@ if (_target getVariable [QGVAR(mre),false] && GVAR(improveChance)) then {
     _randomNumber = _randomNumber + GVAR(amountOfImprove);
 };
 
-_answer = [call FUNC(getAnswersHashMap), _randomNumber] call FUNC(getBestAnswer);
+_answer = [[[_target] call EFUNC(common,getConfigSide)] call FUNC(getAnswersHashMap), _randomNumber] call FUNC(getBestAnswer);
 
 // If the unit is a translator, answer a random answer from the array
 [_target, _answer] remoteExec [QFUNC(talk), _player];
 _target setVariable [QGVAR(cooldown), true, true];
 _target spawn {
-    sleep random [GVAR(cooldownMin),  (GVAR(cooldownMin) + GVAR(cooldownMax)) / 2, GVAR(cooldownMax)];
+    switch ([_target] call EFUNC(common,getConfigSide)) do {
+        case east: {
+            sleep random [GVAR(cooldownMinPrisoner),  (GVAR(cooldownMinPrisoner) + GVAR(cooldownMaxPrisoner)) / 2, GVAR(cooldownMaxPrisoner)];
+        };
+        case civilian;
+        case default {
+            sleep random [GVAR(cooldownMin),  (GVAR(cooldownMin) + GVAR(cooldownMax)) / 2, GVAR(cooldownMax)];
+        };
+    };
     _this setVariable [QGVAR(cooldown), false, true];
 };
 

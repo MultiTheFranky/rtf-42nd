@@ -57,5 +57,9 @@
             <English>Structures</English>
             <Spanish>Estructuras</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Main_FactionPropsDisplayName">
+            <English>Props</English>
+            <Spanish>Props</Spanish>
+        </Key>
     </Package>
 </Project>

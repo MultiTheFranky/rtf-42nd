@@ -42,7 +42,7 @@ _answer = [[[_target] call EFUNC(common,getConfigSide)] call FUNC(getAnswersHash
 [_target, _answer] remoteExec [QFUNC(talk), _player];
 _target setVariable [QGVAR(cooldown), true, true];
 _target spawn {
-    switch ([_target] call EFUNC(common,getConfigSide)) do {
+    switch ([_this] call EFUNC(common,getConfigSide)) do {
         case east: {
             sleep random [GVAR(cooldownMinPrisoner),  (GVAR(cooldownMinPrisoner) + GVAR(cooldownMaxPrisoner)) / 2, GVAR(cooldownMaxPrisoner)];
         };

@@ -34,6 +34,10 @@ class childishgambino_this_is_america {
     name = "Childishgambino This Is America";
     value = QGVAR(childishgambino_this_is_america);
 };
+class covenant_drunkendream {
+    name = "Covenant Drunkendream";
+    value = QGVAR(covenant_drunkendream);
+};
 class covenant_road_to_kotal_e__anjuman {
     name = "Covenant Road To Kotal E  Anjuman";
     value = QGVAR(covenant_road_to_kotal_e__anjuman);
@@ -93,6 +97,10 @@ class saintchaos_give_it_100 {
 class seven_nation_army {
     name = "Seven Nation Army";
     value = QGVAR(seven_nation_army);
+};
+class terminal_list_watchmedie {
+    name = "Terminal List Watchmedie";
+    value = QGVAR(terminal_list_watchmedie);
 };
 class the_adhan_call_to_prayer {
     name = "The Adhan Call To Prayer";

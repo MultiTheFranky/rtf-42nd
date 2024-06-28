@@ -54,6 +54,12 @@ class GVAR(childishgambino_this_is_america) {
         duration = 47;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(covenant_drunkendream) {
+        name = QUOTE(Covenant Drunkendream);
+        sound[] = {QPATHTOF(data\covenant_drunkendream.ogg), 1, 1};
+        duration = 135;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(covenant_road_to_kotal_e__anjuman) {
         name = QUOTE(Covenant Road To Kotal E  Anjuman);
         sound[] = {QPATHTOF(data\covenant_road_to_kotal_e__anjuman.ogg), 1, 1};
@@ -142,6 +148,12 @@ class GVAR(seven_nation_army) {
         name = QUOTE(Seven Nation Army);
         sound[] = {QPATHTOF(data\seven_nation_army.ogg), 1, 1};
         duration = 44;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(terminal_list_watchmedie) {
+        name = QUOTE(Terminal List Watchmedie);
+        sound[] = {QPATHTOF(data\terminal_list_watchmedie.ogg), 1, 1};
+        duration = 214;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(the_adhan_call_to_prayer) {

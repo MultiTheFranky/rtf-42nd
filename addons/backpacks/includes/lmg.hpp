@@ -6,7 +6,6 @@ class GVAR(lmg): B_Kitbag_rgr {
                 MACRO_ADDITEM(ACE_IR_Strobe_Item,1);
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_CableTie,10);
-                MACRO_ADDITEM(ACRE_PRC152,1);
                 MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),1);
     };
     class TransportMagazines {

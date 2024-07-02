@@ -11,8 +11,8 @@ class GVAR(rto): B_CTRG_soldier_AR_A_F {
     respawnWeapons[] = {QEGVAR(weapons,rto_primaryWeapon),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,mc_sleeve);
     backpack = QEGVAR(backpacks,rto);
-    linkedItems[] = {QEGVAR(vests,rto),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
-    respawnLinkedItems[] = {QEGVAR(vests,rto),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
+    linkedItems[] = {QEGVAR(vests,rto),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","rhsusf_radio_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
+    respawnLinkedItems[] = {QEGVAR(vests,rto),"CUP_H_OpsCore_Covered_MCAM","rhsusf_oakley_goggles_clr","ItemMap","ItemGPS","rhsusf_radio_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"};
     items[] = {"ACE_EarPlugs","ACE_tourniquet","ACE_morphine","ACE_epinephrine","rtf42_items_Cards","acc_flashlight","ACE_IR_Strobe_Item","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_packingBandage","SmokeShell","SmokeShell","Chemlight_green","Chemlight_green","SmokeShellBlue","SmokeShellBlue"};
     respawnItems[] = {"ACE_EarPlugs","ACE_tourniquet","ACE_morphine","ACE_epinephrine","rtf42_items_Cards","acc_flashlight","ACE_IR_Strobe_Item","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_packingBandage","SmokeShell","SmokeShell","Chemlight_green","Chemlight_green","SmokeShellBlue","SmokeShellBlue"};
     magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_m67","rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_30Rnd_556x45_M855A1_PMAG"};

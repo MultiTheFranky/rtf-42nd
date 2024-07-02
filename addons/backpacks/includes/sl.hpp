@@ -5,7 +5,6 @@ class GVAR(sl): B_AssaultPack_rgr {
                 MACRO_ADDITEM(ACE_quikclot,9);
                 MACRO_ADDITEM(ACE_EntrenchingTool,1);
                 MACRO_ADDITEM(ACE_SpraypaintBlue,1);
-                MACRO_ADDITEM(ACRE_PRC152,1);
                 MACRO_ADDITEM(ACE_MapTools,1);
                 MACRO_ADDITEM(ACE_Flashlight_MX991,1);
                 MACRO_ADDITEM(ACE_CableTie,10);

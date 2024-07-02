@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=12;
 	};
 	class Camera
 	{
 		pos[]={4173.623,17.201576,797.14417};
 		dir[]={0.012188251,-0.74537343,-0.66653574};
 		up[]={0.013627597,0.6666472,-0.74524891};
-		aside[]={-0.99983299,-9.3132257e-10,-0.018282913};
+		aside[]={-0.99983299,-9.3132257e-010,-0.018282913};
 	};
 };
 binarizationWanted=0;
@@ -41,7 +41,6 @@ addons[]=
 	"CUP_Creatures_Military_USArmy",
 	"rhsusf_c_troops",
 	"rtf42_uniforms",
-	"acre_sys_prc343",
 	"rtf42_items",
 	"ace_hearing",
 	"ace_captives",
@@ -54,14 +53,13 @@ addons[]=
 	"ace_maptools",
 	"ace_flashlights",
 	"ace_compat_rhs_usf3_nightvision",
-	"acre_sys_prc152",
 	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=22;
 		class Item0
 		{
 			className="rtf42_units";
@@ -134,93 +132,79 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="acre_sys_prc343";
-			name="ACRE2 - AN/PRC-343";
-			author="ACRE2Team";
-			url="https://github.com/IDI-Systems/acre2";
-		};
-		class Item12
-		{
 			className="rtf42_items";
 			name="rtf42 - Items";
 			author="42nd RTF Team";
 		};
-		class Item13
+		class Item12
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item14
+		class Item13
 		{
 			className="ace_captives";
 			name="ACE3 - Captives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item15
+		class Item14
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item16
+		class Item15
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item16
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item18
+		class Item17
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item19
+		class Item18
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item20
+		class Item19
 		{
 			className="ace_tagging";
 			name="ACE3 - Tagging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item21
+		class Item20
 		{
 			className="ace_maptools";
 			name="ACE3 - Map Tools";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item22
+		class Item21
 		{
 			className="ace_flashlights";
 			name="ACE3 - Flashlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
-		};
-		class Item23
-		{
-			className="acre_sys_prc152";
-			name="ACRE2 - AN/PRC-152";
-			author="ACRE2Team";
-			url="https://github.com/IDI-Systems/acre2";
 		};
 	};
 };
@@ -533,38 +517,33 @@ class Mission
 												};
 												class ItemCargo
 												{
-													items=7;
+													items=6;
 													class Item0
-													{
-														name="ACRE_PRC343";
-														count=1;
-													};
-													class Item1
 													{
 														name="rtf42_items_Cards";
 														count=1;
 													};
-													class Item2
+													class Item1
 													{
 														name="ACE_EarPlugs";
 														count=1;
 													};
-													class Item3
+													class Item2
 													{
 														name="ACE_CableTie";
 														count=2;
 													};
-													class Item4
+													class Item3
 													{
 														name="ACE_adenosine";
 														count=1;
 													};
-													class Item5
+													class Item4
 													{
 														name="ACE_morphine";
 														count=1;
 													};
-													class Item6
+													class Item5
 													{
 														name="ACE_epinephrine";
 														count=1;
@@ -683,7 +662,7 @@ class Mission
 												};
 												class ItemCargo
 												{
-													items=10;
+													items=9;
 													class Item0
 													{
 														name="ACE_splint";
@@ -729,11 +708,6 @@ class Mission
 														name="rhsusf_ANPVS_15";
 														count=1;
 													};
-													class Item9
-													{
-														name="ACRE_PRC152";
-														count=1;
-													};
 												};
 											};
 											map="ItemMap";
@@ -750,45 +724,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="HNEG_emed_emtrDieout3ID";
-											expression="false";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="0";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="HNEG_emed_emtrDieout4ID";
-											expression="false";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="0";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="HNEG_emed_aedInit";
-											expression=" if (!is3DEN) then { _this call compile _value; }; ";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="true";
-												};
-											};
-										};
-										class Attribute3
-										{
 											property="face";
 											expression="_this setface _value;";
 											class Value
@@ -800,7 +735,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute1
 										{
 											property="pitch";
 											expression="_this setpitch _value;";
@@ -813,46 +748,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
-										{
-											property="HNEG_emed_emtrDieout1ID";
-											expression="false";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="0";
-												};
-											};
-										};
-										class Attribute6
-										{
-											property="HNEG_emed_emitterInit";
-											expression=" if (!is3DEN) then { _this call compile _value; }; ";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="true";
-												};
-											};
-										};
-										class Attribute7
-										{
-											property="HNEG_emed_emtrDieout2ID";
-											expression="false";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="0";
-												};
-											};
-										};
-										nAttributes=8;
+										nAttributes=2;
 									};
 								};
 							};
@@ -880,7 +776,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4172.8857,5.0014391,785.83765};
-						angles[]={0,3.1273119,-0};
+						angles[]={0,3.1273119,0};
 					};
 					side="East";
 					flags=7;

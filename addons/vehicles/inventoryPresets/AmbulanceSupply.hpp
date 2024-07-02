@@ -32,7 +32,6 @@ class TransportItems {
     MACRO_ADDITEM(ACE_packingBandage,20);
     MACRO_ADDITEM(ACE_quikclot,30);
     MACRO_ADDITEM(ACE_tourniquet,15);
-    MACRO_ADDITEM(ACRE_PRC152,1);
     MACRO_ADDITEM(ACE_CableTie,10);
     MACRO_ADDITEM(ACE_EarPlugs,5);
     MACRO_ADDITEM(ACE_rope6,1);

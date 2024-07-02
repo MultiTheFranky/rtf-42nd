@@ -17,7 +17,6 @@ class TransportMagazines {
 class TransportItems {
     MACRO_ADDITEM(ACE_EntrenchingTool,3);
     MACRO_ADDITEM(ACE_SpraypaintBlue,4);
-    MACRO_ADDITEM(ACRE_PRC152,1);
     MACRO_ADDITEM(ACE_CableTie,15);
     MACRO_ADDITEM(ACE_EarPlugs,5);
     MACRO_ADDITEM(ACE_M26_Clacker,2);

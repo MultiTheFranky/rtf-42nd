@@ -1,4 +1,5 @@
 class GVAR(tl): B_AssaultPack_rgr {
+    displayName = CSTRING(TeamLeader);
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_packingBandage,4);

@@ -104,12 +104,12 @@ function generateNewVersion(beta = false) {
     // If is not beta, return the actual version without beta minor
     if (parseInt(versionBetaMinor) === 0) {
         return {
-            version: `v${versionYear}.${versionMonth}.${
-                parseInt(versionPatch) + 1
-            }`,
+            version: `v${versionYear}.${versionMonth}.${parseInt(
+                versionPatch
+            )}`,
             versionYear,
             versionMonth,
-            versionPatch: parseInt(versionPatch) + 1,
+            versionPatch: parseInt(versionPatch),
         };
     }
     return {

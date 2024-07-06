@@ -1,4 +1,5 @@
 class GVAR(rto): B_FieldPack_khk {
+    displayName = CSTRING(RTO);
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_packingBandage,4);

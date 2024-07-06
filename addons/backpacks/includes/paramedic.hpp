@@ -1,4 +1,5 @@
 class GVAR(paramedic): milgp_b_patrol_01_rgr {
+    displayName = CSTRING(Paramedic);
     class TransportItems {
                 MACRO_ADDITEM(ACE_packingBandage,20);
                 MACRO_ADDITEM(ACE_quikclot,25);

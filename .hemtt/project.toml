@@ -18,7 +18,7 @@ include = [
 ]
 
 [hemtt.launch.default]
-workshop = []
+workshop = ["2369477168"]
 presets = [
     "main", # .html presets from .hemtt/presets/
 ]

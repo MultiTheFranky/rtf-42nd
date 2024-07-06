@@ -1,4 +1,5 @@
 class GVAR(lmg): B_Kitbag_rgr {
+    displayName = CSTRING(LMG);
     class TransportItems {
                 MACRO_ADDITEM(rtf42_items_Cards,1);
                 MACRO_ADDITEM(ACE_EarPlugs,1);

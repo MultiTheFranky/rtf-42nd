@@ -23,4 +23,12 @@ class GVAR(officer): B_AssaultPack_rgr {
                 MACRO_ADDMAGAZINE(rhs_mag_m67,1);
                 MACRO_ADDMAGAZINE(rhs_mag_mk84,2);
     };
+
+    // TFAR Radio Settings
+    tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+    tf_hasLRradio = 1;
+    tf_range = 8000;
+    tf_encryptionCode = "tf_west_radio_code";
+    tf_dialog = "rt1523g_radio_dialog";
+    tf_subtype = "digital_lr";
 };

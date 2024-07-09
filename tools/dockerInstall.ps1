@@ -6,7 +6,7 @@
 start-process -wait docker-installer.exe " install --quiet"
 
 # Clean-up
-rm docker-installer.exe
+Remove-Item docker-installer.exe
 
 # Run
 start-process "$env:ProgramFiles\Docker\Docker\Docker Desktop.exe"

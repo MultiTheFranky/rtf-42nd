@@ -1,0 +1,1 @@
+player remoteExec ["rtf42_fnc_assignZeus", 2];

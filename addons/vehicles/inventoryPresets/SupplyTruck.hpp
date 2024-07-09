@@ -17,7 +17,6 @@ class TransportMagazines {
 class TransportItems {
     MACRO_ADDITEM(ACE_EntrenchingTool,3);
     MACRO_ADDITEM(ACE_SpraypaintBlue,4);
-    MACRO_ADDITEM(ACRE_PRC152,1);
     MACRO_ADDITEM(ACE_CableTie,15);
     MACRO_ADDITEM(ACE_EarPlugs,5);
     MACRO_ADDITEM(ACE_M26_Clacker,2);
@@ -35,6 +34,7 @@ class TransportItems {
     MACRO_ADDITEM(ToolKit,4);
     MACRO_ADDITEM(Binocular,1);
     MACRO_ADDITEM(ACE_RangeTable_82mm,1);
+    MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),2);
 };
 class TransportWeapons {
     MACRO_ADDWEAPON(CUP_hgun_FlareGun,1);

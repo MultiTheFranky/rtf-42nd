@@ -1,20 +1,20 @@
 #include "..\script_component.hpp"
 
 /*
-    * Author: Franky
-    * Function to get the best answer based on a random number
-    *
-    * Arguments:
-    * 0: Answers <HASHMAP>
-    * 1: Random Number <NUMBER>
-    *
-    * Return Value:
-    * 0: Answer <STRING>
-    *
-    * Example:
-    * [answers] call rtf42_interrogation_fnc_getBestAnswer;
-    *
-    * Public: No
+     * Author: Franky
+     * Function to get the best answer based on a random number
+     *
+     * Arguments:
+     * 0: Answers <HASHMAP>
+     * 1: random Number <NUMBER>
+     *
+     * Return Value:
+     * 0: Answer <STRING>
+     *
+     * Example:
+     * [answers] call rtf42_interrogation_fnc_getBestAnswer;
+     *
+     * Public: No
 */
 
 params ["_answers", "_randomNumber"];
@@ -39,13 +39,13 @@ private _negativeAnswers = [
     "Nope, I don't know anything about that, I swear to god"
 ];
 
-private _hightestNumber = 1;
-private _answer = selectRandom _negativeAnswers; //TODO: Localize or set as param
+private _max = -1;
+private _answer = selectRandom _negativeAnswers;// TODO: localize or set as param
 
 {
-    if (_y > _randomNumber && _y < _hightestNumber) then {
+    if (_y > _randomNumber && (_max == -1 || _y < _max)) then {
+        _max = _y;
         _answer = _x;
-        _hightestNumber = _y;
     };
 } forEach _answers;
 

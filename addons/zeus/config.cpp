@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"rtf42_main", "zen_main"};
-        author = ECSTRING(common,RTF42Team);
-        authors[] = {ECSTRING(common,RTF42Team)};
+        author = ECSTRING(main,Author);
+        authors[] = {ECSTRING(main,Author)};
         VERSION_CONFIG;
     };
 };

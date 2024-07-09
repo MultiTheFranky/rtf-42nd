@@ -1,4 +1,5 @@
 class GVAR(tl): B_AssaultPack_rgr {
+    displayName = CSTRING(TeamLeader);
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_packingBandage,4);
@@ -8,7 +9,7 @@ class GVAR(tl): B_AssaultPack_rgr {
                 MACRO_ADDITEM(ACE_CableTie,10);
                 MACRO_ADDITEM(SmokeShellGreen,2);
                 MACRO_ADDITEM(SmokeShellRed,2);
-                MACRO_ADDITEM(ACRE_PRC152,1);
+                MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),1);
     };
     class TransportMagazines {
                 MACRO_ADDMAGAZINE(rhs_mag_m67,1);

@@ -1,7 +1,7 @@
 class GVAR(paramedic_primaryWeapon): rhs_weap_m4a1_carryhandle {
     class LinkedItems {
        class LinkedItemsMuzzle {
-           item = "rhsusf_acc_wmx_bk";
+           item = "acc_flashlight";
            slot = "MuzzleSlot";
        };
        class LinkedItemsOptic {

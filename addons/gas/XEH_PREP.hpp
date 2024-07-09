@@ -1,0 +1,13 @@
+PREP(createParticle);
+PREP(firedEH);
+PREP(init);
+PREP(gasCheck);
+PREP(unitGas);
+PREP(ppCreateEffect);
+PREP(ppDeleteEffect);
+PREP(setUnconscious);
+PREP(canWakeUp);
+PREP(wakeUp);
+PREP(playCough);
+PREP(playBreath);
+PREP(zeusModule);

@@ -36,10 +36,52 @@ class GVAR(any_given_day_unbreakable) {
         duration = 39;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(blacksabbath_warpigs) {
+        name = QUOTE(Blacksabbath Warpigs);
+        sound[] = {QPATHTOF(data\blacksabbath_warpigs.ogg), 1, 1};
+        duration = 48;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(bobdylan_masters_of_war) {
+        name = QUOTE(Bobdylan Masters Of War);
+        sound[] = {QPATHTOF(data\bobdylan_masters_of_war.ogg), 1, 1};
+        duration = 227;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(childishgambino_this_is_america) {
         name = QUOTE(Childishgambino This Is America);
         sound[] = {QPATHTOF(data\childishgambino_this_is_america.ogg), 1, 1};
         duration = 47;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_drunkendream) {
+        name = QUOTE(Covenant Drunkendream);
+        sound[] = {QPATHTOF(data\covenant_drunkendream.ogg), 1, 1};
+        duration = 135;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_road_to_kotal_e__anjuman) {
+        name = QUOTE(Covenant Road To Kotal E  Anjuman);
+        sound[] = {QPATHTOF(data\covenant_road_to_kotal_e__anjuman.ogg), 1, 1};
+        duration = 87;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_three_minute_fuse) {
+        name = QUOTE(Covenant Three Minute Fuse);
+        sound[] = {QPATHTOF(data\covenant_three_minute_fuse.ogg), 1, 1};
+        duration = 159;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(covenant_thunder_continues) {
+        name = QUOTE(Covenant Thunder Continues);
+        sound[] = {QPATHTOF(data\covenant_thunder_continues.ogg), 1, 1};
+        duration = 240;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(dlhu_black_thunder) {
+        name = QUOTE(Dlhu Black Thunder);
+        sound[] = {QPATHTOF(data\dlhu_black_thunder.ogg), 1, 1};
+        duration = 75;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(hans_zimmer_the_rock_bso) {
@@ -60,6 +102,12 @@ class GVAR(linkinpark_bleeding_out) {
         duration = 106;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(marilynmanson_sweet_dreams) {
+        name = QUOTE(Marilynmanson Sweet Dreams);
+        sound[] = {QPATHTOF(data\marilynmanson_sweet_dreams.ogg), 1, 1};
+        duration = 89;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(metallica_for_whom_the_bell_tolls) {
         name = QUOTE(Metallica For Whom The Bell Tolls);
         sound[] = {QPATHTOF(data\metallica_for_whom_the_bell_tolls.ogg), 1, 1};
@@ -70,6 +118,12 @@ class GVAR(mississippi_twilight_trigger) {
         name = QUOTE(Mississippi Twilight Trigger);
         sound[] = {QPATHTOF(data\mississippi_twilight_trigger.ogg), 1, 1};
         duration = 100;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(originals_42ndcountry_coldbeer) {
+        name = QUOTE(Originals 42ndcountry Coldbeer);
+        sound[] = {QPATHTOF(data\originals_42ndcountry_coldbeer.ogg), 1, 1};
+        duration = 191;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(papa_roach_born_for_greatness) {
@@ -84,10 +138,28 @@ class GVAR(pod_afraid_to_die) {
         duration = 88;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(saintchaos_give_it_100) {
+        name = QUOTE(Saintchaos Give It 100);
+        sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1};
+        duration = 79;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(seven_nation_army) {
         name = QUOTE(Seven Nation Army);
         sound[] = {QPATHTOF(data\seven_nation_army.ogg), 1, 1};
         duration = 44;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(terminal_list_watchmedie) {
+        name = QUOTE(Terminal List Watchmedie);
+        sound[] = {QPATHTOF(data\terminal_list_watchmedie.ogg), 1, 1};
+        duration = 214;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(the_adhan_call_to_prayer) {
+        name = QUOTE(The Adhan Call To Prayer);
+        sound[] = {QPATHTOF(data\the_adhan_call_to_prayer.ogg), 1, 1};
+        duration = 98;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(warrior_song) {

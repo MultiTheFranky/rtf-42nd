@@ -57,5 +57,29 @@
             <English>Civil</English>
             <Spanish>Civil</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Interrogation_SuccessChanceDescription">
+            <English>Probability of this answer to be answer by the civilian</English>
+            <Spanish>Probabilidad de que esta respuesta sea respondida por el civil.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_ImproveChanceDescription">
+            <English>Do you want to be able to give MRE to the civilians to improve the chances of a better answer?</English>
+            <Spanish>¿Quiere poder brindar MRE a los civiles para mejorar las posibilidades de una mejor respuesta?</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_AmountOfImproveDescription">
+            <English>Percentage of improvement on the chance of answer</English>
+            <Spanish>Porcentaje de mejora sobre la probabilidad de respuesta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMinDescription">
+            <English>Minimum time that the cooldown will be take between answers</English>
+            <Spanish>Tiempo mínimo que tomará el tiempo de reutilización entre respuestas.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMaxDescription">
+            <English>Maximum time that the cooldown will be take between answers</English>
+            <Spanish>Tiempo máximo que tomará el tiempo de reutilización entre respuestas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_DisplayNamePrisoner">
+            <English>Prisoner Interrogation</English>
+            <Spanish>Interrogatorio de prisioneros</Spanish>
+        </Key>
     </Package>
 </Project>

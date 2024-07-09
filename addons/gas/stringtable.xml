@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Gas">
+        <Key ID="STR_RTF42_Gas_WakeUpDisplayName">
+            <English>Wake up</English>
+            <Spanish>Despertar</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_DisplayName">
+            <English>Gas</English>
+            <Spanish>Gas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasEffectRadioDisplayName">
+            <English>Effect radius of Gas</English>
+            <Spanish>Radio de efecto del gas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasEffectRadioDescription">
+            <English>This is the radius that will effect the units that are inside from the center of the projectile</English>
+            <Spanish>Este es el radio que afectará a las unidades que están dentro desde el centro del proyectil.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_TimeEffectDisplayName">
+            <English>Time of effect</English>
+            <Spanish>Tiempo de efecto</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_TimeEffectDescription">
+            <English>Time (in seconds) that will make the effect to the unit (only applied to players)</English>
+            <Spanish>Tiempo (en segundos) que le hará el efecto a la unidad (solo se aplica a jugadores)</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_TimeToUnconsciousnessDisplayName">
+            <English>Time to unconsciousness</English>
+            <Spanish>Tiempo hasta la inconsciencia</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_TimeToUnconsciousnessDescription">
+            <English>Time that the unit needs to be inside the gas to be unconsciousness</English>
+            <Spanish>Tiempo que la unidad necesita estar dentro del gas para quedar inconsciente</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_TimeToDeathDisplayName">
+            <English>Time to death</English>
+            <Spanish>Tiempo hasta la muerte</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_TimeToDeathDescription">
+            <English>Time that the unit needs to be unconsciousness to die</English>
+            <Spanish>Tiempo que la unidad necesita estar inconsciente para morir.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasMaskClassnameDisplayName">
+            <English>Gasmask classname</English>
+            <Spanish>Nombre de clase de máscara de gas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasMaskClassnameDescription">
+            <English>The classname of a facewear that will prevent the units to be affected by the gas</English>
+            <Spanish>El nombre de clase de una máscara que evitará que las unidades se vean afectadas por el gas.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasCureClassnameDisplayName">
+            <English>Classname of cure item</English>
+            <Spanish>Nombre de clase del elemento de curación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasCureClassnameDescription">
+            <English>Classname of a item that will wake up a unit that it's unconsciousness</English>
+            <Spanish>Nombre de clase de un elemento que despertará a una unidad que está inconsciente.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasColorDisplayName">
+            <English>Gas color</English>
+            <Spanish>Color del gas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Gas_GasColorDescription">
+            <English>This will define the color of the gas</English>
+            <Spanish>Esto definirá el color del gas.</Spanish>
+        </Key>
+    </Package>
+</Project>

@@ -36,6 +36,7 @@
 -   Rust (https://rustup.rs)
 -   Cross (https://github.com/cross-rs/cross) - You can install using `cargo install cross --git https://github.com/cross-rs/cross`
 -   Docker (https://docker.com) - You can install it using the script dockerInstall.ps1
+-   Cmake (https://cmake.org) - To compile the rust playmusic extension
 
 ## Setup
 
@@ -68,9 +69,7 @@ Or you can setup a keybind on custom action 20 on Arma 3.
 
 # License
 
-![License](https://community.bistudio.com/wikidata/images/2/2e/Licence_APL-SA.png)
-
-Arma Public License Share Alike (APL-SA) - See LICENSE for more information.
+License under CUP License - https://www.cup-arma3.org/cup-license
 
 # Credits
 

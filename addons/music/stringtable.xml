@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RTF42">
+    <Package name="Music">
+        <Key ID="STR_RTF42_Music_Sound3DDisplayName">
+            <English>Play sound 3D</English>
+            <Spanish>Reproducir sonido 3D</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_FileDisplayName">
+            <English>File</English>
+            <Spanish>Archivo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_VolumeDisplayName">
+            <English>Volume</English>
+            <Spanish>Volumen</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_PitchDisplayName">
+            <English>Pitch</English>
+            <Spanish>Graves/Agudos</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_DistanceDisplayName">
+            <English>Distance</English>
+            <Spanish>Distancia</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_IsInsideDisplayName">
+            <English>Is inside</English>
+            <Spanish>Está dentro</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_OffsetDisplayName">
+            <English>Offset</English>
+            <Spanish>Tiempo de compensación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_LocalDisplayName">
+            <English>Local</English>
+            <Spanish>Local</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_LoopDisplayName">
+            <English>Loop</English>
+            <Spanish>Bucle</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Music_Sound3DDescription">
+            <English>Play sound 3D module that applies the attributes of the function https://community.bistudio.com/wiki/playSound3D</English>
+            <Spanish>Módulo de reproducción de sonido 3D que aplica los atributos de la función https://community.bistudio.com/wiki/playSound3D</Spanish>
+        </Key>
+    </Package>
+</Project>

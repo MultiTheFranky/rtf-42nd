@@ -20,11 +20,8 @@ class CfgMovesMaleSdr {
             actions = "NoActions";
         };
         class GVAR(base_pistol): Acts_AidlPercMstpSloWWpstDnon_warmup_1_loop {};
-        class GVAR(fullpose_standby): GVAR(base) {
-            file = QPATHTOF(data\fullpose\rtf42_fullpose_standby.rtm);
-            speed = 1e-10;
-            ConnectTo[] = {"AmovPercMstpSnonWnonDnon",0.01};
-            InterpolateTo[] = {};
-        };
+        RTF42FULLPOSE(fullpose_standby);
+        RTF42FULLPOSE(fullpose_holdvest);
+        RTF42FULLPOSE(fullpose_cradle);
     };
 };

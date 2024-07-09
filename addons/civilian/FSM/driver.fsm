@@ -1,0 +1,73 @@
+/*%FSM<COMPILE "F:\SteamLibrary\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, driver">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-38.994904,-208.149109,51.005096,-158.149109,0.000000,"Init"};
+item1[] = {"RTF42_DRIVER",-1,250,-495.858765,-323.938965,-145.858795,-73.938919,0.000000,"RTF42 DRIVER"};
+item2[] = {"Always",4,218,-40.109406,-114.477074,50.849152,-54.891495,0.000000,"Always"};
+item3[] = {"____FAKE____",9,0,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+version=1;
+class LayoutItems
+{
+	class Item1
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+			Align=0;
+		};
+	};
+};
+link0[] = {0,2};
+link1[] = {2,3};
+globals[] = {0.000000,0,0,0,0,640,480,1,5,6316128,1,-506.926270,493.806458,224.371674,-355.075562,2088,1209,1};
+window[] = {0,-1,-1,-1,-1,1878,507,3387,367,1,2123};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "driver";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Always">*/
+                                class Always
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="____FAKE____";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "____FAKE____">*/
+                class ____FAKE____
+                {
+                        name = "____FAKE____";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+        };
+};
+/*%FSM</COMPILE>*/

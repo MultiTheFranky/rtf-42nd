@@ -36,15 +36,16 @@ const getMusic = async () => {
 };
 
 function titleCase(str) {
-    var splitStr = str.toLowerCase().split(' ');
+    var splitStr = str.toLowerCase().split(" ");
     for (var i = 0; i < splitStr.length; i++) {
         // You do not need to check if i is larger than splitStr length, as your for does that for you
         // Assign it back to the array
-        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        splitStr[i] =
+            splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
     // Directly return the joined string
-    return splitStr.join(' ');
- }
+    return splitStr.join(" ");
+}
 
 const downloadMusic = async (musicFiles) => {
     const promises = musicFiles.map(async (file) => {
@@ -61,15 +62,13 @@ const downloadMusic = async (musicFiles) => {
         } catch (error) {
             console.error(`Error with ${file}`);
             console.error(error);
-            return { name: file, length: 0, data, prettyName: file};
+            return { name: file, length: 0, data, prettyName: file };
         }
     });
 
     const music = await Promise.all(promises);
     return music;
 };
-
-
 
 const writeMusic = async (music) => {
     const promises = music.map(async (file) => {
@@ -112,10 +111,42 @@ const writeConfig = async (music) => {
     await fs.writeFile("../../addons/music/CfgMusic.hpp", config);
 };
 
+const writeCfgSounds = async (music) => {
+    const config = `class CfgSounds {
+    sounds[] = {};
+    ${music
+        .map(
+            (file) => `class GVAR(${file.name}) {
+        name = QUOTE(${file.prettyName});
+        sound[] = {QPATHTOF(data\\${file.name}.ogg), 1, 1, 100};
+        titles[] = {};
+    };`
+        )
+        .join("\n")}
+};`;
+
+    await fs.writeFile("../../addons/music/CfgSounds.hpp", config);
+};
+
+const writeSounds3D = async (music) => {
+    const data = music
+        .map(
+            (file) =>
+                `class ${file.name} {
+    name = "${file.prettyName}";
+    value = QGVAR(${file.name});
+};`
+        )
+        .join("\n");
+    await fs.writeFile("../../addons/music/Sounds3D.hpp", data);
+};
+
 const main = async () => {
     const music = await downloadMusic(await getMusic());
     await writeMusic(music);
     await writeConfig(music);
+    await writeSounds3D(music);
+    await writeCfgSounds(music);
 };
 
 main();

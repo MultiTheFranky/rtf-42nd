@@ -1,4 +1,4 @@
-class GVAR(rto): B_FieldPack_khk {
+class GVAR(rto): CUP_B_Kombat_Radio_olive {
     displayName = CSTRING(RTO);
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);

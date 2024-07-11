@@ -48,9 +48,8 @@ function titleCase(str) {
 }
 
 const downloadVideo = async (videoFiles) => {
-    const promises = videoFiles.map(async (file) => {
-        // The file names are <name>-<length>s.ogv
-        // We remove the length from the name
+    const videos = [];
+    for (const file of videoFiles) {
         try {
             const { data } = await axios.get(`${CDN_URL}/${file}`, {
                 responseType: "arraybuffer",
@@ -58,15 +57,12 @@ const downloadVideo = async (videoFiles) => {
             const name = file.split("-")[0];
             const length = file.split("-")[1].split("s")[0];
             const prettyName = titleCase(name.replace(/_/g, " "));
-            return { name: name, length, data, prettyName };
+            videos.push({ name, length, data, prettyName });
         } catch (error) {
             console.error(`Error with ${file}`);
             console.error(error);
-            return { name: file, length: 0, data, prettyName: file };
         }
-    });
-
-    const videos = await Promise.all(promises);
+    }
     return videos;
 };
 

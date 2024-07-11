@@ -36,24 +36,25 @@ const getVideo = async () => {
 };
 
 function titleCase(str) {
-    var splitStr = str.toLowerCase().split(' ');
+    var splitStr = str.toLowerCase().split(" ");
     for (var i = 0; i < splitStr.length; i++) {
         // You do not need to check if i is larger than splitStr length, as your for does that for you
         // Assign it back to the array
-        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        splitStr[i] =
+            splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
     // Directly return the joined string
-    return splitStr.join(' ');
- }
+    return splitStr.join(" ");
+}
 
 const downloadVideo = async (videoFiles) => {
     const promises = videoFiles.map(async (file) => {
-        const { data } = await axios.get(`${CDN_URL}/${file}`, {
-            responseType: "arraybuffer",
-        });
         // The file names are <name>-<length>s.ogv
         // We remove the length from the name
         try {
+            const { data } = await axios.get(`${CDN_URL}/${file}`, {
+                responseType: "arraybuffer",
+            });
             const name = file.split("-")[0];
             const length = file.split("-")[1].split("s")[0];
             const prettyName = titleCase(name.replace(/_/g, " "));
@@ -61,15 +62,13 @@ const downloadVideo = async (videoFiles) => {
         } catch (error) {
             console.error(`Error with ${file}`);
             console.error(error);
-            return { name: file, length: 0, data, prettyName: file};
+            return { name: file, length: 0, data, prettyName: file };
         }
     });
 
     const videos = await Promise.all(promises);
     return videos;
 };
-
-
 
 const writeVideos = async (videos) => {
     const promises = videos.map(async (file) => {

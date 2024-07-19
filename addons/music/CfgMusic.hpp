@@ -150,6 +150,12 @@ class GVAR(seven_nation_army) {
         duration = 44;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(sicario_beast) {
+        name = QUOTE(Sicario Beast);
+        sound[] = {QPATHTOF(data\sicario_beast.ogg), 1, 1};
+        duration = 63;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(terminal_list_watchmedie) {
         name = QUOTE(Terminal List Watchmedie);
         sound[] = {QPATHTOF(data\terminal_list_watchmedie.ogg), 1, 1};

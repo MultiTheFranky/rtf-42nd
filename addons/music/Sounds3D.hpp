@@ -98,6 +98,10 @@ class seven_nation_army {
     name = "Seven Nation Army";
     value = QGVAR(seven_nation_army);
 };
+class sicario_beast {
+    name = "Sicario Beast";
+    value = QGVAR(sicario_beast);
+};
 class terminal_list_watchmedie {
     name = "Terminal List Watchmedie";
     value = QGVAR(terminal_list_watchmedie);

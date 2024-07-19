@@ -125,6 +125,11 @@ class GVAR(seven_nation_army) {
         sound[] = {QPATHTOF(data\seven_nation_army.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(sicario_beast) {
+        name = QUOTE(Sicario Beast);
+        sound[] = {QPATHTOF(data\sicario_beast.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(terminal_list_watchmedie) {
         name = QUOTE(Terminal List Watchmedie);
         sound[] = {QPATHTOF(data\terminal_list_watchmedie.ogg), 1, 1, 100};

@@ -1,0 +1,36 @@
+class CaptureIt {
+    fonts[] = {
+        QPATHTOF(data\captureIt\captureIt06),
+        QPATHTOF(data\captureIt\captureIt07),
+        QPATHTOF(data\captureIt\captureIt08),
+        QPATHTOF(data\captureIt\captureIt09),
+        QPATHTOF(data\captureIt\captureIt10),
+        QPATHTOF(data\captureIt\captureIt11),
+        QPATHTOF(data\captureIt\captureIt12),
+        QPATHTOF(data\captureIt\captureIt13),
+        QPATHTOF(data\captureIt\captureIt14),
+        QPATHTOF(data\captureIt\captureIt15),
+        QPATHTOF(data\captureIt\captureIt16),
+        QPATHTOF(data\captureIt\captureIt17),
+        QPATHTOF(data\captureIt\captureIt18),
+        QPATHTOF(data\captureIt\captureIt19),
+        QPATHTOF(data\captureIt\captureIt20),
+        QPATHTOF(data\captureIt\captureIt21),
+        QPATHTOF(data\captureIt\captureIt22),
+        QPATHTOF(data\captureIt\captureIt23),
+        QPATHTOF(data\captureIt\captureIt24),
+        QPATHTOF(data\captureIt\captureIt25),
+        QPATHTOF(data\captureIt\captureIt26),
+        QPATHTOF(data\captureIt\captureIt27),
+        QPATHTOF(data\captureIt\captureIt28),
+        QPATHTOF(data\captureIt\captureIt29),
+        QPATHTOF(data\captureIt\captureIt30),
+        QPATHTOF(data\captureIt\captureIt31),
+        QPATHTOF(data\captureIt\captureIt34),
+        QPATHTOF(data\captureIt\captureIt35),
+        QPATHTOF(data\captureIt\captureIt37),
+        QPATHTOF(data\captureIt\captureIt46),
+    };
+    spaceWidth = 0.7;
+    spacing = 0.13;
+};

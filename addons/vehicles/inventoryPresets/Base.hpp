@@ -21,6 +21,7 @@ class TransportItems {
     MACRO_ADDITEM(ACE_CableTie,10);
     MACRO_ADDITEM(ACE_EarPlugs,5);
     MACRO_ADDITEM(ACE_M26_Clacker,1);
+    MACRO_ADDITEM(ACE_bodyBag,2);
     MACRO_ADDITEM(MineDetector,1);
     MACRO_ADDITEM(ace_marker_flags_red,5);
     MACRO_ADDITEM(ace_marker_flags_blue,5);

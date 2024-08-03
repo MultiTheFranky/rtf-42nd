@@ -35,6 +35,7 @@ class TransportItems {
     MACRO_ADDITEM(Binocular,1);
     MACRO_ADDITEM(ACE_RangeTable_82mm,1);
     MACRO_ADDITEM(EGVAR(gas,AirPurifyingRespirator),2);
+    MACRO_ADDITEM(ACE_bodyBag,2);
 };
 class TransportWeapons {
     MACRO_ADDWEAPON(CUP_hgun_FlareGun,1);

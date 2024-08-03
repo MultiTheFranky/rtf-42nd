@@ -1,5 +1,6 @@
 class GVAR(rto): CUP_B_Kombat_Radio_olive {
     displayName = CSTRING(RTO);
+    _generalMacro = QGVAR(rto);
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_packingBandage,4);

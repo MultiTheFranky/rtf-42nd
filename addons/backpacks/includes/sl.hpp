@@ -1,5 +1,6 @@
 class GVAR(sl): B_AssaultPack_rgr {
     displayName = CSTRING(SquadLeader);
+    _generalMacro = QGVAR(sl);
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_packingBandage,4);

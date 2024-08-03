@@ -1,5 +1,7 @@
 class GVAR(sapper): B_AssaultPack_rgr {
     displayName = CSTRING(Sapper);
+    _generalMacro = QGVAR(sapper);
+    maximumLoad = 280;
     class TransportItems {
                 MACRO_ADDITEM(ACE_splint,1);
                 MACRO_ADDITEM(ACE_packingBandage,4);

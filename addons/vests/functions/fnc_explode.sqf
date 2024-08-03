@@ -19,10 +19,18 @@ params ["_player"];
 
 switch (vest _player) do {
     case "rtf42_vests_SuicideVest": {
-        ("DemoCharge_Remote_Ammo_Scripted" createVehicle (position _player)) setDamage 1;
+        _player spawn {
+            playSound3D [QPATHTOF(data\vest_sound.ogg), _this];
+            sleep 1;
+            ("DemoCharge_Remote_Ammo_Scripted" createVehicle (position _this)) setDamage 1;
+        };
     };
     case "rtf42_vests_MiniSuicideVest": {
-        ("ClaymoreDirectionalMine_Remote_Ammo_Scripted" createVehicle (position _player)) setDamage 1;
+        _player spawn {
+            playSound3D [QPATHTOF(data\vest_sound.ogg), _this];
+            sleep 1;
+            ("ClaymoreDirectionalMine_Remote_Ammo_Scripted" createVehicle (position _this)) setDamage 1;
+        };
     };
     default { };
 };

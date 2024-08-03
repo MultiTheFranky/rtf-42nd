@@ -12,7 +12,7 @@ client.on("loggedOn", function () {
         console.log(error);
         console.log(response);
 
-        const code = prompt("Activation code: ");
+        const code = prompt("Activation code (SMS or Email): ");
 
         await client.finalizeTwoFactor(
             Buffer.from(response.shared_secret, "base64"),
@@ -22,5 +22,7 @@ client.on("loggedOn", function () {
                 console.log(response);
             }
         );
+        console.log("Two Factor Enabled");
+        return;
     });
 });

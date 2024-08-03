@@ -12,15 +12,15 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=96;
+		nextID=98;
 	};
 	class LayerIndexProvider
 	{
-		nextID=14;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={4173.623,17.201576,797.14417};
+		pos[]={4170.8237,13.903877,788.7998};
 		dir[]={0.012188572,-0.74537331,-0.66653591};
 		up[]={0.01362795,0.66664726,-0.74524873};
 		aside[]={-0.99983287,0,-0.01828339};
@@ -46,6 +46,7 @@ addons[]=
 	"ace_hearing",
 	"ace_captives",
 	"ace_medical_treatment",
+	"rtf42_vests",
 	"ace_realisticnames",
 	"ace_attach",
 	"ace_grenades",
@@ -54,13 +55,14 @@ addons[]=
 	"ace_maptools",
 	"ace_flashlights",
 	"ace_compat_rhs_usf3_nightvision",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Structures_F_Civ_Camping"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=25;
 		class Item0
 		{
 			className="rtf42_units";
@@ -167,52 +169,65 @@ class AddonsMetaData
 		};
 		class Item16
 		{
+			className="rtf42_vests";
+			name="rtf42 - vests";
+			author="42nd RTF Team";
+		};
+		class Item17
+		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item18
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item18
+		class Item19
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item19
+		class Item20
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item20
+		class Item21
 		{
 			className="ace_tagging";
 			name="ACE3 - Tagging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item21
+		class Item22
 		{
 			className="ace_maptools";
 			name="ACE3 - Map Tools";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_flashlights";
 			name="ACE3 - Flashlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
+		};
+		class Item24
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -229,7 +244,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -258,7 +273,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -446,7 +461,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			dataType="Layer";
@@ -560,7 +575,7 @@ class Mission
 											};
 											class vest
 											{
-												typeName="rtf42_vests_officer";
+												typeName="rtf42_vests_SuicideVest";
 												isBackpack=0;
 												class MagazineCargo
 												{
@@ -608,7 +623,7 @@ class Mission
 											};
 											class backpack
 											{
-												typeName="rtf42_backpacks_rto";
+												typeName="rtf42_backpacks_officer";
 												isBackpack=1;
 												class MagazineCargo
 												{
@@ -800,6 +815,21 @@ class Mission
 			{
 			};
 			id=94;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4170.1338,6.3781338,784.22681};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=97;
+			type="Land_Sunshade_F";
 		};
 	};
 };

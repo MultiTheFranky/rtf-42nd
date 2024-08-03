@@ -22,7 +22,7 @@ class CfgVehicles {
                     icon = "a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_cancel_ca.paa";
                     condition = "true";
                     exceptions[] = {};
-                    statement = "ace_player playActionNow 'GestureNod';[ace_player, ''] remoteExec ['switchMove', 0];ace_player action ['SwitchWeapon', ace_player, ace_player, 0];";
+                    statement = "ace_player playActionNow 'GestureNod';[ace_player, ''] remoteExec ['switchMove', 0];";
                 };
             };
         };

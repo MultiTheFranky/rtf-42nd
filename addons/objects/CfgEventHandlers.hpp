@@ -9,3 +9,11 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class GVAR(Speaker) {
+        class ADDON {
+            serverKilled = QUOTE(call COMPILE_FILE(XEH_killed));
+        };
+    };
+};

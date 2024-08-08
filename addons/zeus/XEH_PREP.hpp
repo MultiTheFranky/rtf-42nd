@@ -4,3 +4,4 @@ PREP(setInformantWithAnswers);
 PREP(generateCardModules);
 PREP(generatePlayMusic3D);
 PREP(createGasModule);
+PREP(radioActions);

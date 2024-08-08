@@ -18,3 +18,6 @@ class CfgPatches {
 #include "CfgMusic.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
+class GVAR(RadioMusic) {
+    #include "Sounds3D.hpp"
+};

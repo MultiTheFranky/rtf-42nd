@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=98;
+		nextID=101;
 	};
 	class LayerIndexProvider
 	{
-		nextID=20;
+		nextID=52;
 	};
 	class Camera
 	{
-		pos[]={4170.8237,13.903877,788.7998};
-		dir[]={0.012188572,-0.74537331,-0.66653591};
-		up[]={0.01362795,0.66664726,-0.74524873};
-		aside[]={-0.99983287,0,-0.01828339};
+		pos[]={4179.2798,10.006394,786.97607};
+		dir[]={-0.79952794,-0.34194136,-0.49379268};
+		up[]={-0.29092845,0.93972135,-0.17967896};
+		aside[]={-0.52546722,1.4901161e-008,0.85081393};
 	};
 };
 binarizationWanted=0;
@@ -56,13 +56,15 @@ addons[]=
 	"ace_flashlights",
 	"ace_compat_rhs_usf3_nightvision",
 	"A3_Characters_F",
-	"A3_Structures_F_Civ_Camping"
+	"A3_Structures_F_Civ_Camping",
+	"rtf42_objects",
+	"Jbad_Pc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=27;
 		class Item0
 		{
 			className="rtf42_units";
@@ -229,6 +231,17 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item25
+		{
+			className="rtf42_objects";
+			name="rtf42 - Objects";
+			author="42nd RTF Team";
+		};
+		class Item26
+		{
+			className="Jbad_Pc";
+			name="Jbad_Pc";
+		};
 	};
 };
 dlcs[]=
@@ -244,7 +257,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -273,7 +286,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -461,7 +474,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3;
+		items=6;
 		class Item0
 		{
 			dataType="Layer";
@@ -830,6 +843,83 @@ class Mission
 			};
 			id=97;
 			type="Land_Sunshade_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4169.438,5.1810017,779.98999};
+				angles[]={0,3.1629381,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="radio";
+			};
+			id=98;
+			type="rtf42_objects_Speaker";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Song";
+					expression="_this setVariable [""rtf42_music_radioFile"", _value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="rtf42_music_johnnycash_gods_gonna_cut_you__down";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="PlayRadio";
+					expression="if (_value) then {[_this] call rtf42_objects_fnc_turnOnRadio} else {[_this] call rtf42_objects_fnc_turnOffRadio}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4176.9092,6.2142067,782.88635};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=99;
+			type="rtf42_objects_Door";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4183.7593,5.0006104,777.71875};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=100;
+			type="jbad_PC";
 		};
 	};
 };

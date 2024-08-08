@@ -134,7 +134,7 @@ const writeSounds3D = async (music) => {
             (file) =>
                 `class ${file.name} {
     name = "${file.prettyName}";
-    value = QGVAR(${file.name});
+    value = QEGVAR(music,${file.name});
 };`
         )
         .join("\n");

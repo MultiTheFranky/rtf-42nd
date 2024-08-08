@@ -81,5 +81,25 @@
             <English>STARLINK</English>
             <Spanish>STARLINK</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusDisplayName">
+            <English>Radio</English>
+            <Spanish>Radio</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusTurnOnRadio">
+            <English>Turn on radio</English>
+            <Spanish>Encender la radio</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusTurnOffRadio">
+            <English>Turn off radio</English>
+            <Spanish>Apagar la radio</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusSetMusic">
+            <English>Change music</English>
+            <Spanish>Cambiar la música</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_RadioMusic">
+            <English>Radio music</English>
+            <Spanish>Música de radio</Spanish>
+        </Key>
     </Package>
 </Project>

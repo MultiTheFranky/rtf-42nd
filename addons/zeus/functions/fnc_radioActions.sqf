@@ -21,7 +21,7 @@ private _values = [];
 private _names = [];
 {
     private _musicText = getText (_x >> "name");
-	private _musicValue = getText (_x >> "value");
+    private _musicValue = getText (_x >> "value");
     _names pushBack _musicText;
     _values pushBack _musicValue;
 } forEach _songs;

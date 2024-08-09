@@ -22,7 +22,7 @@ private _actions = [];
 
 {
     private _musicText = getText (_x >> "name");
-	private _musicValue = getText (_x >> "value");
+    private _musicValue = getText (_x >> "value");
     private _action = [_musicText, _musicText, "", 
     {
         params ["_target", "_caller", "_args"];

@@ -135,7 +135,7 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = "false";
             };
-			class Song {
+            class Song {
                 control = "Combo";
                 property = "Song";
                 displayName = CSTRING(RadioSong);
@@ -147,7 +147,7 @@ class CfgVehicles {
                     #include "../music/Sounds3D.hpp"
                 };
             };
-		};
+        };
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = "Radio";

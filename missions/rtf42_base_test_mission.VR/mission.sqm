@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=52;
+		nextID=56;
 	};
 	class Camera
 	{
@@ -860,6 +860,7 @@ class Mission
 			};
 			id=98;
 			type="rtf42_objects_Speaker";
+			atlOffset=0.087560177;
 			class CustomAttributes
 			{
 				class Attribute0

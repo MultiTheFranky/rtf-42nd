@@ -138,16 +138,16 @@ class GVAR(pod_afraid_to_die) {
         duration = 88;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(radio_42ndoriginals_country_coldbeer) {
+        name = QUOTE(Radio 42ndoriginals Country Coldbeer);
+        sound[] = {QPATHTOF(data\radio_42ndoriginals_country_coldbeer.ogg), 1, 1};
+        duration = 191;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(radio_42ndoriginals_taylor_join) {
         name = QUOTE(Radio 42ndoriginals Taylor Join);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_taylor_join.ogg), 1, 1};
         duration = 167;
-        musicClass = QGVAR(musicClass);
-    };
-class GVAR(radio_42originals_country_coldbeer) {
-        name = QUOTE(Radio 42originals Country Coldbeer);
-        sound[] = {QPATHTOF(data\radio_42originals_country_coldbeer.ogg), 1, 1};
-        duration = 191;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(saintchaos_give_it_100) {

@@ -1,4 +1,5 @@
 class CfgVehicles {
+    #include "./data/poster/poster.hpp"
     class Item_Base_F;
     class GVAR(Cards): Item_Base_F {
         scope = 2;
@@ -144,7 +145,7 @@ class CfgVehicles {
                 typeName = "STRING";
                 defaultValue = QEGVAR(music,5fdp_bad_company);
                 class Values {
-                    #include "../music/Sounds3D.hpp"
+                    #include "../music/RadioMusic.hpp"
                 };
             };
         };

@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=101;
+		nextID=119;
 	};
 	class LayerIndexProvider
 	{
-		nextID=56;
+		nextID=62;
 	};
 	class Camera
 	{
-		pos[]={4179.2798,10.006394,786.97607};
-		dir[]={-0.79952794,-0.34194136,-0.49379268};
-		up[]={-0.29092845,0.93972135,-0.17967896};
-		aside[]={-0.52546722,1.4901161e-008,0.85081393};
+		pos[]={4174.5425,9.4847412,785.67786};
+		dir[]={-0.37558454,-0.47776049,-0.79416293};
+		up[]={-0.20425883,0.87848645,-0.43189955};
+		aside[]={-0.90400797,-9.3845301e-008,0.42753461};
 	};
 };
 binarizationWanted=0;
@@ -849,7 +849,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4169.438,5.1810017,779.98999};
+				position[]={4169.438,5.0934415,779.98999};
 				angles[]={0,3.1629381,0};
 			};
 			side="Empty";
@@ -860,7 +860,6 @@ class Mission
 			};
 			id=98;
 			type="rtf42_objects_Speaker";
-			atlOffset=0.087560177;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -872,7 +871,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="rtf42_music_johnnycash_gods_gonna_cut_you__down";
+							value="rtf42_music_radio_42originals_country_coldbeer";
 						};
 					};
 				};

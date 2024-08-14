@@ -90,6 +90,14 @@ class pod_afraid_to_die {
     name = "Pod Afraid To Die";
     value = QEGVAR(music,pod_afraid_to_die);
 };
+class radio_42ndoriginals_taylor_join {
+    name = "Radio 42ndoriginals Taylor Join";
+    value = QEGVAR(music,radio_42ndoriginals_taylor_join);
+};
+class radio_42originals_country_coldbeer {
+    name = "Radio 42originals Country Coldbeer";
+    value = QEGVAR(music,radio_42originals_country_coldbeer);
+};
 class saintchaos_give_it_100 {
     name = "Saintchaos Give It 100";
     value = QEGVAR(music,saintchaos_give_it_100);

@@ -19,5 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 class GVAR(RadioMusic) {
-    #include "Sounds3D.hpp"
+    #include "RadioMusic.hpp"
 };

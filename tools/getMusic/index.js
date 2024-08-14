@@ -141,11 +141,27 @@ const writeSounds3D = async (music) => {
     await fs.writeFile("../../addons/music/Sounds3D.hpp", data);
 };
 
+const writeRadioMusic = async (music) => {
+    const data = music
+        .map(
+            (file) =>
+                `class ${file.name} {
+    name = "${file.prettyName}";
+    value = QEGVAR(music,${file.name});
+};`
+        )
+        .join("\n");
+    await fs.writeFile("../../addons/music/RadioMusic.hpp", data);
+};
+
 const main = async () => {
     const music = await downloadMusic(await getMusic());
     await writeMusic(music);
     await writeConfig(music);
     await writeSounds3D(music);
+    await writeRadioMusic(
+        music.filter((file) => file.name.startsWith("radio"))
+    );
     await writeCfgSounds(music);
 };
 

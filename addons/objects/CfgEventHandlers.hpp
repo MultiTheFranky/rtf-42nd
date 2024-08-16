@@ -17,3 +17,11 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
+
+class Extended_Deleted_EventHandlers {
+    class GVAR(Speaker) {
+        class ADDON {
+            serverDeleted = QUOTE(call COMPILE_FILE(XEH_deleted));
+        };
+    };
+};

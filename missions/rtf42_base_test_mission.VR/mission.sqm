@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=119;
+		nextID=121;
 	};
 	class LayerIndexProvider
 	{
-		nextID=62;
+		nextID=64;
 	};
 	class Camera
 	{
-		pos[]={4174.5425,9.4847412,785.67786};
-		dir[]={-0.37558454,-0.47776049,-0.79416293};
-		up[]={-0.20425883,0.87848645,-0.43189955};
-		aside[]={-0.90400797,-9.3845301e-008,0.42753461};
+		pos[]={4173.9644,8.3216381,790.10889};
+		dir[]={-0.3755821,-0.47775719,-0.79415756};
+		up[]={-0.20425576,0.87849194,-0.43189293};
+		aside[]={-0.904001,0,0.4275305};
 	};
 };
 binarizationWanted=0;
@@ -58,13 +58,14 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Structures_F_Civ_Camping",
 	"rtf42_objects",
-	"Jbad_Pc"
+	"Jbad_Pc",
+	"A3_Structures_F_Globe_Civilian_Graffiti"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			className="rtf42_units";
@@ -241,6 +242,13 @@ class AddonsMetaData
 		{
 			className="Jbad_Pc";
 			name="Jbad_Pc";
+		};
+		class Item27
+		{
+			className="A3_Structures_F_Globe";
+			name="O&T Expansion Eden - Buildings and Structures";
+			author="Trager";
+			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
 		};
 	};
 };
@@ -474,7 +482,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6;
+		items=8;
 		class Item0
 		{
 			dataType="Layer";
@@ -920,6 +928,38 @@ class Mission
 			};
 			id=100;
 			type="jbad_PC";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4168.7837,5.9653416,780.00354};
+				angles[]={0,3.739121,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=119;
+			type="rtf42_objects_Poster_01";
+			atlOffset=0.96534157;
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4169.8696,6.1020751,778.72546};
+				angles[]={0,3.6169698,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=120;
+			type="GalleryInterior_plan_01";
+			atlOffset=1.1020751;
 		};
 	};
 };

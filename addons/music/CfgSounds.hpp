@@ -115,6 +115,11 @@ class GVAR(pod_afraid_to_die) {
         sound[] = {QPATHTOF(data\pod_afraid_to_die.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(radio_42ndoriginal_metal_grind_and_shine) {
+        name = QUOTE(Radio 42ndoriginal Metal Grind And Shine);
+        sound[] = {QPATHTOF(data\radio_42ndoriginal_metal_grind_and_shine.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(radio_42ndoriginals_country_coldbeer) {
         name = QUOTE(Radio 42ndoriginals Country Coldbeer);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_country_coldbeer.ogg), 1, 1, 100};

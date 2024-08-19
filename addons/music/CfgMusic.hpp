@@ -138,6 +138,12 @@ class GVAR(pod_afraid_to_die) {
         duration = 88;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(radio_42ndoriginal_metal_grind_and_shine) {
+        name = QUOTE(Radio 42ndoriginal Metal Grind And Shine);
+        sound[] = {QPATHTOF(data\radio_42ndoriginal_metal_grind_and_shine.ogg), 1, 1};
+        duration = 142;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(radio_42ndoriginals_country_coldbeer) {
         name = QUOTE(Radio 42ndoriginals Country Coldbeer);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_country_coldbeer.ogg), 1, 1};

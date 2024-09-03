@@ -1,0 +1,7 @@
+# Linting configuration
+# https://brettmayson.github.io/HEMTT/analysis/config.html
+# https://brettmayson.github.io/HEMTT/analysis/sqf.html
+
+[sqf.banned_commands]
+options.banned = ["execVM"]
+options.ignore = ["createSoundSource"]

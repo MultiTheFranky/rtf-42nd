@@ -169,7 +169,7 @@ switch _mode do {
 			_index = if _caseSensitive then {_input find _findFull} else {
 				tolower _input find _findFull
 			};
-			if (_index < 0) exitwith {_output pushback _input;};
+			if (_index < 0) exitWith {_output pushback _input;};
 			if (_findPrefix != "") then {_index = _index + _findPLen};
 			_output pushback (_input select [0,_index]);
 			_output pushback _replace;
@@ -185,7 +185,7 @@ switch _mode do {
 		private _index = -1;
 		for "_i" from 0 to 1 step 0 do {
 			_index = tolower _input find _find;
-			if (_index < 0) exitwith {_output pushback _input;};
+			if (_index < 0) exitWith {_output pushback _input;};
 			_output pushback (_input select [0,_index]);
 			_input = _input select [_index + _findLen];
 		};
@@ -199,7 +199,7 @@ switch _mode do {
 		private _index = -1;
 		for "_i" from 0 to 1 step 0 do {
 			_index = tolower _input find _findLow;
-			if (_index < 0) exitwith {_output pushback _input;};
+			if (_index < 0) exitWith {_output pushback _input;};
 			_output pushback (_input select [0,_index]);
 			_output pushBack _find;
 			_input = _input select [_index + _findLen];

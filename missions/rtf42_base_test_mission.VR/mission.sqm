@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=121;
+		nextID=122;
 	};
 	class LayerIndexProvider
 	{
-		nextID=64;
+		nextID=66;
 	};
 	class Camera
 	{
-		pos[]={4173.9644,8.3216381,790.10889};
-		dir[]={-0.3755821,-0.47775719,-0.79415756};
+		pos[]={4180.4746,14.269526,799.71741};
+		dir[]={-0.3755821,-0.47775716,-0.79415756};
 		up[]={-0.20425576,0.87849194,-0.43189293};
-		aside[]={-0.904001,0,0.4275305};
+		aside[]={-0.904001,0,0.42753047};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,14 @@ addons[]=
 	"A3_Structures_F_Civ_Camping",
 	"rtf42_objects",
 	"Jbad_Pc",
-	"A3_Structures_F_Globe_Civilian_Graffiti"
+	"A3_Structures_F_Globe_Civilian_Graffiti",
+	"CUP_Creatures_StaticWeapons"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="rtf42_units";
@@ -249,6 +250,11 @@ class AddonsMetaData
 			name="O&T Expansion Eden - Buildings and Structures";
 			author="Trager";
 			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
+		};
+		class Item28
+		{
+			className="CUP_Creatures_StaticWeapons";
+			name="CUP_Creatures_StaticWeapons";
 		};
 	};
 };
@@ -475,14 +481,14 @@ class Mission
 		windForced=1;
 		year=2035;
 		day=28;
-		hour=13;
-		minute=37;
+		hour=23;
+		minute=-2;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			dataType="Layer";
@@ -509,7 +515,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={4172.7349,5.0014391,778.92725};
+										position[]={4174.2295,5.0014391,756.72284};
 									};
 									side="West";
 									flags=7;
@@ -820,7 +826,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4172.8857,5.0014391,785.83765};
+						position[]={4174.9297,5.0014391,789.57843};
 						angles[]={0,3.1273119,0};
 					};
 					side="East";
@@ -834,6 +840,28 @@ class Mission
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=95;
+						item1=121;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=94;
 		};
@@ -935,7 +963,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4168.7837,5.9653416,780.00354};
-				angles[]={0,3.739121,-0};
+				angles[]={0,3.739121,0};
 			};
 			side="Empty";
 			class Attributes
@@ -951,7 +979,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4169.8696,6.1020751,778.72546};
-				angles[]={0,3.6169698,-0};
+				angles[]={0,3.6169698,0};
 			};
 			side="Empty";
 			class Attributes
@@ -960,6 +988,21 @@ class Mission
 			id=120;
 			type="GalleryInterior_plan_01";
 			atlOffset=1.1020751;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4174.9297,4.9927335,788.98279};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=121;
+			type="CUP_O_SearchLight_static_TK";
 		};
 	};
 };

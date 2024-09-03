@@ -23,7 +23,7 @@ private _options = [];
 private _numberOfAnswers = 5;
 for "_i" from 1 to _numberOfAnswers do {
     _options pushBack ["EDIT", format ["Answer %1", _i], ""];
-    _options pushBack ["SLIDER:PERCENT", format ["Answer Success", _i], [0, 1, 0.5]];
+    _options pushBack ["SLIDER:PERCENT", format ["Answer Success %1", _i], [0, 1, 0.5]];
 };
 
 ["Answers", _options, {

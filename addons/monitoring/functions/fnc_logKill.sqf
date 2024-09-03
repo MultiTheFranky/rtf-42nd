@@ -16,7 +16,7 @@
     * Public: No
 */
 
-if (!isServer) exitwith {};
+if (!isServer) exitWith {};
 
 params ["_player", "_kills"];
 

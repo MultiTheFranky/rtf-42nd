@@ -20,7 +20,7 @@ include = [
 [hemtt.launch.default]
 workshop = ["2369477168"]
 presets = [
-    "main", # .html presets from .hemtt/presets/
+    "rft42-mods", # .html presets from .hemtt/presets/
 ]
 dlc = []
 optionals = []
@@ -39,7 +39,7 @@ parameters = [
 [hemtt.launch.server]
 workshop = []
 presets = [
-    "main", # .html presets from .hemtt/presets/
+    "rft42-mods", # .html presets from .hemtt/presets/
 ]
 dlc = []
 optionals = []
@@ -56,7 +56,7 @@ parameters = [
 [hemtt.launch.player]
 workshop = []
 presets = [
-    "main", # .html presets from .hemtt/presets/
+    "rft42-mods", # .html presets from .hemtt/presets/
 ]
 dlc = []
 optionals = []

@@ -125,6 +125,11 @@ class GVAR(radio_42ndoriginals_country_coldbeer) {
         sound[] = {QPATHTOF(data\radio_42ndoriginals_country_coldbeer.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(radio_42ndoriginals_hiphop) {
+        name = QUOTE(Radio 42ndoriginals Hiphop);
+        sound[] = {QPATHTOF(data\radio_42ndoriginals_hiphop.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(radio_42ndoriginals_taylor_join) {
         name = QUOTE(Radio 42ndoriginals Taylor Join);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_taylor_join.ogg), 1, 1, 100};

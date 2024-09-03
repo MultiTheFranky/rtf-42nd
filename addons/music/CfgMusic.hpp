@@ -150,6 +150,12 @@ class GVAR(radio_42ndoriginals_country_coldbeer) {
         duration = 191;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(radio_42ndoriginals_hiphop) {
+        name = QUOTE(Radio 42ndoriginals Hiphop);
+        sound[] = {QPATHTOF(data\radio_42ndoriginals_hiphop.ogg), 1, 1};
+        duration = 139;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(radio_42ndoriginals_taylor_join) {
         name = QUOTE(Radio 42ndoriginals Taylor Join);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_taylor_join.ogg), 1, 1};

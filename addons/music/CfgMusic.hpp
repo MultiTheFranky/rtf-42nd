@@ -174,6 +174,12 @@ class GVAR(radio_42ndoriginals_taylor_join) {
         duration = 167;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(sabaton_finalsolution) {
+        name = QUOTE(Sabaton Finalsolution);
+        sound[] = {QPATHTOF(data\sabaton_finalsolution.ogg), 1, 1};
+        duration = 44;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(saintchaos_give_it_100) {
         name = QUOTE(Saintchaos Give It 100);
         sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1};

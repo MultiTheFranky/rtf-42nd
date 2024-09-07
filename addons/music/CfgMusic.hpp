@@ -108,6 +108,12 @@ class GVAR(marilynmanson_sweet_dreams) {
         duration = 89;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(mb14_pyramids_con) {
+        name = QUOTE(Mb14 Pyramids Con);
+        sound[] = {QPATHTOF(data\mb14_pyramids_con.ogg), 1, 1};
+        duration = 244;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(metallica_for_whom_the_bell_tolls) {
         name = QUOTE(Metallica For Whom The Bell Tolls);
         sound[] = {QPATHTOF(data\metallica_for_whom_the_bell_tolls.ogg), 1, 1};
@@ -138,22 +144,28 @@ class GVAR(pod_afraid_to_die) {
         duration = 88;
         musicClass = QGVAR(musicClass);
     };
-class GVAR(radio_42ndoriginal_metal_grind_and_shine) {
-        name = QUOTE(Radio 42ndoriginal Metal Grind And Shine);
-        sound[] = {QPATHTOF(data\radio_42ndoriginal_metal_grind_and_shine.ogg), 1, 1};
-        duration = 142;
-        musicClass = QGVAR(musicClass);
-    };
 class GVAR(radio_42ndoriginals_country_coldbeer) {
         name = QUOTE(Radio 42ndoriginals Country Coldbeer);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_country_coldbeer.ogg), 1, 1};
         duration = 191;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(radio_42ndoriginals_get_clap_like_a_clown) {
+        name = QUOTE(Radio 42ndoriginals Get Clap Like A Clown);
+        sound[] = {QPATHTOF(data\radio_42ndoriginals_get_clap_like_a_clown.ogg), 1, 1};
+        duration = 101;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(radio_42ndoriginals_hiphop) {
         name = QUOTE(Radio 42ndoriginals Hiphop);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_hiphop.ogg), 1, 1};
         duration = 139;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(radio_42ndoriginals_metal_grind_and_shine) {
+        name = QUOTE(Radio 42ndoriginals Metal Grind And Shine);
+        sound[] = {QPATHTOF(data\radio_42ndoriginals_metal_grind_and_shine.ogg), 1, 1};
+        duration = 142;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_42ndoriginals_taylor_join) {
@@ -166,6 +178,12 @@ class GVAR(saintchaos_give_it_100) {
         name = QUOTE(Saintchaos Give It 100);
         sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1};
         duration = 79;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(score_bornforthis) {
+        name = QUOTE(Score Bornforthis);
+        sound[] = {QPATHTOF(data\score_bornforthis.ogg), 1, 1};
+        duration = 238;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(seven_nation_army) {

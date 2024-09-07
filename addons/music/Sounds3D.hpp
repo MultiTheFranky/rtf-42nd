@@ -70,6 +70,10 @@ class marilynmanson_sweet_dreams {
     name = "Marilynmanson Sweet Dreams";
     value = QEGVAR(music,marilynmanson_sweet_dreams);
 };
+class mb14_pyramids_con {
+    name = "Mb14 Pyramids Con";
+    value = QEGVAR(music,mb14_pyramids_con);
+};
 class metallica_for_whom_the_bell_tolls {
     name = "Metallica For Whom The Bell Tolls";
     value = QEGVAR(music,metallica_for_whom_the_bell_tolls);
@@ -90,17 +94,21 @@ class pod_afraid_to_die {
     name = "Pod Afraid To Die";
     value = QEGVAR(music,pod_afraid_to_die);
 };
-class radio_42ndoriginal_metal_grind_and_shine {
-    name = "Radio 42ndoriginal Metal Grind And Shine";
-    value = QEGVAR(music,radio_42ndoriginal_metal_grind_and_shine);
-};
 class radio_42ndoriginals_country_coldbeer {
     name = "Radio 42ndoriginals Country Coldbeer";
     value = QEGVAR(music,radio_42ndoriginals_country_coldbeer);
 };
+class radio_42ndoriginals_get_clap_like_a_clown {
+    name = "Radio 42ndoriginals Get Clap Like A Clown";
+    value = QEGVAR(music,radio_42ndoriginals_get_clap_like_a_clown);
+};
 class radio_42ndoriginals_hiphop {
     name = "Radio 42ndoriginals Hiphop";
     value = QEGVAR(music,radio_42ndoriginals_hiphop);
+};
+class radio_42ndoriginals_metal_grind_and_shine {
+    name = "Radio 42ndoriginals Metal Grind And Shine";
+    value = QEGVAR(music,radio_42ndoriginals_metal_grind_and_shine);
 };
 class radio_42ndoriginals_taylor_join {
     name = "Radio 42ndoriginals Taylor Join";
@@ -109,6 +117,10 @@ class radio_42ndoriginals_taylor_join {
 class saintchaos_give_it_100 {
     name = "Saintchaos Give It 100";
     value = QEGVAR(music,saintchaos_give_it_100);
+};
+class score_bornforthis {
+    name = "Score Bornforthis";
+    value = QEGVAR(music,score_bornforthis);
 };
 class seven_nation_army {
     name = "Seven Nation Army";

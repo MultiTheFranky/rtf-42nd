@@ -145,6 +145,11 @@ class GVAR(radio_42ndoriginals_taylor_join) {
         sound[] = {QPATHTOF(data\radio_42ndoriginals_taylor_join.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(sabaton_finalsolution) {
+        name = QUOTE(Sabaton Finalsolution);
+        sound[] = {QPATHTOF(data\sabaton_finalsolution.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(saintchaos_give_it_100) {
         name = QUOTE(Saintchaos Give It 100);
         sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1, 100};

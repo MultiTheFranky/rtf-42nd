@@ -114,6 +114,10 @@ class radio_42ndoriginals_taylor_join {
     name = "Radio 42ndoriginals Taylor Join";
     value = QEGVAR(music,radio_42ndoriginals_taylor_join);
 };
+class sabaton_finalsolution {
+    name = "Sabaton Finalsolution";
+    value = QEGVAR(music,sabaton_finalsolution);
+};
 class saintchaos_give_it_100 {
     name = "Saintchaos Give It 100";
     value = QEGVAR(music,saintchaos_give_it_100);

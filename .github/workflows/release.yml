@@ -130,7 +130,7 @@ jobs:
               continue-on-error: true
 
             - name: PR to merge version to main branch
-              uses: peter-evans/create-pull-request@v6
+              uses: peter-evans/create-pull-request@v7
               if: ${{ contains(github.ref_name,'rc') == false }}
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}

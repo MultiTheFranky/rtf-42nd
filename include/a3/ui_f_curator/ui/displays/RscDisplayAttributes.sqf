@@ -8,7 +8,7 @@ switch _mode do {
 	case "onLoad": {
 
 		_display = _params select 0;
-		_displayConfig = configfile >> _class;
+		_displayConfig = configFile >> _class;
 
 		_ctrlBackground = _display displayctrl IDC_RSCDISPLAYATTRIBUTES_BACKGROUND;
 		_ctrlTitle = _display displayctrl IDC_RSCDISPLAYATTRIBUTES_TITLE;
@@ -35,17 +35,17 @@ switch _mode do {
 			_ctrlMap ctrlmapanimadd [0,ctrlmapscale _ctrlCuratorMap,_ctrlCuratorMap ctrlmapscreentoworld [0.5,0.5]];
 			ctrlmapanimcommit _ctrlMap;
 		} else {
-			_ctrlMap ctrlshow false;
+			_ctrlMap ctrlShow false;
 		};
 
 		//--- Load default attributes
-		_attributes = if (getnumber (_displayConfig >> "filterAttributes") > 0) then {missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_attributes",[]]} else {["%ALL"]};
+		_attributes = if (getnumber (_displayConfig >> "filterAttributes") > 0) then {missionnamespace getVariable ["BIS_fnc_initCuratorAttributes_attributes",[]]} else {["%ALL"]};
 		_allAttributes = "%ALL" in _attributes;
 
 		//--- Initialize attributes
 		_posY = _ctrlContentOffsetY;
 		_contentControls = _displayConfig >> "Controls" >> "Content" >> "Controls";
-		_enableDebugConsole = ["DebugConsole",getnumber (missionconfigfile >> "enableDebugConsole")] call bis_fnc_getParamValue;
+		_enableDebugConsole = ["DebugConsole",getnumber (missionconfigFile >> "enableDebugConsole")] call bis_fnc_getParamValue;
 		_enableAdmin = (_enableDebugConsole == 1 && (isserver || serverCommandAvailable "#shutdown")) || _enableDebugConsole == 2;
 		for "_i" from 0 to (count _contentControls - 1) do {
 			_cfgControl = _contentControls select _i;
@@ -60,75 +60,75 @@ switch _mode do {
 					_controlPos = ctrlposition _control;
 					_controlPos set [0,0];
 					_controlPos set [1,_posY];
-					_control ctrlsetposition _controlPos;
-					_control ctrlcommit 0;
+					_control ctrlSetPosition _controlPos;
+					_control ctrlCommit 0;
 					_posY = _posY + (_controlPos select 3) + 0.005;
 					ctrlsetfocus _control;
 				} else {
-					_control ctrlsetposition [0,0,0,0];
-					_control ctrlcommit 0;
-					_control ctrlshow false;
+					_control ctrlSetPosition [0,0,0,0];
+					_control ctrlCommit 0;
+					_control ctrlShow false;
 				};
 			};
 		};
 		_posH = ((_posY + _ctrlContentOffsetY) min 0.9) * 0.5;
 
-		_target = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
+		_target = missionnamespace getVariable ["BIS_fnc_initCuratorAttributes_target",objnull];
 		_name = switch (typename _target) do {
-			case (typename objnull): {gettext (configfile >> "cfgvehicles" >> typeof _target >> "displayname")};
+			case (typename objnull): {gettext (configFile >> "cfgvehicles" >> typeof _target >> "displayname")};
 			case (typename grpnull): {groupid _target};
 			case (typename []): {format ["%1: %3 #%2",groupid (_target select 0),_target select 1,localize "str_a3_cfgmarkers_waypoint_0"]};
 			case (typename ""): {markertext _target};
 		};
-		_ctrlTitle ctrlsettext format [ctrltext _ctrlTitle,toupper _name];
+		_ctrlTitle ctrlSetText format [ctrlText _ctrlTitle,toUpper _name];
 
 		_ctrlTitlePos set [1,(0.5 - _posH) - (_ctrlTitlePos select 3) - _ctrlTitleOffsetY];
-		_ctrlTitle ctrlsetposition _ctrlTitlePos;
-		_ctrlTitle ctrlcommit 0;
+		_ctrlTitle ctrlSetPosition _ctrlTitlePos;
+		_ctrlTitle ctrlCommit 0;
 
 		_ctrlContentPos set [1,0.5 - _posH];
 		_ctrlContentPos set [3,_posH * 2];
-		_ctrlContent ctrlsetposition _ctrlContentPos;
-		_ctrlContent ctrlcommit 0;
+		_ctrlContent ctrlSetPosition _ctrlContentPos;
+		_ctrlContent ctrlCommit 0;
 
 		_ctrlBackgroundPos set [1,0.5 - _posH];
 		_ctrlBackgroundPos set [3,_posH * 2];
-		_ctrlBackground ctrlsetposition _ctrlBackgroundPos;
-		_ctrlBackground ctrlcommit 0;
+		_ctrlBackground ctrlSetPosition _ctrlBackgroundPos;
+		_ctrlBackground ctrlCommit 0;
 
 		_ctrlButtonOKPos set [1,0.5 + _posH + _ctrlTitleOffsetY];
-		_ctrlButtonOK ctrlsetposition _ctrlButtonOKPos;
-		_ctrlButtonOK ctrlcommit 0;
+		_ctrlButtonOK ctrlSetPosition _ctrlButtonOKPos;
+		_ctrlButtonOK ctrlCommit 0;
 		ctrlsetfocus _ctrlButtonOK;
 
 		_ctrlButtonCancelPos set [1,0.5 + _posH + _ctrlTitleOffsetY];
-		_ctrlButtonCancel ctrlsetposition _ctrlButtonCancelPos;
-		_ctrlButtonCancel ctrlcommit 0;
+		_ctrlButtonCancel ctrlSetPosition _ctrlButtonCancelPos;
+		_ctrlButtonCancel ctrlCommit 0;
 
 		_ctrlButtonCustomPos set [1,0.5 + _posH + _ctrlTitleOffsetY];
-		_ctrlButtonCustom ctrlsetposition _ctrlButtonCustomPos;
-		_ctrlButtonCustom ctrlcommit 0;
+		_ctrlButtonCustom ctrlSetPosition _ctrlButtonCustomPos;
+		_ctrlButtonCustom ctrlCommit 0;
 
 		//--- Close the display when entity is altered
 		[_display] spawn {
-			disableserialization;
+			disableSerialization
 			_display = _this select 0;
-			_target = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
+			_target = missionnamespace getVariable ["BIS_fnc_initCuratorAttributes_target",objnull];
 			switch (typename _target) do {
 				case (typename objnull): {
 					_isAlive = alive _target;
-					waituntil {isnull _display || (_isAlive && !alive _target)};
+					waituntil {isNull _display || (_isAlive && !alive _target)};
 				};
 				case (typename grpnull): {
-					waituntil {isnull _display || isnull _target};
+					waituntil {isNull _display || isNull _target};
 				};
 				case (typename []): {
 					_grp = _target select 0;
 					_wpCount = count waypoints _grp;
-					waituntil {isnull _display || (count waypoints _grp != _wpCount)};
+					waituntil {isNull _display || (count waypoints _grp != _wpCount)};
 				};
 				case (typename ""): {
-					waituntil {isnull _display || markertype _target == ""};
+					waituntil {isNull _display || markertype _target == ""};
 				};
 			};
 			_display closedisplay 2;

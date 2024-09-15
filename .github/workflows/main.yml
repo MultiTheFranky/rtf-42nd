@@ -35,6 +35,9 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+            - uses: arma-actions/arma3-tools@master
+              with:
+                  toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip
             - uses: ./.github/workflows/base
               with:
                   CDN_URL: ${{ secrets.CDN_URL }}
@@ -50,9 +53,6 @@ jobs:
                   npm install
                   $VERSION=$(node index.js --beta)
                   echo "VERSION=$VERSION" >> $env:GITHUB_ENV
-            - uses: arma-actions/arma3-tools@master
-              with:
-                  toolsUrl: ${{ secrets.CDN_URL }}/arma3tools.zip
             - name: Setup HEMTT
               uses: arma-actions/hemtt@v1
             - name: Run HEMTT release

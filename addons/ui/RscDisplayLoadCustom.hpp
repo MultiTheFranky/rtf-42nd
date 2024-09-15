@@ -1,0 +1,1 @@
+class RscDisplayLoadCustom: RscDisplayLoadMission {};

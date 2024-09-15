@@ -35,7 +35,7 @@ class RscDisplayMain: RscStandardDisplay {
         class Logo: RscActivePicture {
             text = QPATHTOF(data\logo_rtf42_ca.paa);
             tooltip = "Connect to the 42nd R.T.F. server";
-            onButtonClick = "[_this select 0] call (uiNamespace getVariable 'rtf42_ui_fnc_connectToServer')";
+            onButtonClick = "connectToServer [('iphostname' callExtension ['data',['arma3.multithefranky.com']]) select 0, 2302, ''];";
             soundClick[] = {};
             soundEnter[] = {};
             onLoad = "";

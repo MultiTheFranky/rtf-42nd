@@ -3,4 +3,3 @@ PREP(setBackgroundAuthor);
 PREP(missionLoad);
 PREP(uiMissionLoad);
 PREP(displayMain);
-PREP(connectToServer);

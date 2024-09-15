@@ -1,13 +1,12 @@
 [package]
-name = "influxdb"
+name = "iphostname"
 version = "1.0.0"
 edition = "2021"
 
 [dependencies]
 arma-rs = "1.10.4"
-influxc = "0.4.2"
-openssl = { version = "0.10", features = ["vendored"] }
+dns-lookup = "2.0.4"
 
 [lib]
-name = "influxdb"
+name = "iphostname"
 crate-type = ["cdylib"]

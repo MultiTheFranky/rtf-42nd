@@ -5,14 +5,14 @@ _display = _this select 0;
 _isMultiplayer = serverTime > 0;
 
 
-_ctrlMission = _display displayCtrl IDC_LOADING_MISSION;						//2300
-_ctrlMissionProgress = _display displayCtrl IDC_LOADING_PROGRESSMISSION;		//1013
-_ctrlMissionType = _display displayCtrl IDC_LOADING_MISSIONGAMETYPE;			//1012
-_ctrlMissionName = _display displayCtrl IDC_LOADING_MISSIONNAME;				//1006
-_ctrlMissionAuthor = _display displayCtrl IDC_LOADING_MISSIONAUTHOR;			//1007
-_ctrlMissionPicture = _display displayCtrl IDC_LOAD_MISSION_PICTURE;			//105
-_ctrlMissionDescription = _display displayCtrl IDC_LOADING_MISSIONDESCRIPTION;	//1100
-_ctrlMissionDescriptionEngine = _display displayCtrl IDC_LOAD_MISSION_NAME;		//101
+_ctrlMission = _display displayCtrl IDC_LOADING_MISSION;      //2300
+_ctrlMissionProgress = _display displayCtrl IDC_LOADING_PROGRESSMISSION;  //1013
+_ctrlMissionType = _display displayCtrl IDC_LOADING_MISSIONGAMETYPE;   //1012
+_ctrlMissionName = _display displayCtrl IDC_LOADING_MISSIONNAME;    //1006
+_ctrlMissionAuthor = _display displayCtrl IDC_LOADING_MISSIONAUTHOR;   //1007
+_ctrlMissionPicture = _display displayCtrl IDC_LOAD_MISSION_PICTURE;   //105
+_ctrlMissionDescription = _display displayCtrl IDC_LOADING_MISSIONDESCRIPTION; //1100
+_ctrlMissionDescriptionEngine = _display displayCtrl IDC_LOAD_MISSION_NAME;  //101
 
 
 //--- Controls to move to bottom right
@@ -31,32 +31,32 @@ _toMove = [
 
 
 _typePos = (ctrlPosition _ctrlMissionType);
-_typePos params ["_mainX","_mainY","_mainW"];	// Get position of mission type, because it's the highest control
+_typePos params ["_mainX","_mainY","_mainW"]; // Get position of mission type, because it's the highest control
 _descriptionPos = (ctrlPosition _ctrlMissionDescription);
-_descriptionPos params ["_descX","_descY","_descW","_descH"];	//Get position of the description, because it's the lowest control
-_mainY= (ctrlPosition _ctrlMissionDescriptionEngine) select 1;	//Highest point in dialog
-_mainH = (_descY + _descH) - _mainY;	// Calculate the difference of the lowest point of description and highest point of type (the total height)
+_descriptionPos params ["_descX","_descY","_descW","_descH"]; //Get position of the description, because it's the lowest control
+_mainY= (ctrlPosition _ctrlMissionDescriptionEngine) select 1; //Highest point in dialog
+_mainH = (_descY + _descH) - _mainY; // Calculate the difference of the lowest point of description and highest point of type (the total height)
 //_type [0, 2.4, 16, 1];
 //_desc=  [0, 14.4, 16, 1];
 //
 
-_mainPos = [_mainX,_mainY,_mainW,_mainH];	//main pos as array
+_mainPos = [_mainX,_mainY,_mainW,_mainH]; //main pos as array
 
 
 //--- Find bottom bar height
-_mapBackBottom = _display displayCtrl 1003;	// bottom bar
-_backBottomPos = ctrlPosition _mapBackBottom;	//x,y,w,h
-_backBottomH = _backBottomPos param [3];	// Get height of bottom
+_mapBackBottom = _display displayCtrl 1003; // bottom bar
+_backBottomPos = ctrlPosition _mapBackBottom; //x,y,w,h
+_backBottomH = _backBottomPos param [3]; // Get height of bottom
 //--- Get new position for ctrlMission
-//_mainMovePos = ctrlPosition _ctrlMission;	//x,y,w,h
-//_mainMovePos params ["_mainX","_mainY","_mainW","_mainH"];	// Get position of main
-_tempX = (safeZoneX + safeZoneW) - _mainW;	// Find position Width away from right side
-_tempY = (safeZoneY + safeZoneH) - (_mainH + _backBottomH);	// Find position Height away from bottom
-//_xDiff = _tempX - _mainX;	// Find difference between mainX and tempX
-//_yDiff = _tempY - _mainY;	// Find difference between mainY and tempY
+//_mainMovePos = ctrlPosition _ctrlMission; //x,y,w,h
+//_mainMovePos params ["_mainX","_mainY","_mainW","_mainH"]; // Get position of main
+_tempX = (safeZoneX + safeZoneW) - _mainW; // Find position Width away from right side
+_tempY = (safeZoneY + safeZoneH) - (_mainH + _backBottomH); // Find position Height away from bottom
+//_xDiff = _tempX - _mainX; // Find difference between mainX and tempX
+//_yDiff = _tempY - _mainY; // Find difference between mainY and tempY
 
-//_newX = _mainX + _xDiff;	// Add difference to the main X
-//_newY = _mainY + _yDiff;	// Add difference to the main Y
+//_newX = _mainX + _xDiff; // Add difference to the main X
+//_newY = _mainY + _yDiff; // Add difference to the main Y
 //--- Move the mission control
 //_ctrlMission ctrlSetPosition [_tempX, _tempY];
 _ctrlMission ctrlSetPosition [_tempX+3, _tempY+3]; // Removes the whole block completely
@@ -69,7 +69,7 @@ _ctrlMission ctrlCommit 0;
 
 _nul = {
     _control = _x;
-    _pos = ctrlPosition _control;	//x,y,w,h
+    _pos = ctrlPosition _control; //x,y,w,h
     _pos params ["_moveX","_moveY","_moveW","_moveH"];
     _newX = _moveX + 10;
     _newY = _moveY + 10;

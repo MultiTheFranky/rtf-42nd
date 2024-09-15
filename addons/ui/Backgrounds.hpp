@@ -7,10 +7,34 @@ class GVAR(Backgrounds) {
         height = 1024;
     };
 
+   class GVAR(ally) {
+        name = QUOTE(Ally);
+        path = QPATHTOF(data\backgrounds\ally.paa);
+        author = QUOTE(Marquez);
+        width = 2048;
+        height = 1024;
+    };
+
    class GVAR(bad_guys) {
         name = QUOTE(Bad Guys);
         path = QPATHTOF(data\backgrounds\bad_guys.paa);
         author = QUOTE(Chef);
+        width = 2048;
+        height = 1024;
+    };
+
+   class GVAR(bit) {
+        name = QUOTE(Bit);
+        path = QPATHTOF(data\backgrounds\bit.paa);
+        author = QUOTE(West);
+        width = 2048;
+        height = 1024;
+    };
+
+   class GVAR(carryon) {
+        name = QUOTE(Carryon);
+        path = QPATHTOF(data\backgrounds\carryon.paa);
+        author = QUOTE(West);
         width = 2048;
         height = 1024;
     };

@@ -56,5 +56,5 @@ runs:
           run: echo "CDN_URL=${{inputs.CDN_URL}}" >> ${{ github.workspace }}\\tools\\getBackgrounds\\.env
           shell: pwsh
         - name: Run getBackgrounds
-          run: cd ${{ github.workspace }}\\tools\\getBackgrounds && npm start
+          run: cd ${{ github.workspace }}\\tools\\getBackgrounds && npm run onlyDownload
           shell: pwsh

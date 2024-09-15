@@ -2,8 +2,7 @@
 *.zip
 release/*
 releases/*
-extensions/*/bin/*
-extensions/*/obj/*
+extensions/**/tests.rs
 .vscode/*
 tools/temp
 *.cache

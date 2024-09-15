@@ -5,19 +5,6 @@ rem call mountDev.bat
 rem create a loop
 :fullLoop
 
-rem Execute buildExtensions.bat
-rem call buildExtensions.bat
-
-rem call buildTranslations.bat
-
-rem call buildMusic.bat
-
-rem call buildVideos.bat
-
-rem call buildImages.bat
-
-:loopRestartOnly
-
 rem Check if HEMMT is installed
 if not exist hemtt.exe (
   echo Hemtt is not installed, please check the README.
@@ -43,14 +30,12 @@ rem close the monitoring script
 taskkill /fi "WindowTitle eq Arma 3 Monitoring - monitoringLogs.bat" >nul
 
 rem Restart options
-ECHO 1.Build Extensions, Rebuild and Restart
-ECHO 2.Restart only
-ECHO 3.Close
+ECHO 1.Restart
+ECHO 2.Close
 ECHO.
 
 CHOICE /C 123 /M "Select an option: "
-IF ERRORLEVEL 3 GOTO stopDebug
-IF ERRORLEVEL 2 GOTO loopRestartOnly
+IF ERRORLEVEL 2 GOTO stopDebug
 IF ERRORLEVEL 1 GOTO fullLoop
 
 :stopDebug

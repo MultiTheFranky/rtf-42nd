@@ -13,10 +13,10 @@ class RscDisplayMain: RscStandardDisplay {
         };
         class BackgroundLeft: RscText {
             colorBackground[] = {0.1,0.1,0.1,1};
-            x = "-	10";
-            y = "-	10";
-            w = "safezoneX + 	10";
-            h = "2 * 	10";
+            x = "- 10";
+            y = "- 10";
+            w = "safezoneX +  10";
+            h = "2 *  10";
         };
         class BackgroundRight: BackgroundLeft {
             x = "safezoneX + safezoneW";
@@ -36,16 +36,16 @@ class RscDisplayMain: RscStandardDisplay {
             text = QPATHTOF(data\logo_rtf42_ca.paa);
             tooltip = "Connect to the 42nd R.T.F. server";
             onButtonClick = "[_this select 0] call (uiNamespace getVariable 'rtf42_ui_fnc_connectToServer')";
-			soundClick[] = {};
-			soundEnter[] = {};
+            soundClick[] = {};
+            soundEnter[] = {};
             onLoad = "";
             color[] = {0.9,0.9,0.9,1};
             colorActive[] = {1,1,1,1};
             shadow = 0;
-            x = "0.5 - 	2.3 * 	(pixelW * pixelGrid * 2)";
-            y = "safezoneY + (3 - 0.5 * 	5) * 	(pixelH * pixelGrid * 2)";
-            w = "1 * 	5 * 	(pixelW * pixelGrid * 2)";
-            h = "1 * 	5 * 	(pixelH * pixelGrid * 2)";
+            x = "0.5 -  2.3 *  (pixelW * pixelGrid * 2)";
+            y = "safezoneY + (3 - 0.5 *  5) *  (pixelH * pixelGrid * 2)";
+            w = "1 *  5 *  (pixelW * pixelGrid * 2)";
+            h = "1 *  5 *  (pixelH * pixelGrid * 2)";
         };
         class LogoApex: Logo {};
         delete SpotlightNext;

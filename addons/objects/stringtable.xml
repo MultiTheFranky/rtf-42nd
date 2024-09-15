@@ -57,5 +57,9 @@
             <English>Turn off radio</English>
             <Spanish>Apagar la radio</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_ReinforcedDoorDisplayName">
+            <English>Reinforced Door</English>
+            <Spanish>Puerta reforzada</Spanish>
+        </Key>
     </Package>
 </Project>

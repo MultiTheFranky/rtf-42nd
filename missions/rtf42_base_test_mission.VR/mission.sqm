@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=122;
+		nextID=123;
 	};
 	class LayerIndexProvider
 	{
-		nextID=88;
+		nextID=92;
 	};
 	class Camera
 	{
-		pos[]={4180.4746,14.269526,799.71741};
-		dir[]={-0.3755821,-0.47775716,-0.79415756};
-		up[]={-0.20425576,0.87849194,-0.43189293};
-		aside[]={-0.904001,0,0.42753047};
+		pos[]={4179.083,8.3593836,776.7406};
+		dir[]={-0.030928856,-0.37543198,0.92639995};
+		up[]={-0.012530807,0.92682934,0.37526804};
+		aside[]={0.99949771,9.9241197e-007,0.033372305};
 	};
 };
 binarizationWanted=0;
@@ -488,7 +488,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			dataType="Layer";
@@ -1003,6 +1003,21 @@ class Mission
 			};
 			id=121;
 			type="CUP_O_SearchLight_static_TK";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4180.6382,6.2136574,782.76477};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=122;
+			type="rtf42_objects_ReinforcedDoor";
 		};
 	};
 };

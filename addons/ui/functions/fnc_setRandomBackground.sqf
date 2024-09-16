@@ -19,9 +19,15 @@
 
 params ["_idc", "_display", "_control", "_random", "_background"];
 
+#define RTF42_BACKGROUND_LOGO QPATHTOF(data\background_main_ca.paa)
+
 with uiNamespace do {
     disableSerialization;
-    private _backgroundLast = uiNamespace getVariable "RTF42_BACKGROUND_LAST";
+    private _ctrlBackGround = _display displayCtrl _idc;
+    _ctrlBackGround ctrlSetText RTF42_BACKGROUND_LOGO;
+
+    // DISABLED BECAUSE RUBI DOESN'T LIKE IT (I WILL NEED TO KILL HIM 😂)
+   /*  private _backgroundLast = uiNamespace getVariable "RTF42_BACKGROUND_LAST";
 
     // Don't return other background if the actual background it's less than 30s
     if (!isNil "_backgroundLast" && {(diag_tickTime - _backgroundLast ) < 30}) exitWith {
@@ -62,5 +68,5 @@ with uiNamespace do {
         [_display, _background] call rtf42_ui_fnc_setBackgroundAuthor;
         uiNamespace setVariable ["RTF42_BACKGROUND_LAST", diag_tickTime];
         uiNamespace setVariable ["RTF42_BACKGROUND_LAST_BACKGROUND", _background];
-    };
+    }; */
 };

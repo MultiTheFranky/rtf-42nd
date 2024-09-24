@@ -195,7 +195,7 @@ class RscTitles {
         };
         class LegalText: RscStructuredText {
             idc = -1;
-            text = "327th Star Corps";
+            text = "";
             size = "0.02 * SafezoneH";
             shadow = 0;
             x = "SafeZoneX + SafeZoneW / 2 - (50 *   (0.01875 * SafezoneH)) / 2";

@@ -114,6 +114,14 @@ class radio_42ndoriginals_taylor_join {
     name = "Radio 42ndoriginals Taylor Join";
     value = QEGVAR(music,radio_42ndoriginals_taylor_join);
 };
+class radio_blacklabelsociety_stillborn {
+    name = "Radio Blacklabelsociety Stillborn";
+    value = QEGVAR(music,radio_blacklabelsociety_stillborn);
+};
+class radio_metallica_untillitsleeps {
+    name = "Radio Metallica Untillitsleeps";
+    value = QEGVAR(music,radio_metallica_untillitsleeps);
+};
 class sabaton_finalsolution {
     name = "Sabaton Finalsolution";
     value = QEGVAR(music,sabaton_finalsolution);

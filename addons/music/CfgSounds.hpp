@@ -145,6 +145,16 @@ class GVAR(radio_42ndoriginals_taylor_join) {
         sound[] = {QPATHTOF(data\radio_42ndoriginals_taylor_join.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(radio_blacklabelsociety_stillborn) {
+        name = QUOTE(Radio Blacklabelsociety Stillborn);
+        sound[] = {QPATHTOF(data\radio_blacklabelsociety_stillborn.ogg), 1, 1, 100};
+        titles[] = {};
+    };
+class GVAR(radio_metallica_untillitsleeps) {
+        name = QUOTE(Radio Metallica Untillitsleeps);
+        sound[] = {QPATHTOF(data\radio_metallica_untillitsleeps.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(sabaton_finalsolution) {
         name = QUOTE(Sabaton Finalsolution);
         sound[] = {QPATHTOF(data\sabaton_finalsolution.ogg), 1, 1, 100};

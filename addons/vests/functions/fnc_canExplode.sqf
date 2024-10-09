@@ -10,14 +10,14 @@
     *
     *
     * Example:
-    * [_player] call rtf42_vests_fnc_canExplode;
+    * [_target] call rtf42_vests_fnc_canExplode;
     *
     * Public: No
 */
 
-params ["_player"];
+params ["_target"];
 
 // Check if the vest is "rtf42_vests_SuicideVest" or "rtf42_vests_MiniSuicideVest"
 
-(vest _player) isEqualTo "rtf42_vests_SuicideVest" || (vest _player) isEqualTo "rtf42_vests_MiniSuicideVest"
+(vest _target) isEqualTo "rtf42_vests_SuicideVest" || (vest _target) isEqualTo "rtf42_vests_MiniSuicideVest"
 

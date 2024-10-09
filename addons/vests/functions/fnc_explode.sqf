@@ -10,24 +10,24 @@
     *
     *
     * Example:
-    * [_player] call rtf42_vests_fnc_explode;
+    * [_target] call rtf42_vests_fnc_explode;
     *
     * Public: No
 */
 
-params ["_player"];
+params ["_target"];
 
-switch (vest _player) do {
+switch (vest _target) do {
     case "rtf42_vests_SuicideVest": {
-        _player spawn {
-            playSound3D [QPATHTOF(data\vest_sound.ogg), _this];
+        _target spawn {
+            playSound3D [QPATHTOF(data\vest_sound.ogg), objNull, true, getPosASL _this];
             sleep 1;
             ("DemoCharge_Remote_Ammo_Scripted" createVehicle (position _this)) setDamage 1;
         };
     };
     case "rtf42_vests_MiniSuicideVest": {
-        _player spawn {
-            playSound3D [QPATHTOF(data\vest_sound.ogg), _this];
+        _target spawn {
+            playSound3D [QPATHTOF(data\vest_sound.ogg), objNull, true, getPosASL _this];
             sleep 1;
             ("ClaymoreDirectionalMine_Remote_Ammo_Scripted" createVehicle (position _this)) setDamage 1;
         };
@@ -36,7 +36,7 @@ switch (vest _player) do {
 };
 
 // Remove the vest
-removeVest _player;
+removeVest _target;
 
 
 

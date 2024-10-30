@@ -60,7 +60,7 @@ class CfgVehicles {
         editorSubcategory = QEGVAR(main,Static);
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                magazines[] = {"8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_Smoke_white","8Rnd_82mm_Mo_Smoke_white"};
+                magazines[] = {"8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_Smoke_white","8Rnd_82mm_Mo_Smoke_white"};
                 weapons[] = {QGVAR(mortar_82mm)};
             };
         };

@@ -52,10 +52,10 @@ waitUntil {
     count (waypoints (group _agent)) == 0  || 
     !alive _agent ||
     isNull _agent ||
-    vehicle _agent == _agent ||
+    (isNull objectParent _agent) ||
     (_vehicle getVariable [QGVAR(agentLastPosition), [0,0,0]]) isEqualTo (getPos _vehicle)
 };
-if (!alive _agent || isNull _agent || vehicle _agent == _agent) exitWith {};
+if (!alive _agent || isNull _agent || (isNull objectParent _agent)) exitWith {};
 if ((_vehicle getVariable [QGVAR(agentLastPosition), [0,0,0]]) isEqualTo (getPos _vehicle)) then {
     _vehicle setVelocityModelSpace [0,2,0];
 };

@@ -5,6 +5,10 @@
             <English>AT</English>
             <Spanish>AT</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Units_leader_DisplayName">
+            <English>Leader</English>
+            <Spanish>Líder</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Units_lmg_DisplayName">
             <English>Light Machine Gun</English>
             <Spanish>Ametrallador Ligero</Spanish>
@@ -12,6 +16,10 @@
         <Key ID="STR_RTF42_Units_officer_DisplayName">
             <English>Officer</English>
             <Spanish>Oficial</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_operator_DisplayName">
+            <English>Operator</English>
+            <Spanish>Operador</Spanish>
         </Key>
         <Key ID="STR_RTF42_Units_paramedic_DisplayName">
             <English>Paramedic</English>
@@ -36,14 +44,6 @@
         <Key ID="STR_RTF42_Units_tl_DisplayName">
             <English>Team Leader</English>
             <Spanish>Líder de Equipo</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Units_leader_DisplayName">
-            <English>Leader</English>
-            <Spanish>Líder</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Units_operator_DisplayName">
-            <English>Operator</English>
-            <Spanish>Operador</Spanish>
         </Key>
     </Package>
 </Project>

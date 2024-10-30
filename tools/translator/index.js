@@ -1,16 +1,16 @@
-const axios = require('axios').default;
+const axios = require("axios").default;
 
 if (!process.env.TOLGEE_URL) {
-    throw new Error('TOLGEE_URL is not set');
+    throw new Error("TOLGEE_URL is not set");
 }
 
 if (!process.env.TOLGEE_API_KEY) {
-    throw new Error('TOLGEE_API_KEY is not set');
+    throw new Error("TOLGEE_API_KEY is not set");
 }
 
 const locales = new Map([
-    ['en', 'English'],
-    ['es-ES', 'Spanish']
+    ["en", "English"],
+    ["es-ES", "Spanish"],
 ]);
 
 /**
@@ -29,18 +29,23 @@ const getAllTranslations = async () => {
     let lastPage = 0;
 
     while (true) {
-        const response = await axios.get(`${process.env.TOLGEE_URL}/v2/projects/translations?${locales.map(locale => `locales=${locale}`).join('&')}&size=${size}&page=${lastPage}&sort=desc`, {
-            headers: {
-                'X-API-Key': process.env.TOLGEE_API_KEY
+        const response = await axios.get(
+            `${process.env.TOLGEE_URL}/v2/projects/translations?${locales
+                .map((locale) => `locales=${locale}`)
+                .join("&")}&size=${size}&page=${lastPage}&sort=desc`,
+            {
+                headers: {
+                    "X-API-Key": process.env.TOLGEE_API_KEY,
+                },
             }
-        })
+        );
         const responseData = response.data;
-        if(!responseData._embedded) break;
+        if (!responseData._embedded) break;
         lastPage++;
         data.push(...responseData._embedded.keys);
     }
 
-    console.log(`Retrieved ${data.length} translations`)
+    console.log(`Retrieved ${data.length} translations`);
 
     return data;
 };
@@ -57,11 +62,33 @@ const mapTranslations = (translations) => {
             ...result[key.keyNamespace],
             [key.keyName]: {
                 en: key.translations.en.text,
-                'es-ES': key.translations['es-ES'].text
-            }
-        }
+                "es-ES": key.translations["es-ES"].text,
+            },
+        };
     }
-    return result;
+    // Order translations by keyName and keyNamespace
+    return orderTranslations(result);
+};
+
+const orderTranslations = (translations) => {
+    const ordered = {};
+    for (const keyNamespace in translations) {
+        ordered[keyNamespace] = {};
+        Object.keys(translations[keyNamespace])
+            .sort(
+                (a, b) => a.localeCompare(b, "en", { sensitivity: "base" }) || 0
+            )
+            .forEach((keyName) => {
+                ordered[keyNamespace][keyName] =
+                    translations[keyNamespace][keyName];
+            });
+    }
+    return Object.keys(ordered)
+        .sort()
+        .reduce((acc, key) => {
+            acc[key] = ordered[key];
+            return acc;
+        }, {});
 };
 
 /**
@@ -79,38 +106,45 @@ const getXMLFromMap = (translations) => {
             if (keyNamespace !== keyNamespaceTop) continue;
             xml.push(`    <Package name="${keyNamespace}">`);
             for (const keyName in translations[keyNamespace]) {
-                xml.push(`        <Key ID="STR_RTF42_${keyNamespace}_${keyName}">`);
+                xml.push(
+                    `        <Key ID="STR_RTF42_${keyNamespace}_${keyName}">`
+                );
                 for (const locale in translations[keyNamespace][keyName]) {
-                    xml.push(`            <${locales.get(locale)}>${translations[keyNamespace][keyName][locale]}</${locales.get(locale)}>`);
+                    xml.push(
+                        `            <${locales.get(locale)}>${
+                            translations[keyNamespace][keyName][locale]
+                        }</${locales.get(locale)}>`
+                    );
                 }
-                xml.push('        </Key>');
+                xml.push("        </Key>");
             }
-            xml.push('    </Package>');
+            xml.push("    </Package>");
         }
-        xml.push('</Project>');
-        totalXML.set(keyNamespaceTop.toLowerCase(), xml.join('\n'));
+        xml.push("</Project>");
+        totalXML.set(keyNamespaceTop.toLowerCase(), xml.join("\n"));
     }
     return totalXML;
-}
-
+};
 
 /**
  * Writes the translations to stringtable.xml files.
  * @param {Map<string, string>} translations - The translations to write.
  */
 const writeStringtable = (translations) => {
-    const fs = require('fs');
+    const fs = require("fs");
     for (const [key, value] of translations.entries()) {
         try {
             fs.writeFileSync(`../../addons/${key}/stringtable.xml`, value);
         } catch (error) {}
     }
-}
+};
 
 /**
  * Main function.
  */
 
 (async () => {
-    writeStringtable(getXMLFromMap(mapTranslations(await getAllTranslations())));
+    writeStringtable(
+        getXMLFromMap(mapTranslations(await getAllTranslations()))
+    );
 })();

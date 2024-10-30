@@ -5,3 +5,6 @@
 [sqf.banned_commands]
 options.banned = ["execVM"]
 options.ignore = ["createSoundSource"]
+
+[sqf.var_all_caps]
+options.ignore = ["ACE_RECOMPILES", "ACE_PREP_RECOMPILE"]

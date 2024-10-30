@@ -18,11 +18,6 @@ rem call buildImages.bat
 
 :loopRestartOnly
 
-rem Check if HEMMT is installed
-if not exist hemtt.exe (
-  echo Hemtt is not installed, please check the README.
-  exit
-)
 hemtt launch
 
 rem sleep for 5 seconds

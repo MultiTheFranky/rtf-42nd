@@ -9,13 +9,13 @@
             <English>Explode!</English>
             <Spanish>Explotar!</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Vests_SuicideVestDisplayName">
-            <English>Suicide Vest</English>
-            <Spanish>Chaleco Explosivo</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Vests_MiniSuicideVestDisplayName">
             <English>Mini Suicidal Vest</English>
             <Spanish>Chaleco Explosivo Pequeño</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Vests_SuicideVestDisplayName">
+            <English>Suicide Vest</English>
+            <Spanish>Chaleco Explosivo</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1,45 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Interrogation">
-        <Key ID="STR_RTF42_Interrogation_DisplayName">
-            <English>Interrogation</English>
-            <Spanish>Interrogación</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_EnabledDisplayName">
-            <English>Enabled</English>
-            <Spanish>Activado</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_EnabledDescription">
-            <English>Do you want to activate this module?</English>
-            <Spanish>¿Quieres activar este módulo?</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_AnswerDisplayName">
-            <English>Answer</English>
-            <Spanish>Respuesta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_AnswerDescription">
-            <English>Answer that the civilians will answers when an interrogator success.</English>
-            <Spanish>Respuesta que dará un civil cuando la interrogación sea fructífera.</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_SuccessChanceDisplayName">
-            <English>Success Chance</English>
-            <Spanish>Porcentaje de acierto</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_ImproveChanceDisplayName">
-            <English>Improve Chance</English>
-            <Spanish>Mejorar la probabilidad</Spanish>
+        <Key ID="STR_RTF42_Interrogation_AmountOfImproveDescription">
+            <English>Percentage of improvement on the chance of answer</English>
+            <Spanish>Porcentaje de mejora sobre la probabilidad de respuesta</Spanish>
         </Key>
         <Key ID="STR_RTF42_Interrogation_AmountOfImproveDisplayName">
             <English>Amount of improvement</English>
             <Spanish>Cantidad de mejora</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Interrogation_CooldownMinDisplayName">
-            <English>Min. Cooldown</English>
-            <Spanish>Enfriamiento mínimo</Spanish>
+        <Key ID="STR_RTF42_Interrogation_AnswerDescription">
+            <English>Answer that the civilians will answers when an interrogator success.</English>
+            <Spanish>Respuesta que dará un civil cuando la interrogación sea fructífera.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_AnswerDisplayName">
+            <English>Answer</English>
+            <Spanish>Respuesta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CivilDisplayName">
+            <English>Civil</English>
+            <Spanish>Civil</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMaxDescription">
+            <English>Maximum time that the cooldown will be take between answers</English>
+            <Spanish>Tiempo máximo que tomará el tiempo de reutilización entre respuestas</Spanish>
         </Key>
         <Key ID="STR_RTF42_Interrogation_CooldownMaxDisplayName">
             <English>Max. Cooldown</English>
             <Spanish>Enfriamiento máximo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMinDescription">
+            <English>Minimum time that the cooldown will be take between answers</English>
+            <Spanish>Tiempo mínimo que tomará el tiempo de reutilización entre respuestas.</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_CooldownMinDisplayName">
+            <English>Min. Cooldown</English>
+            <Spanish>Enfriamiento mínimo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_DisplayName">
+            <English>Interrogation</English>
+            <Spanish>Interrogación</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_DisplayNamePrisoner">
+            <English>Prisoner Interrogation</English>
+            <Spanish>Interrogatorio de prisioneros</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_EnabledDescription">
+            <English>Do you want to activate this module?</English>
+            <Spanish>¿Quieres activar este módulo?</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_EnabledDisplayName">
+            <English>Enabled</English>
+            <Spanish>Activado</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_ImproveChanceDescription">
+            <English>Do you want to be able to give MRE to the civilians to improve the chances of a better answer?</English>
+            <Spanish>¿Quiere poder brindar MRE a los civiles para mejorar las posibilidades de una mejor respuesta?</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Interrogation_ImproveChanceDisplayName">
+            <English>Improve Chance</English>
+            <Spanish>Mejorar la probabilidad</Spanish>
         </Key>
         <Key ID="STR_RTF42_Interrogation_InterrogateAction">
             <English>Interrogate</English>
@@ -53,33 +73,13 @@
             <English>What is this? It's for me? Thanks!</English>
             <Spanish>¿Qué es esto? ¿Es para mí? ¡Gracias!</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Interrogation_CivilDisplayName">
-            <English>Civil</English>
-            <Spanish>Civil</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Interrogation_SuccessChanceDescription">
             <English>Probability of this answer to be answer by the civilian</English>
             <Spanish>Probabilidad de que esta respuesta sea respondida por el civil.</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Interrogation_ImproveChanceDescription">
-            <English>Do you want to be able to give MRE to the civilians to improve the chances of a better answer?</English>
-            <Spanish>¿Quiere poder brindar MRE a los civiles para mejorar las posibilidades de una mejor respuesta?</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_AmountOfImproveDescription">
-            <English>Percentage of improvement on the chance of answer</English>
-            <Spanish>Porcentaje de mejora sobre la probabilidad de respuesta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_CooldownMinDescription">
-            <English>Minimum time that the cooldown will be take between answers</English>
-            <Spanish>Tiempo mínimo que tomará el tiempo de reutilización entre respuestas.</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_CooldownMaxDescription">
-            <English>Maximum time that the cooldown will be take between answers</English>
-            <Spanish>Tiempo máximo que tomará el tiempo de reutilización entre respuestas</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Interrogation_DisplayNamePrisoner">
-            <English>Prisoner Interrogation</English>
-            <Spanish>Interrogatorio de prisioneros</Spanish>
+        <Key ID="STR_RTF42_Interrogation_SuccessChanceDisplayName">
+            <English>Success Chance</English>
+            <Spanish>Porcentaje de acierto</Spanish>
         </Key>
     </Package>
 </Project>

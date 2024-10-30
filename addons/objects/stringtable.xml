@@ -5,33 +5,25 @@
             <English>Cards</English>
             <Spanish>Cartas</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Objects_SeeCards">
-            <English>See cards</English>
-            <Spanish>Ver cartas</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Objects_Explode">
-            <English>Explode</English>
-            <Spanish>Explotar</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Objects_CeilingLampDisplayName">
             <English>Ceiling Lamp</English>
             <Spanish>Lámpara de Techo</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Objects_DoorDisplayName">
-            <English>Door</English>
-            <Spanish>Puerta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Objects_OpenDoorDisplayName">
-            <English>Open door</English>
-            <Spanish>Abrir puerta</Spanish>
         </Key>
         <Key ID="STR_RTF42_Objects_CloseDoorDisplayName">
             <English>Close door</English>
             <Spanish>Cerrar puerta</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Objects_SpeakerDisplayName">
-            <English>Speaker</English>
-            <Spanish>Altavoz</Spanish>
+        <Key ID="STR_RTF42_Objects_DoorDisplayName">
+            <English>Door</English>
+            <Spanish>Puerta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_Explode">
+            <English>Explode</English>
+            <Spanish>Explotar</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_OpenDoorDisplayName">
+            <English>Open door</English>
+            <Spanish>Abrir puerta</Spanish>
         </Key>
         <Key ID="STR_RTF42_Objects_PlayRadio">
             <English>Play radio</English>
@@ -49,17 +41,25 @@
             <English>The song that you want to play on the radio</English>
             <Spanish>La canción que quieres que suene en la radio.</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Objects_TurnOnRadio">
-            <English>Turn on radio</English>
-            <Spanish>Encender la radio</Spanish>
+        <Key ID="STR_RTF42_Objects_ReinforcedDoorDisplayName">
+            <English>Reinforced Door</English>
+            <Spanish>Puerta reforzada</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_SeeCards">
+            <English>See cards</English>
+            <Spanish>Ver cartas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_SpeakerDisplayName">
+            <English>Speaker</English>
+            <Spanish>Altavoz</Spanish>
         </Key>
         <Key ID="STR_RTF42_Objects_TurnOffRadio">
             <English>Turn off radio</English>
             <Spanish>Apagar la radio</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Objects_ReinforcedDoorDisplayName">
-            <English>Reinforced Door</English>
-            <Spanish>Puerta reforzada</Spanish>
+        <Key ID="STR_RTF42_Objects_TurnOnRadio">
+            <English>Turn on radio</English>
+            <Spanish>Encender la radio</Spanish>
         </Key>
     </Package>
 </Project>

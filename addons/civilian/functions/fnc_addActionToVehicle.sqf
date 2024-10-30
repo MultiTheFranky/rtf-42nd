@@ -27,7 +27,7 @@ private _actions = createHashMapFromArray [ // HashMap of Actions <STRING, ARRAY
             params ["_target"];
             private _driver = (driver _target);
             doGetOut _driver;
-            waitUntil {isNull driver _target && vehicle _driver == _driver};
+            waitUntil {isNull driver _target && (isNull objectParent _driver)};
             [_driver, true] call ACE_captives_fnc_setSurrendered;
             waitUntil {!(isNull driver _target)};
             if (!(isPlayer driver _target)) then {

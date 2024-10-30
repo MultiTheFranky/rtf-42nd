@@ -5,61 +5,61 @@
             <English>42nd RTF Team</English>
             <Spanish>Equipo 42nd RTF</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Main_FactionDisplayName">
-            <English>42nd RTF</English>
-            <Spanish>42nd RTF</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Main_VehicleDisplayName">
-            <English>42nd RTF Vehicles</English>
-            <Spanish>Vehículos 42nd RTF </Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Main_SubcategoryInfantryDisplayName">
-            <English>Infantry</English>
-            <Spanish>Infantería</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Main_ModulesDisplayName">
-            <English>RTF42 Modules</English>
-            <Spanish>Módulos RTF42</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Main_CategoryItemsDisplayName">
             <English>42nd R.T.F</English>
             <Spanish>42nd R.T.F</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Main_SubcategoryVehiclesDisplayName">
-            <English>Vehicles</English>
-            <Spanish>Vehículos</Spanish>
+        <Key ID="STR_RTF42_Main_FactionDisplayName">
+            <English>42nd RTF</English>
+            <Spanish>42nd RTF</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Main_SubcategoryAircraftDisplayName">
-            <English>Planes</English>
-            <Spanish>Aviones</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Main_SubcategoryStaticDisplayName">
-            <English>Static</English>
-            <Spanish>Estáticas</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Main_SubcategoryPropsDisplayName">
+        <Key ID="STR_RTF42_Main_FactionPropsDisplayName">
             <English>Props</English>
             <Spanish>Props</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Main_SubcategoryLightsDisplayName">
-            <English>Lights</English>
-            <Spanish>Luces</Spanish>
         </Key>
         <Key ID="STR_RTF42_Main_GreenBeret">
             <English>Green Beret</English>
             <Spanish>Boinas Verdes</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Main_ModulesDisplayName">
+            <English>RTF42 Modules</English>
+            <Spanish>Módulos RTF42</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryAircraftDisplayName">
+            <English>Planes</English>
+            <Spanish>Aviones</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Main_SubcategoryGreenBeretDisplayName">
             <English>Green Beret</English>
             <Spanish>Boinas Verdes</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryInfantryDisplayName">
+            <English>Infantry</English>
+            <Spanish>Infantería</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryLightsDisplayName">
+            <English>Lights</English>
+            <Spanish>Luces</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryPropsDisplayName">
+            <English>Props</English>
+            <Spanish>Props</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryStaticDisplayName">
+            <English>Static</English>
+            <Spanish>Estáticas</Spanish>
         </Key>
         <Key ID="STR_RTF42_Main_SubcategoryStructureDisplayName">
             <English>Structures</English>
             <Spanish>Estructuras</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Main_FactionPropsDisplayName">
-            <English>Props</English>
-            <Spanish>Props</Spanish>
+        <Key ID="STR_RTF42_Main_SubcategoryVehiclesDisplayName">
+            <English>Vehicles</English>
+            <Spanish>Vehículos</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_VehicleDisplayName">
+            <English>42nd RTF Vehicles</English>
+            <Spanish>Vehículos 42nd RTF</Spanish>
         </Key>
     </Package>
 </Project>

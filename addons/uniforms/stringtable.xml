@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Uniforms">
-        <Key ID="STR_RTF42_Uniforms_mc_displayName">
-            <English>MultiCam</English>
-            <Spanish>MultiCam</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_mc_sleeve_displayName">
-            <English>MultiCam Sleeve</English>
-            <Spanish>MultiCam Manga Corta</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Uniforms_mc_beret_displayName">
             <English>MultiCam Green Beret</English>
             <Spanish>MultiCam Boina Verde</Spanish>
@@ -16,6 +8,14 @@
         <Key ID="STR_RTF42_Uniforms_mc_beret_sleeve_displayName">
             <English>MultiCam Green Beret Sleeve</English>
             <Spanish>MultiCam Boina Verde Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_mc_displayName">
+            <English>MultiCam</English>
+            <Spanish>MultiCam</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_mc_sleeve_displayName">
+            <English>MultiCam Sleeve</English>
+            <Spanish>MultiCam Manga Corta</Spanish>
         </Key>
     </Package>
 </Project>

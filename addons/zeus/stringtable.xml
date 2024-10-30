@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Zeus">
-        <Key ID="STR_RTF42_Zeus_ContextRadioZeusDisplayName">
-            <English>Radio</English>
-            <Spanish>Radio</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_ContextRadioZeusSetMusic">
-            <English>Change music</English>
-            <Spanish>Cambiar la música</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_ContextRadioZeusTurnOffRadio">
-            <English>Turn off radio</English>
-            <Spanish>Apagar la radio</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_ContextRadioZeusTurnOnRadio">
-            <English>Turn on radio</English>
-            <Spanish>Encender la radio</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_DisplayName">
-            <English>Zeus</English>
-            <Spanish>Zeus</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_GasZeusDisplayName">
-            <English>Gas</English>
-            <Spanish>Gas</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_HintCard">
-            <English>Hint cards</English>
-            <Spanish>Mostrar cartas</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_RadioMusic">
-            <English>Radio music</English>
-            <Spanish>Música de radio</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_SetInformantDisplayName">
-            <English>Set informant</English>
-            <Spanish>Establecer informante</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_SetInformantWithAnswersDisplayName">
-            <English>Set Informant with answers</English>
-            <Spanish>Establecer informante con preguntas</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Zeus_SetTranslatorDisplayName">
-            <English>Set translator</English>
-            <Spanish>Establecer traductor</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Zeus_aceshigh">
             <English>ACES HIGH</English>
             <Spanish>ACES HIGH</Spanish>
@@ -65,9 +21,29 @@
             <English>BIG BROTHER</English>
             <Spanish>BIG BROTHER</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusDisplayName">
+            <English>Radio</English>
+            <Spanish>Radio</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusSetMusic">
+            <English>Change music</English>
+            <Spanish>Cambiar la música</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusTurnOffRadio">
+            <English>Turn off radio</English>
+            <Spanish>Apagar la radio</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_ContextRadioZeusTurnOnRadio">
+            <English>Turn on radio</English>
+            <Spanish>Encender la radio</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Zeus_deathfromabove">
             <English>DEATH FROM ABOVE</English>
             <Spanish>DEATH FROM ABOVE</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_DisplayName">
+            <English>Zeus</English>
+            <Spanish>Zeus</Spanish>
         </Key>
         <Key ID="STR_RTF42_Zeus_fallguys">
             <English>FALL GUYS</English>
@@ -77,6 +53,10 @@
             <English>FOB</English>
             <Spanish>FOB</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_GasZeusDisplayName">
+            <English>Gas</English>
+            <Spanish>Gas</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Zeus_heavypuncher">
             <English>HEAVY PUNCHER</English>
             <Spanish>HEAVY PUNCHER</Spanish>
@@ -85,9 +65,29 @@
             <English>HERE COMES THE BOOM</English>
             <Spanish>HERE COMES THE BOOM</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Zeus_HintCard">
+            <English>Hint cards</English>
+            <Spanish>Mostrar cartas</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Zeus_medevac">
             <English>MEDEVAC</English>
             <Spanish>MEDEVAC</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_RadioMusic">
+            <English>Radio music</English>
+            <Spanish>Música de radio</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_SetInformantDisplayName">
+            <English>Set informant</English>
+            <Spanish>Establecer informante</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_SetInformantWithAnswersDisplayName">
+            <English>Set Informant with answers</English>
+            <Spanish>Establecer informante con preguntas</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Zeus_SetTranslatorDisplayName">
+            <English>Set translator</English>
+            <Spanish>Establecer traductor</Spanish>
         </Key>
         <Key ID="STR_RTF42_Zeus_starlink">
             <English>STARLINK</English>

@@ -26,6 +26,10 @@ class blacksabbath_warpigs {
     name = "Blacksabbath Warpigs";
     value = QEGVAR(music,blacksabbath_warpigs);
 };
+class bluesarraceno_dogsofwar {
+    name = "Bluesarraceno Dogsofwar";
+    value = QEGVAR(music,bluesarraceno_dogsofwar);
+};
 class bobdylan_masters_of_war {
     name = "Bobdylan Masters Of War";
     value = QEGVAR(music,bobdylan_masters_of_war);
@@ -149,6 +153,10 @@ class terminal_list_watchmedie {
 class the_adhan_call_to_prayer {
     name = "The Adhan Call To Prayer";
     value = QEGVAR(music,the_adhan_call_to_prayer);
+};
+class urbancountry_knifestone {
+    name = "Urbancountry Knifestone";
+    value = QEGVAR(music,urbancountry_knifestone);
 };
 class warrior_song {
     name = "Warrior Song";

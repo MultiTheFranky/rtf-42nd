@@ -61,8 +61,8 @@ const mapTranslations = (translations) => {
         result[key.keyNamespace] = {
             ...result[key.keyNamespace],
             [key.keyName]: {
-                en: key.translations.en.text,
-                "es-ES": key.translations["es-ES"].text,
+                en: key.translations.en.text.trim(),
+                "es-ES": key.translations["es-ES"].text.trim(),
             },
         };
     }
@@ -75,9 +75,7 @@ const orderTranslations = (translations) => {
     for (const keyNamespace in translations) {
         ordered[keyNamespace] = {};
         Object.keys(translations[keyNamespace])
-            .sort(
-                (a, b) => a.localeCompare(b, "en", { sensitivity: "base" }) || 0
-            )
+            .sort()
             .forEach((keyName) => {
                 ordered[keyNamespace][keyName] =
                     translations[keyNamespace][keyName];

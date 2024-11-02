@@ -17,13 +17,13 @@
             <English>Paramedic Backpack</English>
             <Spanish>Mochila paramédico</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Backpacks_Rifleman">
-            <English>Rifleman Backpack</English>
-            <Spanish>Mochila fusilero</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Backpacks_RTO">
             <English>RTO Backpack</English>
             <Spanish>Mochila Radio Operador</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Backpacks_Rifleman">
+            <English>Rifleman Backpack</English>
+            <Spanish>Mochila fusilero</Spanish>
         </Key>
         <Key ID="STR_RTF42_Backpacks_Sapper">
             <English>Sapper Backpack</English>
@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_RTF42_Backpacks_TeamLeader">
             <English>Team leader Backpack</English>
-            <Spanish>Mochila de líder de equipo </Spanish>
+            <Spanish>Mochila de líder de equipo</Spanish>
         </Key>
     </Package>
 </Project>

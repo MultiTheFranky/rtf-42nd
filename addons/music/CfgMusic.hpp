@@ -42,6 +42,12 @@ class GVAR(blacksabbath_warpigs) {
         duration = 48;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(bluesarraceno_dogsofwar) {
+        name = QUOTE(Bluesarraceno Dogsofwar);
+        sound[] = {QPATHTOF(data\bluesarraceno_dogsofwar.ogg), 1, 1};
+        duration = 173;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(bobdylan_masters_of_war) {
         name = QUOTE(Bobdylan Masters Of War);
         sound[] = {QPATHTOF(data\bobdylan_masters_of_war.ogg), 1, 1};
@@ -226,6 +232,12 @@ class GVAR(the_adhan_call_to_prayer) {
         name = QUOTE(The Adhan Call To Prayer);
         sound[] = {QPATHTOF(data\the_adhan_call_to_prayer.ogg), 1, 1};
         duration = 98;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(urbancountry_knifestone) {
+        name = QUOTE(Urbancountry Knifestone);
+        sound[] = {QPATHTOF(data\urbancountry_knifestone.ogg), 1, 1};
+        duration = 186;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(warrior_song) {

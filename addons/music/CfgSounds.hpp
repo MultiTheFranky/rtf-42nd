@@ -35,6 +35,11 @@ class GVAR(blacksabbath_warpigs) {
         sound[] = {QPATHTOF(data\blacksabbath_warpigs.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(bluesarraceno_dogsofwar) {
+        name = QUOTE(Bluesarraceno Dogsofwar);
+        sound[] = {QPATHTOF(data\bluesarraceno_dogsofwar.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(bobdylan_masters_of_war) {
         name = QUOTE(Bobdylan Masters Of War);
         sound[] = {QPATHTOF(data\bobdylan_masters_of_war.ogg), 1, 1, 100};
@@ -188,6 +193,11 @@ class GVAR(terminal_list_watchmedie) {
 class GVAR(the_adhan_call_to_prayer) {
         name = QUOTE(The Adhan Call To Prayer);
         sound[] = {QPATHTOF(data\the_adhan_call_to_prayer.ogg), 1, 1, 100};
+        titles[] = {};
+    };
+class GVAR(urbancountry_knifestone) {
+        name = QUOTE(Urbancountry Knifestone);
+        sound[] = {QPATHTOF(data\urbancountry_knifestone.ogg), 1, 1, 100};
         titles[] = {};
     };
 class GVAR(warrior_song) {

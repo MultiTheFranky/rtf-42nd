@@ -27,4 +27,4 @@ params ["_card"];
     3090
 ] spawn BIS_fnc_dynamicText;
 
-playMusic QEGVAR(music,"cardsound");
+playMusic QEGVAR(music,cardsound);

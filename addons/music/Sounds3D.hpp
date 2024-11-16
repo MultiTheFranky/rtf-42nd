@@ -34,6 +34,10 @@ class bobdylan_masters_of_war {
     name = "Bobdylan Masters Of War";
     value = QEGVAR(music,bobdylan_masters_of_war);
 };
+class cardsound {
+    name = "Cardsound";
+    value = QEGVAR(music,cardsound);
+};
 class childishgambino_this_is_america {
     name = "Childishgambino This Is America";
     value = QEGVAR(music,childishgambino_this_is_america);

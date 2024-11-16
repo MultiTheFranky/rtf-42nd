@@ -54,6 +54,12 @@ class GVAR(bobdylan_masters_of_war) {
         duration = 227;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(cardsound) {
+        name = QUOTE(Cardsound);
+        sound[] = {QPATHTOF(data\cardsound.ogg), 1, 1};
+        duration = 4;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(childishgambino_this_is_america) {
         name = QUOTE(Childishgambino This Is America);
         sound[] = {QPATHTOF(data\childishgambino_this_is_america.ogg), 1, 1};

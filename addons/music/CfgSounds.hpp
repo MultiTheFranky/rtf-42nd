@@ -45,6 +45,11 @@ class GVAR(bobdylan_masters_of_war) {
         sound[] = {QPATHTOF(data\bobdylan_masters_of_war.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(cardsound) {
+        name = QUOTE(Cardsound);
+        sound[] = {QPATHTOF(data\cardsound.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(childishgambino_this_is_america) {
         name = QUOTE(Childishgambino This Is America);
         sound[] = {QPATHTOF(data\childishgambino_this_is_america.ogg), 1, 1, 100};

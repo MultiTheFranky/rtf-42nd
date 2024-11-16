@@ -17,6 +17,4 @@
 
 params ["_card"];
 
-diag_log format ["rtf42_cards_fnc_seeCardGlobal: %1", _card];
-
 [_card] remoteExec [QFUNC(seeCardSimple), 0];

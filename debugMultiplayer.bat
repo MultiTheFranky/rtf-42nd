@@ -10,7 +10,7 @@ if not exist hemtt.exe (
 )
 
 rem Launch the HEMTT server
-hemtt launch server
+hemtt.exe launch server
 
 rem Check if the process gives an error
 if errorlevel 1 goto armaClosed
@@ -19,7 +19,7 @@ rem Sleep for 5 seconds
 timeout /t 5 >nul
 
 rem Launch the Arma 3 clients (2 clients)
-hemtt launch player -i 2 -Q
+hemtt.exe launch player -i 2 -Q
 
 rem sleep for 5 seconds
 timeout /t 5 >nul

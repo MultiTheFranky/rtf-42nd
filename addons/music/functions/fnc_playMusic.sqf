@@ -17,5 +17,5 @@
     * Public: No
 */
 if (typeName _this == "ARRAY" && hasInterface) then {
-    diag_log ("playmusic" callExtension ["play", _this]);
+    "playmusic" callExtension ["play", _this];
 }

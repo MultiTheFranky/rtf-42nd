@@ -15,5 +15,5 @@
     * Public: No
 */
 if (hasInterface) then {
-    diag_log ("playmusic" callExtension ["stop", []]);
+    "playmusic" callExtension ["stop", []];
 };

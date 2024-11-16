@@ -17,8 +17,11 @@ rem call buildVideos.bat
 rem call buildImages.bat
 
 :loopRestartOnly
-
-hemtt launch
+if not exist hemtt.exe (
+  echo Hemtt is not installed, please check the README.
+  exit
+)
+hemtt.exe launch
 
 rem sleep for 5 seconds
 timeout /t 5 >nul

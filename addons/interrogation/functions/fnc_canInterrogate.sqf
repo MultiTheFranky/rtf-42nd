@@ -18,7 +18,6 @@
 */
 
 params ["_target","_player"];
-diag_log format["%1 - %2 - %3",_target,_player, !(_target getVariable [QGVAR(cooldown), false])];
 GVAR(enabled) && {
     alive _target && 
     alive _player && 

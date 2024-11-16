@@ -119,6 +119,7 @@ const getXMLFromMap = (translations) => {
             xml.push("    </Package>");
         }
         xml.push("</Project>");
+        xml.push("");
         totalXML.set(keyNamespaceTop.toLowerCase(), xml.join("\n"));
     }
     return totalXML;

@@ -79,6 +79,7 @@
 ## Development
 
 ```bash
+ .\updateHemtt.bat
  .\debug.bat
 ```
 

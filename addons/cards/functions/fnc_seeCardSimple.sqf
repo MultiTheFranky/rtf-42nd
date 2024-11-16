@@ -27,6 +27,4 @@ params ["_card"];
     3090
 ] spawn BIS_fnc_dynamicText;
 
-// Play a sound based on the card name (if it exists) ("\z\rtf42\addons\cards\ui\starlink.jpg" -> "starlink")
-private _cardName = _card select [count "\z\rtf42\addons\cards\ui\", (count _card) - ((count "\z\rtf42\addons\cards\ui\") + count 4)];
-playMusic format [QEGVAR(music,%1), _cardName];
+playMusic QEGVAR(music,"cardsound");

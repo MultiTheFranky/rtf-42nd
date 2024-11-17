@@ -58,3 +58,12 @@ runs:
         - name: Run getBackgrounds
           run: cd ${{ github.workspace }}\\tools\\getBackgrounds && npm run onlyDownload
           shell: pwsh
+        - name: Install getCards
+          run: cd ${{ github.workspace }}\\tools\\getCards && npm install
+          shell: pwsh
+        - name: Fill .env file with secrets
+          run: echo "CDN_URL=${{inputs.CDN_URL}}" >> ${{ github.workspace }}\\tools\\getCards\\.env
+          shell: pwsh
+        - name: Run getCards
+          run: cd ${{ github.workspace }}\\tools\\getCards && npm run onlyDownload
+          shell: pwsh

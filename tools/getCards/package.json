@@ -1,0 +1,21 @@
+{
+    "name": "getcards",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "env-cmd node index.js",
+        "onlyDownload": "env-cmd node index.js --onlyDownload"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.6.2",
+        "jimp": "^1.6.0",
+        "sharp": "^0.33.5",
+        "ssh2-sftp-client": "^11.0.0"
+    },
+    "devDependencies": {
+        "env-cmd": "^10.1.0"
+    }
+}

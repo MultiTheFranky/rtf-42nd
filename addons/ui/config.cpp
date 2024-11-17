@@ -26,6 +26,7 @@ class RscActivePicture;
 
 // Override base classes
 #include "Backgrounds.hpp"
+#include "Cards.hpp"
 #include "CfgEventHandlers.hpp"
 #include "RcsDisplayMain.hpp"
 #include "RscDisplayPassword.hpp"

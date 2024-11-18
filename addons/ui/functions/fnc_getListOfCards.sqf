@@ -18,6 +18,6 @@
  private _cards = "true" configClasses (configFile >> QGVAR(Cards));
  private _list = [];
  {
-	 _list pushBack [configName (_x),getText(_x >> "name"),getText(_x >> "path")];
+     _list pushBack [configName (_x),getText(_x >> "name"),getText(_x >> "path")];
  } forEach _cards;
  _list

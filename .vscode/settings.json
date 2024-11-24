@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "extensions/iphostname/Cargo.toml",
+        "extensions/playmusic/Cargo.toml",
+    ]
+}

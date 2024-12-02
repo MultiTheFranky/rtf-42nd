@@ -29,7 +29,7 @@ private _activeLocations = [];
             _activeLocations pushBackUnique _x;
         };
     } forEach _locations;
-} forEach (call BIS_fnc_listPlayers);
+} forEach ((call BIS_fnc_listPlayers) select {alive _x});
 
 // Remove more elements than GVAR(maxNumberOfActiveLocations)
 if (count _activeLocations > GVAR(maxNumberOfActiveLocations)) then {

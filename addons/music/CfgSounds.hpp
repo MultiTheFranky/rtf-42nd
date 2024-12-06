@@ -30,6 +30,16 @@ class GVAR(any_given_day_unbreakable) {
         sound[] = {QPATHTOF(data\any_given_day_unbreakable.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(arabic_metal1) {
+        name = QUOTE(Arabic Metal1);
+        sound[] = {QPATHTOF(data\arabic_metal1.ogg), 1, 1, 100};
+        titles[] = {};
+    };
+class GVAR(arabic_metal2) {
+        name = QUOTE(Arabic Metal2);
+        sound[] = {QPATHTOF(data\arabic_metal2.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(blacksabbath_warpigs) {
         name = QUOTE(Blacksabbath Warpigs);
         sound[] = {QPATHTOF(data\blacksabbath_warpigs.ogg), 1, 1, 100};
@@ -88,6 +98,11 @@ class GVAR(hans_zimmer_the_rock_bso) {
 class GVAR(johnnycash_gods_gonna_cut_you__down) {
         name = QUOTE(Johnnycash Gods Gonna Cut You  Down);
         sound[] = {QPATHTOF(data\johnnycash_gods_gonna_cut_you__down.ogg), 1, 1, 100};
+        titles[] = {};
+    };
+class GVAR(lastknife_do_right) {
+        name = QUOTE(Lastknife Do Right);
+        sound[] = {QPATHTOF(data\lastknife_do_right.ogg), 1, 1, 100};
         titles[] = {};
     };
 class GVAR(linkinpark_bleeding_out) {
@@ -173,6 +188,11 @@ class GVAR(sabaton_finalsolution) {
 class GVAR(saintchaos_give_it_100) {
         name = QUOTE(Saintchaos Give It 100);
         sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1, 100};
+        titles[] = {};
+    };
+class GVAR(savoretti_soldiers_eyes) {
+        name = QUOTE(Savoretti Soldiers Eyes);
+        sound[] = {QPATHTOF(data\savoretti_soldiers_eyes.ogg), 1, 1, 100};
         titles[] = {};
     };
 class GVAR(score_bornforthis) {

@@ -36,6 +36,18 @@ class GVAR(any_given_day_unbreakable) {
         duration = 39;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(arabic_metal1) {
+        name = QUOTE(Arabic Metal1);
+        sound[] = {QPATHTOF(data\arabic_metal1.ogg), 1, 1};
+        duration = 90;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(arabic_metal2) {
+        name = QUOTE(Arabic Metal2);
+        sound[] = {QPATHTOF(data\arabic_metal2.ogg), 1, 1};
+        duration = 125;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(blacksabbath_warpigs) {
         name = QUOTE(Blacksabbath Warpigs);
         sound[] = {QPATHTOF(data\blacksabbath_warpigs.ogg), 1, 1};
@@ -106,6 +118,12 @@ class GVAR(johnnycash_gods_gonna_cut_you__down) {
         name = QUOTE(Johnnycash Gods Gonna Cut You  Down);
         sound[] = {QPATHTOF(data\johnnycash_gods_gonna_cut_you__down.ogg), 1, 1};
         duration = 135;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(lastknife_do_right) {
+        name = QUOTE(Lastknife Do Right);
+        sound[] = {QPATHTOF(data\lastknife_do_right.ogg), 1, 1};
+        duration = 207;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(linkinpark_bleeding_out) {
@@ -208,6 +226,12 @@ class GVAR(saintchaos_give_it_100) {
         name = QUOTE(Saintchaos Give It 100);
         sound[] = {QPATHTOF(data\saintchaos_give_it_100.ogg), 1, 1};
         duration = 79;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(savoretti_soldiers_eyes) {
+        name = QUOTE(Savoretti Soldiers Eyes);
+        sound[] = {QPATHTOF(data\savoretti_soldiers_eyes.ogg), 1, 1};
+        duration = 168;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(score_bornforthis) {

@@ -36,3 +36,4 @@ hemtt.exe
 !/addons/vests/data/vest_sound.ogg
 /addons/ui/data/backgrounds/*
 /addons/ui/data/cards/*
+!/tools/ffmpeg.exe

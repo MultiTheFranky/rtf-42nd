@@ -22,6 +22,14 @@ class any_given_day_unbreakable {
     name = "Any Given Day Unbreakable";
     value = QEGVAR(music,any_given_day_unbreakable);
 };
+class arabic_metal1 {
+    name = "Arabic Metal1";
+    value = QEGVAR(music,arabic_metal1);
+};
+class arabic_metal2 {
+    name = "Arabic Metal2";
+    value = QEGVAR(music,arabic_metal2);
+};
 class blacksabbath_warpigs {
     name = "Blacksabbath Warpigs";
     value = QEGVAR(music,blacksabbath_warpigs);
@@ -69,6 +77,10 @@ class hans_zimmer_the_rock_bso {
 class johnnycash_gods_gonna_cut_you__down {
     name = "Johnnycash Gods Gonna Cut You  Down";
     value = QEGVAR(music,johnnycash_gods_gonna_cut_you__down);
+};
+class lastknife_do_right {
+    name = "Lastknife Do Right";
+    value = QEGVAR(music,lastknife_do_right);
 };
 class linkinpark_bleeding_out {
     name = "Linkinpark Bleeding Out";
@@ -137,6 +149,10 @@ class sabaton_finalsolution {
 class saintchaos_give_it_100 {
     name = "Saintchaos Give It 100";
     value = QEGVAR(music,saintchaos_give_it_100);
+};
+class savoretti_soldiers_eyes {
+    name = "Savoretti Soldiers Eyes";
+    value = QEGVAR(music,savoretti_soldiers_eyes);
 };
 class score_bornforthis {
     name = "Score Bornforthis";

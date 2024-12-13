@@ -6,6 +6,7 @@ class GVAR(Door): House_F {
     editorCategory = QEGVAR(main,Items);
     editorSubcategory = QEGVAR(main,Structure);
     model = QPATHTOF(data\door\door.p3d);
+    editorPreview = QPATHTOF(ui\door_ca.jpg);
     class AnimationSources {
         class Door_source {
             source = QUOTE(user);

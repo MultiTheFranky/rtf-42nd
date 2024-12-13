@@ -6,7 +6,7 @@ class GVAR(Speaker): ThingX {
     vehicleClass = "Props";
     editorCategory = QEGVAR(main,Items);
     editorSubcategory = QEGVAR(main,Props);
-    editorPreview = QPATHTOF(ui\icon_speaker_ca.paa);
+    editorPreview = QPATHTOF(ui\icon_speaker_ca.jpg);
     hiddenSelections[] = {"screen"};
     hiddenSelectionsTextures[] = {"#(rgb,8,8,3)color(0,0,0,0)"}; // Black screen
     hiddenSelectionsMaterials[] = {"\a3\data_f\default.rvmat"};

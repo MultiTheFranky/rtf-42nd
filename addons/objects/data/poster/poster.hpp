@@ -3,7 +3,7 @@ class GVAR(Poster_01): UserTexture1m_F {
     scope = 2;
     scopeCurator = 2;
     displayName = "Poster 01";
-    editorPreview = QPATHTOF(data\poster\poster_01_ca.paa);
+    editorPreview = QPATHTOF(data\poster\poster_01_ca.jpg);
     hiddenSelectionsTextures[] = {QPATHTOF(data\poster\poster_01_ca.paa)};
     author = ECSTRING(main,Author);
     vehicleClass = "Signs";

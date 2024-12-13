@@ -6,6 +6,7 @@ class GVAR(CeilingLamp): Lamps_base_F {
     vehicleClass = "Cargo";
     editorCategory = QEGVAR(main,Items);
     editorSubcategory = QEGVAR(main,Lights);
+    editorPreview = QPATHTOF(ui\ceiling_lamp_ca.jpg);
     model = QPATHTOF(data\ceiling_lamp\ceiling_lamp.p3d);
     _generalMacro = QGVAR(CeilingLamp);
     aggregateReflectors[] = {{"Light_1"}};

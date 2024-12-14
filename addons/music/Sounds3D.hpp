@@ -82,6 +82,10 @@ class lastknife_do_right {
     name = "Lastknife Do Right";
     value = QEGVAR(music,lastknife_do_right);
 };
+class linkin_park_figure9 {
+    name = "Linkin Park Figure9";
+    value = QEGVAR(music,linkin_park_figure9);
+};
 class linkinpark_bleeding_out {
     name = "Linkinpark Bleeding Out";
     value = QEGVAR(music,linkinpark_bleeding_out);

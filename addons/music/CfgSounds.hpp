@@ -105,6 +105,11 @@ class GVAR(lastknife_do_right) {
         sound[] = {QPATHTOF(data\lastknife_do_right.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(linkin_park_figure9) {
+        name = QUOTE(Linkin Park Figure9);
+        sound[] = {QPATHTOF(data\linkin_park_figure9.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(linkinpark_bleeding_out) {
         name = QUOTE(Linkinpark Bleeding Out);
         sound[] = {QPATHTOF(data\linkinpark_bleeding_out.ogg), 1, 1, 100};

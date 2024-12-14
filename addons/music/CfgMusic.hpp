@@ -126,6 +126,12 @@ class GVAR(lastknife_do_right) {
         duration = 207;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(linkin_park_figure9) {
+        name = QUOTE(Linkin Park Figure9);
+        sound[] = {QPATHTOF(data\linkin_park_figure9.ogg), 1, 1};
+        duration = 198;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(linkinpark_bleeding_out) {
         name = QUOTE(Linkinpark Bleeding Out);
         sound[] = {QPATHTOF(data\linkinpark_bleeding_out.ogg), 1, 1};

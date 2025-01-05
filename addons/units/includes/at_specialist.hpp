@@ -1,4 +1,4 @@
-class GVAR(at_specialist): B_CTRG_soldier_GL_LAT_F {
+class GVAR(at_specialist): tweed_acu_summer_ocp_crye_knee_jedi {
     _generalMacro = QGVAR(at_specialist);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,8 +6,6 @@ class GVAR(at_specialist): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(at_specialist_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
-    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,at_specialist_primaryWeapon),QEGVAR(weapons,at_specialist_secondaryWeapon),QEGVAR(weapons,at_specialist_launcher),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,at_specialist_primaryWeapon),QEGVAR(weapons,at_specialist_secondaryWeapon),QEGVAR(weapons,at_specialist_launcher),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,at_specialist);

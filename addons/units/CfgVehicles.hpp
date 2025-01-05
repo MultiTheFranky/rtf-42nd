@@ -1,6 +1,10 @@
 class CBA_Extended_EventHandlers;
 class CfgVehicles {
-    class B_CTRG_soldier_GL_LAT_F;
+    class tweed_acu_summer_ocp_crye_knee_jedi;
+    class tweed_acu_summer_ocp_crye_knee;
+    class tweed_acu_summer_ocp_crye_knee_trop;
+    class tweed_acu_summer_ocp_blench_tuck_trop;
+
     #include "includes\at_specialist.hpp"
     #include "includes\breacher.hpp"
     #include "includes\combat_medic.hpp"
@@ -15,7 +19,6 @@ class CfgVehicles {
     #include "includes\sl.hpp"
     #include "includes\tl.hpp"
     #include "includes\wvm.hpp"
-
 
     #include "includes\cup_compatibility.hpp"
 

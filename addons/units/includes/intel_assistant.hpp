@@ -1,4 +1,4 @@
-class GVAR(intel_assistant): B_CTRG_soldier_GL_LAT_F {
+class GVAR(intel_assistant): tweed_acu_summer_ocp_crye_knee {
     _generalMacro = QGVAR(intel_assistant);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,8 +6,6 @@ class GVAR(intel_assistant): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(intel_assistant_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
-    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,intel_assistant_primaryWeapon),QEGVAR(weapons,intel_assistant_secondaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,intel_assistant_primaryWeapon),QEGVAR(weapons,intel_assistant_secondaryWeapon),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,intel_assistant);

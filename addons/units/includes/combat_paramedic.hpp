@@ -1,4 +1,4 @@
-class GVAR(combat_paramedic): B_CTRG_soldier_GL_LAT_F {
+class GVAR(combat_paramedic): tweed_acu_summer_ocp_crye_knee {
     _generalMacro = QGVAR(combat_paramedic);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,8 +6,6 @@ class GVAR(combat_paramedic): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(combat_paramedic_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
-    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,combat_paramedic_primaryWeapon),QEGVAR(weapons,combat_paramedic_secondaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,combat_paramedic_primaryWeapon),QEGVAR(weapons,combat_paramedic_secondaryWeapon),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,combat_paramedic);

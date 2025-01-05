@@ -1,4 +1,4 @@
-class GVAR(breacher): B_CTRG_soldier_GL_LAT_F {
+class GVAR(breacher): tweed_acu_summer_ocp_crye_knee_jedi {
     _generalMacro = QGVAR(breacher);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,8 +6,6 @@ class GVAR(breacher): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(breacher_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
-    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,breacher_primaryWeapon),QEGVAR(weapons,breacher_secondaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,breacher_primaryWeapon),QEGVAR(weapons,breacher_secondaryWeapon),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,breacher);

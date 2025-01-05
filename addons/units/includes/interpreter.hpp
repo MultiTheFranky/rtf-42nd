@@ -1,4 +1,4 @@
-class GVAR(interpreter): B_CTRG_soldier_GL_LAT_F {
+class GVAR(interpreter): tweed_acu_summer_ocp_blench_tuck_trop {
     _generalMacro = QGVAR(interpreter);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,8 +6,6 @@ class GVAR(interpreter): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(interpreter_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
-    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,interpreter_primaryWeapon),QEGVAR(weapons,interpreter_secondaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,interpreter_primaryWeapon),QEGVAR(weapons,interpreter_secondaryWeapon),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,interpreter);

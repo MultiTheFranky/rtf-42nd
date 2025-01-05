@@ -1,4 +1,4 @@
-class GVAR(eod): B_CTRG_soldier_GL_LAT_F {
+class GVAR(eod): tweed_acu_summer_ocp_crye_knee_trop {
     _generalMacro = QGVAR(eod);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,8 +6,6 @@ class GVAR(eod): B_CTRG_soldier_GL_LAT_F {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(eod_DisplayName);
-    hiddenSelectionsTextures[] = {QPATHTOEF(uniforms,data\rtf42_uniform_mc_ca.paa)};
-    hiddenSelectionsMaterials[] = {QPATHTOEF(uniforms,data\clothing1.rvmat)};
     weapons[] = {QEGVAR(weapons,eod_primaryWeapon),QEGVAR(weapons,eod_secondaryWeapon),"Throw","Put"};
     respawnWeapons[] = {QEGVAR(weapons,eod_primaryWeapon),QEGVAR(weapons,eod_secondaryWeapon),"Throw","Put"};
     uniformClass = QEGVAR(uniforms,eod);

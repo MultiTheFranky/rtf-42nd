@@ -5,6 +5,38 @@
             <English>AT</English>
             <Spanish>AT</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Units_at_specialist_DisplayName">
+            <English>AT Specialist</English>
+            <Spanish>Especialista en AT</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_breacher_DisplayName">
+            <English>Breacher</English>
+            <Spanish>Breacher</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_combat_medic_DisplayName">
+            <English>Combat Medic</English>
+            <Spanish>Médico de combate</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_combat_paramedic_DisplayName">
+            <English>Combat Paramedic</English>
+            <Spanish>Paramédico de combate</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_eod_DisplayName">
+            <English>EOD</English>
+            <Spanish>Experto en Explosivos</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_grenadier_DisplayName">
+            <English>Grenadier</English>
+            <Spanish>Granadero</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_intel_assistant_DisplayName">
+            <English>Intel Assistant</English>
+            <Spanish>Asistente de Inteligencia</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_interpreter_DisplayName">
+            <English>Interpreter</English>
+            <Spanish>Intérprete</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Units_leader_DisplayName">
             <English>Leader</English>
             <Spanish>Líder</Spanish>
@@ -44,6 +76,10 @@
         <Key ID="STR_RTF42_Units_tl_DisplayName">
             <English>Team Leader</English>
             <Spanish>Líder de Equipo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Units_wvm_DisplayName">
+            <English>WVM</English>
+            <Spanish>Ingenieros mecánicos</Spanish>
         </Key>
     </Package>
 </Project>

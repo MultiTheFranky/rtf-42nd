@@ -1,2 +1,2 @@
-class GVAR(lmg): milgp_v_mmac_hgunner_rgr {
+class GVAR(lmg): 3DMA_WD_AVS_Saw {
 };

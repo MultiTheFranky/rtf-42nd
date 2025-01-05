@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Uniforms">
+        <Key ID="STR_RTF42_Uniforms_at_specialistUniformDisplayName">
+            <English>AT Specialist Uniform</English>
+            <Spanish>Uniforme de especialista AT</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_breacherUniformDisplayName">
+            <English>Breacher Uniform</English>
+            <Spanish>Uniforme de Breacher</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_combat_medicUniformDisplayName">
+            <English>Combat Medic Uniform</English>
+            <Spanish>Uniforme de médico de combate</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_combat_paramedicUniformDisplayName">
+            <English>Combat Paramedic Uniform</English>
+            <Spanish>Uniforme de paramédico de combate</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_eodUniformDisplayName">
+            <English>EOD Uniform</English>
+            <Spanish>Uniforme EOD</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_grenadierUniformDisplayName">
+            <English>Grenadier Uniform</English>
+            <Spanish>Uniforme de granadero</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_intel_assistantUniformDisplayName">
+            <English>Intel Assistant Uniform</English>
+            <Spanish>Uniforme de asistente de Inteligencia</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_interpreterUniformDisplayName">
+            <English>Interpreter Uniform</English>
+            <Spanish>Uniforme de intérprete</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_lmgUniformDisplayName">
+            <English>LMG Uniform</English>
+            <Spanish>Uniforme de ametralladora ligera</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Uniforms_mc_beret_displayName">
             <English>MultiCam Green Beret</English>
             <Spanish>MultiCam Boina Verde</Spanish>
@@ -16,6 +52,26 @@
         <Key ID="STR_RTF42_Uniforms_mc_sleeve_displayName">
             <English>MultiCam Sleeve</English>
             <Spanish>MultiCam Manga Corta</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_officerUniformDisplayName">
+            <English>Officer Uniform</English>
+            <Spanish>Uniforme de oficial</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_riflemanUniformDisplayName">
+            <English>Rifleman Uniform</English>
+            <Spanish>Uniforme de fusilero</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_slUniformDisplayName">
+            <English>Squad Leader Uniform</English>
+            <Spanish>Uniforme de líder de escuadrón</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_tlUniformDisplayName">
+            <English>Team Leader Uniform</English>
+            <Spanish>Uniforme de líder de equipo</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_wvmUniformDisplayName">
+            <English>WVM Uniform</English>
+            <Spanish>Uniforme WVM</Spanish>
         </Key>
     </Package>
 </Project>

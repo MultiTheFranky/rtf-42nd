@@ -1,53 +1,25 @@
 class CfgWeapons {
-    class U_B_CTRG_1;
-    class U_B_CTRG_3;
+    class U_tweed_acu_summer_ocp_crye_knee_jedi;
+    class U_tweed_acu_summer_ocp_crye_knee;
+    class U_tweed_acu_summer_ocp_crye_knee_trop;
+    class U_tweed_acu_summer_ocp_blench_tuck_trop;
     class UniformItem;
     class GVAR(UniformItemBase): UniformItem {
         containerClass = "Supply50";
         mass = 50;
     };
-    class GVAR(mc): U_B_CTRG_1 {
-        scope = 2;
-        displayName = CSTRING(mc_displayName);
-        picture = QPATHTOF(ui\mc_ca.paa);
-        class ItemInfo: UniformItem {
-            uniformModel = "-";
-            uniformClass = QEGVAR(units,rifleman);
-            containerClass = "Supply50";
-            mass = 50;
-        };
-    };
-    class GVAR(mc_sleeve): U_B_CTRG_3 {
-        scope = 2;
-        displayName = CSTRING(mc_sleeve_displayName);
-        picture = QPATHTOF(ui\mc_sleeve_ca.paa);
-        class ItemInfo: UniformItem {
-            uniformModel = "-";
-            uniformClass = QEGVAR(units,rto);
-            containerClass = "Supply50";
-            mass = 50;
-        };
-    };
-    class GVAR(mc_beret): U_B_CTRG_1 {
-        scope = 2;
-        displayName = CSTRING(mc_beret_displayName);
-        picture = QPATHTOF(ui\mc_beret_ca.paa);
-        class ItemInfo: UniformItem {
-            uniformModel = "-";
-            uniformClass = QEGVAR(units,leader);
-            containerClass = "Supply50";
-            mass = 50;
-        };
-    };
-    class GVAR(mc_beret_sleeve): U_B_CTRG_3 {
-        scope = 2;
-        displayName = CSTRING(mc_beret_sleeve_displayName);
-        picture = QPATHTOF(ui\mc_beret_sleeve_ca.paa);
-        class ItemInfo: UniformItem {
-            uniformModel = "-";
-            uniformClass = QEGVAR(units,operator);
-            containerClass = "Supply50";
-            mass = 50;
-        };
-    };
+    #include "includes\at_specialist.hpp"
+    #include "includes\breacher.hpp"
+    #include "includes\combat_medic.hpp"
+    #include "includes\combat_paramedic.hpp"
+    #include "includes\eod.hpp"
+    #include "includes\grenadier.hpp"
+    #include "includes\intel_assistant.hpp"
+    #include "includes\interpreter.hpp"
+    #include "includes\lmg.hpp"
+    #include "includes\officer.hpp"
+    #include "includes\rifleman.hpp"
+    #include "includes\sl.hpp"
+    #include "includes\tl.hpp"
+    #include "includes\wvm.hpp"
 };

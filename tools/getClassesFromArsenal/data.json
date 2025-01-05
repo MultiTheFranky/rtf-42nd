@@ -1,22 +1,30 @@
 {
     "data": [
         {
-            "type": "rifleman",
+            "type": "tl",
             "arsenalData": [
                 [
                     [
-                        "rhs_weap_m4a1_carryhandle",
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_tan",
                         "",
-                        "",
-                        "rhsusf_acc_eotech_xps3",
+                        "rhsusf_acc_su230",
                         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
                         [],
                         "rhsusf_acc_grip2"
                     ],
                     [],
-                    [],
                     [
-                        "U_B_CTRG_1",
+                        "rtf42_weapons_sl_secondaryWeapon",
+                        "",
+                        "",
+                        "",
+                        ["rhsusf_mag_17Rnd_9x19_JHP", 17],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee",
                         [
                             ["ACE_EarPlugs", 1],
                             ["ACE_tourniquet", 1],
@@ -27,12 +35,340 @@
                         ]
                     ],
                     [
-                        "milgp_v_mmac_light_rgr",
+                        "3DMA_WD_AVS_PLSGT",
                         [
+                            ["rhsusf_acc_wmx_bk", 1],
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["ACE_quikclot", 1],
+                            ["ACE_packingBandage", 1],
+                            ["ACE_adenosine", 1],
+                            ["tsp_sling", 1],
+                            ["SmokeShell", 2, 1],
+                            ["Chemlight_green", 2, 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["SmokeShellOrange", 1, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP",
+                        [
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 4],
+                            ["ACE_quikclot", 9],
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_SpraypaintBlue", 1],
+                            ["ACE_MapTools", 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["SmokeShellGreen", 2, 1],
+                            ["SmokeShellRed", 2, 1],
+                            ["rhs_mag_mk84", 2, 1]
+                        ]
+                    ],
+                    "3DMA_WD_Opscore_V5",
+                    "G_tweed_tacticool_weiss_oak",
+                    ["ACE_Vector", "", "", "", [], [], ""],
+                    [
+                        "ItemMap",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "sl",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_m4",
+                        "rhsusf_acc_nt4_tan",
+                        "",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        "rhsusf_acc_grip2"
+                    ],
+                    [],
+                    [
+                        "rhsusf_weap_glock17g4",
+                        "",
+                        "",
+                        "",
+                        ["rhsusf_mag_17Rnd_9x19_JHP", 17],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee",
+                        [
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_tourniquet", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_epinephrine", 1],
+                            ["rtf42_items_Cards", 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_PLSGT",
+                        [
+                            ["rhsusf_acc_wmx_bk", 1],
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["ACE_quikclot", 1],
+                            ["ACE_packingBandage", 1],
+                            ["ItemcTabHCam", 1],
+                            ["tsp_sling", 1],
+                            ["SmokeShell", 2, 1],
+                            ["Chemlight_green", 2, 1],
+                            ["rhs_mag_m67", 2, 1],
+                            ["SmokeShellOrange", 1, 1],
+                            ["rhsusf_mag_17Rnd_9x19_FMJ", 2, 17],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP",
+                        [
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 4],
+                            ["ACE_quikclot", 9],
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_SpraypaintBlue", 1],
+                            ["ACE_MapTools", 1],
+                            ["ACE_Flashlight_MX991", 1],
+                            ["ACE_adenosine", 1],
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["SmokeShellGreen", 2, 1],
+                            ["SmokeShellRed", 2, 1],
+                            ["rhs_mag_mk84", 2, 1],
+                            ["Laserbatteries", 2, 1]
+                        ]
+                    ],
+                    "rhsusf_mich_bare_norotos_alt",
+                    "G_tweed_tacticool_weiss_oak",
+                    ["ACE_Vector", "", "", "", [], [], ""],
+                    [
+                        "ItemMap",
+                        "ItemAndroid",
+                        "TFAR_anprc152",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "officer",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_tan",
+                        "",
+                        "rhsusf_acc_su230a",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        "rhsusf_acc_grip2"
+                    ],
+                    [],
+                    [
+                        "rtf42_weapons_officer_secondaryWeapon",
+                        "",
+                        "",
+                        "",
+                        ["rhsusf_mag_17Rnd_9x19_JHP", 17],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee_trop",
+                        [
+                            ["rtf42_items_Cards", 1],
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_CableTie", 2],
+                            ["ACE_adenosine", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_epinephrine", 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_SL",
+                        [
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["rhsusf_mag_17Rnd_9x19_FMJ", 2, 17],
+                            ["rhsusf_mag_17Rnd_9x19_JHP", 1, 17],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30],
+                            ["rhs_mag_m67", 2, 1],
+                            ["SmokeShell", 3, 1]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP_RTO",
+                        [
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 4],
+                            ["ACE_quikclot", 9],
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_SpraypaintBlue", 1],
+                            ["ACE_MapTools", 1],
+                            ["ACE_Flashlight_MX991", 1],
+                            ["tsp_sling", 1],
+                            ["rhs_mag_mk84", 2, 1],
+                            ["SmokeShellGreen", 2, 1],
+                            ["SmokeShellRed", 2, 1],
+                            ["Laserbatteries", 2, 1],
+                            ["ACE_HandFlare_Green", 1, 1],
+                            ["ACE_HandFlare_Red", 1, 1],
+                            ["ACE_HandFlare_White", 1, 1],
+                            ["ACE_HandFlare_Yellow", 1, 1],
+                            ["SmokeShellBlue", 2, 1]
+                        ]
+                    ],
+                    "rhsusf_mich_bare_norotos_alt_tan",
+                    "G_tweed_tacticool_weiss_oak",
+                    ["ACE_Vector", "", "", "", [], [], ""],
+                    [
+                        "ItemMap",
+                        "ItemcTab",
+                        "TFAR_anprc152",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "grenadier",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
+                        "",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        "rhsusf_acc_grip2"
+                    ],
+                    [],
+                    [
+                        "vtf_MK13",
+                        "",
+                        "",
+                        "",
+                        ["1Rnd_HE_Grenade_shell", 1],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee_trop",
+                        [
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_tourniquet", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_epinephrine", 1],
+                            ["rtf42_items_Cards", 1],
                             ["acc_flashlight", 1],
                             ["ACE_IR_Strobe_Item", 1],
                             ["ACE_quikclot", 1],
                             ["ACE_packingBandage", 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 2, 30]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_Grenadier",
+                        [
+                            ["tsp_sling", 1],
+                            ["1Rnd_HE_Grenade_shell", 5, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 3, 30]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP",
+                        [
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 4],
+                            ["ACE_quikclot", 9],
+                            ["ACE_EntrenchingTool", 1],
+                            ["rtf42_gas_AirPurifyingRespirator", 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["rhs_mag_mk84", 2, 1],
+                            ["SmokeShellGreen", 2, 1],
+                            ["SmokeShellRed", 2, 1],
+                            ["CUP_1Rnd_Smoke_M203", 4, 1],
+                            ["1Rnd_SmokeGreen_Grenade_shell", 2, 1],
+                            ["1Rnd_SmokeRed_Grenade_shell", 2, 1]
+                        ]
+                    ],
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
+                    [
+                        "ItemMap",
+                        "ItemGPS",
+                        "rhsusf_radio_anprc152",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "breacher",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
+                        "",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        "rhsusf_acc_grip2"
+                    ],
+                    [],
+                    [
+                        "crow_x26_blk_yellow",
+                        "",
+                        "",
+                        "",
+                        ["X26_Cartridge", 2],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee_jedi",
+                        [
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_tourniquet", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_epinephrine", 1],
+                            ["rtf42_items_Cards", 1],
+                            ["ACE_quikclot", 10],
+                            ["ACE_packingBandage", 5],
+                            ["ACE_wirecutter", 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_Rifleman_v2",
+                        [
+                            ["rhsusf_acc_wmx_bk", 1],
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["tsp_sling", 1],
                             ["SmokeShell", 2, 1],
                             ["Chemlight_green", 2, 1],
                             ["rhs_mag_m67", 1, 1],
@@ -40,93 +376,257 @@
                         ]
                     ],
                     [
-                        "B_AssaultPack_rgr",
+                        "rhsusf_assault_eagleaiii_ocp",
                         [
                             ["ACE_splint", 1],
-                            ["ACE_packingBandage", 4],
-                            ["ACE_quikclot", 9],
                             ["ACE_EntrenchingTool", 1],
-                            ["ACE_CableTie", 10],
+                            ["ACE_DefusalKit", 1],
+                            ["ACE_M26_Clacker", 1],
+                            ["MineDetector", 1],
+                            ["ACE_adenosine", 1],
+                            ["tsp_breach_shock", 1],
                             ["rhs_mag_m67", 1, 1],
                             ["SmokeShellGreen", 2, 1],
                             ["SmokeShellRed", 2, 1],
-                            ["rhs_mag_mk84", 2, 1]
+                            ["rhs_mag_mk84", 2, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 1, 30],
+                            ["tsp_breach_block_mag", 2, 1],
+                            ["tsp_breach_popper_mag", 1, 1],
+                            ["tsp_breach_linear_mag", 1, 1]
                         ]
                     ],
-                    "CUP_H_OpsCore_Covered_MCAM",
-                    "rhsusf_oakley_goggles_clr",
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
                     [],
                     [
                         "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
                         "ItemCompass",
                         "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
+                        "3DMA_WD_ANPVS31_v1"
                     ]
                 ],
                 []
             ]
         },
         {
-            "type": "paramedic",
+            "type": "combat_medic",
             "arsenalData": [
                 [
                     [
-                        "rhs_weap_m4a1_carryhandle",
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
                         "",
-                        "acc_flashlight",
-                        "rhsusf_acc_eotech_xps3",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 30],
+                        [],
+                        ""
+                    ],
+                    [],
+                    [
+                        "rtf42_weapons_officer_secondaryWeapon",
+                        "",
+                        "",
+                        "",
+                        ["rhsusf_mag_17Rnd_9x19_JHP", 17],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee",
+                        [
+                            ["ACE_EarPlugs", 1],
+                            ["rtf42_items_Cards", 1],
+                            ["rhsusf_acc_wmx_bk", 1]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_Medic",
+                        [
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["tsp_sling", 1],
+                            ["HandGrenade", 1, 1],
+                            ["SmokeShell", 2, 1],
+                            ["Chemlight_green", 2, 1],
+                            ["SmokeShellGreen", 1, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 5, 30]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP_thermos_od3",
+                        [
+                            ["ACE_packingBandage", 20],
+                            ["ACE_quikclot", 30],
+                            ["ACE_elasticBandage", 15],
+                            ["ACE_salineIV_500", 5],
+                            ["ACE_salineIV_250", 5],
+                            ["ACE_splint", 10],
+                            ["ACE_tourniquet", 8],
+                            ["ACE_morphine", 15],
+                            ["ACE_epinephrine", 10],
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_personalAidKit", 1],
+                            ["ACE_suture", 1],
+                            ["ACE_surgicalKit", 1],
+                            ["ACE_adenosine", 10]
+                        ]
+                    ],
+                    "CUP_H_OpsCore_Tan",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
+                    [
+                        "ItemMap",
+                        "ItemMicroDAGR",
+                        "TFAR_anprc152",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "combat_paramedic",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
+                        "rhsusf_acc_wmx_bk",
+                        "rhsusf_acc_su230",
                         ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 30],
                         [],
                         "rhsusf_acc_grip2"
                     ],
                     [],
-                    [],
                     [
-                        "U_B_CTRG_1",
+                        "crow_x26_blk_yellow",
+                        "",
+                        "",
+                        "",
+                        ["X26_Cartridge", 2],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee",
                         [
                             ["ACE_EarPlugs", 1],
                             ["rtf42_items_Cards", 1]
                         ]
                     ],
                     [
-                        "milgp_v_mmac_medic_rgr",
+                        "3DMA_WD_AVS_Medic",
                         [
                             ["ACE_IR_Strobe_Item", 1],
                             ["HandGrenade", 1, 1],
                             ["SmokeShell", 2, 1],
                             ["Chemlight_green", 2, 1],
                             ["SmokeShellGreen", 1, 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30]
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 5, 30]
                         ]
                     ],
                     [
-                        "milgp_b_patrol_01_rgr",
+                        "B_simc_US_Molle_sturm_OCP_thermos_OCP",
                         [
-                            ["ACE_packingBandage", 20],
-                            ["ACE_quikclot", 25],
+                            ["ACE_adenosine", 5],
                             ["ACE_elasticBandage", 10],
-                            ["ACE_salineIV_500", 5],
-                            ["ACE_salineIV_250", 5],
-                            ["ACE_splint", 10],
-                            ["ACE_tourniquet", 10],
-                            ["ACE_morphine", 15],
+                            ["ACE_packingBandage", 20],
+                            ["ACE_quikclot", 20],
                             ["ACE_epinephrine", 10],
-                            ["ACE_EntrenchingTool", 1],
-                            ["ACE_CableTie", 10]
+                            ["ACE_morphine", 10],
+                            ["ACE_salineIV_250", 5],
+                            ["ACE_salineIV_500", 4],
+                            ["ACE_salineIV", 1],
+                            ["ACE_fieldDressing", 5],
+                            ["ACE_splint", 5],
+                            ["ACE_tourniquet", 10],
+                            ["ACE_bodyBag_blue", 1]
                         ]
                     ],
-                    "CUP_H_OpsCore_Covered_MCAM",
-                    "rhsusf_oakley_goggles_clr",
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_ESS_tan",
                     [],
                     [
                         "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
                         "ItemCompass",
                         "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "at_specialist",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
+                        "rhsusf_acc_wmx_bk",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        "rhsusf_acc_grip2"
+                    ],
+                    ["rhs_weap_M136_hedp", "", "", "", [], [], ""],
+                    [
+                        "crow_x26_blk_yellow",
+                        "",
+                        "",
+                        "",
+                        ["X26_Cartridge", 2],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee_jedi",
+                        [
+                            ["rtf42_items_Cards", 1],
+                            ["ACE_epinephrine", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_tourniquet", 1],
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 5],
+                            ["ACE_quikclot", 10]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_Rifleman_v4",
+                        [
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["tsp_sling", 1],
+                            ["HandGrenade", 2, 1],
+                            ["SmokeShell", 2, 1],
+                            ["SmokeShellGreen", 2, 1],
+                            ["Chemlight_green", 2, 1],
+                            ["SmokeShellRed", 2, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 5, 30]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP",
+                        [
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_adenosine", 1]
+                        ]
+                    ],
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
+                    [
+                        "ItemMap",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
                     ]
                 ],
                 []
@@ -141,14 +641,22 @@
                         "rhsusf_acc_SFMB556",
                         "",
                         "rhsusf_acc_su230",
-                        ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 200],
+                        ["rhsusf_200rnd_556x45_M855_mixed_box", 200],
                         [],
-                        "rhsusf_acc_saw_bipod"
+                        "rhsusf_acc_grip4_bipod"
                     ],
                     [],
-                    [],
                     [
-                        "U_B_CTRG_1",
+                        "crow_x26_blk_yellow",
+                        "",
+                        "",
+                        "",
+                        ["X26_Cartridge", 2],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee",
                         [
                             ["ACE_tourniquet", 1],
                             ["ACE_morphine", 1],
@@ -158,8 +666,10 @@
                         ]
                     ],
                     [
-                        "milgp_v_mmac_hgunner_rgr",
+                        "3DMA_WD_AVS_Saw",
                         [
+                            ["ACE_CableTie", 1],
+                            ["tsp_sling", 1],
                             ["HandGrenade", 2, 1],
                             ["SmokeShell", 2, 1],
                             ["SmokeShellGreen", 2, 1],
@@ -167,54 +677,63 @@
                         ]
                     ],
                     [
-                        "B_Kitbag_rgr",
+                        "rhsusf_assault_eagleaiii_ocp",
                         [
                             ["rtf42_items_Cards", 1],
                             ["ACE_EarPlugs", 1],
                             ["ACE_EntrenchingTool", 1],
                             ["ACE_IR_Strobe_Item", 1],
                             ["ACE_splint", 1],
-                            ["ACE_CableTie", 10],
-                            ["rhsusf_100Rnd_556x45_mixed_soft_pouch", 1, 100],
+                            ["ACE_adenosine", 1],
                             [
                                 "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
                                 1,
                                 200
-                            ]
+                            ],
+                            ["rhsusf_200rnd_556x45_mixed_box", 1, 200],
+                            ["ACE_SpareBarrel", 1, 1]
                         ]
                     ],
-                    "CUP_H_OpsCore_Covered_MCAM",
-                    "rhsusf_oakley_goggles_clr",
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
                     [],
                     [
                         "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
                         "ItemCompass",
                         "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
+                        "3DMA_WD_ANPVS31_v1"
                     ]
                 ],
                 []
             ]
         },
         {
-            "type": "sapper",
+            "type": "intel_assistant",
             "arsenalData": [
                 [
                     [
-                        "rhs_weap_m4a1_carryhandle",
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
                         "",
-                        "",
-                        "rhsusf_acc_eotech_xps3",
+                        "rhsusf_acc_su230",
                         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
                         [],
                         "rhsusf_acc_grip2"
                     ],
                     [],
-                    [],
                     [
-                        "U_B_CTRG_1",
+                        "rtf42_weapons_officer_secondaryWeapon",
+                        "",
+                        "",
+                        "",
+                        ["rhsusf_mag_17Rnd_9x19_JHP", 17],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee",
                         [
                             ["ACE_EarPlugs", 1],
                             ["ACE_tourniquet", 1],
@@ -225,277 +744,227 @@
                         ]
                     ],
                     [
-                        "milgp_v_mmac_light_rgr",
+                        "3DMA_WD_AVS_Rifleman_v3",
                         [
-                            ["acc_flashlight", 1],
+                            ["rhsusf_acc_wmx_bk", 1],
                             ["ACE_IR_Strobe_Item", 1],
                             ["ACE_quikclot", 1],
                             ["ACE_packingBandage", 1],
+                            ["tsp_sling", 1],
                             ["SmokeShell", 2, 1],
                             ["Chemlight_green", 2, 1],
                             ["rhs_mag_m67", 1, 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 3, 30]
-                        ]
-                    ],
-                    [
-                        "B_AssaultPack_rgr",
-                        [
-                            ["ACE_splint", 1],
-                            ["ACE_packingBandage", 4],
-                            ["ACE_quikclot", 9],
-                            ["ACE_EntrenchingTool", 1],
-                            ["ACE_DefusalKit", 1],
-                            ["ACE_M26_Clacker", 1],
-                            ["ACE_wirecutter", 1],
-                            ["ACE_CableTie", 10],
-                            ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellGreen", 2, 1],
-                            ["SmokeShellRed", 2, 1],
-                            ["rhs_mag_mk84", 2, 1],
-                            ["DemoCharge_Remote_Mag", 3, 1]
-                        ]
-                    ],
-                    "CUP_H_OpsCore_Covered_MCAM",
-                    "rhsusf_oakley_goggles_clr",
-                    [],
-                    [
-                        "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
-                        "ItemCompass",
-                        "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
-                    ]
-                ],
-                []
-            ]
-        },
-        {
-            "type": "at",
-            "arsenalData": [
-                [
-                    [
-                        "rhs_weap_m4a1_carryhandle",
-                        "",
-                        "acc_flashlight",
-                        "rhsusf_acc_eotech_xps3",
-                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
-                        [],
-                        "rhsusf_acc_grip2"
-                    ],
-                    ["rhs_weap_M136_hedp", "", "", "", [], [], ""],
-                    [],
-                    [
-                        "U_B_CTRG_1",
-                        [
-                            ["rtf42_items_Cards", 1],
-                            ["ACE_epinephrine", 1],
-                            ["ACE_morphine", 1],
-                            ["ACE_tourniquet", 1],
-                            ["ACE_splint", 1],
-                            ["ACE_packingBandage", 5],
-                            ["ACE_quikclot", 10]
-                        ]
-                    ],
-                    [
-                        "milgp_v_mmac_hgunner_rgr",
-                        [
-                            ["ACE_IR_Strobe_Item", 1],
-                            ["HandGrenade", 2, 1],
-                            ["SmokeShell", 2, 1],
-                            ["SmokeShellGreen", 2, 1],
-                            ["Chemlight_green", 2, 1],
-                            ["SmokeShellRed", 2, 1],
                             ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30]
                         ]
                     ],
                     [
-                        "B_Kitbag_rgr",
-                        [
-                            ["ACE_EntrenchingTool", 1],
-                            ["ACE_EarPlugs", 1]
-                        ]
-                    ],
-                    "CUP_H_OpsCore_Covered_MCAM",
-                    "rhsusf_oakley_goggles_clr",
-                    [],
-                    [
-                        "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
-                        "ItemCompass",
-                        "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
-                    ]
-                ],
-                []
-            ]
-        },
-        {
-            "type": "rto",
-            "arsenalData": [
-                [
-                    [
-                        "rhs_weap_m4a1_carryhandle",
-                        "",
-                        "",
-                        "rhsusf_acc_eotech_xps3",
-                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
-                        [],
-                        "rhsusf_acc_grip2"
-                    ],
-                    [],
-                    [],
-                    [
-                        "U_B_CTRG_1",
-                        [
-                            ["ACE_EarPlugs", 1],
-                            ["ACE_tourniquet", 1],
-                            ["ACE_morphine", 1],
-                            ["ACE_epinephrine", 1],
-                            ["rtf42_items_Cards", 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
-                        ]
-                    ],
-                    [
-                        "milgp_v_mmac_teamleader_rgr",
-                        [
-                            ["acc_flashlight", 1],
-                            ["ACE_IR_Strobe_Item", 1],
-                            ["ACE_quikclot", 5],
-                            ["ACE_packingBandage", 1],
-                            ["SmokeShell", 2, 1],
-                            ["Chemlight_green", 2, 1],
-                            ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellBlue", 2, 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 3, 30]
-                        ]
-                    ],
-                    [
-                        "B_FieldPack_khk",
-                        [
-                            ["ACE_splint", 1],
-                            ["ACE_packingBandage", 4],
-                            ["ACE_quikclot", 5],
-                            ["ACE_EntrenchingTool", 1],
-                            ["ACE_CableTie", 10],
-                            ["ACRE_PRC117F", 1],
-                            ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellGreen", 2, 1],
-                            ["SmokeShellRed", 2, 1],
-                            ["rhs_mag_mk84", 2, 1]
-                        ]
-                    ],
-                    "CUP_H_OpsCore_Covered_MCAM",
-                    "rhsusf_oakley_goggles_clr",
-                    [],
-                    [
-                        "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
-                        "ItemCompass",
-                        "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
-                    ]
-                ],
-                []
-            ]
-        },
-        {
-            "type": "tl",
-            "arsenalData": [
-                [
-                    [
-                        "rhs_weap_m4a1_carryhandle",
-                        "",
-                        "",
-                        "rhsusf_acc_eotech_xps3",
-                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
-                        [],
-                        "rhsusf_acc_grip2"
-                    ],
-                    [],
-                    [],
-                    [
-                        "U_B_CTRG_1",
-                        [
-                            ["ACE_EarPlugs", 1],
-                            ["ACE_tourniquet", 1],
-                            ["ACE_morphine", 1],
-                            ["ACE_epinephrine", 1],
-                            ["rtf42_items_Cards", 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
-                        ]
-                    ],
-                    [
-                        "milgp_v_mmac_teamleader_rgr",
-                        [
-                            ["acc_flashlight", 1],
-                            ["ACE_IR_Strobe_Item", 1],
-                            ["ACE_quikclot", 1],
-                            ["ACE_packingBandage", 1],
-                            ["SmokeShell", 2, 1],
-                            ["Chemlight_green", 2, 1],
-                            ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellOrange", 1, 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 3, 30]
-                        ]
-                    ],
-                    [
-                        "B_AssaultPack_rgr",
+                        "B_simc_US_Molle_sturm_OCP",
                         [
                             ["ACE_splint", 1],
                             ["ACE_packingBandage", 4],
                             ["ACE_quikclot", 9],
                             ["ACE_EntrenchingTool", 1],
-                            ["ACE_SpraypaintBlue", 1],
-                            ["ACE_CableTie", 10],
+                            ["ACE_adenosine", 1],
                             ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellGreen", 2, 1],
-                            ["SmokeShellRed", 2, 1],
-                            ["rhs_mag_mk84", 2, 1]
+                            ["acex_intelitems_notepad", 1, 1]
                         ]
                     ],
-                    "CUP_H_OpsCore_Spray",
-                    "rhsusf_oakley_goggles_clr",
-                    ["Binocular", "", "", "", [], [], ""],
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
                     [
                         "ItemMap",
-                        "ItemGPS",
-                        "rhsusf_radio_anprc152",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
                         "ItemCompass",
                         "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
+                        "3DMA_WD_ANPVS31_v1"
                     ]
                 ],
                 []
             ]
         },
         {
-            "type": "sl",
+            "type": "rifleman",
             "arsenalData": [
                 [
                     [
                         "rhs_weap_m4a1_carryhandle",
+                        "rhsusf_acc_nt4_black",
+                        "",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        ""
+                    ],
+                    [],
+                    [
+                        "crow_x26_blk_yellow",
                         "",
                         "",
-                        "rhsusf_acc_eotech_xps3",
+                        "",
+                        ["X26_Cartridge", 2],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee_trop",
+                        [
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_tourniquet", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_epinephrine", 1],
+                            ["rtf42_items_Cards", 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_Rifleman_v4",
+                        [
+                            ["rhsusf_acc_wmx_bk", 1],
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["ACE_quikclot", 1],
+                            ["ACE_packingBandage", 1],
+                            ["tsp_sling", 1],
+                            ["SmokeShell", 2, 1],
+                            ["Chemlight_green", 2, 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["X26_Cartridge", 1, 2],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30]
+                        ]
+                    ],
+                    [
+                        "rtf42_backpacks_rifleman",
+                        [
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 4],
+                            ["ACE_quikclot", 9],
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_adenosine", 1],
+                            ["rhs_mag_m67", 1, 1]
+                        ]
+                    ],
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
+                    [
+                        "ItemMap",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "wvm",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
+                        "",
+                        "rhsusf_acc_su230",
                         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
                         [],
                         "rhsusf_acc_grip2"
                     ],
                     [],
                     [
-                        "rhsusf_weap_glock17g4",
+                        "crow_x26_blk_yellow",
                         "",
                         "",
+                        "",
+                        ["X26_Cartridge", 2],
+                        [],
+                        ""
+                    ],
+                    [
+                        "U_tweed_acu_summer_ocp_crye_knee_trop",
+                        [
+                            ["ACE_EarPlugs", 1],
+                            ["ACE_tourniquet", 1],
+                            ["ACE_morphine", 1],
+                            ["ACE_epinephrine", 1],
+                            ["rtf42_items_Cards", 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
+                        ]
+                    ],
+                    [
+                        "3DMA_WD_AVS_Rifleman_v2",
+                        [
+                            ["rhsusf_acc_wmx_bk", 1],
+                            ["ACE_IR_Strobe_Item", 1],
+                            ["ACE_quikclot", 1],
+                            ["ACE_packingBandage", 1],
+                            ["iedd_item_notebook", 1],
+                            ["tsp_sling", 1],
+                            ["SmokeShell", 2, 1],
+                            ["Chemlight_green", 2, 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 4, 30]
+                        ]
+                    ],
+                    [
+                        "B_simc_US_Molle_sturm_OCP",
+                        [
+                            ["ACE_splint", 1],
+                            ["ACE_packingBandage", 4],
+                            ["ACE_quikclot", 9],
+                            ["ACE_EntrenchingTool", 1],
+                            ["ACE_adenosine", 1],
+                            ["ACE_wirecutter", 1],
+                            ["ACE_artilleryTable", 1],
+                            ["rhs_mag_m67", 1, 1],
+                            ["SmokeShellGreen", 2, 1],
+                            ["SmokeShellRed", 2, 1],
+                            ["rhs_mag_mk84", 2, 1],
+                            ["X26_Cartridge", 1, 2]
+                        ]
+                    ],
+                    "3DMA_WD_Opscore_V2",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
+                    [
+                        "ItemMap",
+                        "ItemMicroDAGR",
+                        "TFAR_anprc152",
+                        "ItemCompass",
+                        "ACE_Altimeter",
+                        "3DMA_WD_ANPVS31_v1"
+                    ]
+                ],
+                []
+            ]
+        },
+        {
+            "type": "eod",
+            "arsenalData": [
+                [
+                    [
+                        "rhs_weap_hk416d145",
+                        "rhsusf_acc_nt4_black",
+                        "",
+                        "rhsusf_acc_su230",
+                        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
+                        [],
+                        "rhsusf_acc_grip2"
+                    ],
+                    [],
+                    [
+                        "rtf42_weapons_officer_secondaryWeapon",
+                        "",
+                        "acc_flashlight_pistol",
                         "",
                         ["rhsusf_mag_17Rnd_9x19_JHP", 17],
                         [],
                         ""
                     ],
                     [
-                        "U_B_CTRG_1",
+                        "U_tweed_acu_summer_ocp_crye_knee_trop",
                         [
                             ["ACE_EarPlugs", 1],
                             ["ACE_tourniquet", 1],
@@ -506,137 +975,98 @@
                         ]
                     ],
                     [
-                        "milgp_v_marciras_teamleader_RGR",
+                        "3DMA_WD_AVS_Rifleman_v1",
                         [
-                            ["acc_flashlight", 1],
+                            ["rhsusf_acc_wmx_bk", 1],
                             ["ACE_IR_Strobe_Item", 1],
                             ["ACE_quikclot", 1],
                             ["ACE_packingBandage", 1],
+                            ["tsp_sling", 1],
                             ["SmokeShell", 2, 1],
                             ["Chemlight_green", 2, 1],
                             ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellOrange", 1, 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 3, 30],
-                            ["rhsusf_mag_17Rnd_9x19_FMJ", 2, 17]
+                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 2, 30]
                         ]
                     ],
                     [
-                        "B_AssaultPack_rgr",
+                        "B_simc_US_Molle_sturm_OCP",
                         [
                             ["ACE_splint", 1],
                             ["ACE_packingBandage", 4],
                             ["ACE_quikclot", 9],
                             ["ACE_EntrenchingTool", 1],
-                            ["ACE_SpraypaintBlue", 1],
-                            ["ACRE_PRC152", 1],
-                            ["ACE_MapTools", 1],
-                            ["ACE_Flashlight_MX991", 1],
-                            ["ACE_CableTie", 10],
+                            ["ACE_adenosine", 1],
+                            ["ACE_DefusalKit", 1],
                             ["rhs_mag_m67", 1, 1],
                             ["SmokeShellGreen", 2, 1],
                             ["SmokeShellRed", 2, 1],
-                            ["rhs_mag_mk84", 2, 1],
-                            ["Laserbatteries", 2, 1]
+                            ["rhs_mag_mk84", 2, 1]
                         ]
                     ],
-                    "rhsusf_mich_bare_norotos_alt",
-                    "rhsusf_oakley_goggles_clr",
-                    ["ACE_Vector", "", "", "", [], [], ""],
+                    "CUP_H_OpsCore_Green",
+                    "G_tweed_tacticool_weiss_oak",
+                    [],
                     [
                         "ItemMap",
-                        "ItemAndroid",
-                        "rhsusf_radio_anprc152",
+                        "ItemMicroDAGR",
+                        "TFAR_anprc152",
                         "ItemCompass",
                         "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
+                        "3DMA_WD_ANPVS31_v1"
                     ]
                 ],
                 []
             ]
         },
         {
-            "type": "officer",
+            "type": "interpreter",
             "arsenalData": [
                 [
                     [
-                        "rhs_weap_m4a1_carryhandle",
+                        "rhs_weap_m16a4",
                         "",
                         "",
-                        "rhsusf_acc_eotech_xps3",
+                        "rhsusf_acc_su230",
                         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 30],
                         [],
                         "rhsusf_acc_grip2"
                     ],
                     [],
                     [
-                        "rhsusf_weap_glock17g4",
+                        "CUP_hgun_Makarov",
                         "",
                         "",
                         "",
-                        ["rhsusf_mag_17Rnd_9x19_JHP", 17],
+                        ["CUP_8Rnd_9x18_Makarov_M", 8],
                         [],
                         ""
                     ],
+                    ["U_tweed_acu_summer_ocp_blench_tuck_trop", []],
+                    ["CUP_V_PMC_CIRAS_Khaki_Veh", [["tsp_sling", 1]]],
                     [
-                        "U_B_CTRG_1",
-                        [
-                            ["ACE_EarPlugs", 1],
-                            ["ACE_tourniquet", 1],
-                            ["ACE_morphine", 1],
-                            ["ACE_epinephrine", 1],
-                            ["rtf42_items_Cards", 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 1, 30]
-                        ]
-                    ],
-                    [
-                        "milgp_v_marciras_teamleader_belt_RGR",
-                        [
-                            ["acc_flashlight", 1],
-                            ["ACE_IR_Strobe_Item", 1],
-                            ["ACE_quikclot", 1],
-                            ["ACE_packingBandage", 1],
-                            ["SmokeShell", 2, 1],
-                            ["Chemlight_green", 2, 1],
-                            ["rhs_mag_m67", 1, 1],
-                            ["SmokeShellOrange", 1, 1],
-                            ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 3, 30],
-                            ["rhsusf_mag_17Rnd_9x19_FMJ", 2, 17]
-                        ]
-                    ],
-                    [
-                        "B_AssaultPack_rgr",
+                        "B_AssaultPack_khk",
                         [
                             ["ACE_splint", 1],
                             ["ACE_packingBandage", 4],
                             ["ACE_quikclot", 9],
                             ["ACE_EntrenchingTool", 1],
-                            ["ACE_SpraypaintBlue", 1],
-                            ["ACRE_PRC152", 1],
-                            ["ACE_MapTools", 1],
-                            ["ACE_Flashlight_MX991", 1],
-                            ["ACE_CableTie", 5],
+                            ["rhsusf_ANPVS_15", 1],
                             ["rhs_mag_m67", 1, 1],
                             ["SmokeShellGreen", 2, 1],
                             ["SmokeShellRed", 2, 1],
-                            ["rhs_mag_mk84", 2, 1],
-                            ["Laserbatteries", 2, 1],
-                            ["ACE_HandFlare_Green", 1, 1],
-                            ["ACE_HandFlare_Red", 1, 1],
-                            ["ACE_HandFlare_White", 1, 1],
-                            ["ACE_HandFlare_Yellow", 1, 1],
-                            ["SmokeShellBlue", 2, 1]
+                            ["rhs_mag_mk84", 2, 1]
                         ]
                     ],
-                    "rhsusf_mich_bare_norotos_alt_tan",
-                    "rhsusf_oakley_goggles_clr",
-                    ["ACE_Vector", "", "", "", [], [], ""],
+                    "CUP_H_Ger_M92_Tan",
+                    "",
+                    ["CUP_LRTV", "", "", "", ["Laserbatteries", 1], [], ""],
                     [
                         "ItemMap",
-                        "ItemcTab",
-                        "rhsusf_radio_anprc152",
+                        "ItemMicroDAGR",
+                        "TFAR_rf7800str",
                         "ItemCompass",
-                        "ACE_Altimeter",
-                        "rhsusf_ANPVS_15"
+                        "ItemWatch",
+                        ""
                     ]
                 ],
                 []

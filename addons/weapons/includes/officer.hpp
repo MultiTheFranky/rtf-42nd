@@ -1,7 +1,11 @@
-class GVAR(officer_primaryWeapon): rhs_weap_m4a1_carryhandle {
+class GVAR(officer_primaryWeapon): rhs_weap_hk416d145 {
     class LinkedItems {
+       class LinkedItemsAcc {
+           item = "rhsusf_acc_nt4_tan";
+           slot = "PointerSlot";
+       };
        class LinkedItemsOptic {
-           item = "rhsusf_acc_eotech_xps3";
+           item = "rhsusf_acc_su230a";
            slot = "CowsSlot";
        };
        class LinkedItemsUnder {

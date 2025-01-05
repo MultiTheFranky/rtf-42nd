@@ -9,7 +9,7 @@ class GVAR(lmg_primaryWeapon): rhs_weap_m249_pip_ris {
            slot = "CowsSlot";
        };
        class LinkedItemsUnder {
-           item = "rhsusf_acc_saw_bipod";
+           item = "rhsusf_acc_grip4_bipod";
            slot = "UnderBarrelSlot";
        };
     };
@@ -19,7 +19,20 @@ class GVAR(lmg_primaryWeapon): rhs_weap_m249_pip_ris {
     };
     class TransportMagazines {
         count = 1;
-        magazine = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
+        magazine = "rhsusf_200rnd_556x45_M855_mixed_box";
     };
     baseWeapon = QGVAR(lmg_primaryWeapon);
+};
+class GVAR(lmg_secondaryWeapon): crow_x26_blk_yellow {
+    class LinkedItems {
+    };
+    class TransportWeapons {
+        count = 1;
+        weapon = QGVAR(lmg_secondaryWeapon);
+    };
+    class TransportMagazines {
+        count = 1;
+        magazine = "X26_Cartridge";
+    };
+    baseWeapon = QGVAR(lmg_secondaryWeapon);
 };

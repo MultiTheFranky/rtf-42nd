@@ -1,2 +1,2 @@
-class GVAR(rifleman): milgp_v_mmac_light_rgr {
+class GVAR(rifleman): 3DMA_WD_AVS_Rifleman_v4 {
 };

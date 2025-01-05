@@ -1,2 +1,2 @@
-class GVAR(sl): milgp_v_marciras_teamleader_RGR {
+class GVAR(sl): 3DMA_WD_AVS_PLSGT {
 };

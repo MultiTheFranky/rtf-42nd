@@ -1,7 +1,11 @@
-class GVAR(tl_primaryWeapon): rhs_weap_m4a1_carryhandle {
+class GVAR(tl_primaryWeapon): rhs_weap_hk416d145 {
     class LinkedItems {
+       class LinkedItemsAcc {
+           item = "rhsusf_acc_nt4_tan";
+           slot = "PointerSlot";
+       };
        class LinkedItemsOptic {
-           item = "rhsusf_acc_eotech_xps3";
+           item = "rhsusf_acc_su230";
            slot = "CowsSlot";
        };
        class LinkedItemsUnder {
@@ -19,7 +23,20 @@ class GVAR(tl_primaryWeapon): rhs_weap_m4a1_carryhandle {
     };
     baseWeapon = QGVAR(tl_primaryWeapon);
 };
-class GVAR(tl_binoculars): Binocular {
+class GVAR(tl_secondaryWeapon): rhsusf_weap_glock17g4 {
+    class LinkedItems {
+    };
+    class TransportWeapons {
+        count = 1;
+        weapon = QGVAR(tl_secondaryWeapon);
+    };
+    class TransportMagazines {
+        count = 1;
+        magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+    };
+    baseWeapon = QGVAR(tl_secondaryWeapon);
+};
+class GVAR(tl_binoculars): ACE_Vector {
     class LinkedItems {
     };
     class TransportWeapons {

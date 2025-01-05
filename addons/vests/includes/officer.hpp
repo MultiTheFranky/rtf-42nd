@@ -1,2 +1,2 @@
-class GVAR(officer): milgp_v_marciras_teamleader_belt_RGR {
+class GVAR(officer): 3DMA_WD_AVS_SL {
 };

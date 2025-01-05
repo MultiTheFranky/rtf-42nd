@@ -1,4 +1,4 @@
-#define MAJOR 2024
-#define MINOR 12
-#define PATCHLVL 1
+#define MAJOR 2025
+#define MINOR 1
+#define PATCHLVL 0
 #define BUILD 0

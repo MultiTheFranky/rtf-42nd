@@ -23,16 +23,3 @@ class GVAR(lmg_primaryWeapon): rhs_weap_m249_pip_ris {
     };
     baseWeapon = QGVAR(lmg_primaryWeapon);
 };
-class GVAR(lmg_secondaryWeapon): crow_x26_blk_yellow {
-    class LinkedItems {
-    };
-    class TransportWeapons {
-        count = 1;
-        weapon = QGVAR(lmg_secondaryWeapon);
-    };
-    class TransportMagazines {
-        count = 1;
-        magazine = "X26_Cartridge";
-    };
-    baseWeapon = QGVAR(lmg_secondaryWeapon);
-};

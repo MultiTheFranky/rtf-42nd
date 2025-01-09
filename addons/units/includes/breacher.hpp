@@ -1,4 +1,4 @@
-class GVAR(breacher): tweed_acu_summer_ocp_crye_knee_jedi {
+class GVAR(breacher): tweed_acu_summer_ocp_crye_knee {
     _generalMacro = QGVAR(breacher);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,9 +6,9 @@ class GVAR(breacher): tweed_acu_summer_ocp_crye_knee_jedi {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(breacher_DisplayName);
-    weapons[] = {QEGVAR(weapons,breacher_primaryWeapon),QEGVAR(weapons,breacher_secondaryWeapon),"Throw","Put"};
-    respawnWeapons[] = {QEGVAR(weapons,breacher_primaryWeapon),QEGVAR(weapons,breacher_secondaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,breacher);
+    weapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,x26),"Throw","Put"};
+    respawnWeapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,x26),"Throw","Put"};
+    uniformClass = QEGVAR(uniforms,base);
     backpack = QEGVAR(backpacks,breacher);
     linkedItems[] = {QEGVAR(vests,breacher),"3DMA_WD_Opscore_V2","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
     respawnLinkedItems[] = {QEGVAR(vests,breacher),"3DMA_WD_Opscore_V2","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};

@@ -6,9 +6,9 @@ class GVAR(combat_medic): tweed_acu_summer_ocp_crye_knee {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(combat_medic_DisplayName);
-    weapons[] = {QEGVAR(weapons,combat_medic_primaryWeapon),QEGVAR(weapons,combat_medic_secondaryWeapon),"Throw","Put"};
-    respawnWeapons[] = {QEGVAR(weapons,combat_medic_primaryWeapon),QEGVAR(weapons,combat_medic_secondaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,combat_medic);
+    weapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,glock),"Throw","Put"};
+    respawnWeapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,glock),"Throw","Put"};
+    uniformClass = QEGVAR(uniforms,base);
     backpack = QEGVAR(backpacks,combat_medic);
     linkedItems[] = {QEGVAR(vests,combat_medic),"CUP_H_OpsCore_Tan","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_anprc152","ItemCompass","ACE_Altimeter"};
     respawnLinkedItems[] = {QEGVAR(vests,combat_medic),"CUP_H_OpsCore_Tan","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_anprc152","ItemCompass","ACE_Altimeter"};

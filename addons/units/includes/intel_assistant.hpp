@@ -6,9 +6,9 @@ class GVAR(intel_assistant): tweed_acu_summer_ocp_crye_knee {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(intel_assistant_DisplayName);
-    weapons[] = {QEGVAR(weapons,intel_assistant_primaryWeapon),QEGVAR(weapons,intel_assistant_secondaryWeapon),"Throw","Put"};
-    respawnWeapons[] = {QEGVAR(weapons,intel_assistant_primaryWeapon),QEGVAR(weapons,intel_assistant_secondaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,intel_assistant);
+    weapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,glock),"Throw","Put"};
+    respawnWeapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,glock),"Throw","Put"};
+    uniformClass = QEGVAR(uniforms,base);
     backpack = QEGVAR(backpacks,intel_assistant);
     linkedItems[] = {QEGVAR(vests,intel_assistant),"3DMA_WD_Opscore_V2","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
     respawnLinkedItems[] = {QEGVAR(vests,intel_assistant),"3DMA_WD_Opscore_V2","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};

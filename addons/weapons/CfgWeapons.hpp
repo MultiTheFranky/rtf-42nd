@@ -11,19 +11,79 @@ class CfgWeapons {
     class ACE_Vector;
     class rhs_weap_m4a1_carryhandle;
     class rhs_weap_m4;
+
+    class GVAR(hk416): rhs_weap_hk416d145 {
+        class LinkedItems {
+        class LinkedItemsAcc {
+            item = "rhsusf_acc_nt4_black";
+            slot = "PointerSlot";
+        };
+        class LinkedItemsMuzzle {
+            item = "rhsusf_acc_wmx_bk";
+            slot = "MuzzleSlot";
+        };
+        class LinkedItemsOptic {
+            item = "rhsusf_acc_su230";
+            slot = "CowsSlot";
+        };
+        class LinkedItemsUnder {
+            item = "rhsusf_acc_grip2";
+            slot = "UnderBarrelSlot";
+        };
+        };
+        class TransportWeapons {
+            count = 1;
+            weapon = QGVAR(hk416);
+        };
+        class TransportMagazines {
+            count = 1;
+            magazine = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
+        };
+        baseWeapon = QGVAR(hk416);
+    };
+
+    class GVAR(x26): crow_x26_blk_yellow {
+        class LinkedItems {
+        };
+        class TransportWeapons {
+            count = 1;
+            weapon = QGVAR(x26);
+        };
+        class TransportMagazines {
+            count = 1;
+            magazine = "X26_Cartridge";
+        };
+        baseWeapon = QGVAR(x26);
+    };
     
+    class GVAR(glock): rhsusf_weap_glock17g4 {
+        class LinkedItems {
+        };
+        class TransportWeapons {
+            count = 1;
+            weapon = QGVAR(glock);
+        };
+        class TransportMagazines {
+            count = 1;
+            magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+        };
+        baseWeapon = QGVAR(glock);
+    };
+
+    class GVAR(vector): ACE_Vector {
+        class LinkedItems {
+        };
+        class TransportWeapons {
+            count = 1;
+            weapon = QGVAR(vector);
+        };
+        baseWeapon = QGVAR(vector);
+    };
+
     #include "includes\at_specialist.hpp"
-    #include "includes\breacher.hpp"
-    #include "includes\combat_medic.hpp"
-    #include "includes\combat_paramedic.hpp"
-    #include "includes\eod.hpp"
     #include "includes\grenadier.hpp"
-    #include "includes\intel_assistant.hpp"
     #include "includes\interpreter.hpp"
     #include "includes\lmg.hpp"
-    #include "includes\officer.hpp"
     #include "includes\rifleman.hpp"
     #include "includes\sl.hpp"
-    #include "includes\tl.hpp"
-    #include "includes\wvm.hpp"
 };

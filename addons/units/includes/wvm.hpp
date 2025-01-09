@@ -1,4 +1,4 @@
-class GVAR(wvm): tweed_acu_summer_ocp_crye_knee_trop {
+class GVAR(wvm): tweed_acu_summer_ocp_crye_knee {
     _generalMacro = QGVAR(wvm);
     author = ECSTRING(main,Author);
     scope = 2;
@@ -6,9 +6,9 @@ class GVAR(wvm): tweed_acu_summer_ocp_crye_knee_trop {
     faction = QEGVAR(main,Faction);
     editorSubcategory = QEGVAR(main,Infantry);
     displayName = CSTRING(wvm_DisplayName);
-    weapons[] = {QEGVAR(weapons,wvm_primaryWeapon),QEGVAR(weapons,wvm_secondaryWeapon),"Throw","Put"};
-    respawnWeapons[] = {QEGVAR(weapons,wvm_primaryWeapon),QEGVAR(weapons,wvm_secondaryWeapon),"Throw","Put"};
-    uniformClass = QEGVAR(uniforms,wvm);
+    weapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,x26),"Throw","Put"};
+    respawnWeapons[] = {QEGVAR(weapons,hk416),QEGVAR(weapons,x26),"Throw","Put"};
+    uniformClass = QEGVAR(uniforms,base);
     backpack = QEGVAR(backpacks,wvm);
     linkedItems[] = {QEGVAR(vests,wvm),"3DMA_WD_Opscore_V2","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_anprc152","ItemCompass","ACE_Altimeter"};
     respawnLinkedItems[] = {QEGVAR(vests,wvm),"3DMA_WD_Opscore_V2","G_tweed_tacticool_weiss_oak","ItemMap","ItemMicroDAGR","TFAR_anprc152","ItemCompass","ACE_Altimeter"};

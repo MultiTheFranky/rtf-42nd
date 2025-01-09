@@ -5,6 +5,10 @@
             <English>AT Specialist Uniform</English>
             <Spanish>Uniforme de especialista AT</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Uniforms_baseUniformDisplayName">
+            <English>OCP Uniform</English>
+            <Spanish>Uniforme OCP</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Uniforms_breacherUniformDisplayName">
             <English>Breacher Uniform</English>
             <Spanish>Uniforme de Breacher</Spanish>
@@ -37,18 +41,6 @@
             <English>LMG Uniform</English>
             <Spanish>Uniforme de ametralladora ligera</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Uniforms_mc_beret_displayName">
-            <English>MultiCam Green Beret</English>
-            <Spanish>MultiCam Boina Verde</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_mc_beret_sleeve_displayName">
-            <English>MultiCam Green Beret Sleeve</English>
-            <Spanish>MultiCam Boina Verde Manga Corta</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Uniforms_mc_displayName">
-            <English>MultiCam</English>
-            <Spanish>MultiCam</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Uniforms_mc_sleeve_displayName">
             <English>MultiCam Sleeve</English>
             <Spanish>MultiCam Manga Corta</Spanish>
@@ -61,9 +53,17 @@
             <English>Rifleman Uniform</English>
             <Spanish>Uniforme de fusilero</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Uniforms_semisleeveUniformDisplayName">
+            <English>Semi Sleeve OCP Uniform</English>
+            <Spanish>Uniforme OCP Medio remangado</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Uniforms_slUniformDisplayName">
             <English>Squad Leader Uniform</English>
             <Spanish>Uniforme de líder de escuadrón</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Uniforms_sleeveUniformDisplayName">
+            <English>Sleeve OCP Uniform</English>
+            <Spanish>Uniforme OCP Remangado</Spanish>
         </Key>
         <Key ID="STR_RTF42_Uniforms_tlUniformDisplayName">
             <English>Team Leader Uniform</English>

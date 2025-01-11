@@ -65,5 +65,13 @@
             <English>Turn on radio</English>
             <Spanish>Encender la radio</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_intel_documentDisplayName">
+            <English>Intel Document</English>
+            <Spanish>Documento de Intel</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_intel_document_wrinkledDisplayName">
+            <English>Wrinkled Intel Document</English>
+            <Spanish>Documento Intel arrugado</Spanish>
+        </Key>
     </Package>
 </Project>

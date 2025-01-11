@@ -25,6 +25,10 @@
             <English>Open door</English>
             <Spanish>Abrir puerta</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_PickUp">
+            <English>Pick up</English>
+            <Spanish>Coger</Spanish>
+        </Key>
         <Key ID="STR_RTF42_Objects_PlayRadio">
             <English>Play radio</English>
             <Spanish>Reproducir radio</Spanish>

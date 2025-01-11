@@ -1,7 +1,7 @@
 @echo off
 rem =========ZONE TO EDIT========
 rem Define Disk
-set DISK=F:
+set DISK=D:
 rem Define P: drive directory
 set P_DRIVE_DIR=%DISK%\Arma3PDrive
 rem =============================

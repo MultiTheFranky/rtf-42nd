@@ -1,6 +1,6 @@
 @echo off
 rem Define Arma 3 Tools directory
-set ARMA3_TOOLS_DIR="F:\SteamLibrary\steamapps\common\Arma 3 Tools"
+set ARMA3_TOOLS_DIR="D:\SteamLibrary\steamapps\common\Arma 3 Tools"
 
 if not exist %ARMA3_TOOLS_DIR% (
   echo Arma 3 Tools directory does not exist, please check the path.

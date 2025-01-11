@@ -41,4 +41,7 @@ class CfgVehicles {
     #include "./data/reinforced_door/reinforced_door.hpp"
     class ThingX;
     #include "./data/speaker/speaker.hpp"
+    class Leaflet_05_F;
+    class Leaflet_05_New_F;
+    #include "./data/intel_document/intel_document.hpp"
 };

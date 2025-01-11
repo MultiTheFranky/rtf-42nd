@@ -168,7 +168,7 @@ while {alive _driver && !(isNull (objectParent _driver))} do{
         };
     };
 
-    if (_scan && {!((behaviour _driver) isEqualTo "STEALTH")}) then{ //Scan and bypass scan on STEALTH
+    if (_scan && {((behaviour _driver) isNotEqualTo "STEALTH")}) then{ //Scan and bypass scan on STEALTH
         switch (true) do{
             //Gates
             case (_gates findIf {_frontcar isEqualTo _x} isNotEqualTo -1):{
@@ -238,7 +238,7 @@ while {alive _driver && !(isNull (objectParent _driver))} do{
                 private _delta = [getDir _frontcar, _cardir] call BIS_fnc_getAngleDelta;
                 private _speedfront = speed _frontcar / 3.6; //km/h > m/s
                 private _speed = -1;
-                private _moving = !(floor _speedfront isEqualTo 0);
+                private _moving = (floor _speedfront isNotEqualTo 0);
                 private _seg = 2*_dist*(sin _heading/2); //chord length https://en.wikipedia.org/wiki/Circular_segment
 
                 if (abs _delta > 150) exitWith{ //oncoming traffic at < 30� rotation

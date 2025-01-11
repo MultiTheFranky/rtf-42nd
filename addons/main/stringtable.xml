@@ -6,8 +6,12 @@
             <Spanish>Equipo 42nd RTF</Spanish>
         </Key>
         <Key ID="STR_RTF42_Main_CategoryItemsDisplayName">
-            <English>42nd R.T.F</English>
-            <Spanish>42nd R.T.F</Spanish>
+            <English>42nd RTF</English>
+            <Spanish>42nd RTF</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_FactionCDisplayName">
+            <English>42nd RTF</English>
+            <Spanish>42nd RTF</Spanish>
         </Key>
         <Key ID="STR_RTF42_Main_FactionDisplayName">
             <English>42nd RTF</English>
@@ -28,6 +32,10 @@
         <Key ID="STR_RTF42_Main_SubcategoryAircraftDisplayName">
             <English>Planes</English>
             <Spanish>Aviones</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Main_SubcategoryCivilianDisplayName">
+            <English>42nd RTF Civilian</English>
+            <Spanish>42nd RTF Civilian</Spanish>
         </Key>
         <Key ID="STR_RTF42_Main_SubcategoryGreenBeretDisplayName">
             <English>Green Beret</English>

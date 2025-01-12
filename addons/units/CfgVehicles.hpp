@@ -19,7 +19,6 @@ class CfgVehicles {
     #include "includes\sl.hpp"
     #include "includes\tl.hpp"
     #include "includes\wvm.hpp"
-
-    #include "includes\cup_compatibility.hpp"
-
+    class CUP_C_TK_Man_04;
+    #include "includes\randomCivilian.hpp"
 };

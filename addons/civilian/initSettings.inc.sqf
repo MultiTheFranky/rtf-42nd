@@ -19,7 +19,7 @@ private _category = format ["RTF42 %1", LLSTRING(DisplayName)];
 [QGVAR(useVehicleAgents), "CHECKBOX", [LSTRING(UseVehicleAgentsDisplayName), LSTRING(UseVehicleAgentsDescription)], _category, true, 1] call CBA_fnc_addSetting;
 
 [QGVAR(civiliansClassnames), "EDITBOX", [LSTRING(CiviliansClassnamesDisplayName), LSTRING(CiviliansClassnamesDescription)], _category, 
-    '["CUP_C_TK_Man_05_Waist","CUP_C_TK_Man_06_Waist","CUP_C_TK_Man_01_Coat","CUP_C_TK_Man_08_Waist","CUP_C_TK_Man_03_Coat","CUP_C_TK_Man_01_Jack","CUP_C_TK_Man_06_Jack","CUP_C_TK_Man_03_Jack"]'
+    '["rtf42_units_randomCivilian"]'
 , 1] call CBA_fnc_addSetting;
 
 [QGVAR(civiliansVehiclesClassnames), "EDITBOX", [LSTRING(CiviliansVehiclesClassnamesDisplayName), LSTRING(CiviliansVehiclesClassnamesDescription)], _category, 

@@ -23,4 +23,7 @@ class CfgEditorSubcategories {
     class GVAR(Structure) {
         displayName=CSTRING(SubcategoryStructureDisplayName);
     };
+    class GVAR(Civilian) {
+        displayName=CSTRING(SubcategoryCivilianDisplayName);
+    };
 };

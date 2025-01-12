@@ -6,6 +6,11 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(FactionC): NO_CATEGORY {
+        displayName = CSTRING(FactionCDisplayName);
+        priority = 2;
+        side = 3;
+    };
     class GVAR(Faction_Props): Default {
         displayName = CSTRING(FactionPropsDisplayName);
         priority = 2;

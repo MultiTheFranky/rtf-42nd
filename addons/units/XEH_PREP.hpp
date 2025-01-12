@@ -1,1 +1,2 @@
 PREP(flashlight);
+PREP(randomizeCivilian);

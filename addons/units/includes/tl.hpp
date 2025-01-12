@@ -1,4 +1,4 @@
-class GVAR(tl): tweed_acu_summer_ocp_crye_knee_trop {
+class GVAR(tl): GVAR(tweed_acu_summer_ocp_crye_knee_trop) {
     _generalMacro = QGVAR(tl);
     author = ECSTRING(main,Author);
     scope = 2;

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=540;
+		nextID=542;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4173.2017,9.7046452,794.61639};
-		dir[]={-0.082457751,-0.58002722,-0.81041294};
-		up[]={-0.058713373,0.81459707,-0.57704794};
-		aside[]={-0.99486351,-3.7252903e-09,0.1012252};
+		pos[]={4172.6436,6.8504496,790.34216};
+		dir[]={-0.3613058,-0.53924286,-0.7607072};
+		up[]={-0.23135012,0.84215027,-0.48709348};
+		aside[]={-0.90329146,0,0.42902768};
 	};
 };
 binarizationWanted=0;
@@ -44,10 +44,6 @@ class AddonsMetaData
 			author="42nd RTF Team";
 		};
 	};
-};
-dlcs[]=
-{
-	"CUP_Units"
 };
 randomSeed=14016033;
 class ScenarioData
@@ -278,7 +274,7 @@ class Mission
 		class Item0
 		{
 			dataType="Group";
-			side="Civilian";
+			side="West";
 			class Entities
 			{
 				items=1;
@@ -287,22 +283,22 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4173.3843,5.0014391,789.22247};
+						position[]={4171.5522,5.0014391,788.03668};
 					};
-					side="Civilian";
+					side="West";
 					flags=7;
 					class Attributes
 					{
 						isPlayer=1;
 					};
-					id=539;
-					type="rtf42_units_randomCivilian";
+					id=541;
+					type="rtf42_units_at_specialist";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=538;
+			id=540;
 		};
 	};
 };

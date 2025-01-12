@@ -1,4 +1,4 @@
-class GVAR(intel_assistant): tweed_acu_summer_ocp_crye_knee {
+class GVAR(intel_assistant): GVAR(tweed_acu_summer_ocp_crye_knee) {
     _generalMacro = QGVAR(intel_assistant);
     author = ECSTRING(main,Author);
     scope = 2;

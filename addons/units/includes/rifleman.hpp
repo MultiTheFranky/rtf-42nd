@@ -1,4 +1,4 @@
-class GVAR(rifleman): tweed_acu_summer_ocp_crye_knee {
+class GVAR(rifleman): GVAR(tweed_acu_summer_ocp_crye_knee) {
     _generalMacro = QGVAR(rifleman);
     author = ECSTRING(main,Author);
     scope = 2;

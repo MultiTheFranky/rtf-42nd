@@ -25,16 +25,16 @@ presets = [
 dlc = []
 optionals = []
 parameters = [
-    "-skipIntro",                                                      # These parameters are passed to the Arma 3 executable
-    "-noSplash",                                                       # They do not need to be added to your list
-    "-showScriptErrors",                                               # You can add additional parameters here
+    "-skipIntro",        # These parameters are passed to the Arma 3 executable
+    "-noSplash",         # They do not need to be added to your list
+    "-showScriptErrors", # You can add additional parameters here
     "-debug",
     "-filePatching",
     "-world=empty",
     "-noPause",
     "-noPauseAudio",
     "-unit=232333",
-    "D:\\rtf-42nd\\missions\\rtf42_base_test_mission.VR\\mission.sqm", # Launch into existing Editor Mission - \\ needed - Change what ever you path is
+    #"D:\\rtf-42nd\\missions\\rtf42_base_test_mission.VR\\mission.sqm", # Launch into existing Editor Mission - \\ needed - Change what ever you path is
 ]
 
 [hemtt.launch.server]

@@ -37,3 +37,5 @@ hemtt.exe
 /addons/ui/data/backgrounds/*
 /addons/ui/data/cards/*
 !/tools/ffmpeg.exe
+addons/**/*.png
+addons/**/*.blend[0-9]*

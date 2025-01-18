@@ -6,14 +6,6 @@ class 5fdp_judgement_day {
     name = "5fdp Judgement Day";
     value = QEGVAR(music,5fdp_judgement_day);
 };
-class 5fdp_the_end {
-    name = "5fdp The End";
-    value = QEGVAR(music,5fdp_the_end);
-};
-class 5fdp_wrong_side_of_heaven {
-    name = "5fdp Wrong Side Of Heaven";
-    value = QEGVAR(music,5fdp_wrong_side_of_heaven);
-};
 class adieaux_warriors {
     name = "Adieaux Warriors";
     value = QEGVAR(music,adieaux_warriors);
@@ -38,6 +30,10 @@ class bluesarraceno_dogsofwar {
     name = "Bluesarraceno Dogsofwar";
     value = QEGVAR(music,bluesarraceno_dogsofwar);
 };
+class bm_everybodys_outlaw {
+    name = "Bm Everybodys Outlaw";
+    value = QEGVAR(music,bm_everybodys_outlaw);
+};
 class bobdylan_masters_of_war {
     name = "Bobdylan Masters Of War";
     value = QEGVAR(music,bobdylan_masters_of_war);
@@ -45,10 +41,6 @@ class bobdylan_masters_of_war {
 class cardsound {
     name = "Cardsound";
     value = QEGVAR(music,cardsound);
-};
-class childishgambino_this_is_america {
-    name = "Childishgambino This Is America";
-    value = QEGVAR(music,childishgambino_this_is_america);
 };
 class covenant_drunkendream {
     name = "Covenant Drunkendream";
@@ -89,10 +81,6 @@ class linkin_park_figure9 {
 class linkinpark_bleeding_out {
     name = "Linkinpark Bleeding Out";
     value = QEGVAR(music,linkinpark_bleeding_out);
-};
-class marilynmanson_sweet_dreams {
-    name = "Marilynmanson Sweet Dreams";
-    value = QEGVAR(music,marilynmanson_sweet_dreams);
 };
 class mb14_pyramids_con {
     name = "Mb14 Pyramids Con";
@@ -138,21 +126,29 @@ class radio_42ndoriginals_taylor_join {
     name = "Radio 42ndoriginals Taylor Join";
     value = QEGVAR(music,radio_42ndoriginals_taylor_join);
 };
+class radio_5fdp_apologize {
+    name = "Radio 5fdp Apologize";
+    value = QEGVAR(music,radio_5fdp_apologize);
+};
 class radio_blacklabelsociety_stillborn {
     name = "Radio Blacklabelsociety Stillborn";
     value = QEGVAR(music,radio_blacklabelsociety_stillborn);
+};
+class radio_cmarks_outlaws_and_outsiders {
+    name = "Radio Cmarks Outlaws And Outsiders";
+    value = QEGVAR(music,radio_cmarks_outlaws_and_outsiders);
 };
 class radio_metallica_untillitsleeps {
     name = "Radio Metallica Untillitsleeps";
     value = QEGVAR(music,radio_metallica_untillitsleeps);
 };
-class sabaton_finalsolution {
-    name = "Sabaton Finalsolution";
-    value = QEGVAR(music,sabaton_finalsolution);
+class radio_pearljam_evenflow {
+    name = "Radio Pearljam Evenflow";
+    value = QEGVAR(music,radio_pearljam_evenflow);
 };
-class saintchaos_give_it_100 {
-    name = "Saintchaos Give It 100";
-    value = QEGVAR(music,saintchaos_give_it_100);
+class renegade_keep_fire_burning {
+    name = "Renegade Keep Fire Burning";
+    value = QEGVAR(music,renegade_keep_fire_burning);
 };
 class savoretti_soldiers_eyes {
     name = "Savoretti Soldiers Eyes";
@@ -161,10 +157,6 @@ class savoretti_soldiers_eyes {
 class score_bornforthis {
     name = "Score Bornforthis";
     value = QEGVAR(music,score_bornforthis);
-};
-class seven_nation_army {
-    name = "Seven Nation Army";
-    value = QEGVAR(music,seven_nation_army);
 };
 class sicario_beast {
     name = "Sicario Beast";
@@ -182,9 +174,9 @@ class urbancountry_knifestone {
     name = "Urbancountry Knifestone";
     value = QEGVAR(music,urbancountry_knifestone);
 };
-class warrior_song {
-    name = "Warrior Song";
-    value = QEGVAR(music,warrior_song);
+class yelawolf_till_its_gone {
+    name = "Yelawolf Till Its Gone";
+    value = QEGVAR(music,yelawolf_till_its_gone);
 };
 class zackdempsey_dont_get_in_my_way {
     name = "Zackdempsey Dont Get In My Way";

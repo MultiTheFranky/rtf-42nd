@@ -3,13 +3,13 @@ class CfgMusic {
     class GVAR(5fdp_bad_company) {
         name = QUOTE(5fdp Bad Company);
         sound[] = {QPATHTOF(data\5fdp_bad_company.ogg), 1, 1};
-        duration = 38;
+        duration = 39;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(5fdp_judgement_day) {
         name = QUOTE(5fdp Judgement Day);
         sound[] = {QPATHTOF(data\5fdp_judgement_day.ogg), 1, 1};
-        duration = 82;
+        duration = 83;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(adieaux_warriors) {
@@ -27,7 +27,7 @@ class GVAR(any_given_day_unbreakable) {
 class GVAR(arabic_metal1) {
         name = QUOTE(Arabic Metal1);
         sound[] = {QPATHTOF(data\arabic_metal1.ogg), 1, 1};
-        duration = 90;
+        duration = 91;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(arabic_metal2) {
@@ -39,13 +39,13 @@ class GVAR(arabic_metal2) {
 class GVAR(blacksabbath_warpigs) {
         name = QUOTE(Blacksabbath Warpigs);
         sound[] = {QPATHTOF(data\blacksabbath_warpigs.ogg), 1, 1};
-        duration = 48;
+        duration = 50;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(bluesarraceno_dogsofwar) {
         name = QUOTE(Bluesarraceno Dogsofwar);
         sound[] = {QPATHTOF(data\bluesarraceno_dogsofwar.ogg), 1, 1};
-        duration = 173;
+        duration = 174;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(bm_everybodys_outlaw) {
@@ -75,7 +75,7 @@ class GVAR(covenant_drunkendream) {
 class GVAR(covenant_road_to_kotal_e__anjuman) {
         name = QUOTE(Covenant Road To Kotal E  Anjuman);
         sound[] = {QPATHTOF(data\covenant_road_to_kotal_e__anjuman.ogg), 1, 1};
-        duration = 87;
+        duration = 88;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(covenant_three_minute_fuse) {
@@ -87,7 +87,7 @@ class GVAR(covenant_three_minute_fuse) {
 class GVAR(covenant_thunder_continues) {
         name = QUOTE(Covenant Thunder Continues);
         sound[] = {QPATHTOF(data\covenant_thunder_continues.ogg), 1, 1};
-        duration = 240;
+        duration = 238;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(dlhu_black_thunder) {
@@ -99,13 +99,19 @@ class GVAR(dlhu_black_thunder) {
 class GVAR(hans_zimmer_the_rock_bso) {
         name = QUOTE(Hans Zimmer The Rock Bso);
         sound[] = {QPATHTOF(data\hans_zimmer_the_rock_bso.ogg), 1, 1};
-        duration = 97;
+        duration = 87;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(johnnycash_gods_gonna_cut_you__down) {
         name = QUOTE(Johnnycash Gods Gonna Cut You  Down);
         sound[] = {QPATHTOF(data\johnnycash_gods_gonna_cut_you__down.ogg), 1, 1};
-        duration = 135;
+        duration = 136;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(kaleo_down_we_go) {
+        name = QUOTE(Kaleo Down We Go);
+        sound[] = {QPATHTOF(data\kaleo_down_we_go.ogg), 1, 1};
+        duration = 233;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(lastknife_do_right) {
@@ -123,7 +129,7 @@ class GVAR(linkin_park_figure9) {
 class GVAR(linkinpark_bleeding_out) {
         name = QUOTE(Linkinpark Bleeding Out);
         sound[] = {QPATHTOF(data\linkinpark_bleeding_out.ogg), 1, 1};
-        duration = 106;
+        duration = 107;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(mb14_pyramids_con) {
@@ -135,7 +141,7 @@ class GVAR(mb14_pyramids_con) {
 class GVAR(metallica_for_whom_the_bell_tolls) {
         name = QUOTE(Metallica For Whom The Bell Tolls);
         sound[] = {QPATHTOF(data\metallica_for_whom_the_bell_tolls.ogg), 1, 1};
-        duration = 253;
+        duration = 255;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(mississippi_twilight_trigger) {
@@ -147,7 +153,7 @@ class GVAR(mississippi_twilight_trigger) {
 class GVAR(originals_42ndcountry_coldbeer) {
         name = QUOTE(Originals 42ndcountry Coldbeer);
         sound[] = {QPATHTOF(data\originals_42ndcountry_coldbeer.ogg), 1, 1};
-        duration = 191;
+        duration = 192;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(papa_roach_born_for_greatness) {
@@ -159,13 +165,13 @@ class GVAR(papa_roach_born_for_greatness) {
 class GVAR(pod_afraid_to_die) {
         name = QUOTE(Pod Afraid To Die);
         sound[] = {QPATHTOF(data\pod_afraid_to_die.ogg), 1, 1};
-        duration = 88;
+        duration = 89;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_42ndoriginals_country_coldbeer) {
         name = QUOTE(Radio 42ndoriginals Country Coldbeer);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_country_coldbeer.ogg), 1, 1};
-        duration = 191;
+        duration = 192;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_42ndoriginals_get_clap_like_a_clown) {
@@ -183,7 +189,7 @@ class GVAR(radio_42ndoriginals_hiphop) {
 class GVAR(radio_42ndoriginals_metal_grind_and_shine) {
         name = QUOTE(Radio 42ndoriginals Metal Grind And Shine);
         sound[] = {QPATHTOF(data\radio_42ndoriginals_metal_grind_and_shine.ogg), 1, 1};
-        duration = 142;
+        duration = 143;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_42ndoriginals_taylor_join) {
@@ -201,19 +207,19 @@ class GVAR(radio_5fdp_apologize) {
 class GVAR(radio_blacklabelsociety_stillborn) {
         name = QUOTE(Radio Blacklabelsociety Stillborn);
         sound[] = {QPATHTOF(data\radio_blacklabelsociety_stillborn.ogg), 1, 1};
-        duration = 195;
+        duration = 196;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_cmarks_outlaws_and_outsiders) {
         name = QUOTE(Radio Cmarks Outlaws And Outsiders);
         sound[] = {QPATHTOF(data\radio_cmarks_outlaws_and_outsiders.ogg), 1, 1};
-        duration = 199;
+        duration = 200;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_metallica_untillitsleeps) {
         name = QUOTE(Radio Metallica Untillitsleeps);
         sound[] = {QPATHTOF(data\radio_metallica_untillitsleeps.ogg), 1, 1};
-        duration = 269;
+        duration = 270;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(radio_pearljam_evenflow) {
@@ -225,7 +231,7 @@ class GVAR(radio_pearljam_evenflow) {
 class GVAR(renegade_keep_fire_burning) {
         name = QUOTE(Renegade Keep Fire Burning);
         sound[] = {QPATHTOF(data\renegade_keep_fire_burning.ogg), 1, 1};
-        duration = 77;
+        duration = 78;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(savoretti_soldiers_eyes) {
@@ -249,13 +255,13 @@ class GVAR(sicario_beast) {
 class GVAR(terminal_list_watchmedie) {
         name = QUOTE(Terminal List Watchmedie);
         sound[] = {QPATHTOF(data\terminal_list_watchmedie.ogg), 1, 1};
-        duration = 214;
+        duration = 215;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(the_adhan_call_to_prayer) {
         name = QUOTE(The Adhan Call To Prayer);
         sound[] = {QPATHTOF(data\the_adhan_call_to_prayer.ogg), 1, 1};
-        duration = 98;
+        duration = 99;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(urbancountry_knifestone) {
@@ -267,13 +273,13 @@ class GVAR(urbancountry_knifestone) {
 class GVAR(yelawolf_till_its_gone) {
         name = QUOTE(Yelawolf Till Its Gone);
         sound[] = {QPATHTOF(data\yelawolf_till_its_gone.ogg), 1, 1};
-        duration = 280;
+        duration = 281;
         musicClass = QGVAR(musicClass);
     };
 class GVAR(zackdempsey_dont_get_in_my_way) {
         name = QUOTE(Zackdempsey Dont Get In My Way);
         sound[] = {QPATHTOF(data\zackdempsey_dont_get_in_my_way.ogg), 1, 1};
-        duration = 43;
+        duration = 44;
         musicClass = QGVAR(musicClass);
     };
 };

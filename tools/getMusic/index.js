@@ -1,5 +1,7 @@
 const axios = require("axios").default;
 const fs = require("fs").promises;
+const ffmpeg = require("fluent-ffmpeg");
+ffmpeg.setFfprobePath(require("ffprobe-static").path);
 
 if (!process.env.CDN_URL) {
     console.error("CDN_URL is not defined");
@@ -47,6 +49,18 @@ function titleCase(str) {
     return splitStr.join(" ");
 }
 
+function getDurationFromURL(url) {
+    return new Promise((resolve, reject) => {
+        ffmpeg.ffprobe(url, (err, metadata) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(metadata.format.duration);
+        });
+    });
+}
+
 const downloadMusic = async (musicFiles) => {
     const promises = musicFiles.map(async (file) => {
         const { data } = await axios.get(`${CDN_URL}/${file}`, {
@@ -56,7 +70,9 @@ const downloadMusic = async (musicFiles) => {
         // We remove the length from the name
         try {
             const name = file.split("-")[0];
-            const length = file.split("-")[1].split("s")[0];
+            const length = Math.round(
+                await getDurationFromURL(`${CDN_URL}/${file}`)
+            );
             const prettyName = titleCase(name.replace(/_/g, " "));
             return { name: name, length, data, prettyName };
         } catch (error) {

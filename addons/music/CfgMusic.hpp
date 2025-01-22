@@ -114,6 +114,12 @@ class GVAR(kaleo_down_we_go) {
         duration = 233;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(kaleo_down_we_go) {
+        name = QUOTE(Kaleo Down We Go);
+        sound[] = {QPATHTOF(data\kaleo_down_we_go.ogg), 1, 1};
+        duration = 232;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(lastknife_do_right) {
         name = QUOTE(Lastknife Do Right);
         sound[] = {QPATHTOF(data\lastknife_do_right.ogg), 1, 1};

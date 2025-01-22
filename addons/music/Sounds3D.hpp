@@ -70,6 +70,10 @@ class johnnycash_gods_gonna_cut_you__down {
     name = "Johnnycash Gods Gonna Cut You  Down";
     value = QEGVAR(music,johnnycash_gods_gonna_cut_you__down);
 };
+class kaleo_down_we_go {
+    name = "Kaleo Down We Go";
+    value = QEGVAR(music,kaleo_down_we_go);
+};
 class lastknife_do_right {
     name = "Lastknife Do Right";
     value = QEGVAR(music,lastknife_do_right);

@@ -1,3 +1,7 @@
+class 42nd_originals_cruel_town {
+    name = "42nd Originals Cruel Town";
+    value = QEGVAR(music,42nd_originals_cruel_town);
+};
 class 5fdp_bad_company {
     name = "5fdp Bad Company";
     value = QEGVAR(music,5fdp_bad_company);

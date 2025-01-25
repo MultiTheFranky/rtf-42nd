@@ -1,6 +1,12 @@
 class CfgMusic {
     tracks[] = {};
-    class GVAR(5fdp_bad_company) {
+    class GVAR(42nd_originals_cruel_town) {
+        name = QUOTE(42nd Originals Cruel Town);
+        sound[] = {QPATHTOF(data\42nd_originals_cruel_town.ogg), 1, 1};
+        duration = 193;
+        musicClass = QGVAR(musicClass);
+    };
+class GVAR(5fdp_bad_company) {
         name = QUOTE(5fdp Bad Company);
         sound[] = {QPATHTOF(data\5fdp_bad_company.ogg), 1, 1};
         duration = 39;

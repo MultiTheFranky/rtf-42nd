@@ -1,6 +1,11 @@
 class CfgSounds {
     sounds[] = {};
-    class GVAR(5fdp_bad_company) {
+    class GVAR(42nd_originals_cruel_town) {
+        name = QUOTE(42nd Originals Cruel Town);
+        sound[] = {QPATHTOF(data\42nd_originals_cruel_town.ogg), 1, 1, 100};
+        titles[] = {};
+    };
+class GVAR(5fdp_bad_company) {
         name = QUOTE(5fdp Bad Company);
         sound[] = {QPATHTOF(data\5fdp_bad_company.ogg), 1, 1, 100};
         titles[] = {};

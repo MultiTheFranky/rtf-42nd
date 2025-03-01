@@ -14,6 +14,11 @@ class GVAR(halo) {
         file = QPATHTOF(data\halo.ogv);
         duration = 28;
     };
+class GVAR(mission38) {
+        name = QUOTE(Mission38);
+        file = QPATHTOF(data\mission38.ogv);
+        duration = 109;
+    };
 class GVAR(rangerleadtheway42) {
         name = QUOTE(Rangerleadtheway42);
         file = QPATHTOF(data\rangerleadtheway42.ogv);

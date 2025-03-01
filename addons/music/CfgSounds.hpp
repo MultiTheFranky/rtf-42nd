@@ -60,6 +60,11 @@ class GVAR(cardsound) {
         sound[] = {QPATHTOF(data\cardsound.ogg), 1, 1, 100};
         titles[] = {};
     };
+class GVAR(colter_sleepingblacktop) {
+        name = QUOTE(Colter Sleepingblacktop);
+        sound[] = {QPATHTOF(data\colter_sleepingblacktop.ogg), 1, 1, 100};
+        titles[] = {};
+    };
 class GVAR(covenant_drunkendream) {
         name = QUOTE(Covenant Drunkendream);
         sound[] = {QPATHTOF(data\covenant_drunkendream.ogg), 1, 1, 100};

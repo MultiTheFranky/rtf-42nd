@@ -46,6 +46,10 @@ class cardsound {
     name = "Cardsound";
     value = QEGVAR(music,cardsound);
 };
+class colter_sleepingblacktop {
+    name = "Colter Sleepingblacktop";
+    value = QEGVAR(music,colter_sleepingblacktop);
+};
 class covenant_drunkendream {
     name = "Covenant Drunkendream";
     value = QEGVAR(music,covenant_drunkendream);

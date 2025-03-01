@@ -72,6 +72,12 @@ class GVAR(cardsound) {
         duration = 4;
         musicClass = QGVAR(musicClass);
     };
+class GVAR(colter_sleepingblacktop) {
+        name = QUOTE(Colter Sleepingblacktop);
+        sound[] = {QPATHTOF(data\colter_sleepingblacktop.ogg), 1, 1};
+        duration = 196;
+        musicClass = QGVAR(musicClass);
+    };
 class GVAR(covenant_drunkendream) {
         name = QUOTE(Covenant Drunkendream);
         sound[] = {QPATHTOF(data\covenant_drunkendream.ogg), 1, 1};

@@ -73,5 +73,13 @@
             <English>Wrinkled Intel Document</English>
             <Spanish>Documento Intel arrugado</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_missile_intel_documentDisplayName">
+            <English>Missile Intel Document</English>
+            <Spanish>Documento de inteligencia sobre misiles</Spanish>
+        </Key>
+        <Key ID="STR_RTF42_Objects_multi_intel_documentDisplayName">
+            <English>Multi Intel Document</English>
+            <Spanish>Documento de múltiples Intel</Spanish>
+        </Key>
     </Package>
 </Project>

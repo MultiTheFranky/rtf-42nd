@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project name="RTF42">
-    <Package name="Common">
-        <Key ID="STR_RTF42_Common_RTF42Team">
-            <English>RTF42 Team</English>
-            <Spanish>Equipo 42ndRTF</Spanish>
-        </Key>
-    </Package>
-</Project>

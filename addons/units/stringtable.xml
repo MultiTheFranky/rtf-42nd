@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Units">
-        <Key ID="STR_RTF42_Units_at_DisplayName">
-            <English>AT</English>
-            <Spanish>AT</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Units_at_specialist_DisplayName">
             <English>AT Specialist</English>
             <Spanish>Especialista en AT</Spanish>
@@ -37,10 +33,6 @@
             <English>Interpreter</English>
             <Spanish>Intérprete</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Units_leader_DisplayName">
-            <English>Leader</English>
-            <Spanish>Líder</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Units_lmg_DisplayName">
             <English>Light Machine Gun</English>
             <Spanish>Ametrallador Ligero</Spanish>
@@ -49,25 +41,9 @@
             <English>Officer</English>
             <Spanish>Oficial</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Units_operator_DisplayName">
-            <English>Operator</English>
-            <Spanish>Operador</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Units_paramedic_DisplayName">
-            <English>Paramedic</English>
-            <Spanish>Paramédico</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Units_rifleman_DisplayName">
             <English>Rifleman</English>
             <Spanish>Fusilero</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Units_rto_DisplayName">
-            <English>RTO</English>
-            <Spanish>RTO</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Units_sapper_DisplayName">
-            <English>Sapper</English>
-            <Spanish>Zapador</Spanish>
         </Key>
         <Key ID="STR_RTF42_Units_sl_DisplayName">
             <English>Squad Leader</English>

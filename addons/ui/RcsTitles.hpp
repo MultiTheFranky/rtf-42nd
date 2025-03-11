@@ -15,7 +15,7 @@ class RscTitles {
                 x = "safezoneXAbs";
                 y = "- 10";
                 w = "safezoneWAbs";
-                h = "2 *  10";
+                h = "20";
             };
             class BackgroundLeft: Background {
                 x = "- 10";

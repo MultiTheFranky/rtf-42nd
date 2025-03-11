@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="RTF42">
     <Package name="Vests">
-        <Key ID="STR_RTF42_Vests_BaseVestDisplayName">
-            <English>Green Beret Platecarrier</English>
-            <Spanish>Portaplacas Boina Verde</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Vests_Explode">
-            <English>Explode!</English>
-            <Spanish>Explotar!</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Vests_MiniSuicideVestDisplayName">
             <English>Mini Suicidal Vest</English>
             <Spanish>Chaleco Explosivo Pequeño</Spanish>

@@ -9,14 +9,6 @@
             <English>File</English>
             <Spanish>Archivo</Spanish>
         </Key>
-        <Key ID="STR_RTF42_Music_IsInsideDisplayName">
-            <English>Is inside</English>
-            <Spanish>Está dentro</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Music_LocalDisplayName">
-            <English>Local</English>
-            <Spanish>Local</Spanish>
-        </Key>
         <Key ID="STR_RTF42_Music_LoopDisplayName">
             <English>Loop</English>
             <Spanish>Bucle</Spanish>
@@ -36,10 +28,6 @@
         <Key ID="STR_RTF42_Music_Sound3DDisplayName">
             <English>Play sound 3D</English>
             <Spanish>Reproducir sonido 3D</Spanish>
-        </Key>
-        <Key ID="STR_RTF42_Music_VolumeDisplayName">
-            <English>Volume</English>
-            <Spanish>Volumen</Spanish>
         </Key>
     </Package>
 </Project>

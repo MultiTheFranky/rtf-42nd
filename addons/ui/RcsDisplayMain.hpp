@@ -16,7 +16,7 @@ class RscDisplayMain: RscStandardDisplay {
             x = "- 10";
             y = "- 10";
             w = "safezoneX +  10";
-            h = "2 *  10";
+            h = "20";
         };
         class BackgroundRight: BackgroundLeft {
             x = "safezoneX + safezoneW";

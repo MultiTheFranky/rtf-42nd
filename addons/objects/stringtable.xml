@@ -81,5 +81,9 @@
             <English>Multi Intel Document</English>
             <Spanish>Documento de múltiples Intel</Spanish>
         </Key>
+        <Key ID="STR_RTF42_Objects_top_secret_intel_documentDisplayName">
+            <English>Top Secret Intel Document</English>
+            <Spanish>Documento de inteligencia de alto secreto</Spanish>
+        </Key>
     </Package>
 </Project>
